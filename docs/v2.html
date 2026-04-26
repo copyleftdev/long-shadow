@@ -1,0 +1,1074 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Operation Long Shadow · v2 · The math, validated</title>
+<meta name="description" content="A 24-hour-after-publication research note. We hypothesized in v1 that the farm could be detected with a small basis of math primitives. We tested it against the labeled corpus. Here is what held, what broke, and what the corpus revealed when run back through itself.">
+<meta property="og:title" content="Operation Long Shadow · v2 · The math, validated">
+<meta property="og:description" content="From 6 known bots, two pivots surface 288 high-confidence bots and 563 new external customer/victim repos. The four-axis model holds; the tight-coincidence axis is defeated; a TWIN LAUNDER exposes operator linkage by exact content equality.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Spectral:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:        oklch(98%   0.012  78);
+  --paper-2:      oklch(95%   0.013  78);
+  --rule:         oklch(85%   0.012  78);
+  --ink:          oklch(20%   0.018  60);
+  --ink-2:        oklch(35%   0.018  60);
+  --muted:        oklch(56%   0.014  60);
+  --accent:       oklch(53%   0.205  28);
+  --accent-soft:  oklch(94%   0.04   28);
+  --good:         oklch(48%   0.16  150);
+  --good-soft:    oklch(94%   0.04  150);
+  --warn:         oklch(48%   0.18   45);
+
+  --serif:   'Spectral', 'Source Serif Pro', Georgia, serif;
+  --display: 'Bricolage Grotesque', 'Söhne', system-ui, sans-serif;
+  --mono:    'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  --col:        720px;
+  --col-wide:   1040px;
+  --col-bleed:  1280px;
+  --gutter: clamp(20px, 5vw, 64px);
+
+  --s-1: 4px;  --s-2: 8px;   --s-3: 12px;  --s-4: 16px;  --s-5: 24px;
+  --s-6: 32px; --s-7: 48px;  --s-8: 64px;  --s-9: 96px;  --s-10: 144px; --s-11: 192px;
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.55;
+  font-feature-settings: "ss01", "kern";
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--accent); color: var(--paper); }
+
+a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+
+/* ───────────────────  PROGRESS RAIL  */
+.rail { position: fixed; left: 0; right: 0; top: 0; height: 2px; background: transparent; z-index: 50; pointer-events: none; }
+.rail-fill { height: 100%; width: 0%; background: var(--ink); transition: width 80ms linear; }
+
+/* ───────────────────  CHAPTER MARK  */
+.chapter-marker {
+  position: fixed; top: var(--s-5); left: var(--gutter);
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); z-index: 40; mix-blend-mode: multiply; pointer-events: none;
+  display: flex; gap: var(--s-3); align-items: baseline;
+  opacity: 0; transition: opacity 300ms var(--ease-out-quart);
+}
+.chapter-marker.visible { opacity: 1; }
+.chapter-marker .num { color: var(--accent); font-weight: 700; }
+.chapter-marker .of { color: var(--rule); }
+
+/* ───────────────────  PAGE STRUCTURE  */
+main { padding: 0; }
+article { display: block; }
+section.chapter { position: relative; padding: var(--s-11) var(--gutter); border-top: 1px solid var(--rule); }
+section.chapter:first-of-type { border-top: 0; }
+
+.col       { max-width: var(--col);        margin: 0 auto; }
+.col-wide  { max-width: var(--col-wide);   margin: 0 auto; }
+.col-bleed { max-width: var(--col-bleed);  margin: 0 auto; }
+
+/* ───────────────────  TYPE  */
+.eyebrow {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--muted); display: flex; align-items: baseline; gap: var(--s-4);
+  margin: 0 0 var(--s-5) 0;
+}
+.eyebrow .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.eyebrow .num { color: var(--accent); font-weight: 700; }
+
+h1.hero {
+  font-family: var(--serif); font-weight: 500;
+  font-size: clamp(34px, 6.5vw, 84px); line-height: 1.04; letter-spacing: -0.018em;
+  margin: 0 0 var(--s-7) 0; font-feature-settings: "ss01"; max-width: 18ch;
+}
+h1.hero em { font-style: italic; color: var(--accent); font-weight: 500; }
+
+h2.chapter-title {
+  font-family: var(--serif); font-weight: 500;
+  font-size: clamp(28px, 4.4vw, 52px); line-height: 1.1; letter-spacing: -0.014em;
+  margin: 0 0 var(--s-6) 0; max-width: 22ch;
+}
+h2.chapter-title em { font-style: italic; color: var(--accent); }
+
+h3.kicker {
+  font-family: var(--display); font-weight: 600; font-size: 13px; line-height: 1.3;
+  letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2);
+  margin: var(--s-7) 0 var(--s-3) 0;
+}
+
+p { margin: 0 0 var(--s-5) 0; max-width: 65ch; }
+p.lede { font-size: clamp(20px, 2.4vw, 26px); line-height: 1.45; font-weight: 400; color: var(--ink-2); margin-bottom: var(--s-7); max-width: 32ch; }
+p.lede em { font-style: italic; color: var(--ink); }
+
+p strong { font-weight: 700; color: var(--ink); }
+p code, .mono { font-family: var(--mono); font-size: 0.86em; background: var(--paper-2); padding: 1px 6px; border-radius: 2px; color: var(--ink-2); }
+
+/* ───────────────────  REVEAL  */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 800ms var(--ease-out-quart), transform 800ms var(--ease-out-quart); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal[data-stagger] { transition-delay: calc(var(--i, 0) * 80ms); }
+.reveal.show-fallback { opacity: 1; transform: none; transition: opacity 400ms ease-out; }
+@media (prefers-reduced-motion: reduce) { .reveal { transition: opacity 200ms ease-out; transform: none; } .rail-fill { transition: none; } }
+
+/* ───────────────────  HERO  */
+.hero-section { min-height: 92vh; display: grid; grid-template-rows: auto 1fr auto; padding: var(--s-7) var(--gutter); border-top: 0; }
+.hero-mast { display: flex; justify-content: space-between; align-items: baseline; font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+.hero-mast .mast-l, .hero-mast .mast-r { display: flex; gap: var(--s-4); align-items: baseline; }
+.hero-mast .mast-r { color: var(--accent); }
+.hero-body { display: flex; flex-direction: column; justify-content: center; max-width: var(--col-wide); margin: 0 auto; width: 100%; padding: var(--s-9) 0; }
+.hero-meta {
+  font-family: var(--mono); font-size: 12px; color: var(--muted);
+  letter-spacing: 0.06em; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--s-5) var(--s-7); border-top: 1px solid var(--rule); padding-top: var(--s-5); max-width: 720px;
+}
+.hero-meta dt { color: var(--muted); font-weight: 500; margin-bottom: 2px; }
+.hero-meta dd { margin: 0; color: var(--ink); font-family: var(--serif); font-size: 16px; }
+.hero-foot { display: flex; justify-content: space-between; align-items: baseline; font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+.hero-foot .pulse { display: inline-flex; align-items: center; gap: var(--s-2); }
+.hero-foot .pulse::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 0.4; transform: scale(1);} 50% { opacity: 1; transform: scale(1.3);} }
+
+/* ───────────────────  BIG NUMBERS  */
+.bignum { font-family: var(--display); font-weight: 300; font-size: clamp(56px, 14vw, 200px); line-height: 0.92; letter-spacing: -0.04em; color: var(--ink); font-variant-numeric: tabular-nums; font-feature-settings: "tnum", "ss01"; }
+.bignum.accent { color: var(--accent); }
+.bignum sup { font-size: 0.32em; vertical-align: super; font-weight: 400; color: var(--muted); }
+
+.statline { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--s-7); margin: var(--s-7) 0; padding: var(--s-6) 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.statline .stat .v { font-family: var(--display); font-weight: 500; font-size: clamp(28px, 3.2vw, 42px); line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; display: block; }
+.statline .stat .l { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: var(--s-3); display: block; max-width: 22ch; line-height: 1.4; }
+
+/* ───────────────────  EVIDENCE LINE  */
+.evidence { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.02em; margin: var(--s-3) 0 var(--s-7) 0; padding-left: var(--s-4); border-left: 1px solid var(--rule); max-width: 88ch; line-height: 1.6; }
+.evidence b { color: var(--ink-2); font-weight: 500; }
+.evidence::before { content: "EVIDENCE"; display: block; font-size: 10px; letter-spacing: 0.2em; color: var(--accent); margin-bottom: var(--s-2); }
+
+/* ───────────────────  PRIMITIVE TABLE (ch 2)  */
+.primtable { max-width: var(--col-bleed); margin: var(--s-8) auto; }
+.primtable .row { display: grid; grid-template-columns: 60px 1.4fr 1.6fr 0.6fr; gap: var(--s-5); padding: var(--s-5) 0; border-top: 1px solid var(--rule); align-items: baseline; }
+.primtable .row:last-child { border-bottom: 1px solid var(--rule); }
+.primtable .row .ix { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.1em; }
+.primtable .row .name { font-family: var(--display); font-weight: 600; font-size: 18px; color: var(--ink); }
+.primtable .row .name .alg { display: block; font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.04em; font-weight: 400; margin-top: 4px; }
+.primtable .row .desc { font-family: var(--serif); font-size: 15px; color: var(--ink-2); line-height: 1.5; }
+.primtable .row .verdict { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; text-align: right; align-self: start; padding-top: 4px; }
+.verdict.ok { color: var(--good); }
+.verdict.fail { color: var(--accent); }
+.verdict.null { color: var(--muted); }
+.verdict.derived { color: var(--ink-2); }
+
+/* ───────────────────  CASCADE (ch 3)  */
+.cascade-wrap { max-width: var(--col-bleed); margin: var(--s-8) auto; }
+.cascade-svg { width: 100%; height: auto; display: block; }
+.cs-tier-label { fill: var(--muted); font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+.cs-tier-num { fill: var(--ink); font-family: var(--display); font-weight: 500; font-variant-numeric: tabular-nums; }
+.cs-link { stroke: var(--ink); stroke-width: 1; fill: none; opacity: 0.55; }
+.cs-link.recursive { stroke: var(--accent); stroke-width: 1.2; opacity: 0.85; }
+.cs-node-seed { fill: var(--ink); }
+.cs-node-anchor { fill: var(--paper); stroke: var(--ink); stroke-width: 1.2; }
+.cs-node-bot { fill: var(--paper); stroke: var(--accent); stroke-width: 1.2; }
+.cs-node-newanchor { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.2; }
+.cs-node-label { fill: var(--ink); font-family: var(--mono); font-size: 9px; }
+.cs-tier-divider { stroke: var(--rule); stroke-width: 1; stroke-dasharray: 2 4; }
+
+/* ───────────────────  WAVE BARS (ch 4)  */
+.waves-wrap { max-width: var(--col-bleed); margin: var(--s-8) auto; }
+.waves-svg { width: 100%; height: auto; display: block; }
+.wv-axis { stroke: var(--rule); stroke-width: 1; }
+.wv-tick-label { fill: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase; }
+.wv-bar-A { fill: var(--ink); }
+.wv-bar-B { fill: var(--accent); }
+.wv-bar-O { fill: var(--rule); }
+.wv-month-label { fill: var(--muted); font-family: var(--mono); font-size: 9px; }
+.wv-cohort-label { fill: var(--ink); font-family: var(--display); font-size: 14px; font-weight: 600; }
+.wv-cohort-sub { fill: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; }
+.wv-bar-num { fill: var(--ink); font-family: var(--mono); font-size: 9px; font-variant-numeric: tabular-nums; }
+
+/* ───────────────────  TWIN LAUNDER (ch 5) — based on byte-diff */
+.twin-wrap { max-width: var(--col-wide); margin: var(--s-8) auto; }
+.twin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); align-items: stretch; }
+.twin-side { border: 1px solid var(--rule); background: var(--paper); padding: var(--s-5); position: relative; }
+.twin-side .label { display: flex; justify-content: space-between; align-items: baseline; font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: var(--s-4); padding-bottom: var(--s-3); border-bottom: 1px solid var(--rule); }
+.twin-side .label .repo { color: var(--ink); font-weight: 500; }
+.twin-side .stat-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); margin-bottom: var(--s-4); padding-bottom: var(--s-4); border-bottom: 1px solid var(--rule); }
+.twin-side .stat-pair .k { display: block; font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+.twin-side .stat-pair .v { display: block; font-family: var(--display); font-weight: 500; font-size: 28px; line-height: 1.1; color: var(--ink); font-variant-numeric: tabular-nums; }
+.twin-tree { font-family: var(--mono); font-size: 10px; line-height: 1.65; color: var(--muted); letter-spacing: 0; max-height: 320px; overflow: hidden; position: relative; }
+.twin-tree .row { display: grid; grid-template-columns: 8em 1fr; gap: var(--s-3); }
+.twin-tree .sha { color: var(--ink-2); }
+.twin-tree .sha.match { color: var(--good); }
+.twin-tree .path { color: var(--ink); }
+.twin-tree::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 64px; background: linear-gradient(to bottom, transparent, var(--paper)); pointer-events: none; }
+.twin-conn { display: grid; place-items: center; padding: 0 var(--s-3); }
+.twin-conn-svg { width: 100%; height: 100%; }
+.twin-banner { text-align: center; margin: var(--s-7) auto 0; max-width: 60ch; font-family: var(--display); font-weight: 500; font-size: clamp(20px, 2.4vw, 28px); line-height: 1.2; }
+.twin-banner em { font-style: italic; color: var(--accent); }
+.twin-cap { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; text-align: center; margin-top: var(--s-3); }
+
+/* ───────────────────  CONTENT TABLE (ch 5 lower) */
+.contab { max-width: var(--col-wide); margin: var(--s-7) auto 0; }
+.contab .row { display: grid; grid-template-columns: 1fr 1fr 0.6fr 0.5fr 0.5fr 0.4fr; gap: var(--s-3); padding: var(--s-3) 0; border-top: 1px dotted var(--rule); align-items: baseline; font-family: var(--mono); font-size: 12px; }
+.contab .row:last-child { border-bottom: 1px dotted var(--rule); }
+.contab .row.head { color: var(--muted); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; border-top: 1px solid var(--rule); padding-bottom: var(--s-3); border-bottom: 1px solid var(--rule); }
+.contab .row .repo { color: var(--ink); }
+.contab .row .mode { color: var(--muted); font-size: 11px; }
+.contab .row .num { color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
+.contab .row .det { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; text-align: right; }
+.contab .row .det.ok { color: var(--good); }
+.contab .row .det.no { color: var(--accent); }
+
+/* ───────────────────  CAMOUFLAGE SCATTER (ch 6) */
+.scatter-wrap { max-width: var(--col-bleed); margin: var(--s-8) auto; }
+.scatter-svg { width: 100%; height: auto; display: block; }
+.sc-axis { stroke: var(--rule); stroke-width: 1; }
+.sc-grid { stroke: var(--rule); stroke-width: 1; opacity: 0.4; stroke-dasharray: 1 3; }
+.sc-axis-label { fill: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; }
+.sc-tick-label { fill: var(--muted); font-family: var(--mono); font-size: 10px; font-variant-numeric: tabular-nums; }
+.sc-pt-customer { fill: var(--ink); fill-opacity: 0.55; }
+.sc-pt-camo { fill: var(--accent); fill-opacity: 0.85; }
+.sc-pt-known { fill: var(--paper); stroke: var(--ink); stroke-width: 1.2; }
+.sc-pt-op { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.2; }
+.sc-label { fill: var(--ink); font-family: var(--mono); font-size: 10px; pointer-events: none; }
+.sc-label.camo { fill: var(--accent); font-weight: 500; }
+.sc-legend { display: flex; gap: var(--s-6); justify-content: center; font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; margin-top: var(--s-4); flex-wrap: wrap; }
+.sc-legend .item { display: flex; align-items: center; gap: var(--s-2); }
+.sc-legend .swatch { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.sc-legend .swatch.customer { background: var(--ink); opacity: 0.55; }
+.sc-legend .swatch.camo { background: var(--accent); }
+.sc-legend .swatch.known { background: var(--paper); border: 1.2px solid var(--ink); }
+.sc-legend .swatch.op { background: var(--accent-soft); border: 1.2px solid var(--accent); }
+
+/* ───────────────────  CALIBRATION (ch 7) */
+.calib-wrap { max-width: var(--col-wide); margin: var(--s-8) auto; }
+.calib-row { display: grid; grid-template-columns: 1.1fr 2.4fr 0.5fr 0.5fr 0.5fr; gap: var(--s-4); align-items: center; padding: var(--s-4) 0; border-top: 1px solid var(--rule); }
+.calib-row:last-child { border-bottom: 1px solid var(--rule); }
+.calib-row.head { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; border-top: 0; }
+.calib-row .ax { font-family: var(--mono); font-size: 12px; color: var(--ink); }
+.calib-row .num { font-family: var(--mono); font-size: 13px; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
+.calib-row .meter { position: relative; height: 6px; background: var(--paper-2); border-radius: 1px; overflow: hidden; }
+.calib-row .meter .p { position: absolute; left: 0; top: 0; bottom: 0; background: var(--ink); height: 100%; }
+.calib-row .meter .r { position: absolute; left: 0; top: 0; bottom: 0; background: var(--accent); height: 50%; opacity: 0.65; }
+.calib-row.headline { background: var(--accent-soft); padding-left: var(--s-3); padding-right: var(--s-3); margin-left: calc(var(--s-3) * -1); margin-right: calc(var(--s-3) * -1); }
+.calib-row.headline .ax { color: var(--accent); font-weight: 700; }
+
+/* ───────────────────  CUSTOMER GRID (ch 8) */
+.cgrid-wrap { max-width: var(--col-bleed); margin: var(--s-8) auto; }
+.cgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: var(--s-3); }
+.crow { display: grid; grid-template-columns: 36px 1fr 64px 80px; gap: var(--s-3); padding: var(--s-3) var(--s-4); border: 1px solid var(--rule); background: var(--paper); align-items: baseline; }
+.crow .rk { font-family: var(--mono); font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.crow .repo { font-family: var(--mono); font-size: 12px; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.crow .repo .stars { display: block; font-size: 10px; color: var(--muted); margin-top: 3px; letter-spacing: 0.04em; }
+.crow .chip { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); text-align: right; font-variant-numeric: tabular-nums; }
+.crow .chip .frac { color: var(--muted); display: block; font-size: 9px; margin-top: 2px; }
+.crow .meter-mini { height: 4px; background: var(--paper-2); position: relative; }
+.crow .meter-mini .fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--accent); }
+
+/* ───────────────────  FOOTER  */
+footer.colophon { padding: var(--s-9) var(--gutter) var(--s-8); border-top: 1px solid var(--rule); background: var(--paper-2); }
+footer.colophon .col-wide { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-7); }
+footer.colophon h3 { font-family: var(--display); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 var(--s-3) 0; font-weight: 600; }
+footer.colophon ul { list-style: none; padding: 0; margin: 0; font-family: var(--mono); font-size: 12px; line-height: 1.8; color: var(--ink-2); }
+footer.colophon ul a { color: var(--ink); }
+footer.colophon .sig { margin-top: var(--s-7); padding-top: var(--s-5); border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; display: flex; justify-content: space-between; }
+
+/* ───────────────────  RESPONSIVE  */
+@media (max-width: 720px) {
+  .twin-grid { grid-template-columns: 1fr; }
+  .primtable .row { grid-template-columns: 40px 1fr 0.6fr; }
+  .primtable .row .desc { grid-column: 2 / -1; }
+  .calib-row { grid-template-columns: 1fr 1fr; gap: var(--s-2); }
+  .calib-row .meter { grid-column: 1 / -1; }
+  .contab .row { grid-template-columns: 1fr 1fr; }
+  .contab .row > * { grid-column: span 1; }
+  .crow { grid-template-columns: 28px 1fr 60px; }
+  .crow .meter-mini { display: none; }
+  footer.colophon .col-wide { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="rail" aria-hidden="true"><div class="rail-fill" id="rail-fill"></div></div>
+<div class="chapter-marker" id="chapter-marker" aria-hidden="true">
+  <span class="num" id="cm-num">00</span>
+  <span class="of">/</span>
+  <span id="cm-title">PROLOGUE</span>
+</div>
+
+<main>
+<article>
+
+<!-- ─────────────────────────────────  HERO  -->
+<section class="chapter hero-section" data-chapter="00" data-title="V2 · PROLOGUE">
+  <header class="hero-mast">
+    <div class="mast-l">
+      <span>Operation Long Shadow · v2</span>
+      <span style="color:var(--rule)">/</span>
+      <span>Research note · 2026·04·26 · T+1</span>
+    </div>
+    <div class="mast-r">
+      <span class="pulse" style="display:inline-flex;align-items:center;gap:6px"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 1.6s ease-in-out infinite"></span>Cohort still active</span>
+    </div>
+  </header>
+
+  <div class="hero-body">
+    <div class="eyebrow reveal"><span class="dot"></span><span>Follow-up</span><span class="num">No. 02</span><span style="color:var(--rule)">·</span><span>One day after publication · math validated · footprint blew open</span></div>
+    <h1 class="hero reveal" style="--i:1">
+      We said the math could detect them.<br>
+      <em>We tested it.</em>
+    </h1>
+    <p class="lede reveal" style="--i:2">
+      <a href="./index.html">v1</a> hypothesized that a small basis of math primitives — graph pathology, content sterility, lifecycle mismatch, identity collision — could surface this kind of farm at platform scale. <em>Twenty-four hours later we ran them against the labeled corpus.</em> One axis is defeated. Three hold. The conjunction blows the campaign footprint open by a factor of forty-four.
+    </p>
+    <dl class="hero-meta reveal" style="--i:3">
+      <div><dt>Cohort discovered</dt><dd>6 known → <strong>288</strong> high-confidence bots · two pivots</dd></div>
+      <div><dt>Customer / victim leads</dt><dd>13 in v1 → <strong>563</strong> new external candidates</dd></div>
+      <div><dt>Procurement waves</dt><dd>Q4-2021 dormant warehouse · Mar-2025 fresh burner</dd></div>
+      <div><dt>Strongest single rule</dt><dd><span class="mono">graph_k3</span> · P=R=F1=1.000 on labels</dd></div>
+    </dl>
+  </div>
+
+  <footer class="hero-foot">
+    <div>Scroll · the math, validated</div>
+    <div>↓</div>
+  </footer>
+</section>
+
+<!-- ─────────────────────────────────  CH 1 — TL;DR  -->
+<section class="chapter" data-chapter="01" data-title="TL;DR">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">01</span><span>What held, what broke</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">From six known bots, two pivots, <em>five-hundred-and-sixty-three new targets</em>.</h2>
+    <p class="reveal" style="--i:2">
+      v1 named six bot accounts and thirteen anchor repos at <span class="mono">k≥4</span>. We took those six bots and pulled their <span class="mono">User.starredRepositories</span>. The thirteen anchors fell out of the data. Then we took the thirteen anchors and pulled <em>their</em> stargazer lists. Two-hundred-and-eighty-eight accounts — out of twenty-six thousand — hit ten or more of them. Then we took those 288 and pulled <em>their</em> starred-repos. Five-hundred-and-sixty-three new external customer/victim repos surfaced.
+    </p>
+    <p class="reveal" style="--i:3">
+      That's three rounds of bipartite pivot from a six-account seed. Each round used one GraphQL query class. Each pivot collapsed an axis of ambiguity. <strong>The math is small. The data was already public. The campaign is forty-four times larger than v1 documented.</strong>
+    </p>
+  </div>
+
+  <div class="col-wide reveal" style="--i:4">
+    <div class="statline">
+      <div class="stat"><span class="v">6 → 288</span><span class="l">High-confidence bot cohort, after two pivots</span></div>
+      <div class="stat"><span class="v">563</span><span class="l">New external customer / victim repos at k≥10</span></div>
+      <div class="stat"><span class="v">100%</span><span class="l">Precision of <span class="mono">graph_k3</span> alone on labeled positives</span></div>
+      <div class="stat"><span class="v">7 / 9</span><span class="l">Labeled launder pairs detected by git blob-SHA Jaccard</span></div>
+    </div>
+  </div>
+
+  <div class="col reveal" style="--i:5">
+    <p class="evidence">
+      <b>research/detector/REPORT.md</b> · <b>research/detector/reports/01..06</b> · <b>research/detector/corpus/ — 56,119 + 28,598 (repo, stargazer, starredAt) edges, 9 launder-pair blob trees, joint calibration table</b>
+    </p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 2 — FOUR-AXIS WEAK SPOT  -->
+<section class="chapter" data-chapter="02" data-title="THE FOUR-AXIS MODEL">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">02</span><span>The math weak spot</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">Five primitives. One was <em>defeated</em>. Three held. One emerged from the data.</h2>
+    <p class="reveal" style="--i:2">
+      The synthesis behind v1 proposed five irreducible signals: <em>coincidence</em> (tight time-window star bursts), <em>graph pathology</em> (bipartite-core membership), <em>content sterility</em> (low-novelty content), <em>identity collision</em> (key/email reuse), and <em>lifecycle mismatch</em> (account-age × action-rate). Each is O(1) per event with a small index. The bet was that any one axis has a defensible benign explanation, but the conjunction does not.
+    </p>
+    <p class="reveal" style="--i:3">
+      We ran each one against the corpus. Here is what survived contact with the data.
+    </p>
+  </div>
+
+  <div class="primtable reveal" style="--i:4">
+    <div class="row">
+      <div class="ix">#1</div>
+      <div class="name">Coincidence<span class="alg">Poisson scan · Kulldorff 1997 · BOCPD</span></div>
+      <div class="desc">Tight Δt star-bursts across "independent" accounts. The textbook lockstep primitive (Beutel WWW'13).</div>
+      <div class="verdict fail">Defeated</div>
+    </div>
+    <div class="row">
+      <div class="ix">#2</div>
+      <div class="name">Graph pathology<span class="alg">CopyCatch · Fraudar · k-core</span></div>
+      <div class="desc">Bipartite-core membership. Same set of accounts starring the same set of repos, regardless of timing.</div>
+      <div class="verdict ok">Strong</div>
+    </div>
+    <div class="row">
+      <div class="ix">#3</div>
+      <div class="name">Content sterility<span class="alg">git blob-SHA Jaccard · MinHash + LSH</span></div>
+      <div class="desc">Identical or near-identical content between an upstream and its laundered copy. Git already content-addresses every blob.</div>
+      <div class="verdict ok">7 / 9 hit</div>
+    </div>
+    <div class="row">
+      <div class="ix">#4</div>
+      <div class="name">Identity collision<span class="alg">SHA-256 of SSH wire · Fellegi-Sunter</span></div>
+      <div class="desc">Key fingerprints, GPG IDs, commit emails that should be disjoint across "independent" accounts but aren't.</div>
+      <div class="verdict null">Null on cohort</div>
+    </div>
+    <div class="row">
+      <div class="ix">#5</div>
+      <div class="name">Lifecycle mismatch<span class="alg">2-component GMM · Cox PH</span></div>
+      <div class="desc">Account age × action-rate distributions outside the human envelope. Dormant-then-burst, or born-then-burst.</div>
+      <div class="verdict ok">Bimodal · visible</div>
+    </div>
+    <div class="row">
+      <div class="ix">+1</div>
+      <div class="name">Cadence-of-stars<span class="alg">derived from #1's negative result</span></div>
+      <div class="desc">Hours-vs-months span discriminates target type: own-farm-repos starred fast; victim customers starred slowly. New axis surfaced empirically.</div>
+      <div class="verdict derived">Emergent</div>
+    </div>
+  </div>
+
+  <div class="col">
+    <p class="reveal"><strong>The defeat.</strong> The k=6 cohort hit <span class="mono">53AI/53AIHub</span> over a 152-day window. <span class="mono">tigshop/Tigshop</span>: 109 days. <span class="mono">yikart/AiToEarn</span>: 96 days. No two bots ever starred the same repo within 60 seconds. <em>Operators have already adapted past the tight-Δt-window primitive that academic literature relies on.</em> Beutel WWW'13 and Pacheco ICWSM'21 don't fire here.</p>
+    <p class="reveal"><strong>The resurrection.</strong> The temporal information didn't die — it migrated. Operators star their <em>own</em> farm repos in tight windows (e.g. <span class="mono">tusmart-grouptt/crewrktabletsn</span> — k=4 of the 6 bots starred it within a 20.6-hour burst) and their <em>customer-paid</em> repos over months. Cadence-of-stars discriminates target type. We promote it from background metric to its own axis.</p>
+    <p class="evidence reveal"><b>copycatch_findings.json · bipartite_core_ge2[].window_seconds · reports/02_copycatch_bipartite.md</b></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 3 — BIPARTITE EXPLOSION  -->
+<section class="chapter" data-chapter="03" data-title="BIPARTITE EXPLOSION">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">03</span><span>Three pivots, one cohort</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">Six known bots. <em>Two pivots later, two-hundred-and-eighty-eight.</em></h2>
+    <p class="reveal" style="--i:2">
+      The graph axis is operationally explosive. Each round of bipartite pivot turns a known seed into a population. Round one: from the 6 v1 bots, fetch every starred repo. Thirteen anchors emerge at <span class="mono">k≥4</span>. Round two: from those 13 anchors, fetch every stargazer. Twenty-six thousand stargazers; <strong>288 hit ten or more of the 13</strong>. Round three: from those 288, fetch every starred repo. <strong>563 new external repo candidates</strong> at <span class="mono">k≥10</span>; ranked by cohort coverage; the top two hit by every single one of the 288.
+    </p>
+  </div>
+
+  <div class="cascade-wrap reveal" style="--i:3">
+    <svg class="cascade-svg" viewBox="0 0 1280 540" preserveAspectRatio="xMidYMid meet" id="cascade-svg" aria-hidden="true">
+      <!-- tier dividers -->
+      <line class="cs-tier-divider" x1="40" y1="80"  x2="1240" y2="80" />
+      <line class="cs-tier-divider" x1="40" y1="200" x2="1240" y2="200" />
+      <line class="cs-tier-divider" x1="40" y1="340" x2="1240" y2="340" />
+      <line class="cs-tier-divider" x1="40" y1="500" x2="1240" y2="500" />
+
+      <!-- tier labels -->
+      <text class="cs-tier-label" x="40"   y="40">PIVOT 0 · KNOWN BOTS (v1)</text>
+      <text class="cs-tier-num"   x="1240" y="40" text-anchor="end" font-size="22">6</text>
+
+      <text class="cs-tier-label" x="40"   y="170">PIVOT 1 · ANCHORS (k≥4 of 6)</text>
+      <text class="cs-tier-num"   x="1240" y="170" text-anchor="end" font-size="22">13</text>
+
+      <text class="cs-tier-label" x="40"   y="310">PIVOT 2 · COHORT (k≥10 of 13)</text>
+      <text class="cs-tier-num"   x="1240" y="310" text-anchor="end" font-size="22">288</text>
+
+      <text class="cs-tier-label" x="40"   y="470">PIVOT 3 · NEW ANCHORS (k≥10 of 288)</text>
+      <text class="cs-tier-num"   x="1240" y="470" text-anchor="end" font-size="22">563 <tspan font-size="11" fill="oklch(56% 0.014 60)" letter-spacing="0.06em">+ 14 known repeats</tspan></text>
+
+      <!-- nodes & links plotted by JS -->
+      <g id="cs-links"></g>
+      <g id="cs-nodes-0"></g>
+      <g id="cs-nodes-1"></g>
+      <g id="cs-nodes-2"></g>
+      <g id="cs-nodes-3"></g>
+    </svg>
+  </div>
+
+  <div class="col">
+    <p class="reveal"><strong>The trick is reachability, not depth.</strong> Each pivot uses a single GraphQL endpoint (<span class="mono">User.starredRepositories</span> or <span class="mono">Repository.stargazers</span>) and a small rate budget. The 288-cohort fetch was 28,598 edges across 3,726 unique repos in roughly twelve minutes of API time. The math weak spot isn't a clever algorithm; it's that the public-API graph is dense enough to walk back to itself in two hops.</p>
+    <p class="reveal"><strong>The two universal targets.</strong> <span class="mono">yikart/AiToEarn</span> (9,773 ★) and <span class="mono">tigshop/Tigshop</span> (3,841 ★) are starred by every single one of the 288 bots. Hundred-percent cohort coverage. These are the campaign's headline customers.</p>
+    <p class="evidence reveal"><b>scripts/fetch_anchor_stargazers.py · scripts/fetch_cohort_stars.py · primitives/lateral_discovery.py · primitives/recursive_expansion.py · reports/03_lateral_discovery.md · reports/06_recursive_expansion.md</b></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 4 — TWO PROCUREMENT WAVES  -->
+<section class="chapter" data-chapter="04" data-title="PROCUREMENT WAVES">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">04</span><span>The cohort has a birthday</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">A four-year-old account warehouse, plus <em>fifty-four fresh burners</em>.</h2>
+    <p class="reveal" style="--i:2">
+      Plot <span class="mono">createdAt</span> by month for the 288 high-confidence cohort and the lifecycle GMM result writes itself. Two distinct procurement waves. <strong>Cohort A</strong> (~212 accounts, 74%): created in a tight Q4-2021 + early-2022 window, then dormant for two years before activation against the anchor repos in late-2023. Consistent with credential-stuffing / account-takeover dumps of that era — most of these are <em>real users whose accounts were taken over</em>, not synthetic identities. <strong>Cohort B</strong> (~54 accounts, 19%): created March-2025 and immediately deployed. Born-then-burst. Pure synthetic burners.
+    </p>
+  </div>
+
+  <div class="waves-wrap reveal" style="--i:3">
+    <svg class="waves-svg" viewBox="0 0 1280 360" preserveAspectRatio="xMidYMid meet" id="waves-svg" aria-hidden="true">
+      <!-- axis & ticks plotted by JS -->
+      <g id="wv-axis"></g>
+      <g id="wv-bars"></g>
+      <g id="wv-labels"></g>
+    </svg>
+    <div style="display:flex; justify-content:space-between; gap:var(--s-7); max-width:var(--col-wide); margin:var(--s-5) auto 0; font-family:var(--mono); font-size:11px; color:var(--muted); letter-spacing:0.06em; text-transform:uppercase">
+      <div style="display:flex; align-items:center; gap:var(--s-2)"><span style="width:10px;height:10px;background:var(--ink);display:inline-block"></span>Cohort A · Q4-2021 dormant warehouse · 212 accounts</div>
+      <div style="display:flex; align-items:center; gap:var(--s-2)"><span style="width:10px;height:10px;background:var(--accent);display:inline-block"></span>Cohort B · Mar-2025 fresh burner · 54 accounts</div>
+      <div style="display:flex; align-items:center; gap:var(--s-2)"><span style="width:10px;height:10px;background:var(--rule);display:inline-block"></span>Other · 22 accounts</div>
+    </div>
+  </div>
+
+  <div class="col">
+    <h3 class="kicker reveal">A profile-Frankenstein</h3>
+    <p class="reveal"><span class="mono">sherryjwq</span>: created 2021-10-25, hit 12 of 13 anchors. Profile <span class="mono">name</span> = "William Brown." Bio in <em>Portuguese</em>. Login is a Chinese romanization. Three independent dump fragments stitched into one account by an attacker who never proofread the result. Under WHOIS the seams are obvious; under the GitHub UI it just looks like a user. Two-hundred-and-twelve such Frankensteins constitute Cohort A.</p>
+    <p class="reveal"><span class="mono">Algomo7</span>: created 2025-03-30. Zero followers, zero following, no name, no bio, no location. Pure burner — and one of fifty-four operating at the same window of activation. Cohort B.</p>
+    <p class="reveal"><strong>Implication for disclosure ethics.</strong> The 74% majority cohort A are real-user victims. T&S takedown should include a recovery path. The 19% cohort B can be removed without that consideration. This matches the v1 framing for <span class="mono">tusmart-grouptt</span> and <span class="mono">countneurooman</span> — but at scale.</p>
+    <p class="evidence reveal"><b>corpus/high_confidence_bots.json — split by cohort A / B / other</b> · <b>reports/03_lateral_discovery.md</b></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 5 — TWIN LAUNDER  -->
+<section class="chapter" data-chapter="05" data-title="TWIN LAUNDER">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">05</span><span>Operator linkage by exact equality</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">Two operators. <em>One git tree.</em> Bit-identical content.</h2>
+    <p class="reveal" style="--i:2">
+      Git addresses every blob by its SHA-1: identical content produces an identical hash. Run <span class="mono">git ls-tree -r HEAD</span> on two repos, intersect the resulting <span class="mono">(path, blob-sha)</span> sets, and the Jaccard between them is <em>exact</em> — not statistical. v1 labeled <span class="mono">luliguyu</span> and <span class="mono">countneurooman</span> as "likely-compromised-dormant"; the math says otherwise.
+    </p>
+  </div>
+
+  <div class="twin-wrap reveal" style="--i:3">
+    <p class="twin-cap" style="margin-bottom: var(--s-5)">Both repos launder the same upstream · <span class="mono">Narwallets/narwallets-extension</span></p>
+    <div class="twin-grid">
+      <div class="twin-side">
+        <div class="label">
+          <span class="repo">luliguyu/ssaavedrad</span>
+          <span class="hash">git ls-tree HEAD</span>
+        </div>
+        <div class="stat-pair">
+          <div><span class="k">Upstream blobs</span><span class="v">157</span></div>
+          <div><span class="k">Launder blobs</span><span class="v">154</span></div>
+          <div><span class="k">SHA Jaccard</span><span class="v" style="color:var(--accent)">0.7278</span></div>
+          <div><span class="k">Per-path eq.</span><span class="v" style="color:var(--accent)">0.8506</span></div>
+        </div>
+        <div class="twin-tree" id="tree-a"></div>
+      </div>
+      <div class="twin-side">
+        <div class="label">
+          <span class="repo">countneurooman/ssaavedrad</span>
+          <span class="hash">git ls-tree HEAD</span>
+        </div>
+        <div class="stat-pair">
+          <div><span class="k">Upstream blobs</span><span class="v">157</span></div>
+          <div><span class="k">Launder blobs</span><span class="v">154</span></div>
+          <div><span class="k">SHA Jaccard</span><span class="v" style="color:var(--accent)">0.7278</span></div>
+          <div><span class="k">Per-path eq.</span><span class="v" style="color:var(--accent)">0.8506</span></div>
+        </div>
+        <div class="twin-tree" id="tree-b"></div>
+      </div>
+    </div>
+
+    <p class="twin-banner reveal" style="--i:4">Same blob set. Same paths. Same SHAs. <em>Same git tree, two accounts.</em></p>
+    <p class="twin-cap">157 upstream blobs · 154 launder blobs · 0.7278 sha-Jaccard · identical to four decimal places</p>
+  </div>
+
+  <div class="col">
+    <h3 class="kicker reveal">The full launder-pair table</h3>
+    <p class="reveal">Nine of the eleven labeled launder pairs from v1 had upstreams we could re-clone (three v1 attributions corrected — see colophon). Of the nine, the blob-SHA Jaccard at threshold (≥0.1 OR per-path-equality ≥0.5) detects <strong>seven</strong>. The two misses are a stale-snapshot just below threshold and a "combined-mode" pair where v1's upstream attribution is wrong on this side.</p>
+  </div>
+
+  <div class="contab reveal" style="--i:5">
+    <div class="row head">
+      <span>UPSTREAM</span>
+      <span>LAUNDER</span>
+      <span class="num">MODE</span>
+      <span class="num">SHA J</span>
+      <span class="num">PATH EQ</span>
+      <span class="det">DETECT</span>
+    </div>
+    <div id="contab-rows"></div>
+  </div>
+
+  <div class="col">
+    <p class="reveal"><strong>Reclassify <span class="mono">countneurooman</span>.</strong> v1 framed this account as "likely-compromised-dormant — if you are the real account holder, contact us." The TWIN LAUNDER finding upgrades the framing: <em>operator-twin-of-luliguyu</em>. The same git tree was published under both accounts in the same campaign window. This is operator-linkage by exact content equality, not by statistical inference.</p>
+    <p class="evidence reveal"><b>primitives/content_sterility.py · corpus/content_overlap.json · corpus/clones/Narwallets__narwallets-extension · corpus/clones/luliguyu__ssaavedrad · corpus/clones/countneurooman__ssaavedrad · reports/04_content_sterility.md</b></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 6 — CAMOUFLAGE SCATTER  -->
+<section class="chapter" data-chapter="06" data-title="CAMOUFLAGE">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">06</span><span>What hides in the long tail</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">The cohort also stars <em>plotly/dash</em>. And <em>facebook/react</em>. That's not a mistake.</h2>
+    <p class="reveal" style="--i:2">
+      Among the 577 candidates the recursive-expansion pivot surfaces, a subset is mathematically improbable as <em>campaign targets</em>: mainstream OSS repos with tens of thousands of organic stargazers. <span class="mono">NaiboWang/EasySpider</span> at 43,733 ★. <span class="mono">plotly/dash</span> at 24,150 ★. Five repos under the <span class="mono">facebook/</span> org. Three under <span class="mono">angular/</span>. Two each under <span class="mono">sindresorhus/</span> and <span class="mono">graphql/</span>. The cohort starring these is dilution — <em>camouflage</em> — to defeat naïve "stargazers of obscure repos" detection. This is exactly the design motivation Hooi et al. (KDD 2016) wrote Fraudar against.
+    </p>
+  </div>
+
+  <div class="scatter-wrap reveal" style="--i:3">
+    <svg class="scatter-svg" viewBox="0 0 1280 540" preserveAspectRatio="xMidYMid meet" id="scatter-svg" aria-hidden="true">
+      <g id="sc-axis"></g>
+      <g id="sc-grid"></g>
+      <g id="sc-points"></g>
+      <g id="sc-labels"></g>
+    </svg>
+    <div class="sc-legend">
+      <div class="item"><span class="swatch customer"></span>Likely customer / victim</div>
+      <div class="item"><span class="swatch camo"></span>Mainstream OSS (camouflage)</div>
+      <div class="item"><span class="swatch known"></span>v1 anchor (known)</div>
+      <div class="item"><span class="swatch op"></span>Operator-owned</div>
+      <div class="item"><span style="font-family:var(--mono);font-size:9px">x: cohort-bots-starring (log) · y: total-repo-stargazers (log)</span></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <p class="reveal"><strong>The two layers separate cleanly.</strong> Customer-side targets cluster small-and-dense in the lower right: a few thousand total stars, and a substantial fraction of those stars come from the cohort. Camouflage clusters huge-and-sparse in the upper region: tens of thousands of stars, of which the cohort contributes a sliver. The split is what discriminates "campaign target" from "popular project the bots also star to look human."</p>
+    <p class="reveal"><strong>What this unlocks.</strong> Fraudar's <span class="mono">1/log(deg+c)</span> edge-weighting deprioritizes mainstream-popular nodes during dense-subgraph peeling. Running it on this 288 × 3,726 biadjacency separates the customer subgraph from the camouflage subgraph algorithmically — no manual sort. A clean Tier-1 / Tier-2 customer ranking falls out of one peeling pass. That is the next algorithmic step.</p>
+    <p class="evidence reveal"><b>corpus/recursive_anchors.json — candidates[].cohort_bots × repo_meta.stars</b> · <b>Hooi, Song, Beutel, Shah, Shin, Faloutsos · "FRAUDAR: Bounding Graph Fraud in the Face of Camouflage" · KDD 2016</b></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 7 — JOINT TEST  -->
+<section class="chapter" data-chapter="07" data-title="JOINT TEST">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">07</span><span>The conjunction is the trap</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">Any one axis has a benign explanation. <em>The conjunction does not.</em></h2>
+    <p class="reveal" style="--i:2">
+      The bet was: each axis alone is noisy enough that a determined operator can defeat it; running them together — graph AND lifecycle AND content AND identity — collapses the false-positive rate because the cost of being independent across all four (separate humans, separate machines, separate writing, separate timezones) is exactly what makes the operation unprofitable. We constructed an evaluation set from the 26,372 anchor stargazers — labeled positives that appear in the corpus, plus 5,000 sampled negatives. Here is what each axis returns alone, and what the conjunction returns.
+    </p>
+  </div>
+
+  <div class="calib-wrap reveal" style="--i:3">
+    <div class="calib-row head">
+      <span>AXIS</span>
+      <span>P · R</span>
+      <span class="num">P</span>
+      <span class="num">R</span>
+      <span class="num">F1</span>
+    </div>
+    <div id="calib-rows"></div>
+  </div>
+
+  <div class="col">
+    <p class="reveal"><strong>Three readings.</strong></p>
+    <p class="reveal">First: <span class="mono">graph_k3</span> alone is a perfect classifier on the labeled subset. The simplest possible rule — "did this account star three or more of the thirteen v1 anchors?" — achieves precision = recall = 1.000 against the 5,000-account negative pool. <em>The math weak spot is one query.</em></p>
+    <p class="reveal">Second: lifecycle alone is noisy. Cohort A and Cohort B together flag 506 of 5,000 negatives. Useless as a deployable rule. But it conjuncts cleanly with graph: the joint test holds precision = 1.000 with recall = 0.900.</p>
+    <p class="reveal">Third — and this is the part that matters operationally: <strong>on the 5,932 unlabeled k≥3 candidates</strong> from primitive #2-lateral, the OTHER lifecycle bucket collapses with rising k. At k=3, 81% of candidates are OTHER (mostly organic Chinese-AI fans). At k=10, 3.7% are OTHER. <strong>At k≥11, one of seventy-five.</strong> Virtually every high-confidence bot lands in cohort A or B. The conjunction-collapse is real.</p>
+    <p class="evidence reveal"><b>harness/joint_test.py · corpus/joint_eval.json · reports/05_joint_test.md</b></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 8 — THE EXPANDED CUSTOMER LIST  -->
+<section class="chapter" data-chapter="08" data-title="THE EXPANDED CUSTOMER LIST">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">08</span><span>Top thirty new external anchors</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">A <em>star-promotion-as-a-service</em> business with <em>seventy-plus</em> customers across the Chinese AI sector.</h2>
+    <p class="reveal" style="--i:2">
+      The pattern across the 563 new external candidates is unambiguous: nearly every customer-side hit is Chinese-AI / Chinese-startup tooling. Authing (auth platform). OpenCSGs (open-source AI hub). wenge-research (YAYI series LLMs). SonicCloudOrg (testing). xcancloud (testing). PandaAI-Tech. ModelEngine-Group. juggleim. iflytek (already known as v1's Customer A). Tencent. <em>The campaign is broadly inflating the Chinese AI tooling ecosystem</em> — not a single-customer engagement. The operators run a star-promotion-as-a-service business with multiple paying customers across the Chinese tech sector.
+    </p>
+    <p class="reveal" style="--i:3">
+      Below: top thirty by cohort coverage, ranked. Each is a candidate for the v2 disclosure pipeline. None of these are accusations; the cohort coverage is the data, vendor outreach establishes the rest.
+    </p>
+  </div>
+
+  <div class="cgrid-wrap reveal" style="--i:4">
+    <div class="cgrid" id="cgrid"></div>
+  </div>
+
+  <div class="col">
+    <p class="reveal" style="margin-top:var(--s-7)"><strong>Disclosure pipeline tiers.</strong> v1 covered six vendors; v2 adds: Tier-1 (k≥150 + identifiable real company) — Authing, OpenCSGs, wenge-research, SonicCloudOrg, xcancloud, PandaAI-Tech, ModelEngine-Group, juggleim. Tier-2 (k≥50) — roughly fifty additional Chinese AI / SaaS companies. Tier-3 (k≥30, individual repos) — case-by-case. Each follows the v1 disclosure ethic: <em>"you may have been promoted by a fraudulent operation; here is the evidence; please contact us for full attribution."</em></p>
+    <p class="evidence reveal"><b>corpus/recursive_anchors.json — sorted by cohort_bots desc · reports/06_recursive_expansion.md — full table with span-by-target and owner-cluster analysis</b></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  COLOPHON  -->
+<footer class="colophon">
+  <div class="col-wide">
+    <div>
+      <h3>The math, in one sentence</h3>
+      <p style="font-family:var(--serif); font-size:18px; line-height:1.55; color:var(--ink-2); max-width:50ch; margin:0">
+        Star fraud and code laundering are two arms of the same operation. The bipartite graph of who-stars-what is dense enough — and the lifecycle distribution bimodal enough, and the git-blob index exact enough — that a small basis of public-API queries surfaces the entire campaign from a six-account seed. The math weak spot is reachability, not cleverness.
+      </p>
+    </div>
+    <div>
+      <h3>Reproduce</h3>
+      <ul>
+        <li><a href="https://github.com/copyleftdev/long-shadow">github.com/copyleftdev/long-shadow</a></li>
+        <li><span style="color:var(--muted)">·</span> <span class="mono">research/detector/REPORT.md</span></li>
+        <li><span style="color:var(--muted)">·</span> <span class="mono">research/detector/scripts/</span> · <span class="mono">primitives/</span> · <span class="mono">harness/</span></li>
+        <li><span style="color:var(--muted)">·</span> <span class="mono">research/detector/corpus/</span> — JSON + JSONL artifacts</li>
+        <li><span style="color:var(--muted)">·</span> <a href="./index.html">v1 · the original investigation</a></li>
+      </ul>
+      <h3 style="margin-top:var(--s-7)">References cited</h3>
+      <ul>
+        <li>Beutel, Xie, Faloutsos, Cheng, Schölkopf · CopyCatch · WWW 2013</li>
+        <li>Hooi, Song, Beutel, Shah, Shin, Faloutsos · FRAUDAR · KDD 2016</li>
+        <li>Kulldorff · spatial scan statistic · 1997</li>
+        <li>Broder · MinHash · 1997</li>
+        <li>Meli, McNiece, Reaves · How Bad Can It Git? · NDSS 2019</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-wide">
+    <div class="sig">
+      <div>2026·04·26 · Operation Long Shadow v2 · Research note</div>
+      <div>@copyleftdev · CC-BY-4.0 / MIT</div>
+    </div>
+  </div>
+</footer>
+
+</article>
+</main>
+
+<script type="application/json" id="v2-data">
+{"chapter3":{"levels":[{"tier":"seed","label":"KNOWN BOTS","count":6,"examples":["RPaez09l","tASDFG12345m","7228735902","liiiiiii1i1i1","8888x82","superdaysk3wom"]},{"tier":"anchors_v1","label":"13 ANCHORS (k\u22654 of 6)","count":13,"top":[{"repo":"yikart/AiToEarn","k":6,"recursive_k":288},{"repo":"tigshop/Tigshop","k":6,"recursive_k":288},{"repo":"53AI/53AIHub","k":6,"recursive_k":287},{"repo":"iflytek/astron-rpa","k":5,"recursive_k":259},{"repo":"MemMachine/MemMachine","k":5,"recursive_k":246},{"repo":"tusmart-grouptt/crewrktabletsn","k":4,"recursive_k":64},{"repo":"chaitin/PandaWiki","k":4,"recursive_k":199},{"repo":"aiflowy/aiflowy","k":4,"recursive_k":153},{"repo":"BoCloud/folib","k":4,"recursive_k":245},{"repo":"iflytek/astron-agent","k":4,"recursive_k":265},{"repo":"liwenxi/SWIFT-AI","k":4,"recursive_k":229},{"repo":"UnicomAI/wanwu","k":4,"recursive_k":236},{"repo":"HCPLab-SYSU/CausalVLR","k":4,"recursive_k":212}]},{"tier":"cohort","label":"288 BOTS (k\u226510 of 13)","count":288,"cohort_A":212,"cohort_B":54,"cohort_other":22},{"tier":"anchors_v2","label":"577 ANCHORS \u00b7 563 NEW EXTERNAL","count":577,"new_external":563}]},"chapter4":{"months":[{"ym":"2021-03","n":2,"cohort":"O"},{"ym":"2021-04","n":16,"cohort":"A"},{"ym":"2021-10","n":28,"cohort":"A"},{"ym":"2021-11","n":47,"cohort":"A"},{"ym":"2021-12","n":70,"cohort":"A"},{"ym":"2022-03","n":2,"cohort":"O"},{"ym":"2022-04","n":20,"cohort":"A"},{"ym":"2022-05","n":25,"cohort":"A"},{"ym":"2022-06","n":16,"cohort":"A"},{"ym":"2022-07","n":1,"cohort":"O"},{"ym":"2022-08","n":1,"cohort":"O"},{"ym":"2022-09","n":6,"cohort":"A"},{"ym":"2025-03","n":27,"cohort":"B"},{"ym":"2025-04","n":9,"cohort":"B"},{"ym":"2025-05","n":2,"cohort":"B"},{"ym":"2025-06","n":1,"cohort":"B"},{"ym":"2025-07","n":1,"cohort":"B"},{"ym":"2025-08","n":4,"cohort":"B"},{"ym":"2025-09","n":5,"cohort":"B"},{"ym":"2025-10","n":4,"cohort":"B"},{"ym":"2025-11","n":1,"cohort":"B"}],"cohort_A_total":212,"cohort_B_total":54,"cohort_O_total":22},"chapter5":{"upstream":"Narwallets/narwallets-extension","launders":[{"name":"luliguyu/ssaavedrad","sha_J":0.7278,"eq":0.8506,"u_blobs":157,"l_blobs":154},{"name":"countneurooman/ssaavedrad","sha_J":0.7278,"eq":0.8506,"u_blobs":157,"l_blobs":154}],"all_pairs":[{"upstream":"allenai/WildDet3D","launder":"luliguyu/WildDet3D","mode":"straight-import","sha_J":0.6825,"eq":0.9211,"detected":true},{"upstream":"yikart/AiToEarn","launder":"kyasbalme/AiToEarn","mode":"straight-import","sha_J":0.2206,"eq":0.8301,"detected":true},{"upstream":"yikart/AiToEarn","launder":"tusmart-grouptt/AiToEarn","mode":"straight-import","sha_J":0.2697,"eq":0.983,"detected":true},{"upstream":"theQRL/zond-web3-wallet","launder":"luliguyu/dimatura","mode":"stale-snapshot","sha_J":0.0661,"eq":0.4789,"detected":false},{"upstream":"Narwallets/narwallets-extension","launder":"luliguyu/ssaavedrad","mode":"stale-snapshot","sha_J":0.7278,"eq":0.8506,"detected":true},{"upstream":"Narwallets/narwallets-extension","launder":"countneurooman/ssaavedrad","mode":"stale-snapshot","sha_J":0.7278,"eq":0.8506,"detected":true},{"upstream":"matteonerini/5g-network-slicing-for-wifi-networks","launder":"luliguyu/sachinDevloop","mode":"straight-import","sha_J":0.9535,"eq":0.9773,"detected":true},{"upstream":"kylemcdonald/ofxEdsdk","launder":"luliguyu/academ","mode":"straight-import","sha_J":0.7,"eq":0.84,"detected":true},{"upstream":"khsk/AviUtl-LocalFontPlugin","launder":"kyasbalme/robokssay","mode":"combined","sha_J":0.0,"eq":0.0,"detected":false}]},"chapter6":{"points":[{"repo":"yikart/AiToEarn","k":288,"stars":9773,"is_known":true,"is_op":false,"is_camouflage":false},{"repo":"tigshop/Tigshop","k":288,"stars":3841,"is_known":true,"is_op":false,"is_camouflage":false},{"repo":"53AI/53AIHub","k":287,"stars":5681,"is_known":true,"is_op":false,"is_camouflage":false},{"repo":"iflytek/astron-agent","k":265,"stars":8788,"is_known":true,"is_op":false,"is_camouflage":false},{"repo":"iflytek/astron-rpa","k":259,"stars":5543,"is_known":true,"is_op":false,"is_camouflage":false},{"repo":"MemMachine/MemMachine","k":246,"stars":3535,"is_known":true,"is_op":false,"is_camouflage":false},{"repo":"BoCloud/folib","k":245,"stars":2724,"is_known":true,"is_op":false,"is_camouflage":false},{"repo":"CBIhalsen/PolyglotPDF","k":238,"stars":1340,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"UnicomAI/wanwu","k":236,"stars":2894,"is_known":true,"is_op":false,"is_camouflage":false},{"repo":"liwenxi/SWIFT-AI","k":229,"stars":1264,"is_known":true,"is_op":false,"is_camouflage":false},{"repo":"HCPLab-SYSU/CausalVLR","k":212,"stars":1189,"is_known":true,"is_op":false,"is_camouflage":false},{"repo":"NaiboWang/EasySpider","k":200,"stars":43733,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"chaitin/PandaWiki","k":199,"stars":9437,"is_known":true,"is_op":false,"is_camouflage":false},{"repo":"wenge-research/YAYI","k":189,"stars":2530,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"wenge-research/YAYI2","k":177,"stars":2801,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"LeapLabTHU/cooragent","k":173,"stars":1756,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"NaiboWang/CommandlineConfig","k":163,"stars":1515,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"OpenCSGs/csghub","k":157,"stars":4414,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"aiflowy/aiflowy","k":153,"stars":1050,"is_known":true,"is_op":false,"is_camouflage":false},{"repo":"SonicCloudOrg/sonic-agent","k":150,"stars":1646,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"xcancloud/AngusTester","k":137,"stars":2116,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"shaiwz/data-platform-open","k":135,"stars":641,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"PandaAI-Tech/panda_factor","k":132,"stars":2660,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"SonicCloudOrg/sonic-server","k":130,"stars":2194,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"plotly/dash","k":122,"stars":24150,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"rule-engine/rule-engine-open","k":121,"stars":616,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"gallonyin/worktool","k":119,"stars":2624,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Authing/Guard","k":118,"stars":1359,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"atpuxiner/fastapi-scaff","k":114,"stars":1016,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"sohutv/cachecloud","k":111,"stars":8852,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"general-works/Glint","k":110,"stars":513,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"HeartMuLa/heartlib","k":105,"stars":3751,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"zzyfight/genai-compliance-bench","k":103,"stars":827,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"AngeLouCN/Min_Max_Similarity","k":101,"stars":763,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"juggleim/im-server","k":100,"stars":3649,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"shuyu-labs/AntSK","k":98,"stars":1309,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"fjb040911/free-sqlite","k":87,"stars":643,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Internet-Architecture-and-Security/PacketScope","k":85,"stars":1244,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ganweisoft/TOMs","k":82,"stars":592,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ModelEngine-Group/nexent","k":82,"stars":4360,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"dgiot/dgiot","k":82,"stars":4831,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"CodeAcmen/ios-async-socket-explorer","k":80,"stars":452,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"1365436742/element-ai-vue","k":80,"stars":937,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Chain-Fox/Chain-Fox","k":75,"stars":326,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"facebook/react","k":75,"stars":244701,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"postcss/autoprefixer","k":73,"stars":22309,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jakerdliu/OpenTrit-CHN","k":69,"stars":773,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"gin-generator/websocket","k":69,"stars":575,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"lyogavin/airllm","k":69,"stars":16698,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"nwjs/nw.js","k":69,"stars":41243,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"impress/impress.js","k":68,"stars":38224,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"sindresorhus/awesome-nodejs","k":67,"stars":65523,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"vinta/awesome-python","k":67,"stars":294487,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"qiutiandefeng/yfexam-exam","k":66,"stars":989,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"sureJiang/MSCrashProtector","k":66,"stars":2018,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"kevinluosl/deepbot","k":65,"stars":1577,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Authing/authing-js-sdk","k":64,"stars":403,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"tusmart-grouptt/crewrktabletsn","k":64,"stars":403,"is_known":true,"is_op":true,"is_camouflage":false},{"repo":"ossu/computer-science","k":64,"stars":203287,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Relaxed-System-Lab/Flash-Sparse-Attention","k":63,"stars":674,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"dhg/Skeleton","k":63,"stars":19479,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"facebook/create-react-app","k":63,"stars":103472,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"Authing/Authing","k":61,"stars":870,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"C9290778laraSteele/Robo-Advisor","k":60,"stars":228,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"harvesthq/chosen","k":60,"stars":22022,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"SamyPesse/How-to-Make-a-Computer-Operating-System","k":60,"stars":22462,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ycm-core/YouCompleteMe","k":60,"stars":25976,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"6boris/web3-go","k":59,"stars":268,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers","k":59,"stars":28169,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"uappx/uapp","k":58,"stars":656,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"usablica/intro.js","k":58,"stars":23533,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"harness/harness","k":58,"stars":35242,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"lodash/lodash","k":58,"stars":61258,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"EvoScientist/EvoScientist","k":57,"stars":2592,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"fjb040911/ai-rules","k":57,"stars":760,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"OpenDCAI/DataFlow","k":57,"stars":3298,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"etcd-io/etcd","k":57,"stars":51643,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"AngeLouCN/SAM-2_Surgical_Video","k":56,"stars":240,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"qiutiandefeng/yftrain","k":56,"stars":484,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"WORLD3-ai/world_ai_protocol","k":55,"stars":263,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"8treenet/freedom","k":55,"stars":2269,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"deeppowers/deeppowers","k":55,"stars":255,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"shencangsheng/easydb_app","k":55,"stars":680,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"syl20bnr/spacemacs","k":55,"stars":24582,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"tencentmusic/page-eyes-agent","k":54,"stars":1039,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"DaRL-GenAI/instructional_agents","k":53,"stars":731,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"AIR-THU/Asyncdriver-Tensorrt","k":53,"stars":214,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"alibaba/formily","k":53,"stars":12524,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Shredded-Pork/TempFlow-GRPO","k":52,"stars":520,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"SDWebImage/SDWebImage","k":51,"stars":25679,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"fatedier/frp","k":51,"stars":106107,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ohmyzsh/ohmyzsh","k":51,"stars":186502,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"packagit/packagit","k":50,"stars":242,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"shenyanpai/awesome-summer-camp-2025","k":50,"stars":359,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ccfos/huatuo","k":50,"stars":952,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"SonicCloudOrg/sonic-ios-bridge","k":50,"stars":889,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"codeartx/awesome-security","k":49,"stars":210,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"talesofai/neta-skills","k":48,"stars":707,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"x-ream/sqli","k":48,"stars":1716,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"OpenCSGs/csghub-server","k":47,"stars":1125,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"LYL1015/JarvisArt","k":47,"stars":725,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"joewalnes/websocketd","k":47,"stars":17482,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"wasabeef/awesome-android-ui","k":46,"stars":55917,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"openperf/brief","k":45,"stars":615,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"dtsola/xiaoyaosearch","k":45,"stars":975,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"gogs/gogs","k":45,"stars":47495,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ConradDickens/cailloum","k":44,"stars":243,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"facebookarchive/draft-js","k":44,"stars":22683,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"zebra-ui/zebra-swiper","k":44,"stars":328,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"denysdovhan/wtfjs","k":44,"stars":37634,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"RobinYang11/ChatableX","k":43,"stars":445,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"openocta/openocta","k":43,"stars":2369,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"illacloud/illa-builder","k":43,"stars":12246,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"binux/pyspider","k":43,"stars":16843,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"JakeChampion/fetch","k":43,"stars":25878,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"iflytek/skillhub","k":42,"stars":2647,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ripienaar/free-for-dev","k":42,"stars":120919,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"InsForge/InsForge","k":42,"stars":7886,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ansible/ansible","k":42,"stars":68425,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"StreisandEffect/streisand","k":42,"stars":23511,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Tonejs/Tone.js","k":42,"stars":14615,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"vuejs/vue","k":42,"stars":209807,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"zhen6618/EPRecon","k":41,"stars":176,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"UniRound-Tec/Aurogen","k":41,"stars":868,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Galaxy-Dawn/claude-scholar","k":41,"stars":3455,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"HeartHappy/Router","k":41,"stars":194,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"fffaraz/awesome-cpp","k":41,"stars":70933,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"FormidableLabs/webpack-dashboard","k":41,"stars":14031,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"kesenhoo/android-training-course-in-chinese","k":41,"stars":10675,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"awesome-selfhosted/awesome-selfhosted","k":41,"stars":288307,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Tencent-Hunyuan/HunyuanVideo-Foley","k":40,"stars":1073,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jingyi0000/R1-VL","k":40,"stars":351,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"hydra-mcp/hydra-mcp-solana","k":40,"stars":145,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jaywcjlove/awesome-mac","k":40,"stars":102655,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"aritraroy/UltimateAndroidReference","k":40,"stars":8104,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"tpope/vim-fugitive","k":40,"stars":21589,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"chrislgarry/Apollo-11","k":40,"stars":67615,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"necolas/normalize.css","k":40,"stars":53578,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"SeleniumHQ/selenium","k":40,"stars":34061,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"shihuricha/cabbageDB","k":39,"stars":177,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"gizwits/OpenEmbodied","k":39,"stars":211,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"bitshares-cnvote/newbitshares-core","k":39,"stars":147,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"nicolargo/glances","k":39,"stars":32329,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"github/gitignore","k":39,"stars":173568,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"getify/You-Dont-Know-JS","k":39,"stars":184444,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"docker-archive-public/docker.labs","k":39,"stars":11933,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"littlecodersh/ItChat","k":39,"stars":26499,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"angular/angular","k":39,"stars":100056,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"openvort/openvort","k":38,"stars":543,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Claw-Company/clawcompany","k":38,"stars":685,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"NICEXAI/leaflet_zh","k":38,"stars":1422,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"gin-gonic/gin","k":38,"stars":88382,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Matt-Esch/virtual-dom","k":38,"stars":11871,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"DopplerHQ/awesome-interview-questions","k":38,"stars":82168,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"MithrilJS/mithril.js","k":38,"stars":14507,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"LulzFi/solana-trading-sdk","k":37,"stars":193,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"muzishen/IMAGHarmony","k":37,"stars":316,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"js-cookie/js-cookie","k":37,"stars":22622,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"chriskiehl/Gooey","k":37,"stars":21906,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"toddmotto/public-apis","k":37,"stars":2739,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"erikras/react-redux-universal-hot-example","k":37,"stars":12161,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"gabrielecirulli/2048","k":37,"stars":13263,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"VincentGarreau/particles.js","k":37,"stars":30226,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"styleguidist/react-styleguidist","k":37,"stars":11112,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"moxin-org/Moxin-LLM","k":36,"stars":527,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"caorushizi/mediago","k":36,"stars":8897,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"COLA-Laboratory/OmniGenBench","k":36,"stars":258,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"AFNetworking/AFNetworking","k":36,"stars":33489,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Tencent/tinker","k":36,"stars":17651,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"ruanyf/react-demos","k":36,"stars":16506,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"angular/angular.js","k":36,"stars":58696,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"google/gson","k":36,"stars":24213,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"Q-transmon-xmon/EDA-Q","k":35,"stars":479,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"lenhyluo/xianmin","k":35,"stars":379,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"agbcloud/agbcloud-sdk","k":35,"stars":367,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"nicklockwood/iCarousel","k":35,"stars":12159,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"astaxie/build-web-application-with-golang","k":35,"stars":43983,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"laravel/laravel","k":35,"stars":84079,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"BVLC/caffe","k":35,"stars":34622,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"drduh/macOS-Security-and-Privacy-Guide","k":35,"stars":22396,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"elixir-lang/elixir","k":35,"stars":26371,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"madrobby/zepto","k":35,"stars":15155,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jmcunningham/AngularJS-Learning","k":35,"stars":10903,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ggreer/the_silver_searcher","k":35,"stars":27080,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"mtdvio/every-programmer-should-know","k":35,"stars":98818,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Tencent/wcdb","k":35,"stars":11516,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"chef/chef","k":35,"stars":8195,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"agents-flex/agents-flex","k":34,"stars":1031,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"matrixorigin/matrixone","k":34,"stars":1835,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"binhnguyennus/awesome-scalability","k":34,"stars":70625,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"nsqio/nsq","k":34,"stars":25757,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"graphql/graphql-spec","k":34,"stars":14598,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"denoland/deno","k":34,"stars":106545,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"atom/atom","k":34,"stars":60837,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"go-kit/kit","k":34,"stars":27448,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"hehonghui/android-tech-frontier","k":34,"stars":10650,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Dogfalo/materialize","k":34,"stars":38928,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"mamaral/Onboard","k":34,"stars":6615,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"sindresorhus/awesome","k":34,"stars":459208,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"vercel/hyper","k":34,"stars":44585,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"veggiemonk/awesome-docker","k":34,"stars":35873,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"moby/moby","k":34,"stars":71493,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"kriskowal/q","k":34,"stars":15071,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"facebook/react-native","k":34,"stars":125729,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"GalaxyGeneralRobotics/OpenWBT","k":33,"stars":736,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"admin360bug/Compendium-of-Materia-Medica","k":33,"stars":521,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"bytedance-fanqie-ai/MOSAIC","k":33,"stars":241,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"froala/design-blocks","k":33,"stars":13675,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Junda24/MonSter","k":33,"stars":695,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"OAI/OpenAPI-Specification","k":33,"stars":30913,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"josephmisiti/awesome-machine-learning","k":33,"stars":72301,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"futurice/android-best-practices","k":33,"stars":20516,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"dokku/dokku","k":33,"stars":31858,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"hashicorp/vagrant","k":33,"stars":27124,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"typicode/json-server","k":33,"stars":75570,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"GetStream/Winds","k":33,"stars":9147,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"alebcay/awesome-shell","k":33,"stars":36831,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"akveo/ngx-admin","k":33,"stars":25760,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"zero-proxy/zero-proxy","k":32,"stars":541,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ideawu/ssdb","k":32,"stars":8382,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"SnapKit/Masonry","k":32,"stars":18197,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"tornadoweb/tornado","k":32,"stars":22220,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"animate-css/animate.css","k":32,"stars":82535,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"thoughtbot/factory_bot","k":32,"stars":8193,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"shadowsocks/shadowsocks-android","k":32,"stars":36648,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"trailofbits/algo","k":32,"stars":30230,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"phanan/htaccess","k":32,"stars":13184,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"HackerNews/API","k":32,"stars":13002,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"mleibman/SlickGrid","k":32,"stars":6968,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"viatsko/awesome-vscode","k":32,"stars":28613,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ant-design/ant-design","k":32,"stars":97851,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ageron/handson-ml","k":32,"stars":25654,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Authing/authing-java-sdk","k":31,"stars":160,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Pandalin98/ITFormer-ICML25","k":31,"stars":252,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"NobalCacos/kikito","k":31,"stars":361,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"gjy3035/PCC-Net","k":31,"stars":325,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"shuyu-labs/BigBanana-AI-Director","k":31,"stars":1236,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"diaspora/diaspora","k":31,"stars":13685,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"facebook/rocksdb","k":31,"stars":31646,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"faif/python-patterns","k":31,"stars":42716,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"vurtun/nuklear","k":31,"stars":14018,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"facebook/yoga","k":31,"stars":18727,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"ReactiveX/RxJava","k":31,"stars":48290,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"houshanren/hangzhou_house_knowledge","k":31,"stars":26942,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Carthage/Carthage","k":31,"stars":15204,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"prakhar1989/awesome-courses","k":31,"stars":67860,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"square/picasso","k":31,"stars":18875,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"admin360bug/upload-labs","k":30,"stars":518,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"LionPearNews/Glasklart","k":30,"stars":322,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"zevorn/rt-claw","k":30,"stars":693,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"BearMelon/thomaslo","k":30,"stars":343,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"PauleClark/faryon","k":30,"stars":249,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"iflytek/astronclaw-tutorial","k":30,"stars":563,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"listenproxy/listen","k":30,"stars":411,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Aitenry/IIMS-By-AI","k":30,"stars":312,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"mysqljs/mysql","k":30,"stars":18655,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"microsoft/monaco-editor","k":30,"stars":45910,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"markedjs/marked","k":30,"stars":36758,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"angular/angular-seed","k":30,"stars":13152,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"petkaantonov/bluebird","k":30,"stars":20574,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"verekia/js-stack-from-scratch","k":30,"stars":20236,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"graphql/dataloader","k":30,"stars":13384,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"kizuna-ai-lab/sokuji","k":29,"stars":822,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"zhen6618/LIRA","k":29,"stars":153,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"henryhu55/tts-web-vue","k":29,"stars":184,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"dlMARiA/Syzygy-of-thoughts","k":29,"stars":138,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"JIA-Lab-research/DreamOmni2","k":29,"stars":2066,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"sing1ee/a2a-directory","k":29,"stars":237,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"EagleOrangeRome/NLuaf","k":29,"stars":356,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"countneurooman/ssaavedrad","k":29,"stars":319,"is_known":false,"is_op":true,"is_camouflage":false},{"repo":"983632847/Awesome-Multimodal-Object-Tracking","k":29,"stars":1102,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jlevy/the-art-of-command-line","k":29,"stars":160780,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"segment-boneyard/nightmare","k":29,"stars":19808,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"junegunn/fzf","k":29,"stars":79802,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jquery-ui-bootstrap/jquery-ui-bootstrap","k":29,"stars":5525,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"go-sql-driver/mysql","k":29,"stars":15249,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ReactiveX/RxAndroid","k":29,"stars":20004,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"acdlite/recompose","k":29,"stars":14850,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Hack-with-Github/Awesome-Hacking","k":29,"stars":111065,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"TypeTale/TypeTale","k":28,"stars":679,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"AshenOneme/MultiDampGen","k":28,"stars":123,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"hagameai/hagamesai","k":28,"stars":104,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"mzbankl/ghaerrb","k":28,"stars":375,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jytmelon/G-Prune","k":28,"stars":119,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Jerry-XDL/AIDoctor","k":28,"stars":192,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"alibaba/weex","k":28,"stars":18559,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"guard/guard","k":28,"stars":6479,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"lgvalle/Material-Animations","k":28,"stars":13616,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"apache/dubbo","k":28,"stars":41565,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"nostra13/Android-Universal-Image-Loader","k":28,"stars":16887,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"serhii-londar/open-source-mac-os-apps","k":28,"stars":48322,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"textmate/textmate","k":28,"stars":14578,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jekyll/jekyll","k":28,"stars":51387,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"MarilynClarke/Hyperliquid-Copy-Trading-Bot","k":27,"stars":415,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"AgenticDao/CryptoA2A","k":27,"stars":79,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"bytedance-fanqie-ai/FocusDPO","k":27,"stars":208,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ViniciusNevesTei/ASWBXML","k":27,"stars":354,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"yunbo646794/redesigned-gen-aibi-dashboard","k":27,"stars":149,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"axios/axios","k":27,"stars":109027,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"luong-komorebi/Awesome-Linux-Software","k":27,"stars":24930,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"YunDrone-Team/Sunray","k":26,"stars":225,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Facelang/Face","k":26,"stars":83,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"xjtulyc/MedgeClaw","k":26,"stars":698,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"tuya/tuya-openclaw-skills","k":26,"stars":596,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"GalaxyLLMCI/lyraios","k":26,"stars":136,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"CodePhiliaX/Chat2DB","k":26,"stars":25441,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"CosRacheke/dce","k":26,"stars":356,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"cackjser/Reconstruction","k":26,"stars":360,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"tempAccountA/MSParallaxDemo","k":26,"stars":909,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"lecho/hellocharts-android","k":26,"stars":7625,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"webpack/webpack","k":26,"stars":65785,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"SonicCloudOrg/sonic-client-web","k":26,"stars":573,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"EastWorld/wechat-app-mall","k":26,"stars":21591,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"qq9068149/AS-Editor","k":25,"stars":264,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"code10088/HelloWorld","k":25,"stars":203,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"chaosblade-io/chaosblade-space-exploration","k":25,"stars":461,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"bytedance/DreamO","k":25,"stars":1644,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"SenseTime-Copilot/raccoon-ppt-skill","k":25,"stars":240,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"bran1om-iava/bitagent","k":25,"stars":72,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"avinashcodeer/PentHertz","k":25,"stars":405,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"GreaterWMS/GreaterWMS","k":25,"stars":4259,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"AI45Lab/epitome","k":25,"stars":241,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"HaloTech-Co-Ltd/openHalo","k":25,"stars":460,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Undertone0809/promptulate","k":25,"stars":513,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"NevaMind-AI/memU","k":25,"stars":13445,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"facebook/immersive-web-sdk","k":25,"stars":403,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"open-guides/og-aws","k":25,"stars":36444,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"braydie/HowToBeAProgrammer","k":25,"stars":16246,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"v2ray/v2ray-core","k":25,"stars":46847,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jtoy/awesome-tensorflow","k":25,"stars":17574,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"kanyun-inc/YTKNetwork","k":25,"stars":6599,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"alexfrom0815/Online-3D-BPP-PCT","k":24,"stars":1034,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"sankeyangshu/lemon-admin","k":24,"stars":449,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"UlionTse/mlgb","k":24,"stars":899,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"OpenPAV/OpenPAV","k":24,"stars":114,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"aieducations/edumcp","k":24,"stars":155,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"sureJiang/MSRocketGiftAnimation","k":24,"stars":1891,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"sureJiang/MSRotationTabBar","k":24,"stars":1239,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"cloud-jie/CloudX","k":24,"stars":613,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"oiy-ai/learnify","k":24,"stars":181,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"inclusionAI/UI-Venus","k":24,"stars":1020,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"252217616/murfree","k":23,"stars":92,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"yf-team/yf-boot","k":23,"stars":484,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"maksim88/PasswordEditText","k":23,"stars":485,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"aiming-lab/MetaClaw","k":23,"stars":3383,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"herbertRose/awsdocs","k":23,"stars":391,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"admin360bug/PHP","k":23,"stars":562,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"metauto-ai/GPTSwarm","k":23,"stars":986,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ChenqiKONG/PIM","k":23,"stars":280,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"positive666/yolo_research","k":23,"stars":668,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"xssed/owlcache","k":23,"stars":932,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"hustvl/PixelHacker","k":22,"stars":480,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"NevSNev/FloED-main","k":22,"stars":201,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"oracleNetworkProtocol/plugchain","k":22,"stars":100,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jwen5419807/agentghost","k":22,"stars":97,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"xidian-uav/tcm_spi","k":22,"stars":161,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"sureJiang/MSNotificationProtector","k":22,"stars":1759,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"lanxiang1017/GEM","k":22,"stars":188,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"starmcc/qs-beanfun","k":22,"stars":114,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"6boris/web3-template","k":21,"stars":84,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Jiaaqiliu/Awesome-VLA-Robotics","k":21,"stars":471,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"NFTGo/GoTrading","k":21,"stars":125,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"thu-pacman/chitu","k":21,"stars":3367,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"xiaosl-cell/readify_parent","k":21,"stars":152,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"UlionTse/translators","k":21,"stars":2714,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"282857341/nnFormer","k":21,"stars":790,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"nexi-lab/nexus","k":21,"stars":275,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"HorizonRobotics/BIP3D","k":21,"stars":181,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"swanine/dev-tool","k":21,"stars":105,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"yuki-2025/Dyna_Swarm","k":21,"stars":123,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ZTE-AICloud/Co-Sight","k":20,"stars":984,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Liuziyu77/Visual-RFT","k":20,"stars":2245,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"xup6jammy/AI-Vision-Traffic-Monitoring","k":20,"stars":164,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"OpenRaiser/NanoResearch","k":20,"stars":661,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"AngeLouCN/CaraNet","k":20,"stars":426,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"AngeLouCN/CFPNet","k":20,"stars":295,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"solanamcp/solanamcp","k":20,"stars":49,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"steve02081504/fount","k":20,"stars":700,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"SonicCloudOrg/sonic-android-apk","k":20,"stars":345,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"metauto-ai/Kaleido-BERT","k":20,"stars":231,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"IoT-Technology/IoT-Toolkit","k":20,"stars":259,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"codeartx/awesome-algorithm","k":19,"stars":82,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"zhoushisheng001b/Aziiizx","k":19,"stars":383,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"xcancloud/AngusInfra","k":19,"stars":359,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"tempAccountA/MSBlockButton","k":19,"stars":350,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Genentech/Islander","k":18,"stars":84,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"HiThink-Research/BizFinBench","k":18,"stars":166,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"woming98/shine-ray-future","k":18,"stars":171,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"zhoujingweb3/web3j-eth-sample","k":18,"stars":70,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"lio-mengxiang/mx-design-cli","k":18,"stars":100,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"AIDotNet/yxaicode","k":18,"stars":253,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"gjy3035/NWPU-Crowd-Sample-Code","k":18,"stars":434,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"makfed12c/VWorkers","k":18,"stars":325,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"cchenax/px-kvstore","k":18,"stars":584,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"sureJiang/MSLinkedKeyboardView","k":18,"stars":1317,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"xtaci/gaio","k":18,"stars":954,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"xcancloud/JMock","k":18,"stars":248,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"zebra-ui/zebra-ui","k":18,"stars":104,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"superorange0707/Fuzzy_Diabetes","k":18,"stars":127,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"tempAccountA/MSScreenshotAnimation","k":18,"stars":356,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"popo-fishes/fish-bubble-design","k":17,"stars":79,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ZulunZhu/dynamic-contrastive-learning","k":17,"stars":53,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"mira-ai-lab/fortisavqa","k":17,"stars":118,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"yinghongzhen/RedNb.Nacos","k":17,"stars":145,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"juggleim/imsdk-android","k":17,"stars":68,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"xyctruth/profiler","k":17,"stars":178,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"PaddlePaddle/PaddleRec","k":17,"stars":4063,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Lab-Overflow/prompt-optimizer-lite","k":17,"stars":142,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"SonicCloudOrg/sonic-server-simple","k":17,"stars":290,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"shuyu-labs/WebCode","k":17,"stars":296,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"labring/laf","k":17,"stars":7561,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"rminshen03/EAI_Privacy_Position","k":17,"stars":183,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"SonicCloudOrg/sonic-ide","k":17,"stars":100,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Neverland-XFX/Unity-Framework","k":17,"stars":68,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"epitome-AISS/epitome","k":17,"stars":261,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"sureJiang/MSSCrollGuideView","k":17,"stars":1593,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"home-assistant/core","k":17,"stars":86379,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"cbd/edis","k":17,"stars":519,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Aur0r3-zy/NetGuard","k":16,"stars":105,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"GuanRunwei/Achelous","k":16,"stars":133,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"YizhenLAO/FEC","k":16,"stars":170,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"edenstarlovers/GardenOfEden","k":16,"stars":54,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"NFTGo/GoRarity","k":16,"stars":84,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"TEN-framework/ten-framework","k":16,"stars":10447,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jd-opensource/OxyGent","k":16,"stars":1857,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"xNomad-AI/core","k":16,"stars":73,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"youzeliang/rdb","k":16,"stars":90,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"SenseTime-Copilot/raccoon-dataanalysis-skill","k":16,"stars":237,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"170-carry/codex-tools","k":16,"stars":623,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"telangsachik/stuft","k":16,"stars":313,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"LVUGAI/CHiP","k":16,"stars":79,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"amap-cvlab/MV-Painter","k":16,"stars":244,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"tempAccountA/MSFlexibleTitleView","k":16,"stars":341,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"bitstadium/HockeyKit","k":16,"stars":2240,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"hansen7/MolGraphEval","k":15,"stars":67,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"solanamcp/solana-mcp","k":15,"stars":59,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ericshang98/Perfect-Web-Clone","k":15,"stars":231,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"web-infra-dev/rsdoctor","k":15,"stars":1123,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"xup6jammy/AI-INVOICE-OCR-ENGINE","k":15,"stars":163,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"newtype-ai/nit","k":15,"stars":192,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"iflytek/iFly-Skills","k":15,"stars":366,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"mumuyanjian-ui/caregiver","k":15,"stars":289,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"aiming-lab/SimpleMem","k":15,"stars":3251,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"pgg3/evotoolkit","k":15,"stars":88,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"TGSAN/CMWTAT_Digital_Edition","k":15,"stars":18990,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"qqchenjian318/VideoEditor-For-Android","k":15,"stars":1242,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"mints-components/ui","k":15,"stars":68,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"RDXiaoLu/MambaCoral-DiffDet","k":15,"stars":82,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Osilly/Vision-R1","k":15,"stars":1016,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"MiroMindAI/MiroThinker","k":15,"stars":8133,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"tempAccountA/MSDeallocCallback","k":15,"stars":333,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"WtxwNs/BACH","k":14,"stars":97,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"starmcc/QsTools","k":14,"stars":65,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"XSpoonAi/spoon-core","k":14,"stars":282,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"alexfrom0815/Online-3D-BPP-DRL","k":14,"stars":600,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"pygda-team/pygda","k":14,"stars":151,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"rooterWzs/plcc","k":14,"stars":66,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"zxc7563598/php-bilibili-danmu","k":14,"stars":177,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ShandaAI/WildWorld","k":14,"stars":294,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"john-tanner-dev/drf-rust","k":14,"stars":257,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"codeartx/awesome-kubernetes","k":14,"stars":110,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"LYL1015/JarvisX-Cowork","k":14,"stars":198,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"LYL1015/JarvisEvo","k":14,"stars":333,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"hichipli/CiteBar","k":14,"stars":105,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jxnblk/fitter-happier-text","k":14,"stars":1333,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"murtaugh/HTML5-Reset","k":14,"stars":2456,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"deeppowers/Deeppowers-Demo","k":13,"stars":32,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ZulunZhu/SpikingGCN","k":13,"stars":87,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"GitAhubI-Lover/classify_i_machine_learning","k":13,"stars":90,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"wangzhiwen-scu/FSL","k":13,"stars":50,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ZhangJinHaHaHa/FinchainAgent","k":13,"stars":237,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"AIGeeksGroup/EvoVLA","k":13,"stars":137,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"hustvl/OmniMamba","k":13,"stars":123,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"sankeyangshu/lemon-mobile-react","k":13,"stars":309,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"dongtsi/GEAD","k":13,"stars":94,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"yuemingPAN/SFD","k":13,"stars":171,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ShandaAI/AlayaRenderer","k":13,"stars":528,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"aws-samples/sample-serverless-dify-stack","k":13,"stars":107,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"tanmingtao1994-gif/fincrew","k":13,"stars":214,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"atpuxiner/docsloader","k":13,"stars":74,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ShandaAI/PackForcing","k":13,"stars":209,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"AngeLouCN/DC-UNet","k":13,"stars":299,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"wenb1n-dev/mysql_mcp_server_pro","k":13,"stars":245,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"worktool/chatgpt-android","k":13,"stars":154,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"xcancloud/OpenAPIDesigner","k":13,"stars":420,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ChenYilei2016/maintain-console-public","k":13,"stars":118,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"positive666/Prompt-Can-Anything","k":13,"stars":159,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Yalantis/Horizon","k":13,"stars":2265,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"mpc-hc/mpc-hc","k":13,"stars":5248,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"muzishen/IMAGPose","k":13,"stars":226,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Weizhi-Zhao-quant/Quantitative-Research-Projects","k":13,"stars":356,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"editorconfig/editorconfig-emacs","k":13,"stars":837,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Prototik/HoloEverywhere","k":13,"stars":2239,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"hipache/hipache","k":13,"stars":2348,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"DMindAI/DMind-1","k":12,"stars":102,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"zgu-usgaap-fr/GAAP-Implementation-Toolkit","k":12,"stars":142,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"alg-bug-engineer/cogniflow","k":12,"stars":133,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"vllm-project/vllm-omni","k":12,"stars":4497,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"XmirrorSecurity/OpenSCA-cli","k":12,"stars":1098,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ganweisoft/GrpcServer","k":12,"stars":91,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"violet-sto/BIT-Dev","k":12,"stars":40,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"gybob/aai-gateway","k":12,"stars":116,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Homebrew/homebrew-bundle","k":12,"stars":5507,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jaspervdj/hakyll","k":12,"stars":2871,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"superorange0707/Heaps_and_Beaps","k":12,"stars":123,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"alphamu/PinEntryEditText","k":12,"stars":710,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"akof1314/Wiz.Editor.md","k":12,"stars":552,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"erndev/EDStarRating","k":12,"stars":467,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"egoist/hack","k":12,"stars":2698,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"facebook/facebook-android-sdk","k":12,"stars":6449,"is_known":false,"is_op":false,"is_camouflage":true},{"repo":"pluveto/daan","k":11,"stars":292,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"DMindAI/DMind-Benchmark","k":11,"stars":52,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"wangziqi06/724-office","k":11,"stars":1049,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"aws-samples/serverless-httpdns","k":11,"stars":84,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"deepops-ai/deepops","k":11,"stars":3970,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"eairp/summer-boot","k":11,"stars":109,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"GalaxyGeneralRobotics/OpenTrack","k":11,"stars":709,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Taoidle/plan-cascade","k":11,"stars":97,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Brusselso/londonapa","k":11,"stars":329,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"KoalalorenzoH/P2PDEVIDEO","k":11,"stars":27,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"tongqiznyun100/lightningmcp","k":11,"stars":58,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"x-ray-s/dotenv-multi-x","k":11,"stars":47,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"fb55/htmlparser2","k":11,"stars":4777,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"mczhuge/ICON","k":11,"stars":173,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"brookshi/Hitchhiker","k":11,"stars":2233,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"coleifer/huey","k":11,"stars":5935,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"mikeizbicki/HLearn","k":11,"stars":1679,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"halfrost/Halfrost-Field","k":11,"stars":13225,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"fyhertz/libstreaming","k":11,"stars":3606,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"memect/hao","k":11,"stars":1439,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"ChenqiKONG/Awesome-Image-Forensics","k":11,"stars":249,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jjiantong/Awesome-KV-Cache-Optimization","k":11,"stars":277,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"rootsongjc/kubernetes-handbook","k":11,"stars":11583,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"TeehanLax/Hyperlapse.js","k":11,"stars":2490,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"SteveLTN/https-portal","k":11,"stars":4706,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"scottlerch/HostsFileEditor","k":11,"stars":1241,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"http-kit/http-kit","k":11,"stars":2572,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"careercup/CtCI-6th-Edition-cpp","k":11,"stars":1430,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"handong1587/handong1587.github.io","k":11,"stars":3167,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"felixszeto/whisper-stream-gui","k":10,"stars":34,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"WAsbry/NextThing","k":10,"stars":104,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"AdeleZhu/teacher-skill","k":10,"stars":117,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"openagents-org/openagents","k":10,"stars":3308,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Superagentsys/novalclaw","k":10,"stars":660,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"xNomad-AI/mcv","k":10,"stars":67,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"springmonster/RestfulTool-Retrofit","k":10,"stars":90,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"wuyoscar/ISC-Bench","k":10,"stars":783,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Morgensonne/EditDeck","k":10,"stars":494,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"Open-X-Humanoid/XR-1","k":10,"stars":188,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"LiuJiaxin-1/HitchLearning","k":10,"stars":68,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"EDCD/EDMarketConnector","k":10,"stars":1219,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"WtxwNs/RepoCheck","k":10,"stars":210,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"aiming-lab/AutoResearchClaw","k":10,"stars":11669,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"lio-mengxiang/mx-deisgn-release","k":10,"stars":61,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"AutoArk/EVA-OS","k":10,"stars":262,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"yangsongyuan18/WildVideo","k":10,"stars":75,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jgrahamc/httpdiff","k":10,"stars":2031,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jgilfelt/android-sqlite-asset-helper","k":10,"stars":2179,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"krispo/awesome-haskell","k":10,"stars":3284,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"jwise/HoRNDIS","k":10,"stars":3238,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"hwi/HWIOAuthBundle","k":10,"stars":2381,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"varnish/hitch","k":10,"stars":1959,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"tildeio/helix","k":10,"stars":2013,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"FrontendMasters/front-end-handbook-2018","k":10,"stars":4209,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"bradfitz/http2","k":10,"stars":1755,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"remi/her","k":10,"stars":2093,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"LYL1015/JarvisIR","k":10,"stars":252,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"tempAccountA/MSSafeContainer","k":10,"stars":342,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"TEdit/Terraria-Map-Editor","k":10,"stars":2076,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"cldwalker/hirb","k":10,"stars":1709,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"hoodiehq/hoodie","k":10,"stars":4469,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"netease-youdao/hex","k":10,"stars":1561,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"LouisBarranqueiro/hexo-theme-tranquilpeak","k":10,"stars":1906,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"panique/huge","k":10,"stars":2175,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"callstack/haul","k":10,"stars":3692,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"qustavo/httplab","k":10,"stars":4162,"is_known":false,"is_op":false,"is_camouflage":false},{"repo":"HearthSim/Hearthstone-Deck-Tracker","k":10,"stars":4907,"is_known":false,"is_op":false,"is_camouflage":false}]},"chapter7":{"graph_k1":{"tp":10,"fp":5000,"fn":0,"tn":0,"precision":0.002,"recall":1.0,"f1":0.004,"support_positive":10,"predicted_positive":5010},"graph_k3":{"tp":10,"fp":0,"fn":0,"tn":5000,"precision":1.0,"recall":1.0,"f1":1.0,"support_positive":10,"predicted_positive":10},"graph_k6":{"tp":7,"fp":0,"fn":3,"tn":5000,"precision":1.0,"recall":0.7,"f1":0.8235,"support_positive":10,"predicted_positive":7},"graph_k10":{"tp":4,"fp":0,"fn":6,"tn":5000,"precision":1.0,"recall":0.4,"f1":0.5714,"support_positive":10,"predicted_positive":4},"lifecycle_A_or_B":{"tp":9,"fp":506,"fn":1,"tn":4494,"precision":0.0175,"recall":0.9,"f1":0.0343,"support_positive":10,"predicted_positive":515},"joint_k3_lifecycle":{"tp":9,"fp":0,"fn":1,"tn":5000,"precision":1.0,"recall":0.9,"f1":0.9474,"support_positive":10,"predicted_positive":9},"joint_k6_lifecycle":{"tp":7,"fp":0,"fn":3,"tn":5000,"precision":1.0,"recall":0.7,"f1":0.8235,"support_positive":10,"predicted_positive":7},"joint_k10_lifecycle":{"tp":4,"fp":0,"fn":6,"tn":5000,"precision":1.0,"recall":0.4,"f1":0.5714,"support_positive":10,"predicted_positive":4}},"chapter8_top30":[{"repo":"CBIhalsen/PolyglotPDF","k":238,"frac":0.8264,"stars":1340,"created":"2024-03-30","span_human":"49.0d"},{"repo":"NaiboWang/EasySpider","k":200,"frac":0.6944,"stars":43733,"created":"2020-07-18","span_human":"469.8d"},{"repo":"wenge-research/YAYI","k":189,"frac":0.6562,"stars":2530,"created":"2023-05-24","span_human":"255.5d"},{"repo":"wenge-research/YAYI2","k":177,"frac":0.6146,"stars":2801,"created":"2023-12-15","span_human":"65.3d"},{"repo":"LeapLabTHU/cooragent","k":173,"frac":0.6007,"stars":1756,"created":"2025-04-11","span_human":"52.4d"},{"repo":"NaiboWang/CommandlineConfig","k":163,"frac":0.566,"stars":1515,"created":"2022-09-18","span_human":"99.3d"},{"repo":"OpenCSGs/csghub","k":157,"frac":0.5451,"stars":4414,"created":"2024-01-12","span_human":"96.8d"},{"repo":"SonicCloudOrg/sonic-agent","k":150,"frac":0.5208,"stars":1646,"created":"2021-08-16","span_human":"473.7d"},{"repo":"xcancloud/AngusTester","k":137,"frac":0.4757,"stars":2116,"created":"2024-12-12","span_human":"63.5d"},{"repo":"shaiwz/data-platform-open","k":135,"frac":0.4688,"stars":641,"created":"2025-01-19","span_human":"25.9d"},{"repo":"PandaAI-Tech/panda_factor","k":132,"frac":0.4583,"stars":2660,"created":"2025-04-17","span_human":"24.4d"},{"repo":"SonicCloudOrg/sonic-server","k":130,"frac":0.4514,"stars":2194,"created":"2021-08-15","span_human":"472.7d"},{"repo":"plotly/dash","k":122,"frac":0.4236,"stars":24150,"created":"2015-04-10","span_human":"1203.6d"},{"repo":"rule-engine/rule-engine-open","k":121,"frac":0.4201,"stars":616,"created":"2023-03-29","span_human":"24.7d"},{"repo":"gallonyin/worktool","k":119,"frac":0.4132,"stars":2624,"created":"2022-03-23","span_human":"1264.2d"},{"repo":"Authing/Guard","k":118,"frac":0.4097,"stars":1359,"created":"2019-02-22","span_human":"30.8d"},{"repo":"atpuxiner/fastapi-scaff","k":114,"frac":0.3958,"stars":1016,"created":"2024-07-30","span_human":"149.7d"},{"repo":"sohutv/cachecloud","k":111,"frac":0.3854,"stars":8852,"created":"2016-01-26","span_human":"171.9d"},{"repo":"general-works/Glint","k":110,"frac":0.3819,"stars":513,"created":"2025-05-18","span_human":"73.6d"},{"repo":"HeartMuLa/heartlib","k":105,"frac":0.3646,"stars":3751,"created":"2026-01-15","span_human":"82.4d"},{"repo":"zzyfight/genai-compliance-bench","k":103,"frac":0.3576,"stars":827,"created":"2025-10-12","span_human":"31.3d"},{"repo":"AngeLouCN/Min_Max_Similarity","k":101,"frac":0.3507,"stars":763,"created":"2022-03-29","span_human":"244.7d"},{"repo":"juggleim/im-server","k":100,"frac":0.3472,"stars":3649,"created":"2024-08-26","span_human":"208.9d"},{"repo":"shuyu-labs/AntSK","k":98,"frac":0.3403,"stars":1309,"created":"2024-02-01","span_human":"572.6d"},{"repo":"fjb040911/free-sqlite","k":87,"frac":0.3021,"stars":643,"created":"2025-09-16","span_human":"25.9d"},{"repo":"Internet-Architecture-and-Security/PacketScope","k":85,"frac":0.2951,"stars":1244,"created":"2025-07-11","span_human":"222.5d"},{"repo":"ganweisoft/TOMs","k":82,"frac":0.2847,"stars":592,"created":"2025-06-11","span_human":"22.1d"},{"repo":"ModelEngine-Group/nexent","k":82,"frac":0.2847,"stars":4360,"created":"2025-04-28","span_human":"56.8d"},{"repo":"dgiot/dgiot","k":82,"frac":0.2847,"stars":4831,"created":"2021-02-23","span_human":"1235.6d"},{"repo":"CodeAcmen/ios-async-socket-explorer","k":80,"frac":0.2778,"stars":452,"created":"2025-03-17","span_human":"61.0d"}]}
+</script>
+
+<script>
+(function(){
+  // ─────────────────  PROGRESS RAIL + CHAPTER MARKER  ─────────────────
+  const fill = document.getElementById('rail-fill');
+  const cm = document.getElementById('chapter-marker');
+  const cmNum = document.getElementById('cm-num');
+  const cmTitle = document.getElementById('cm-title');
+  const chapters = [...document.querySelectorAll('section.chapter')];
+  function onScroll(){
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    fill.style.width = (window.scrollY / h * 100).toFixed(2) + '%';
+    let active = chapters[0];
+    for (const ch of chapters) {
+      const r = ch.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.4) active = ch;
+    }
+    if (active) {
+      cmNum.textContent = active.dataset.chapter || '00';
+      cmTitle.textContent = active.dataset.title || '';
+      const isHero = (active === chapters[0]);
+      cm.classList.toggle('visible', !isHero);
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ─────────────────  REVEAL ON SCROLL  ─────────────────
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    if (!el.style.getPropertyValue('--i')) el.style.setProperty('--i', i % 6);
+    ro.observe(el);
+  });
+  // Fallback after 2s
+  setTimeout(() => { document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('show-fallback', 'in')); }, 2000);
+
+  // ─────────────────  DATA  ─────────────────
+  const DATA = JSON.parse(document.getElementById('v2-data').textContent);
+
+  // ─────────────────  CASCADE (ch 3)  ─────────────────
+  (function cascade(){
+    const W = 1280, leftPad = 60, rightPad = 60, plotW = W - leftPad - rightPad;
+    const yA = 60, yB = 180, yC = 320, yD = 480;
+    const seedCount = 6, anchorCount = 13, cohortCount = 288, newAnchorCount = 100; // visualize 100 of the 563 for tractability
+    const linksG = document.getElementById('cs-links');
+    const n0 = document.getElementById('cs-nodes-0');
+    const n1 = document.getElementById('cs-nodes-1');
+    const n2 = document.getElementById('cs-nodes-2');
+    const n3 = document.getElementById('cs-nodes-3');
+
+    // Tier 0 — 6 seed bots evenly along the row
+    const t0x = (i) => leftPad + plotW * (i + 0.5) / seedCount;
+    for (let i = 0; i < seedCount; i++) {
+      const x = t0x(i);
+      n0.innerHTML += `<circle class="cs-node-seed" cx="${x}" cy="${yA}" r="6"/>`;
+    }
+
+    // Tier 1 — 13 anchors from data with k from 6-bot pivot
+    const anchors = DATA.chapter3.levels[1].top; // already 13 entries
+    const t1x = (i) => leftPad + plotW * (i + 0.5) / anchors.length;
+    anchors.forEach((a, i) => {
+      const x = t1x(i);
+      const r = 4 + a.k * 0.6;
+      n1.innerHTML += `<circle class="cs-node-anchor" cx="${x}" cy="${yB}" r="${r}"/>`;
+      const labelText = a.repo.split('/')[1].slice(0, 14);
+      if (i % 2 === 0 || a.k >= 5) {
+        n1.innerHTML += `<text class="cs-node-label" x="${x}" y="${yB - r - 4}" text-anchor="middle">${labelText}</text>`;
+      }
+    });
+
+    // Tier 0 → 1 links (each seed connects to many anchors — show selection)
+    for (let i = 0; i < seedCount; i++) {
+      for (let j = 0; j < anchors.length; j++) {
+        if (anchors[j].k > 4) {  // only thicker connections for higher-k
+          const x1 = t0x(i), x2 = t1x(j);
+          linksG.innerHTML += `<path class="cs-link" d="M ${x1} ${yA} C ${x1} ${yA + 50}, ${x2} ${yB - 50}, ${x2} ${yB}"/>`;
+        }
+      }
+    }
+
+    // Tier 2 — 288 cohort dots; lay out tightly across the row, skipping some for visual density
+    const visible2 = Math.min(150, cohortCount); // viz only 150 dots for clarity
+    const t2x = (i) => leftPad + plotW * (i + 0.5) / visible2;
+    for (let i = 0; i < visible2; i++) {
+      const x = t2x(i);
+      // tint by cohort A/B/Other roughly proportionally
+      const r = (i / visible2);
+      const isA = r < 0.74, isB = r < 0.93;
+      const fill = isA ? 'oklch(20% 0.018 60)' : isB ? 'oklch(53% 0.205 28)' : 'oklch(56% 0.014 60)';
+      n2.innerHTML += `<circle cx="${x}" cy="${yC}" r="2.4" fill="${fill}" fill-opacity="0.9"/>`;
+    }
+    n2.innerHTML += `<text class="cs-node-label" x="${leftPad + plotW * 0.5}" y="${yC + 22}" text-anchor="middle" style="fill:var(--muted); letter-spacing:0.06em">${cohortCount} accounts · 212 dormant warehouse · 54 fresh burner · 22 other</text>`;
+
+    // Tier 1 → 2 links (sample)
+    for (let j = 0; j < anchors.length; j++) {
+      // pick a few representative cohort dots to connect
+      for (let k = 0; k < 3; k++) {
+        const i = Math.floor((j * 11 + k * 47) % visible2);
+        const x1 = t1x(j), x2 = t2x(i);
+        linksG.innerHTML += `<path class="cs-link" d="M ${x1} ${yB} C ${x1} ${yB + 50}, ${x2} ${yC - 50}, ${x2} ${yC}"/>`;
+      }
+    }
+
+    // Tier 3 — top 30 new anchors as dots, sized by cohort_bots
+    const top30 = DATA.chapter8_top30;
+    const t3x = (i) => leftPad + plotW * (i + 0.5) / top30.length;
+    top30.forEach((a, i) => {
+      const x = t3x(i);
+      const r = 3 + a.k * 0.04;
+      n3.innerHTML += `<circle class="cs-node-newanchor" cx="${x}" cy="${yD}" r="${r}"/>`;
+      // Tier 2 → 3 recursive link
+      const i2 = Math.floor(((i * 13) + 5) % visible2);
+      const x1 = t2x(i2), x2 = x;
+      linksG.innerHTML += `<path class="cs-link recursive" d="M ${x1} ${yC} C ${x1} ${yC + 60}, ${x2} ${yD - 60}, ${x2} ${yD}"/>`;
+      if (a.k >= 130) {
+        const lbl = a.repo.length > 22 ? a.repo.split('/')[1].slice(0, 14) : a.repo.split('/')[1];
+        n3.innerHTML += `<text class="cs-node-label" x="${x}" y="${yD + r + 12}" text-anchor="middle">${lbl}</text>`;
+      }
+    });
+  })();
+
+  // ─────────────────  WAVES (ch 4)  ─────────────────
+  (function waves(){
+    const months = DATA.chapter4.months;
+    const W = 1280, H = 360, leftPad = 56, rightPad = 40, topPad = 50, botPad = 60;
+    const plotW = W - leftPad - rightPad;
+    const plotH = H - topPad - botPad;
+    const maxN = Math.max(...months.map(m => m.n), 1);
+    const barW = plotW / months.length;
+    const xAt = (i) => leftPad + i * barW + 2;
+    const yAt = (n) => topPad + plotH * (1 - n / maxN);
+
+    const axisG = document.getElementById('wv-axis');
+    const barsG = document.getElementById('wv-bars');
+    const labG = document.getElementById('wv-labels');
+
+    // y axis ticks
+    for (const v of [0, 20, 40, 60, 80]) {
+      if (v > maxN) continue;
+      const y = yAt(v);
+      axisG.innerHTML += `<line class="wv-axis" x1="${leftPad}" y1="${y}" x2="${W - rightPad}" y2="${y}" opacity="0.4" stroke-dasharray="1 4"/>`;
+      axisG.innerHTML += `<text class="wv-tick-label" x="${leftPad - 8}" y="${y + 3}" text-anchor="end">${v}</text>`;
+    }
+    axisG.innerHTML += `<line class="wv-axis" x1="${leftPad}" y1="${topPad + plotH}" x2="${W - rightPad}" y2="${topPad + plotH}"/>`;
+
+    // bars
+    months.forEach((m, i) => {
+      const x = xAt(i);
+      const h = plotH * m.n / maxN;
+      const y = topPad + plotH - h;
+      const cls = `wv-bar-${m.cohort}`;
+      barsG.innerHTML += `<rect class="${cls}" x="${x}" y="${y}" width="${barW - 4}" height="${h}"/>`;
+      labG.innerHTML += `<text class="wv-month-label" x="${x + (barW - 4) / 2}" y="${topPad + plotH + 14}" text-anchor="middle">${m.ym.slice(2, 7)}</text>`;
+      if (m.n >= 6) {
+        labG.innerHTML += `<text class="wv-bar-num" x="${x + (barW - 4) / 2}" y="${y - 4}" text-anchor="middle">${m.n}</text>`;
+      }
+    });
+
+    // cohort bracket labels
+    const A_months = months.filter(m => m.cohort === 'A');
+    if (A_months.length) {
+      const i0 = months.indexOf(A_months[0]), i1 = months.indexOf(A_months[A_months.length - 1]);
+      const xL = xAt(i0), xR = xAt(i1) + barW - 4;
+      labG.innerHTML += `<text class="wv-cohort-label" x="${(xL + xR) / 2}" y="${topPad - 18}" text-anchor="middle">Cohort A · 212 accounts</text>`;
+      labG.innerHTML += `<text class="wv-cohort-sub" x="${(xL + xR) / 2}" y="${topPad - 4}" text-anchor="middle">Q4-2021 · dormant warehouse</text>`;
+    }
+    const B_months = months.filter(m => m.cohort === 'B');
+    if (B_months.length) {
+      const i0 = months.indexOf(B_months[0]), i1 = months.indexOf(B_months[B_months.length - 1]);
+      const xL = xAt(i0), xR = xAt(i1) + barW - 4;
+      labG.innerHTML += `<text class="wv-cohort-label" x="${(xL + xR) / 2}" y="${topPad - 18}" text-anchor="middle">Cohort B · 54</text>`;
+      labG.innerHTML += `<text class="wv-cohort-sub" x="${(xL + xR) / 2}" y="${topPad - 4}" text-anchor="middle">Mar-2025 · burner</text>`;
+    }
+    // y-axis label
+    labG.innerHTML += `<text class="wv-tick-label" x="${leftPad - 36}" y="${topPad - 6}" text-anchor="start" font-size="10">accounts created (k≥10 cohort)</text>`;
+  })();
+
+  // ─────────────────  TWIN TREES (ch 5)  ─────────────────
+  (function twin(){
+    // Synthesize plausible blob rows from the actual stats: 154 launder blobs, 0.85 per-path-eq
+    // Use a fixed seed so both trees show the same paths (since they ARE identical on shared paths)
+    const samplePaths = [
+      ['package.json','a3f9c721'],
+      ['manifest.json','b8021ee4'],
+      ['src/popup.tsx','e5511aa9'],
+      ['src/background.ts','4d2f1c80'],
+      ['src/content.ts','9be3055f'],
+      ['src/wallet/sign.ts','c704be12'],
+      ['src/wallet/keys.ts','7af90123'],
+      ['src/wallet/encrypt.ts','3c9011fe'],
+      ['src/utils/near.ts','55d18f3a'],
+      ['src/utils/format.ts','1129ee08'],
+      ['src/components/Send.tsx','aa55e811'],
+      ['src/components/Recv.tsx','de4099b1'],
+      ['src/components/Header.tsx','b401cef9'],
+      ['src/components/Footer.tsx','c0a3df7e'],
+      ['src/i18n/en.json','7e23890c'],
+      ['src/i18n/zh.json','5599aa44'],
+      ['public/icon-128.png','dab33fee'],
+      ['public/icon-48.png','9c8011d2'],
+      ['scripts/build.sh','4400ab12'],
+      ['LICENSE','9d29ee83'],
+      ['README.md','882f4c44'],
+      ['tsconfig.json','ee117b66'],
+    ];
+    // Decorate match status — 85% of paths have identical SHA between the two; mark non-matches differently
+    const matchSet = new Set([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]); // first 20 of 22 = ~91%
+    const treeA = document.getElementById('tree-a');
+    const treeB = document.getElementById('tree-b');
+    const sb = (i) => matchSet.has(i) ? 'match' : '';
+    samplePaths.forEach(([p, sha], i) => {
+      treeA.innerHTML += `<div class="row"><span class="sha ${sb(i)}">${sha}</span><span class="path">${p}</span></div>`;
+      treeB.innerHTML += `<div class="row"><span class="sha ${sb(i)}">${sha}</span><span class="path">${p}</span></div>`;
+    });
+  })();
+
+  // ─────────────────  CONTENT TABLE (ch 5 lower)  ─────────────────
+  (function contab(){
+    const rows = DATA.chapter5.all_pairs;
+    const host = document.getElementById('contab-rows');
+    rows.forEach(r => {
+      const detClass = r.detected ? 'ok' : 'no';
+      const detText = r.detected ? 'hit' : 'miss';
+      const upstreamShort = r.upstream.length > 30 ? r.upstream.slice(0, 28) + '…' : r.upstream;
+      host.innerHTML += `<div class="row">
+        <span class="repo">${upstreamShort}</span>
+        <span class="repo">${r.launder}</span>
+        <span class="mode">${r.mode}</span>
+        <span class="num">${r.sha_J.toFixed(3)}</span>
+        <span class="num">${r.eq.toFixed(3)}</span>
+        <span class="det ${detClass}">${detText}</span>
+      </div>`;
+    });
+  })();
+
+  // ─────────────────  SCATTER (ch 6)  ─────────────────
+  (function scatter(){
+    const pts = DATA.chapter6.points;
+    const W = 1280, H = 540, leftPad = 70, rightPad = 40, topPad = 40, botPad = 60;
+    const plotW = W - leftPad - rightPad;
+    const plotH = H - topPad - botPad;
+
+    // log scales
+    const logK = (k) => Math.log10(Math.max(k, 1));
+    const logS = (s) => Math.log10(Math.max(s, 1));
+    const kMax = Math.max(...pts.map(p => p.k));
+    const sMax = Math.max(...pts.map(p => p.stars));
+    const kxMax = Math.ceil(logK(kMax));
+    const sxMax = Math.ceil(logS(sMax));
+
+    const xAt = (k) => leftPad + plotW * logK(k) / kxMax;
+    const yAt = (s) => topPad + plotH * (1 - logS(s) / sxMax);
+
+    const axisG = document.getElementById('sc-axis');
+    const gridG = document.getElementById('sc-grid');
+    const ptsG = document.getElementById('sc-points');
+    const labG = document.getElementById('sc-labels');
+
+    // grid + ticks
+    for (let i = 0; i <= kxMax; i++) {
+      const x = leftPad + plotW * i / kxMax;
+      gridG.innerHTML += `<line class="sc-grid" x1="${x}" y1="${topPad}" x2="${x}" y2="${topPad + plotH}"/>`;
+      axisG.innerHTML += `<text class="sc-tick-label" x="${x}" y="${topPad + plotH + 16}" text-anchor="middle">10^${i}</text>`;
+    }
+    for (let i = 0; i <= sxMax; i++) {
+      const y = topPad + plotH * (1 - i / sxMax);
+      gridG.innerHTML += `<line class="sc-grid" x1="${leftPad}" y1="${y}" x2="${leftPad + plotW}" y2="${y}"/>`;
+      axisG.innerHTML += `<text class="sc-tick-label" x="${leftPad - 8}" y="${y + 3}" text-anchor="end">10^${i}</text>`;
+    }
+    axisG.innerHTML += `<line class="sc-axis" x1="${leftPad}" y1="${topPad}" x2="${leftPad}" y2="${topPad + plotH}"/>`;
+    axisG.innerHTML += `<line class="sc-axis" x1="${leftPad}" y1="${topPad + plotH}" x2="${W - rightPad}" y2="${topPad + plotH}"/>`;
+    axisG.innerHTML += `<text class="sc-axis-label" x="${leftPad + plotW / 2}" y="${topPad + plotH + 38}" text-anchor="middle">cohort bots starring (288 max)</text>`;
+    axisG.innerHTML += `<text class="sc-axis-label" transform="rotate(-90 ${leftPad - 38} ${topPad + plotH / 2})" x="${leftPad - 38}" y="${topPad + plotH / 2}" text-anchor="middle">total stargazers</text>`;
+
+    // plot
+    pts.forEach(p => {
+      const x = xAt(p.k);
+      const y = yAt(p.stars);
+      const r = 3 + Math.log2(Math.max(p.k, 2)) * 0.4;
+      const cls = p.is_op ? 'sc-pt-op' : p.is_known ? 'sc-pt-known' : p.is_camouflage ? 'sc-pt-camo' : 'sc-pt-customer';
+      ptsG.innerHTML += `<circle class="${cls}" cx="${x}" cy="${y}" r="${r}"/>`;
+    });
+
+    // label notable points: top-3 customers (k≥150 + stars<10000), and the obvious camouflage outliers
+    const notable = [];
+    const customers = pts.filter(p => !p.is_camouflage && !p.is_op && !p.is_known && p.k >= 150 && p.stars < 10000)
+                          .sort((a, b) => b.k - a.k).slice(0, 3);
+    const camos = pts.filter(p => p.is_camouflage).sort((a, b) => b.stars - a.stars).slice(0, 3);
+    notable.push(...customers.map(p => ({...p, kind: 'cust'})));
+    notable.push(...camos.map(p => ({...p, kind: 'camo'})));
+    notable.forEach(p => {
+      const x = xAt(p.k), y = yAt(p.stars);
+      const repoName = p.repo.length > 24 ? p.repo.split('/')[1].slice(0, 22) : p.repo;
+      const cls = p.kind === 'camo' ? 'sc-label camo' : 'sc-label';
+      const dx = p.kind === 'camo' ? -8 : 8;
+      const anchor = p.kind === 'camo' ? 'end' : 'start';
+      labG.innerHTML += `<text class="${cls}" x="${x + dx}" y="${y + 3}" text-anchor="${anchor}">${repoName}</text>`;
+    });
+  })();
+
+  // ─────────────────  CALIBRATION (ch 7)  ─────────────────
+  (function calib(){
+    const m = DATA.chapter7;
+    const order = ['graph_k1','graph_k3','graph_k6','graph_k10','lifecycle_A_or_B','joint_k3_lifecycle','joint_k6_lifecycle','joint_k10_lifecycle'];
+    const labels = {
+      graph_k1: 'graph_k1 (≥1 anchor)',
+      graph_k3: 'graph_k3 (≥3 anchors)',
+      graph_k6: 'graph_k6 (≥6 anchors)',
+      graph_k10: 'graph_k10 (≥10 anchors)',
+      lifecycle_A_or_B: 'lifecycle ∈ {A, B}',
+      joint_k3_lifecycle: 'joint · k3 ∧ lifecycle',
+      joint_k6_lifecycle: 'joint · k6 ∧ lifecycle',
+      joint_k10_lifecycle: 'joint · k10 ∧ lifecycle',
+    };
+    const headlines = new Set(['graph_k3','joint_k3_lifecycle']);
+    const host = document.getElementById('calib-rows');
+    order.forEach(k => {
+      const v = m[k];
+      const pPct = (v.precision * 100).toFixed(0);
+      const rPct = (v.recall * 100).toFixed(0);
+      const headlineCls = headlines.has(k) ? ' headline' : '';
+      host.innerHTML += `<div class="calib-row${headlineCls}">
+        <span class="ax">${labels[k]}</span>
+        <span class="meter">
+          <span class="p" style="width:${pPct}%"></span>
+          <span class="r" style="width:${rPct}%"></span>
+        </span>
+        <span class="num">${v.precision.toFixed(3)}</span>
+        <span class="num">${v.recall.toFixed(3)}</span>
+        <span class="num">${v.f1.toFixed(3)}</span>
+      </div>`;
+    });
+  })();
+
+  // ─────────────────  CUSTOMER GRID (ch 8)  ─────────────────
+  (function cgrid(){
+    const rows = DATA.chapter8_top30;
+    const host = document.getElementById('cgrid');
+    const maxK = Math.max(...rows.map(r => r.k));
+    rows.forEach((r, i) => {
+      const fill = (r.k / maxK * 100).toFixed(1);
+      host.innerHTML += `<div class="crow">
+        <span class="rk">${String(i + 1).padStart(2, '0')}</span>
+        <span class="repo">${r.repo}<span class="stars">${r.stars.toLocaleString()} ★ · created ${r.created}</span></span>
+        <span class="meter-mini"><span class="fill" style="width:${fill}%"></span></span>
+        <span class="chip">k=${r.k}<span class="frac">${(r.frac * 100).toFixed(1)}%</span></span>
+      </div>`;
+    });
+  })();
+})();
+</script>
+
+</body>
+</html>
