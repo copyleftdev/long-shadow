@@ -1,0 +1,25 @@
+# Local secrets — never commit
+.env
+.env.local
+*.token
+*.key
+*.pem
+
+# Working state from running watchers locally
+state/
+*.state.json
+
+# Editor noise
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*~
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Docker build cache mounts
+docker-compose.override.yml

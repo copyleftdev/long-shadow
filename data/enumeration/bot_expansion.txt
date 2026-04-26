@@ -1,0 +1,34 @@
+===== EvoScientist stargazers (100) =====
+["kelo020304","ohaoz","heywanrong","Trouverecc","typhoon112","QingenZhang","zerens","SuperDouble","prorrice","tilterG","XZH12399","whisper-11","we1shi","marcoulucagomast","Yan-2214737305","LIZESHENG13","startreker-shzy","Realyangy","Saint-Diana","oiiiwjh","Magicalppj","Roveer","hlyyyyy","swagshaw","XiaoshenHu","YangNuoCheng","gaopeng32","JaymeWX","iPhiliph","code28283","Sean-yh","Ervinoreo","1mycell","EvagelineFEI","j99tang","ni-ming-nbg","wr19960001","BWQ-L","Chen-Zhefeng","dunova","chenxin-dlut","jx-xiong","refusereba4","qqq502379661","2-chen","pzp5700","yyQUQ","LiaoYFBH","nelfunciel","MmMaiIIi","liuhao-97","acse-hx721","lhmd","2287185537","lt592-Longyan","SQAgent","zhang123233123123","Muuuun","Boycetoon","yzxoi","imcominggirl","Kian-Chen","Sonnet1219","fgtear","yan97ao","tinyzqh","middle-chunjie","Funsom","CSF819","gulas322","jhfnetboy","Boom5426","BuddyZhu","michaelwang66","lxriscute0501","Vange17","yc040506","smeanapole","yihan-zhou02","clcy1029","turboFei","Yiyao0928","liyang-tju","wbs306","gravitychen","malaxiang1","nanhu22","OrientLuna","xtt5241","zxxiao","yxwyxwyxw","zanw1","emmywong0530","KinghorseYMPC","Ling-Zhihao","Sang-Buster","XsnakezonX","DaoyiWeiwo","awz66661","endickor"]
+
+===== Galaxy-Dawn/claude-scholar stargazers (100) =====
+["uc68453945","wwhisdavid","ruomio123","m1croarcsec","LiuShuo1999","hannah-chy","ychyss","dumingco1e","luyan0807","X-iZhang","seasky0524","dzp62442","xsleaksiki","BeamusWayne","hzxd","hztBUAA","Ranchentxe","Jialeibihaidai","OrchardOde","Pi3-l22","Zhao-VasD","HuiLi","JuniperJournal","pzp5700","hyper078","runfreema","GalaxyGossip","Williechan2013","Jenniferjisi","jump-and-jump","bytesBeend","shxc","Zhiyu-Chen","x13alvd0j","DoraJaymon","optimizingcds","likznw","sandinoha","hrgentry","James-826","Enping-Hu","hey-yulee","MihajaRazafimahefa","BinNEU","cornerst","fsi145686","andgwhat","lizhibulizhi","xiaoan17","VitorbnCat","LIN-CG","x13a2an4g","ligurion","eliasiKent","yyyyy5383","ronancplHeaven","hbxaurora","Pyrojewel-zard","1587480b018","linjieluo","zhufeng77","sidbes838","OwenLiu04","xskeandi","oooranzoone","how2shellphish","ningna01","Weizhifar","yumamizu","botaohu","MichaelSunCH","lrzniu","hi-yuanxu","YoungBossX","xiaomukuaier","emmacaort","mathhyphen","ProudBenzene","navarro-ua","shijiale0609","bol22","shui-yuan","hzhaoh","Chenghao-Wu","iHateTheWorld555","rainoffallingstar","Jasper0068","jiqiu123","bobodagou","YangTakeshi","DenDen047","a454511125-dotcom","pandaAIGC","bruAristimunha","frankhan91","Doutianbao","LucusFigoGao","Kuzu0","XianPengMao","lingium"]
+
+===== Suspect repo Galaxy-Dawn/claude-scholar =====
+{"created_at":"2026-01-27T10:32:17Z","description":"Semi-automated research assistant for academic research and software development","fork":false,"forks":321,"owner_type":"User","parent":null,"pushed_at":"2026-04-25T06:38:01Z","stars":3446}
+
+===== Suspect repo lenhyluo/xianmin =====
+{"created_at":"2023-05-26T04:41:38Z","description":"Xianmin's personal web-site, generated using ox-hugo + Hugo","fork":false,"forks":303,"owner_type":"User","parent":null,"pushed_at":"2026-02-02T19:18:25Z","stars":379}
+
+===== Suspect repo mzbankl/ghaerrb =====
+{"created_at":"2022-03-15T04:19:34Z","description":"The Nano-X Window System","fork":false,"forks":317,"owner_type":"User","parent":null,"pushed_at":"2025-07-20T09:25:09Z","stars":375}
+
+===== Suspect repo Brusselso/londonapa =====
+{"created_at":"2023-04-13T04:37:43Z","description":"i-am-poor-android-htian4 created by GitHub Classroom","fork":false,"forks":250,"owner_type":"User","parent":null,"pushed_at":"2026-03-13T09:16:23Z","stars":329}
+
+===== Suspect repo openvort/openvort =====
+{"created_at":"2026-03-02T03:01:29Z","description":"Open-source AI Employee Platform — Create AI employees that collaborate with you","fork":false,"forks":83,"owner_type":"User","parent":null,"pushed_at":"2026-04-09T14:24:39Z","stars":543}
+
+===== Suspect repo wangziqi06/724-office =====
+{"created_at":"2026-03-17T05:56:13Z","description":"7/24 Office — Self-evolving AI Agent system. 36 tools, 10,000 lines pure Python,","fork":false,"forks":167,"owner_type":"User","parent":null,"pushed_at":"2026-04-09T09:49:19Z","stars":1047}
+
+===== Suspect repo zhoushisheng001b/Aziiizx =====
+{"created_at":"2022-04-18T01:57:51Z","description":"motion detection and lock \u0026 unlock door via telegram bot and raspberry","fork":false,"forks":282,"owner_type":"User","parent":null,"pushed_at":"2025-06-04T01:42:39Z","stars":383}
+
+===== Suspect repo DesignOps6ix9/OpenDeepResearch =====
+{"created_at":"2026-02-22T20:48:36Z","description":"OpenDeepResearch：让你保持对于深度研究过程的掌控感。它是一个研究过程可交互的深度研究 Agent，解决了传统 deep research 黑盒不","fork":false,"forks":0,"owner_type":"User","parent":null,"pushed_at":"2026-02-26T16:02:01Z","stars":39}
+
+===== Suspect repo louislili/GodlikeAI =====
+{"created_at":"2025-11-02T02:09:13Z","description":"GodlikeAI——让机器像神一样思考","fork":false,"forks":0,"owner_type":"User","parent":null,"pushed_at":"2025-11-13T07:02:44Z","stars":54}
+
+===== DONE =====

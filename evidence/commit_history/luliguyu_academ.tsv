@@ -1,0 +1,90 @@
+269d9c28c71479f635f68f504a7c18efea27b869	1753353815	1753353815	sbolr9514@yeah.net	HowardBrowne	Merge pull request #33 from Dewb/master
+b281fcbca6d49b336ed3899c5925553b18cfadf6	1752367135	1752367135	sbolr9514@yeah.net	HowardBrowne	Expose internal connected flag as Camera::isConnected()
+2659c8b176ae6cd49a4d3ff357e32e31f7661aea	1751770735	1751770735	sbolr9514@yeah.net	HowardBrowne	Merge pull request #47 from jocabola/master
+a20f15630d16b727f6abbfb1dd8ac14a570104b5	1751271095	1751271095	sbolr9514@yeah.net	HowardBrowne	Upgraded support to Canon SDK 3.4.0
+4fce106b023dc807bfe45a0bcb13aad623d72a40	1751071855	1751071855	sbolr9514@yeah.net	HowardBrowne	added license. closes #43.
+63fc45d9cbfb863d0da09e03c9cf1485e9e8d8a1	1750892495	1750892495	sbolr9514@yeah.net	HowardBrowne	removed project files and updated readme and addons.make
+25c1ecfe33f3f3f773df3d8e4871aed476f98b08	1750175615	1750175615	sbolr9514@yeah.net	HowardBrowne	initialize live view by default
+041d284dc58f5998730945d86678131c6601df78	1749964695	1749964695	sbolr9514@yeah.net	HowardBrowne	added ability to disable live view
+069d6eb0022544e61e51ac9d0cbc9f28cc251854	1749181255	1749181255	sbolr9514@yeah.net	HowardBrowne	updating to compile with EDSDK 3.2
+a092230fe5e2a5bd3eaddd55bffd739c74f40b7b	1748806175	1748806175	sbolr9514@yeah.net	HowardBrowne	merged all updates maintaining 0.9.0 compatibility
+bcea7480f220f6d7409a833a188a17a89d1c5be8	1747753135	1747753135	sbolr9514@yeah.net	HowardBrowne	delete in destructor not close, show bandwidth
+bf7ad630ebe4b4129896bf4500978bb7f84fff83	1747296535	1747296535	sbolr9514@yeah.net	HowardBrowne	uses swaps for managing buffer, which should be faster than assignment
+b1e391862fcbc03e5ca89d903c51051ebfe3afc1	1746525135	1746525135	sbolr9514@yeah.net	HowardBrowne	readme change, 60 fps cap
+324d2ec4b217b5eb81e7b72e49ea3fac7b6e2246	1745261455	1745261455	sbolr9514@yeah.net	HowardBrowne	added windows CoInitializeEx back in
+d5f0f9fce70fe48aea27a146defbe882e4dde017	1744752895	1744752895	sbolr9514@yeah.net	HowardBrowne	updated project file, tested different kinds of initialization and shutdown procedures to determine which threads different calls need to live in
+ef2f1014393c1c51c75a237c5c4f0811ec55505f	1743767975	1743767975	sbolr9514@yeah.net	HowardBrowne	attempting to fix closing behavior again
+477f0ea62426dbcfc18dadb5eb36433f9bb6469a	1743443655	1743443655	sbolr9514@yeah.net	HowardBrowne	trying without timeout
+c916f71ac83a5d8f780104a29d62e7a31b24f3c3	1743355735	1743355735	sbolr9514@yeah.net	HowardBrowne	Merge branch 'master' into 0.9.0
+3fc485c01497093336c311d418b7752f48aae9fa	1742182735	1742182735	sbolr9514@yeah.net	HowardBrowne	rearrange closing sequence to set connected and liveReady to false
+daf019c4569c6cdaca494cdff62218b9e66d9548	1741386135	1741386135	sbolr9514@yeah.net	HowardBrowne	merged
+833aa5e5ee0756d6398cb01016313ae36eace45a	1740912575	1740912575	sbolr9514@yeah.net	HowardBrowne	switched from closing session on destructor to manually closing
+941ff8426f17d6eb4028133dd21eb4532cd90f02	1740860735	1740860735	sbolr9514@yeah.net	HowardBrowne	updates for 0.9.0
+11ffbe01e756e008f32ea510fabd3e7934c1f99b	1740585935	1740585935	sbolr9514@yeah.net	HowardBrowne	Merge branch 'master' of github.com:kylemcdonald/ofxEdsdk
+7d422c82c38c853554fc82a9cd2ad40467533cde	1739850614	1739850614	sbolr9514@yeah.net	HowardBrowne	Merge pull request #26 from morethanlogic/feature/setter_method_for_orientation
+9eb916046eef90444282ea608780a6ffe4c709a1	1739652814	1739652814	sbolr9514@yeah.net	HowardBrowne	Added a setter method to be able to change the orientation at 'run time' (after instantiation).
+9c521f4681d04b0594c612e3fb256a633735c1cd	1739205094	1739205094	sbolr9514@yeah.net	HowardBrowne	minor update for transcranial
+db385d382c6b97d19b75d31bd65e23fdd52abccd	1739009774	1739009774	sbolr9514@yeah.net	HowardBrowne	via @smallyfly
+3fde02f97f683dc721589cc949bd758632fd3584	1738371494	1738371494	sbolr9514@yeah.net	HowardBrowne	Merge pull request #19 from morethanlogic/feature/movie_mode
+096b492eeb3c090799143fcd06297de749bd5ab4	1737153334	1737153334	sbolr9514@yeah.net	HowardBrowne	Implemented the movie recording feature (incl. in the example).
+ec7e8827ed0b60839d7d473f7e00e356cf4552e3	1735923814	1735923814	sbolr9514@yeah.net	HowardBrowne	Having the Eds::StartLiveView command sent in the thread was freezing the app (Tested w/ Canon SDK 2.14 and EOS Rebel T5i firmware 1.1.3).
+49a3ac00872ffebb1f0e045d226996fc15a40662	1734646854	1734646854	sbolr9514@yeah.net	HowardBrowne	Fixed the drawPhoto method. The photoTexture was never allocated when using this method.
+fa05fb74613f2a481bc6b1116d5357e8a0eeaf39	1733482854	1733482854	sbolr9514@yeah.net	HowardBrowne	Fixed type.
+5e3a567ad20a7342ad480f25c55f367c628ee58c	1732836334	1732836334	sbolr9514@yeah.net	HowardBrowne	Fixed the #elif directives.
+c16510f6e5f03bed3a18d6e52b0cf713cb192ca9	1732472014	1732472014	sbolr9514@yeah.net	HowardBrowne	Only define __MACOS__ if we're on Mac OS. Doing this using OF style OS flags.
+47eabee4e42d304e5d68afcbe5bd079270d4e4cf	1731986054	1731986054	sbolr9514@yeah.net	HowardBrowne	Merge pull request #20 from morethanlogic/feature/rotation
+4db02501b87149c94d9ca881323784d16b905771	1731888134	1731888134	sbolr9514@yeah.net	HowardBrowne	Added the option to rotate (by n times 90) the Live View and photo.
+a59de29c3bb809028d554a8fc3a95c91e750ba06	1731115334	1731115334	sbolr9514@yeah.net	HowardBrowne	updated project file so example can live outside of ofxEdsdk folder
+ed14f7476d133628e3f625fc7883f1d0be1913fe	1730154814	1730154814	sbolr9514@yeah.net	HowardBrowne	Merge pull request #13 from roymacdonald/fix-2.12
+6b84261abbeb0ed50339c1bad3e737f9233d4a62	1728858934	1728858934	sbolr9514@yeah.net	HowardBrowne	example xcode project fix. Now should compile fine.
+432f25d43b869cb91d20d74c0616b2a1837f9b40	1727741214	1727741214	sbolr9514@yeah.net	HowardBrowne	Merge pull request #10 from roymacdonald/fix-2.12
+e274de394ac6794bf73850cebb845c600651466f	1727343894	1727343894	sbolr9514@yeah.net	HowardBrowne	edsdk v2.12 compatibility on mac and win. reverted example
+d78a5133e10c2f959113957b90c48f7de1b8adfd	1726081894	1726081894	sbolr9514@yeah.net	HowardBrowne	edsdk v2.12 compatibility for mac and win
+a1369dc1ce7d76ec6652bd41a4e993fe9192483b	1725901694	1725901694	sbolr9514@yeah.net	HowardBrowne	updated xcode example project
+538967a13592e3cbf9e1e704df0d9992fa37300a	1724675454	1724675454	sbolr9514@yeah.net	HowardBrowne	now works with edsdk 2.12 :)
+9679e68bf4466d01ef264dcad8f78b22352d71ed	1723748774	1723748774	sbolr9514@yeah.net	HowardBrowne	Merge branch 'master' of github.com:kylemcdonald/ofxEdsdk
+02d83a2884ff3781499271b2ae1a8d057c93e923	1723513894	1723513894	sbolr9514@yeah.net	HowardBrowne	Merge pull request #9 from elliotwoods/patch-1
+a60964fe780ce17483383cb5edee9a3c577ca993	1722558774	1722558774	sbolr9514@yeah.net	HowardBrowne	Update readme.md
+454d1a85d39bc659d113f3757e157bdab9f46f5e	1721511294	1721511294	sbolr9514@yeah.net	HowardBrowne	added ofxaddons thumbnail
+6bc7559b6da3c0d7c1c1bcd238bb87b2964ea402	1720697494	1720697494	sbolr9514@yeah.net	HowardBrowne	Merge branch 'master' of github.com:kylemcdonald/ofxEdsdk
+d14f4e0a1ea59be95f3d97b673dbecb52e1a9a38	1719685254	1719685254	sbolr9514@yeah.net	HowardBrowne	Merge pull request #7 from matthewepler/master
+3756274a243cf720d9b7af1d112e346d194b2db7	1719605814	1719605814	sbolr9514@yeah.net	HowardBrowne	added emphasis to header
+dcbdf789fa8d0ed629d54fa5b2e59ecd76bec04b	1719343734	1719343734	sbolr9514@yeah.net	HowardBrowne	Added install instructions to readme
+c894572ba08d55c5abcadb41689a6527344684f9	1718268454	1718268454	sbolr9514@yeah.net	HowardBrowne	Merge pull request #6 from bangnoise/master
+1e8df2d565ee49aa3d4f6c744284d571a332b5d8	1717910574	1717910574	sbolr9514@yeah.net	HowardBrowne	Don't end live-view to keep it alive, just sent the start signal again, which is sufficient and avoids disrupting the stream. Tested with EDSDK 2.10 and Canon 7D and 5D Mark II.
+e236cc9efe14ec3f66f2d8042bc8707a969c4528	1717205254	1717205254	sbolr9514@yeah.net	HowardBrowne	added getLiveTexture() getPhotoTexture() and savePhoto()
+b8e3f2f80c0193938d5c7e91c118764e011d08b4	1717109894	1717109894	sbolr9514@yeah.net	HowardBrowne	realized the sleep interval was in the totally wrong place. also, changed the reset time to 15 minutes just for safety.
+90e459962ec7d5aa8e82a7ceb10275327466f101	1716400374	1716400374	sbolr9514@yeah.net	HowardBrowne	added an auto-reset that restarts liveview after 25 minutes. trying to avoid the camera automatically turning itself off.
+d73be8285f510305bbbe80fa0dfe1786881a13e4	1716245854	1716245854	sbolr9514@yeah.net	HowardBrowne	added sleep for the thread, so it doesn't fall into 100% cpu usage. if you are getting dropped frames, try decreasing the sleep time.
+6579c78b4fb66ab6a9f24fe50d414468d2071ac6	1715036894	1715036894	sbolr9514@yeah.net	HowardBrowne	makes a bigger binary, but causes no linking errors for people who do not having the framework in their library
+8d1120b7af4e6184b6e8d84bc2be18af94d0497d	1714998934	1714998934	sbolr9514@yeah.net	HowardBrowne	can't quite figure out the EDS_ERR_DEVICE_BUSY, but it doesn't seem to create any problems.
+5f04676c5cea6ebf6f7861860f999535d9be2e20	1714182814	1714182814	sbolr9514@yeah.net	HowardBrowne	updated for most recent EDSDK, removed unused functions from EdsExamples, moved downloadImage and sendKeepAlive into threadedFunction, removed error catching from DownloadImage so it can be caught
+92794d5836cebad820d252bbd8f52406700a204e	1713941094	1713941094	sbolr9514@yeah.net	HowardBrowne	cleanup
+c25a9bba05a83059aa0a038ee07195e7e0acf7b6	1713675054	1713675054	sbolr9514@yeah.net	HowardBrowne	successfully added the fixed queue! sometimes i see the camera stop responding after a few minutes. not sure why yet, but maybe i need to add automatic resetting of the stream if i don't see images for a few seconds...
+11dd68e2ef0845cd62eb99c3a4df92266a37db6b	1713448734	1713448734	sbolr9514@yeah.net	HowardBrowne	last minor changes before branching to fixed queue
+c18e024fdf76c731d92bbda553e51d1e49dbef03	1713275893	1713275893	sbolr9514@yeah.net	HowardBrowne	adding a fixed queue to the mix, going to try and bring vertical synced live view up to 30 fps
+ccc38e0b2c7a8fc110888594ab5be7d46898012d	1712531573	1712531573	sbolr9514@yeah.net	HowardBrowne	safe release, lots of api cleanup, double checking some bools. allows for saving without decoding. decoding and uploading to gpu is done as necessary.
+b35bc96d9f00f77eb03dc5f78bcd7645c7e7c6a7	1711630493	1711630493	sbolr9514@yeah.net	HowardBrowne	changed image to photo in variable names
+683e32d9f8dc1d346340d37f1f18cdb1caf8cb69	1711035213	1711035213	sbolr9514@yeah.net	HowardBrowne	added functionality for capturing a picture into memory. instead of using the edsdk saving functions i'm using the OF ones as necessary, which should be a little faster and more flexible
+ee3d9a242861c815dce3ec437bca2bf83f932c17	1709965093	1709965093	sbolr9514@yeah.net	HowardBrowne	de-generalized includes
+5fec0b7d181627c84fcb8f3c51cd357b4912ea6b	1709222973	1709222973	sbolr9514@yeah.net	HowardBrowne	edsdk example code is moved into EdsWrapper/EdsExamples so it basically acts like extra SDK functionality
+16af1dc417618dc10beae2ece1c56ff052fe9b0d	1708697613	1708697613	sbolr9514@yeah.net	HowardBrowne	adding more edsdk api samples, towards downloading images. might move them into their own file soon...
+2d91a421fe6f5c66cfed233d632994d4d8e2e297	1708331813	1708331813	sbolr9514@yeah.net	HowardBrowne	moved eds wrapper to sub directory
+c138885d7f5b2aac89e4fb987d5364a44faeb98e	1708036373	1708036373	sbolr9514@yeah.net	HowardBrowne	added readme w note for ycam, added takePicture, renamed keepAlive to sendKeepAlive, moved static functions into class so sendKeepAlive and setLiveViewReady can be protected
+680f0dc9a25e442c0174dbbd0beb29ca55f7b8f5	1707586613	1707586613	sbolr9514@yeah.net	HowardBrowne	formatting, removed irrelvant comment
+45d9e8e5c2870d915039f07e2c3ed9b0ff339857	1707075693	1707075693	sbolr9514@yeah.net	HowardBrowne	double checked all frameNew switches. looked into possible timing bug when the app is running slower -- but i would need to add a circular buffer to get any better performance due to mistiming between the update() and capture thread.
+9470619ca3ddda5f87ebaa782b1348546aa2ee0e	1706299213	1706299213	sbolr9514@yeah.net	HowardBrowne	added RateTimer/getFrameRate to camera. checked all threaded variables for being locked correctly. added isReady and removed isConnected. checked all if() for proper requirements.
+22d5f02872630e788f01903701faa5fe67cdc3d5	1705192413	1705192413	sbolr9514@yeah.net	HowardBrowne	finished threading. moved decoding from the capture thread to the main thread. 100% reliable startup and shutdown now.
+02fd28f0bf93966e5b5db6b2235a70364968a977	1704880973	1704880973	sbolr9514@yeah.net	HowardBrowne	now that startup is in a separate thread, the connection is made 100% of the time
+eec88fc7f35f285c4397724f9fd3f8388d01ed38	1704848373	1704848373	sbolr9514@yeah.net	HowardBrowne	updated for 007
+b3d60e04dff52f7f71bea82adc5eb50d3ec93d86	1704644493	1704644493	sbolr9514@yeah.net	HowardBrowne	changes while working on janus machine
+c3ca2e236bd6d1e53b9921219ae1345ebddf0dbd	1704528733	1704528733	sbolr9514@yeah.net	HowardBrowne	added device info cout and keepalive. still haven't solved why it doesn't work first time you start it up.
+07379e04569df568f5e3814fefb472a51d3e9fa6	1704281813	1704281813	sbolr9514@yeah.net	HowardBrowne	added more things to the string helper class
+ca07e6f94a2627441e20203bfe51247be72f3ea5	1703109733	1703109733	sbolr9514@yeah.net	HowardBrowne	added function name info to exceptions
+6a461c0b44d19132824179854dc014c2a143ce20	1702800693	1702800693	sbolr9514@yeah.net	HowardBrowne	last namespace change i promise. now to use the exception-style interface you change EdsXXX() to Eds::XXX()
+c908d72def2370f1f305e4123ec396c89d4b5315	1702152053	1702152053	sbolr9514@yeah.net	HowardBrowne	finished renaming
+45dcbe1bd6fff4dddc30a9d2b3df156a77b1d736	1701833733	1701833733	sbolr9514@yeah.net	HowardBrowne	fixing renames
+5be6b5ec3aa86f2e684bfc4e9d722d9725f4ce82	1701331413	1701331413	sbolr9514@yeah.net	HowardBrowne	if FBO isn't capitalized, EDSDK certainly shouldn't be. going to try with one more pass...
+d8ee7e3d220bc67a88470cf6210d16cc9b1ce4d7	1700772613	1700772613	sbolr9514@yeah.net	HowardBrowne	restructured a little more. added exception class, which makes setup() cleaner and eventually everything else as well
+8e89ffbe0650c53e64add7684129cba2087f7162	1699509893	1699509893	sbolr9514@yeah.net	HowardBrowne	restructuring, added EDSDK namespace for non-OF things. added EDSDKWrapper which uses exceptions instead of return codes
+4fd1c014a93c7462aa9e95822fcb30e122566793	1698699533	1698699533	sbolr9514@yeah.net	HowardBrowne	first commit, includes example

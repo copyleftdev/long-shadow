@@ -1,0 +1,496 @@
+df24a1b56d936edb36cb3e77a31a8470aa5c3041	2045817050	2045817050	naobingdz407945@163.com	countneurooman	[MOD] background approve
+365a49eab32a1989be950d40d6825ee61a500278	2045061410	2045061410	naobingdz407945@163.com	countneurooman	manage sign-in and get-account-id
+783e49273add516efef5f19bb1b967fb5ad03a97	2044745010	2044745010	naobingdz407945@163.com	countneurooman	simplify content-script
+7eb80441e49c10914c886eca02f5077881a411d0	2044549650	2044549650	naobingdz407945@163.com	countneurooman	remove unneeded tabs permission and logs
+77a6f730dd21d2de8cd17450ea8c593ea27b093c	2043783329	2043783329	naobingdz407945@163.com	countneurooman	v4 images for chrome store
+fe0e3fc25f9cb91e4c781355aec86ebd087a8176	2043222889	2043222889	naobingdz407945@163.com	countneurooman	remove console.log
+67a071132f3bc97ae93729643365d266c0a5cef7	2043095969	2043095969	naobingdz407945@163.com	countneurooman	change logo, remove bundled-libs no longer needed
+e1b6257072fff8f459a31b44ae8c6a81be943812	2042536129	2042536129	naobingdz407945@163.com	countneurooman	return FinalExecutionOutcome to wallet-connect
+7e2e50e512359d070e6152696c6e65e6f035e24e	2042382089	2042382089	naobingdz407945@163.com	countneurooman	use DOMContentLoaded
+98b50ba2e0286a2bf1fa2739e594c083e9c645ed	2042075809	2042075809	naobingdz407945@163.com	countneurooman	background: wait and retry for popup to open
+c20515765f9838e0bf777449739748dff6ca1a4d	2041582209	2041582209	naobingdz407945@163.com	countneurooman	better list pools
+7ac15caec8f9e47606442d0210a459019ee527f0	2041260009	2041260009	naobingdz407945@163.com	countneurooman	reorder send-amount, send-to
+7ca1d9bd2cfbd20ad38a53d8d09840e53ca49ccf	2040189489	2040189489	naobingdz407945@163.com	countneurooman	remove unneeded dependency, small fixes
+feab38ad4b04424ff7fbe7edd8de5aa3d31162b8	2040168089	2040168089	naobingdz407945@163.com	countneurooman	approve popup working
+4d1a1fa5af012a862196af099f428ca7d6a0de4a	2039946529	2039946529	naobingdz407945@163.com	countneurooman	remove account fix, state of no account selected
+19075cf376f47ec35d0ac790a838b508495ccbb4	2039269129	2039269129	naobingdz407945@163.com	countneurooman	hide errs on ok & cancel click
+c40e1a6b15bd3ab0d1da6138d2576f2d7869e8ff	2039033409	2039033409	naobingdz407945@163.com	countneurooman	visual adjustments
+173ce2e1b7353e7b6ad8f050da62e5fd8c365989	2038011169	2038011169	naobingdz407945@163.com	countneurooman	NEAR-API-LITE, remove Buffer, bundle
+ff19d40454a37661e2acd80d7eb6ce0aeade21c7	2037444609	2037444609	naobingdz407945@163.com	countneurooman	pass msg to background, always recover base state
+73edfdb0d6db5e372b3d3265ea14cba4772efbfe	2036888409	2036888409	naobingdz407945@163.com	countneurooman	partial refactor - pre replace Buffer
+14a5314a8e87d653ef7b34148726f5161867a05a	2035598409	2035598409	naobingdz407945@163.com	countneurooman	TODO check flow from scratch, network
+3cdf4ffd0806682057ddc18fba1af662ee8f6e0e	2034391649	2034391649	naobingdz407945@163.com	countneurooman	Merge branch 'adapter' into dev-v4-adapter
+a6f1e6274c01bb6605b7c830b1411e74eb3bfd65	2033821769	2033821769	naobingdz407945@163.com	countneurooman	Merge branch 'adapter' of https://github.com/Narwallets/narwallets-extension into adapter
+158f2d2a80b8e9bbe3c84aa6d35976ef040c7b33	2032545289	2032545289	naobingdz407945@163.com	countneurooman	[ADD] functional narwallets v4
+2002f2bc01674645648f2a283e3e2303754030f3	2032017729	2032017729	naobingdz407945@163.com	countneurooman	addition to gitignore
+1f91920c8d0344bfaa0ab3791ba48fd2c449c41b	2031401929	2031401929	naobingdz407945@163.com	countneurooman	mru accounts in hamburger
+8eb58bff5548f081d607aead0e7c8bcfd9868dcd	2030573529	2030573529	naobingdz407945@163.com	countneurooman	remember preferred account per network
+b0e7c4162e5b624bb698238ca04c31fb3758aa16	2030020849	2030020849	naobingdz407945@163.com	countneurooman	select account by popup - remove acc list as page
+c4c2afa2e9f147361c015b9ba8c5048e2ac0dbd5	2028823729	2028823729	naobingdz407945@163.com	countneurooman	show usd value of assets stNEAR, META
+7152bed3e12778b953c87d6b7b5629c7f4a1f62c	2027985929	2027985929	naobingdz407945@163.com	countneurooman	searchable popup
+e819d99d4c96b5516ac8d7848ee85202b901b6e8	2027236449	2027236449	naobingdz407945@163.com	countneurooman	function CheckValidAmount
+1d07b38c40c8a20c2069d65a67bdc9550aea8853	2026182609	2026182609	naobingdz407945@163.com	countneurooman	better search in popuplist
+8c1d6b28e1ef2c982151374170a8c97d8c8c45f1	2025723289	2025723289	naobingdz407945@163.com	countneurooman	Merge remote-tracking branch 'origin/task/305' into dev-v4
+0d8a3509f951857b217150a60fd12fecd6c21cf7	2024886289	2024886289	naobingdz407945@163.com	countneurooman	Solved defect when filter string is empty
+93dd86bc9c60c25d9e01e6d134fca26e3a576041	2023676329	2023676329	naobingdz407945@163.com	countneurooman	Added search in dropdown/popup lists
+f05b20d15f0ffa1f486b65623a9efbd7f9c64f55	2023303089	2023303089	naobingdz407945@163.com	countneurooman	wallet-selector compatible, small improvements
+6f1c96e312abd83595a43e5b43084ba4a680936a	2022078609	2022078609	naobingdz407945@163.com	countneurooman	change name to Narwallets V4
+752b3ec2a12a53d80a8996bf640e4bd3740c81f4	2021772929	2021772929	naobingdz407945@163.com	countneurooman	[ADD] sign and send transactions
+960350d0e443f73df65dae31c338abea866cccf8	2021482489	2021482489	naobingdz407945@163.com	countneurooman	[ADD] sign and send transaction
+ecc58323c4b42140e39e82cdd791bb12e7619be7	2020774889	2020774889	naobingdz407945@163.com	countneurooman	[FIX] property error
+3488c49a509c29fceafbc4b41b45b1a6aaecb386	2019949649	2019949649	naobingdz407945@163.com	countneurooman	[ADD] integration with ws - sign in
+cec2ff93ada767a25eb8beeab2c55911779ab29b	2019936169	2019936169	naobingdz407945@163.com	countneurooman	[ADD] adapter base logic
+e3751d0eabf03ba50e063b34bba564a39fff809b	2019378529	2019378529	naobingdz407945@163.com	countneurooman	remove console.logs
+7c7b9f0922f7ff86d43a1e954db46e505339e96a	2018201609	2018201609	naobingdz407945@163.com	countneurooman	show locked amount, simpler max, bump version
+1b5c5f12a01a416c9490b7d82d80995e735ab966	2017318569	2017318569	naobingdz407945@163.com	countneurooman	better refresh
+b36a2ad093cc74e4e856b035192438a453b62ae0	2016239728	2016239728	naobingdz407945@163.com	countneurooman	fix click-on-asset
+7cfa3e5c0c813fdfc220b11fa32201e59a1b366e	2015091528	2015091528	naobingdz407945@163.com	countneurooman	fix template id, asset id, filter zero balance
+6696c0562c1990ddc7f30d6b2451e936bf81d6ae	2014494608	2014494608	naobingdz407945@163.com	countneurooman	bump manifest
+31aa90aeac4879670a6ffa3ded6261b624939ecc	2013685528	2013685528	naobingdz407945@163.com	countneurooman	avoid console.error
+ed87ad3681a3bcac908b69626407f02a49cfe3f3	2013185168	2013185168	naobingdz407945@163.com	countneurooman	multiple fixes - background handles history
+e9fd5a36498e0a0f37d63218328d1135a95e9762	2012194448	2012194448	naobingdz407945@163.com	countneurooman	v 3.0.7
+efcc40eca006b78961a362f21b9bc8e436982c4b	2011034448	2011034448	naobingdz407945@163.com	countneurooman	fix add-account template
+9981021f7be944bd61b419242cd5fe39d12c6723	2010086328	2010086328	naobingdz407945@163.com	countneurooman	version 3.0.6
+6723cb8fe37dc29e0cfb6450edd99156636d4cf0	2009484488	2009484488	naobingdz407945@163.com	countneurooman	price for stNEAR wNEAR STAKED & UNSTAKED
+370791aa0a261a117f01f8c42f2a167653feee85	2008646688	2008646688	naobingdz407945@163.com	countneurooman	better beta test instructions
+a42114f6d2fbd6e01241ca103f67d0701b48cd66	2008441848	2008441848	naobingdz407945@163.com	countneurooman	small fixes for lockup-acccounts
+4ce4846db4a0ead16db10c8e117aa546556a4ae9	2008353328	2008353328	naobingdz407945@163.com	countneurooman	better show-hide password
+5bfe94a692f1e4e7e06158b0b8a1005211a3e313	2007460808	2007460808	naobingdz407945@163.com	countneurooman	remove unused module
+0f405ad3868d3d49cfbf69e7da3d5a7f3161a7a6	2007162768	2007162768	naobingdz407945@163.com	countneurooman	Merge Sebas: add note when new contact (acc send)
+10b1107c5369c4540b3ca439bf0cd0138ef559b7	2006000208	2006000208	naobingdz407945@163.com	countneurooman	Merge pull request #25 from Narwallets/task/309
+f134f570dfec252f346ecacbd1b283f9ae0e707a	2005761048	2005761048	naobingdz407945@163.com	countneurooman	Added button to every pasword input to show/hide chars
+a8d5e0fb1eb30ac0b68374cf21a200c578d00f9e	2005278688	2005278688	naobingdz407945@163.com	countneurooman	v03.00.05
+caed82bb804a3aff5f87057dad78ae832778da19	2004146048	2004146048	naobingdz407945@163.com	countneurooman	nep141-transfer, better findContact
+9be003b07d7eebf5a486686a6ef638eceb8ac0cb	2003432768	2003432768	naobingdz407945@163.com	countneurooman	update asset on receiving account if the account is in the wallet
+2d3477e59b42d54f1537e23be5603a72a92e1700	2002657128	2002657128	naobingdz407945@163.com	countneurooman	Modify statements to functions
+e6218249422d36dc6de14f2f72b9e489948b48cd	2002131888	2002131888	naobingdz407945@163.com	countneurooman	Added comments
+356e7ec12b952c4abcad2517b2930b95bbd79831	2000921488	2000921488	naobingdz407945@163.com	countneurooman	Add or update asset
+9b9d0e9cfabfd48a685306b347a19d86272499b8	2000641168	2000641168	naobingdz407945@163.com	countneurooman	update on-screen asset balance on auto-refresh
+01f427038a2ea470ac63c753e94aa280e26c75ef	2000541728	2000541728	naobingdz407945@163.com	countneurooman	Merge pull request #24 from Narwallets/fix/02112021
+03d3d9a967c3b57c511f4bcf35e646fd0bb6ee37	1999790208	1999790208	naobingdz407945@163.com	countneurooman	Changed pop up time. Type fixed. Addres name color fixed
+e18040e90804f84f4b92d29cf2c49b5c22524757	1998919208	1998919208	naobingdz407945@163.com	countneurooman	Merge branch 'master' of https://github.com/Narwallets/narwallets-extension
+07e7be2af502d7c8687c12d90d6e71d3736b349f	1998713288	1998713288	naobingdz407945@163.com	countneurooman	Merge pull request #21 from Narwallets/fix/299
+3a82a542527f5f947ff37a993f032fa9f2116ea7	1998694688	1998694688	naobingdz407945@163.com	countneurooman	Added history to selected asset when unstake
+d75802bac15107dc4d3272aff64fbce47a2290d7	1998160768	1998160768	naobingdz407945@163.com	countneurooman	fix bug formatJSONErr- v3.0.4
+5c8266e1d2ee6acfac6c268827c228ccc725aa57	1997312608	1997312608	naobingdz407945@163.com	countneurooman	Merge branch 'master' of https://github.com/Narwallets/narwallets-extension
+3eeb447d7af4956122658f3deb678afb2ff77791	1996168808	1996168808	naobingdz407945@163.com	countneurooman	[ADD] liquid unstake confirm
+b99f527dfcd3c9f91f905742cb2fc447d62a3e0a	1995320528	1995320528	naobingdz407945@163.com	countneurooman	consider token decimals - v 3.0.3
+347f9f11938e981c6827073c5b082b230f0e966b	1994150888	1994150888	naobingdz407945@163.com	countneurooman	support other than 24 decimals on Tokens
+d5631064978f56fab7b35c760d5c7a848488b289	1993756048	1993756048	naobingdz407945@163.com	countneurooman	lockup-account: restake
+cb121452e84ff5e19eba4b7160dc48996b90036b	1992597568	1992597568	naobingdz407945@163.com	countneurooman	lockup-account: Unstake
+2adb8316018d8bc5c97888fed92b535ed99346b8	1991808288	1991808288	naobingdz407945@163.com	countneurooman	lockup-account: withdraw & stake
+128c5eeee2616b8a3d96488d9120d1af8f6dae45	1991645768	1991645768	naobingdz407945@163.com	countneurooman	published as 3.0.1
+ceff85021a07adb942973b8e7b9e0f90494644e5	1990669128	1990669128	naobingdz407945@163.com	countneurooman	minor aesthetic
+68e02442f8f9e40e20f15eb633299d5f334c1c5f	1989398968	1989398968	naobingdz407945@163.com	countneurooman	final combo usage, add stake from stNEAR
+0bf36265344b8058bdd498d7ecd95274e10c88d7	1988708888	1988708888	naobingdz407945@163.com	countneurooman	delete account page fix
+1698228120e744b8b63583b8b2092617461ad025	1988307167	1988307167	naobingdz407945@163.com	countneurooman	create common PopupList AppFace
+e7b1836df34d364a9bcbded237020c50d6dc6740	1987724727	1987724727	naobingdz407945@163.com	countneurooman	[MOD] send Near datalist to combo
+ed15591dd94313041fe8b830adc6d46338829e48	1987653887	1987653887	naobingdz407945@163.com	countneurooman	[MOD] add token datalist to combo
+387e53bb1c07ef7891f1eac3ffe361c6c5c8edde	1987428647	1987428647	naobingdz407945@163.com	countneurooman	Merge pull request #9 from Narwallets/fix/v3_fixes_fede
+ad394034a44495cb4e6a87801da6df1c9c175253	1987311287	1987311287	naobingdz407945@163.com	countneurooman	okCancel when needed. Account button return to accounts list
+d070c5f32eda101749e0e4b48cecb953b5fc87a8	1986252967	1986252967	naobingdz407945@163.com	countneurooman	Hide OkCancel when needed
+f5c747965f6f4cd58bf740ed7f9a1af692e81026	1985616847	1985616847	naobingdz407945@163.com	countneurooman	Merge branch 'master' of https://github.com/Narwallets/narwallets-extension
+1c333bb5a585d0f74ce152003719b24501192118	1984602967	1984602967	naobingdz407945@163.com	countneurooman	fix approve.html url
+ffd6beecf7df6ed84379dcf714e1a7cf57aafda7	1983675167	1983675167	naobingdz407945@163.com	countneurooman	Foco en input cuando se ingresa a import
+a1b158579f56c61f573f6b2c64fbf5833ec4e0d2	1983269247	1983269247	naobingdz407945@163.com	countneurooman	unstake verify moved out of stake verify
+785a2cbabe453e41bb5c8287bbc135940a28cd95	1982085647	1982085647	naobingdz407945@163.com	countneurooman	[FIX] network environment
+c289321d41d1590becb5dd94d894e824b6a4404a	1981995887	1981995887	naobingdz407945@163.com	countneurooman	global activeNetworkInfo, activity/history-css
+8a8cad54daf4db6140d566362930c1e86a469b96	1980826647	1980826647	naobingdz407945@163.com	countneurooman	add destination in stake
+a8adbcb7abd53b577bddd300de7ba82cc68c4e70	1980510527	1980510527	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign'
+b558c4135b9c8929bb7dc004be2e9e4785d4baba	1979943967	1979943967	naobingdz407945@163.com	countneurooman	remove email, add destination in history
+febbdb7993d64fab04d2a572c9a275da5dc7e44d	1978901247	1978901247	naobingdz407945@163.com	countneurooman	AdverBlock added
+0c207f6c7c26fe3ae36b59b40b8b23177b898b46	1978874927	1978874927	naobingdz407945@163.com	countneurooman	accept data:image icons
+a33553c9ee05465cd3bc9707cb464580a0ce7742	1977996047	1977996047	naobingdz407945@163.com	countneurooman	Agregado condicional para verificar inicializacion de okCancelRow
+0b818791cc6333c8336f1b1bdcd071081f4d5f04	1977456687	1977456687	naobingdz407945@163.com	countneurooman	Agregado icono generico
+e5253d2297cc1fdcf366d23ffa2b3b06017f5fb7	1977427847	1977427847	naobingdz407945@163.com	countneurooman	Update generic_asset.svg
+9fbaba4f984e2b1dce0e98642a43f43881f07762	1976802207	1976802207	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+e8e914cc3e56ebc76dd5367fa054a24ed156936e	1975858527	1975858527	naobingdz407945@163.com	countneurooman	Agregada logica para svg default cuando el contrato no da icon
+ab3f91100da316759fa987db234a53b7ae3fe0cf	1975364647	1975364647	naobingdz407945@163.com	countneurooman	Create generic_asset.svg
+47da5a8101874eb385ec192450f3f2967d1579d4	1975180847	1975180847	naobingdz407945@163.com	countneurooman	Cambio de startswith a endswith para asegurarnos imagenes
+b32cc28d2112c71376346772b98a4b15b532b4d6	1974270447	1974270447	naobingdz407945@163.com	countneurooman	Update controls.css
+38dff3136f4421492259411868e167f4122642e8	1973294807	1973294807	naobingdz407945@163.com	countneurooman	[MOD] hideOkCancel on lock
+7996cecfaaa803e511933d3865d8c6a2d4a53cd2	1972612407	1972612407	naobingdz407945@163.com	countneurooman	Update vars_lightmode.css
+e7c4aa0b50e9c4e3cd9c69b768b50abc3db35fee	1971462247	1971462247	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+023cfcf65a3fe2988b8f5038ce0e99a71674db6d	1970370967	1970370967	naobingdz407945@163.com	countneurooman	Fixed startswith null
+7c688b2fecaaec117b760a3b81f4c960ffd49986	1969704887	1969704887	naobingdz407945@163.com	countneurooman	Update controls.css
+16bd577ba8f6bad0305f5412c6df075e3821fa1a	1969253767	1969253767	naobingdz407945@163.com	countneurooman	Cambios para iconos de tokens. Mainnet
+c0f49dd4c4568fa2b52caf231135f0bfc9462bcc	1969039047	1969039047	naobingdz407945@163.com	countneurooman	[MOD] stnear svg
+20491489386719d85da94c5a3b20b617a7c820cf	1968276807	1968276807	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+1b2506b0a6b2908aeb80311c5855c23923d432b9	1967025567	1967025567	naobingdz407945@163.com	countneurooman	remove button in asset
+b2efa64409bbb44973c141b463b2f2ff7682eeee	1966079727	1966079727	naobingdz407945@163.com	countneurooman	Update logo.svg
+4f604da60455a363e99ebd7376b2a8cd46161756	1965816847	1965816847	naobingdz407945@163.com	countneurooman	minor fixes
+717d449108afd89b32de83f9352db7c15402058c	1965757887	1965757887	naobingdz407945@163.com	countneurooman	minor fixes
+a176a91d12b8b2a9a179f016365af7423e2004d7	1964892847	1964892847	naobingdz407945@163.com	countneurooman	aside right margin
+cd278df1e29c37e730b6b9e1988abc9f280507cb	1964767807	1964767807	naobingdz407945@163.com	countneurooman	aside in all its glory
+e3177faaa38dda732adf40e5b46caac1ed1faf97	1964015447	1964015447	naobingdz407945@163.com	countneurooman	tweaks
+48ea22022018228e53fa099b1c46069c9ff8c843	1963784727	1963784727	naobingdz407945@163.com	countneurooman	logos
+2e31f438f17dc750679175e92e725f656a35cc82	1963040966	1963040966	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign'
+a4cb091237a761f68b9c89e0c051d77ed5fed58d	1963013686	1963013686	naobingdz407945@163.com	countneurooman	Update index.html
+453ec0aced9d17b92fa244f552c155cd4442d752	1962020366	1962020366	naobingdz407945@163.com	countneurooman	Update vars_lightmode.css
+c2c0fbea6d77c0f047039617507365608a7e265d	1961056566	1961056566	naobingdz407945@163.com	countneurooman	Verificacion si beneficiario existe. Contactos en input de delete
+0ce16b9ca3c43b220c7c7eed059046ba04713a60	1960933606	1960933606	naobingdz407945@163.com	countneurooman	Agregado SVG de liquid stake a constants. Agregado al reemplazo en los history
+cd43d23b578142fa0ae2d5dd49b74138626d5a35	1959911926	1959911926	naobingdz407945@163.com	countneurooman	Cambios en history reemplazando string con svg
+5896e5391e5e61f5a883c90304ea2b0a9bf04e85	1958800686	1958800686	naobingdz407945@163.com	countneurooman	small adjustments
+1bb8c6f2999b37bc60fef5be98049fb8d124d7c5	1958487246	1958487246	naobingdz407945@163.com	countneurooman	[FIX] account in different network
+208a0bdb9f82c8ac4f2fadad6c4ba7ecab026c30	1958220846	1958220846	naobingdz407945@163.com	countneurooman	[MOD] address book redirect and selectedAccount unify
+804e267b6b42b77e53789db2121c60238abcc87b	1957854726	1957854726	naobingdz407945@163.com	countneurooman	Update ListItems.css
+fedf7f2efca03dd4f9be16e76f7cc94e71526051	1956711046	1956711046	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+0f597a8753b7889260afb96ed88492e2a586fb6b	1955575326	1955575326	naobingdz407945@163.com	countneurooman	tweaks
+6507a406d1e39966c8a51c3029d91aa06eb86819	1954865766	1954865766	naobingdz407945@163.com	countneurooman	method AddHistory en class Asset
+56f282f4751d74ee4a4ff9839c83e03f86506a29	1953606286	1953606286	naobingdz407945@163.com	countneurooman	syntax
+9b2fa321fbb6c5e9669647fe1c9e80aa346419c3	1952918606	1952918606	naobingdz407945@163.com	countneurooman	syntax checker
+e8f2342dfda4a0aedae8f1481c28c4d4cadf842a	1951877926	1951877926	naobingdz407945@163.com	countneurooman	mainnet metapool contract name & fixes
+6bb6245745a582aa9f562973928c3912fceef8c5	1951584846	1951584846	naobingdz407945@163.com	countneurooman	[MOD] consider stnear on refresh
+1a015e917526a73e0ce8e04da234e05c8433453c	1950368486	1950368486	naobingdz407945@163.com	countneurooman	Search more assets bug solved
+55ee59c23f15be0452a93bf4b42563288da46950	1949510086	1949510086	naobingdz407945@163.com	countneurooman	Update approve.css
+28eb3b31c135e7e439b461515602b7e1d6cbcf78	1948294846	1948294846	naobingdz407945@163.com	countneurooman	increase contratst - accesibility
+04347c2a39a705075ba118342e1405dea565e258	1947807326	1947807326	naobingdz407945@163.com	countneurooman	Update approve.css
+55209e7159f3c996503a054ddb427b3de3eb5129	1947778686	1947778686	naobingdz407945@163.com	countneurooman	Update controls.css
+31bd1a7aeba09c0e70ae53cc55454d4c6a6cca8a	1947287966	1947287966	naobingdz407945@163.com	countneurooman	[DEL] code not used
+8e22da70e2998eb9503da079793d4607b0186c78	1946636606	1946636606	naobingdz407945@163.com	countneurooman	Checkeo de cuenta antes de agregar a address book
+99c71284fab198e7596eb21696473a3c4fe257e2	1945335206	1945335206	naobingdz407945@163.com	countneurooman	Validacion de cuenta al transferir token
+454769efcbcfc6ffed78f564e9ac97eeb3e50ceb	1945260206	1945260206	naobingdz407945@163.com	countneurooman	Update down-chevron.svg
+a623bd09c8a9f9dd7de50cf1a39a091223764366	1945119286	1945119286	naobingdz407945@163.com	countneurooman	Merge pull request #8 from Narwallets/lucio-test
+d2864b1d33dc87356baf381801cc7657c3e725c5	1944476566	1944476566	naobingdz407945@163.com	countneurooman	fixes varios
+e59b77a4b763523bd728438727f4e56e07512126	1944094286	1944094286	naobingdz407945@163.com	countneurooman	partial
+73deac363c9e6732723ce22f922a04384c741d3f	1942862726	1942862726	naobingdz407945@163.com	countneurooman	[ADD] colorMode persistency
+3dcca18747e3682c17a9b1f1a188a0b1c4c1bf74	1942285926	1942285926	naobingdz407945@163.com	countneurooman	Disconnect connect manual
+5e34a7cdc74b82c5039d1158493fd6b7fb151f23	1941783086	1941783086	naobingdz407945@163.com	countneurooman	Agregado checkeo de cuenta
+09ea6bef7508e50ec48e89ae0fa82fe1113b9be5	1941763446	1941763446	naobingdz407945@163.com	countneurooman	Update hamb.css
+7388aa590e953221e420eda7d8e73a6c31ba2113	1940607686	1940607686	naobingdz407945@163.com	countneurooman	Agregado control para deshabilitar enter
+44a95f721cace91f5e3f904754281c5b2793aae7	1940468846	1940468846	naobingdz407945@163.com	countneurooman	[MOD] approve.css
+9ecda1f4ac050bfd14c1a3e8300662dd104562bd	1940276046	1940276046	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+b618489133d729736745dbdc94d22657c180810f	1939073326	1939073326	naobingdz407945@163.com	countneurooman	Agregado lista de tokens para mainnet
+6cd071c708538c9b4535a0e74d0639b2afc6b5ed	1938498046	1938498046	naobingdz407945@163.com	countneurooman	Agregado boton Enter para importar cuentas
+3153c4d5682b8f17dbd8a46ae0294524d8bb7cca	1937244886	1937244886	naobingdz407945@163.com	countneurooman	tweaks
+d24fd196e05823ddad2d8171e8f32e216fa1c5c3	1935947246	1935947246	naobingdz407945@163.com	countneurooman	Delete account
+e828dba4c505ce35ab86ce647d2a008cd5b2e01d	1934708566	1934708566	naobingdz407945@163.com	countneurooman	[FIX] varios
+22bc1ce4a27f4f9fc2b03e3909ce6c7efe86d54a	1933947485	1933947485	naobingdz407945@163.com	countneurooman	Merge 'lala_redesign'
+69516f8e6aecaaa81fa56a1d650b9bb0e3cb7b96	1933614445	1933614445	naobingdz407945@163.com	countneurooman	agrega assets cuando importas
+3ec2ce48b4725189c17b4af59b1d333628cd12b0	1932546445	1932546445	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+05e16702ddc143a116e4a6763fe03735622a6d83	1932248725	1932248725	naobingdz407945@163.com	countneurooman	Search more assets busca tokens
+8e9623c1142b4548cf68498aae828c445f68e5f6	1931568125	1931568125	naobingdz407945@163.com	countneurooman	arreglo iconos
+95e2de4ffd96c5de0d2351b25c4b5da7ce664d62	1931383205	1931383205	naobingdz407945@163.com	countneurooman	[ADD] request private key on import
+d447739587b9119a7afe174c1e553c84492e0fe9	1930271045	1930271045	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+a5bfaadd7f188269f3f73d69d4d701b90c357ac2	1929647005	1929647005	naobingdz407945@163.com	countneurooman	tweaks
+5e19ccd47fbde6303767e66e170c67c63759111f	1928975925	1928975925	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+cf9dac99b8defb879b35ec4988c6f7f32ba542a5	1928170045	1928170045	naobingdz407945@163.com	countneurooman	Funcion add asset token
+5910f5b71f6b8af7688a37d0ecda7a5bdfbebb23	1927618005	1927618005	naobingdz407945@163.com	countneurooman	[FIX] usdPriceReady, near symbol
+40e7445d09dfbded80c364a4f1242ac8fa9f3158	1926461885	1926461885	naobingdz407945@163.com	countneurooman	Update ListItems.css
+2ec0834f225ef0de8b6ea56f557c3c1eab3a6cd9	1925993565	1925993565	naobingdz407945@163.com	countneurooman	Update blocks.css
+722ee568ab3accd58168fb0d4918f37b1307e8d2	1924858565	1924858565	naobingdz407945@163.com	countneurooman	truncado de activity cuando es largo
+5ccebd1bf569b6c9aaca16b575f9206e68c41463	1924387805	1924387805	naobingdz407945@163.com	countneurooman	[FIX] more descriptions
+ea2ffe85508e34cd4dbeb38fb07b0dd7575bc3a8	1924255445	1924255445	naobingdz407945@163.com	countneurooman	Update buttons.css
+7b267ec4ab57aaa86fa946002014308632478587	1923203245	1923203245	naobingdz407945@163.com	countneurooman	[MOD] description more
+06a890e1676c24adc9cf86a5678ee2cb3fe2996e	1922789925	1922789925	naobingdz407945@163.com	countneurooman	approve html
+64107ed44a370aa98f6d9e4ef8dffca5afff34b2	1921528285	1921528285	naobingdz407945@163.com	countneurooman	lota shit
+7a9cc4ee67215d61a3d631be0b1367c1561e63fc	1920967605	1920967605	naobingdz407945@163.com	countneurooman	[MOD] fix varios
+62e749a48ac1a32893fb83931dc8f7b6a136f814	1920202005	1920202005	naobingdz407945@163.com	countneurooman	Parpadeo de switch
+3d6599a4e52fa470d8c4e902a57b6f601940cfdc	1919944205	1919944205	naobingdz407945@163.com	countneurooman	Auto refresh for assets
+eaa6dcdc97481a2b4bf1c31b44984623623be85c	1919897645	1919897645	naobingdz407945@163.com	countneurooman	Autoresresh when show selected account
+8dcfdc070502803675c7d0db9cb7b3101e5d8c6b	1918916125	1918916125	naobingdz407945@163.com	countneurooman	Auto-refresh
+7f832a4c9bbedf2aa605e93426a4ac4c1addd80d	1918504885	1918504885	naobingdz407945@163.com	countneurooman	bugs menores
+d308d912b099e3e3e713f3ed9a4b0877ec07d24b	1918468845	1918468845	naobingdz407945@163.com	countneurooman	[ADD] sort assets
+ccf2d3654e0e27e0853ddd98bee60115e8809bb2	1917239845	1917239845	naobingdz407945@163.com	countneurooman	[FIX] stake amount
+88c95456b16fbea446fef39c8a405ce24f7bffdb	1916757965	1916757965	naobingdz407945@163.com	countneurooman	Update svg_const.ts
+c8482499809eb39ac195b0ba7bee3accadb9e7f6	1915529005	1915529005	naobingdz407945@163.com	countneurooman	[FIX] change password
+54d8e7915f5809729d4d5b02a3854a001e58fde1	1914464005	1914464005	naobingdz407945@163.com	countneurooman	controles, lista, icono stnear
+5ab02dc7696b2308eac139633e36cc99f581d155	1914298805	1914298805	naobingdz407945@163.com	countneurooman	Added icons to activity
+baa19803c761efdd61c83ee1e9a061c7d358e507	1913909485	1913909485	naobingdz407945@163.com	countneurooman	[ADD] change password
+b5836045ccbe4cb2996cdee377f536cdff6eae4a	1912625845	1912625845	naobingdz407945@163.com	countneurooman	Update vars_lightmode.css
+f1d0432406f965b5f1d5ce03daf8019f62364807	1912201765	1912201765	naobingdz407945@163.com	countneurooman	colorcitos
+9a2c909b980cdd012211c3670be1e6734d6dde3e	1911997245	1911997245	naobingdz407945@163.com	countneurooman	Update common.css
+9dcf65ddea7bc4e1e57635faebcb570cf76427a0	1911850285	1911850285	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+b5e975bc433f1ce46271846a0bde09e9fd4811de	1911470285	1911470285	naobingdz407945@163.com	countneurooman	Update svg_const.ts
+0f40ab88878faf4660ac1dd14749dcae3c38d67a	1911078605	1911078605	naobingdz407945@163.com	countneurooman	List Tweaking, New Icons, Options Page
+8c1e650419cfdc30e7362b2dc9b9352d347e1e7a	1910279205	1910279205	naobingdz407945@163.com	countneurooman	[ADD] fee to liquid unstake and meta-v2.pool fix
+78ed076c0c7d5c96fcede76f8e0bba8f664e5cd9	1909024045	1909024045	naobingdz407945@163.com	countneurooman	[FIX] enter on okCancel
+7e163431750b60785e83b2deb3597ba3b4e4d7ce	1908339365	1908339365	naobingdz407945@163.com	countneurooman	Changed META SVG
+0b6691ec47e6c53922795810cbdbbd6b97a420e9	1907151284	1907151284	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+868ffb2ba9bd146ea1adb6c59685d23146ffe73e	1905943044	1905943044	naobingdz407945@163.com	countneurooman	SVG file, added meta functionality
+a4d486cd4f122d1c5aeb617eb4075fa102df80c1	1904890604	1904890604	naobingdz407945@163.com	countneurooman	Update meta_icon.svg
+9453c4d46dc9153366487257980a11e8a26b0f07	1904825724	1904825724	naobingdz407945@163.com	countneurooman	Update meta_icon.svg
+a6858cd881315a674abfd33bbdf71803deaa43e2	1904412884	1904412884	naobingdz407945@163.com	countneurooman	Changed STAKE for STAKED
+7c0b58e09a5f8d0ea1a51112c7928fb9305d1143	1903668084	1903668084	naobingdz407945@163.com	countneurooman	Added unstaked assets when search more assets
+b7d2a10e16b6dc311c583af177dd47eeacb7ceaa	1902961164	1902961164	naobingdz407945@163.com	countneurooman	new icons and style tweaks
+deecb2ec0d6102e41aee0dda6c1317d26d0faa0a	1902248204	1902248204	naobingdz407945@163.com	countneurooman	[ADD] options
+36b0d27c9abb2ea4c862a77d97241cdd65b563f9	1901310564	1901310564	naobingdz407945@163.com	countneurooman	[ADD] global enter on okCancel
+ca8d473b650d3d779dd31883f3df78d97ea115da	1900534364	1900534364	naobingdz407945@163.com	countneurooman	typo corrected
+3e856916ffadc1ac0119638c6f2028f11245d49d	1900518044	1900518044	naobingdz407945@163.com	countneurooman	Changes on liquid unstake, autorefresh, and others
+ed10951c3cbb491bced96664840f215a3826cf56	1899287484	1899287484	naobingdz407945@163.com	countneurooman	[ADD] restake
+6afad0406a658127914bbff27e873f3062342148	1898451844	1898451844	naobingdz407945@163.com	countneurooman	typo corrected
+2e0e05b8ccd214b71be7164c656099cd2e41b37f	1897232524	1897232524	naobingdz407945@163.com	countneurooman	SVG arreglados y embebidos en el codigo
+6f2c6705f76b002b8d051bb347c82ec51ad320f3	1896466844	1896466844	naobingdz407945@163.com	countneurooman	[ADD] back buttons
+cc6db08889bc8deefc2ed0ea4db3ac95aaa74309	1895171364	1895171364	naobingdz407945@163.com	countneurooman	unstake_default_svg
+8bd9e3672042dd38353edef397153d853c0319d4	1893983724	1893983724	naobingdz407945@163.com	countneurooman	new icons and tweaks
+ae57a7319f59c286ea6528fb6a6972b3ba51352b	1893313844	1893313844	naobingdz407945@163.com	countneurooman	[ADD] password confirm on private key show
+94e74c554354cbe23e6dfa5f6c3f64992a38169b	1892897444	1892897444	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+ff06b00155ab09ae58079ecd009c7673718aa6b1	1892705404	1892705404	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+209a40e784548df95935a207b5d21d6d8080f166	1892603164	1892603164	naobingdz407945@163.com	countneurooman	Validacion de add address
+03c8f82ce054b389ba7cf02cf0025d3954805bbb	1891824324	1891824324	naobingdz407945@163.com	countneurooman	dark_light mode
+d76292c4137a843694e7963928b5cb8010ca332d	1891327444	1891327444	naobingdz407945@163.com	countneurooman	Final Tweaks
+26d2be6eb72e0734607b70ed51ff4024e3964d21	1890039164	1890039164	naobingdz407945@163.com	countneurooman	Final
+f388c6f04e4e34076d5a3da4195a185565e2eec0	1889112924	1889112924	naobingdz407945@163.com	countneurooman	spinner, error and tweaks
+00ffdf33cb3323206176c78e61eb56b90f3331b4	1888696564	1888696564	naobingdz407945@163.com	countneurooman	reposition to asset
+a2f9d0cc24859a82a4944c85e13caf31fb2d2cf7	1887713924	1887713924	naobingdz407945@163.com	countneurooman	Update controls.css
+281b44adbfa746ed5c355eb1c9d16ad9e41a1b0e	1886593764	1886593764	naobingdz407945@163.com	countneurooman	store date as ISO, fix "ammount"
+6dd30588b06ed95b767b69a3c5e3861a4ca65538	1886232124	1886232124	naobingdz407945@163.com	countneurooman	ISOdate recognition
+2d781bc6b9c864b4a2c8678fc6752e6567ce8bd1	1885021604	1885021604	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+87ee0ee0d3e323a808f9bcb70a6c39aa7a021b16	1883917044	1883917044	naobingdz407945@163.com	countneurooman	Update controls.css
+a3b8c837df5990fdc54c3fb619fa6945d6408606	1883848124	1883848124	naobingdz407945@163.com	countneurooman	Update controls.css
+38a8d85b8923e9c49bea9d61ffad67865f3a6c5f	1883654604	1883654604	naobingdz407945@163.com	countneurooman	[FIX] unstake 0
+0fb8161b3743c91216e818f19d5f1bc242804b13	1882828844	1882828844	naobingdz407945@163.com	countneurooman	Update accountdets.css
+1887e5c1e1b37f22efb557091498a3dac872d2a1	1882674484	1882674484	naobingdz407945@163.com	countneurooman	Darkmode and tweaks
+ad797c43d16fb72a7b23abda0595bae2d307c848	1882489404	1882489404	naobingdz407945@163.com	countneurooman	Update ListItems.css
+ee043651eb87ab8303912fc7b5f73e61afc0ec55	1882008644	1882008644	naobingdz407945@163.com	countneurooman	Update stnear.svg
+53b8380ddf95cc076de02b091655a501df4170c8	1881198404	1881198404	naobingdz407945@163.com	countneurooman	Update stnear.svg
+30d9ca8679beba86a3ecfd7de759b7e4f1ffe613	1880821884	1880821884	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+5206956d97e5a07f6f2759e5eb97f9986ab5292a	1879891004	1879891004	naobingdz407945@163.com	countneurooman	middle commit
+f635efa29600532cdff1c2141fac3af1d6257ad5	1879015843	1879015843	naobingdz407945@163.com	countneurooman	newicon
+8f2874f06f6673a7859cfe1bdc062cf8d538da76	1878880003	1878880003	naobingdz407945@163.com	countneurooman	results
+75bd215f3e421fe17011bee49c34440cba5a6313	1878606723	1878606723	naobingdz407945@163.com	countneurooman	Update ListItems.css
+709e107e5e50e7f4a34acf961bdd0d6c92916f12	1878269283	1878269283	naobingdz407945@163.com	countneurooman	SVG for STNEAR
+bdc1145a66b39e666aa24fdb1b1b8b665e93631f	1877581043	1877581043	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+f3fc8c61b6677951562e8a060c5ab326d2a26f16	1876322523	1876322523	naobingdz407945@163.com	countneurooman	new icons
+c03babc2bc1a19f2ccec4cd78685d420728b0120	1876250563	1876250563	naobingdz407945@163.com	countneurooman	limpieza
+e454e213271584f7deb2d1f5864cf1ead8c6ea92	1875698723	1875698723	naobingdz407945@163.com	countneurooman	Manual refresh
+d6c0f9f54a2c4a32d5bc76eecbf3922093695755	1874920083	1874920083	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+d804014cde2540d51faeddd641540af930f3df8d	1873786083	1873786083	naobingdz407945@163.com	countneurooman	tweaks
+5327215f631436f95486b2f4a4a479ef9b0bde56	1872658563	1872658563	naobingdz407945@163.com	countneurooman	Almos thereee
+2229980ece881993de74710d805b6ac875bae58a	1872291403	1872291403	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+b2e567bd06d170731ff04a9dee36297a483cc0e6	1871790483	1871790483	naobingdz407945@163.com	countneurooman	cambio lista cuentas
+ca4dd56663ae90ce4698675fa2d01c770da2e9e4	1871219963	1871219963	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+963e9c0433909cf8296341e7b5f41f71c2c7836d	1871180883	1871180883	naobingdz407945@163.com	countneurooman	cambios highlight
+e85139c6cf21f687c43faab8b65a072df7c5011c	1869945323	1869945323	naobingdz407945@163.com	countneurooman	[MOD] max button position
+24e0655f67b11871cc7b65826ebfb81398237e8c	1869292643	1869292643	naobingdz407945@163.com	countneurooman	added withdraw and others functionalities
+3a8394beb76daf1457662474f077e0f43b6716ba	1868872003	1868872003	naobingdz407945@163.com	countneurooman	Cambiado lugar de import account
+6c9c551312bb4c117b7ee09cb17a84fea52f703c	1867676443	1867676443	naobingdz407945@163.com	countneurooman	middle commit
+1b108fd777c78a2377e7996967512d455713a2bf	1867494323	1867494323	naobingdz407945@163.com	countneurooman	[MOD] import network endpoint text
+657b5114b16eb19c4b1fc84f5d18e7c867f1f63d	1867075883	1867075883	naobingdz407945@163.com	countneurooman	reverted asset list
+18bf04e7edd7c18fd2adce3e65a445a7eaceb1dc	1866120723	1866120723	naobingdz407945@163.com	countneurooman	refinamiento
+94bb847a0b1ce7e9e9420998410c6e3cf878f229	1866088283	1866088283	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+6c54a7fa529f8f9397345e0c048bfa399194f29b	1866035923	1866035923	naobingdz407945@163.com	countneurooman	[TEST] gitignore extension/dist
+0c9f08c69bb7ab78e5b1a6556c3c19550d7662a6	1865478723	1865478723	naobingdz407945@163.com	countneurooman	[MOD] add token remove full access
+82f9fe48b0790907e03ce4086dc2b356bc2ac75a	1865032563	1865032563	naobingdz407945@163.com	countneurooman	minor change
+a90a44c9adcf07f42f687aa6086af74170fd49eb	1864995363	1864995363	naobingdz407945@163.com	countneurooman	Corrections
+7b078e6fd8d0ac7dbc5b7ca511444923b5c03598	1864970683	1864970683	naobingdz407945@163.com	countneurooman	Adaptado a nuevo diseño
+01d30fecdac32156736165bd55fe6b8d447c2d72	1864137843	1864137843	naobingdz407945@163.com	countneurooman	[ADD] max button
+f82ae22a9db88bb9b238ad7a2a56e2211a28906b	1864011323	1864011323	naobingdz407945@163.com	countneurooman	Middle changes
+76a26993d4d3a0c474d685a6984375a56fddfd86	1863955363	1863955363	naobingdz407945@163.com	countneurooman	[MOD] address_back_button, stake, default_unstake_remove
+b8bccaa3108983e39a11af21da3d13781f127845	1863202003	1863202003	naobingdz407945@163.com	countneurooman	Cambios varios. Eliminacion de boton de more. Agregada logica en search more assets
+6a1a794283efdfd109703cd903861c5469dfa4b3	1863200403	1863200403	naobingdz407945@163.com	countneurooman	[ADD] address bottombar hide/show
+354234b9294383f8a732e227141776346454e7dc	1862132203	1862132203	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+792dfef5f76803248bdd1c9a105767801a565b7d	1861611163	1861611163	naobingdz407945@163.com	countneurooman	address book and shit
+687f29a8492352f0b3a11cf8c525e61833188cac	1861431163	1861431163	naobingdz407945@163.com	countneurooman	middle commit
+b47158fed4f3b023d8d8860dd19775f83e5b3721	1860657123	1860657123	naobingdz407945@163.com	countneurooman	solucionado bug en send nativo. Fechas formateadas. Liquid unstake funcionando.
+b12425ed85f16769bfd4e4a333cdba76ed2e1671	1860511163	1860511163	naobingdz407945@163.com	countneurooman	cambio de logica en botonera
+33067aaeded4e7fe35921f56075874805b951d8c	1859968883	1859968883	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+25121d886a7e9ff5aaa9386ea8555556fa02c28a	1858696363	1858696363	naobingdz407945@163.com	countneurooman	new icons, adjustemnts to css
+fb3f9e5f54b10ad43ad8c7c55c57d4506ce53d49	1858155843	1858155843	naobingdz407945@163.com	countneurooman	added liquidUnstake
+43ad96f7b8d3d84630ad60e32285c9aef209a668	1857380562	1857380562	naobingdz407945@163.com	countneurooman	middle commit
+07380057ec7c3d26eba7d19be39f6ff6433fe866	1856978682	1856978682	naobingdz407945@163.com	countneurooman	address book e inicio de Unstake/liquid
+29291e5ee879129914545eacec6a6bb8d4c9625c	1855803162	1855803162	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+e204f549166542d6f4b1840e5b8d7975e7842f6b	1855379282	1855379282	naobingdz407945@163.com	countneurooman	more css adjustements
+3d471fafd86f10162aafe0c9d05594bb11d26156	1854351962	1854351962	naobingdz407945@163.com	countneurooman	ajustes al css
+72fabfe22cb9aa28df58cc925c47def34875d9a2	1853294682	1853294682	naobingdz407945@163.com	countneurooman	addressbook funcionalidad final
+8bd7f25c482c6863f04a5523987248b2a0bfbe4d	1853224282	1853224282	naobingdz407945@163.com	countneurooman	agregadas opciones de edit y remove en address book
+7f5d07abc2bc04fe9f91c63c73e33859d6b6bce3	1852882682	1852882682	naobingdz407945@163.com	countneurooman	Creacion de pagina add in address book, lista de address, checkeo de duplicidad
+86b864b7929397a2eae8d4497c79881513fd90e5	1851859282	1851859282	naobingdz407945@163.com	countneurooman	Cambios en address book
+2ff9f19a08186b93b7e6c8d09ad87f38a7944195	1851085482	1851085482	naobingdz407945@163.com	countneurooman	cambio en left
+33e6b982af81fa1c409757885564d2b096f6e535	1850545242	1850545242	naobingdz407945@163.com	countneurooman	llamado a api precio dolar
+643d8e0a759694c0a1a3f2af50d237755bfe72a9	1849700722	1849700722	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+52f2d5c25eba3d8e354b65bc8ff61264a7b263be	1849624202	1849624202	naobingdz407945@163.com	countneurooman	patch
+e76d05aba120e02da11e8297541d08c0510f2308	1849472522	1849472522	naobingdz407945@163.com	countneurooman	styling y appfaces
+219ff29fce1bfa092de0f114e259982b96cc51a0	1849124602	1849124602	naobingdz407945@163.com	countneurooman	Middle commit
+507b44693bfbbbd65bd3ba59c054b87913ebb396	1848738882	1848738882	naobingdz407945@163.com	countneurooman	Update stake_icon.svg
+3cc8abe3f07e6004b6ec81c7d57fde9e7a325bfe	1848160282	1848160282	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+0a31570f45dcfa382b0e957aa135a717cb9b1d68	1846907882	1846907882	naobingdz407945@163.com	countneurooman	middle commit
+5553775812538228fdc6d623611bea979e7680a1	1846367002	1846367002	naobingdz407945@163.com	countneurooman	minnor changes
+129517580318702dd79f9aaaa6149f0911f3ae84	1845444842	1845444842	naobingdz407945@163.com	countneurooman	middle commit
+ce884bb356b2963e2f5a3440a8c3f9ffc1fa7cb4	1844547322	1844547322	naobingdz407945@163.com	countneurooman	Create stake_icon.svg
+bd77902dd6995ed3c1205f62d56d1819e504bc57	1844255802	1844255802	naobingdz407945@163.com	countneurooman	Style Changes and Adjustments
+f675ba0b81a7b9983e5f1e3a50d5029131f31b9c	1843922202	1843922202	naobingdz407945@163.com	countneurooman	Funcionalidad ok-cancel
+b50753cbe312d5d9cdd5c9124cebdaf152e9929a	1843904442	1843904442	naobingdz407945@163.com	countneurooman	index changes
+cad8d7da2e1863d6dfa22c2dd7d66c77c31c09be	1843068122	1843068122	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+46e515373eb3b4c56fecdb0b6387cd8d3abb9716	1842832322	1842832322	naobingdz407945@163.com	countneurooman	retoques
+34ab3b93aac7cc61381215b127bedcccc786d3cd	1842151202	1842151202	naobingdz407945@163.com	countneurooman	middle commit
+6426517b8b9bf779940740d5790204dd3a699f61	1841451442	1841451442	naobingdz407945@163.com	countneurooman	Fixes en add token. Fix de botones
+1a021d1c33755af87985025c2f29fe5dce7ecbb4	1840843762	1840843762	naobingdz407945@163.com	countneurooman	Cambios en modelo. Refactor. Add stake
+fa67450be61870752fd93fe6f4be84932bfba2b2	1840015322	1840015322	naobingdz407945@163.com	countneurooman	arreglado el button group para que quede fixed
+fdf390d8ee9130492c204b5c4a9d00a340090542	1838913402	1838913402	naobingdz407945@163.com	countneurooman	Cambio de funcionalidad de Ok Cancel
+d54a24dbfa8ea6c7afa277b30cf7bf9ea8d5386a	1838715602	1838715602	naobingdz407945@163.com	countneurooman	minor changes
+b5502570d30170e00626aa5737912528422a31cd	1837568322	1837568322	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+9e7e644ae1ed2e4c32fea46fee50e148d4c97b5e	1837323482	1837323482	naobingdz407945@163.com	countneurooman	Update index.html
+9b6714566027d22515d971129b99c7fadeaedba8	1836145442	1836145442	naobingdz407945@163.com	countneurooman	Final touches
+ea5578bc51eaf57fa8a2684961919bdb289c566c	1835530962	1835530962	naobingdz407945@163.com	countneurooman	adjustments
+99a5bb036278813b65fd4d8e4531cf801a1a37ee	1834393242	1834393242	naobingdz407945@163.com	countneurooman	tweak 2
+d2f8ebd99a985d481dd53f1e74bc38d7a6d22ad9	1833101322	1833101322	naobingdz407945@163.com	countneurooman	tweaks
+4eee745ba83f950200ca549a182c9a86f3af54b2	1832636202	1832636202	naobingdz407945@163.com	countneurooman	minor adjustements
+be89865e622ce9b8b059d53c55add122190ca778	1832601242	1832601242	naobingdz407945@163.com	countneurooman	varios items del trello para revision
+30cb887e63de48d2e2ea3b34b94cd57e799eb33c	1831413682	1831413682	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+16f540c120633e545f09cc8123669e5741368390	1830110681	1830110681	naobingdz407945@163.com	countneurooman	Cambios menores en index. Botonera asset selected, seleccion por tab. Solucionado Wait en token
+58988b5f4cea28877b13a0824825d57fab8362f0	1829734041	1829734041	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+85b9b5d16e5aa7984358743ccc1334073f0a3a35	1829163201	1829163201	naobingdz407945@163.com	countneurooman	arreglin
+6074182c47da98f43901a9cda6722e8d94658624	1829111801	1829111801	naobingdz407945@163.com	countneurooman	Limpieza de assets al volver a accounts. Envio de informacion a asset-selected. Remove asset details conectado. Modificacion de modelo.
+b5fa42c91152aab87ea1ed7c0b222dbaf25ff568	1828526601	1828526601	naobingdz407945@163.com	countneurooman	Boton de connect disconenct funcionando (connect). Boton import escondido cuando debe. Step 2 escondido cuando debe
+35f6febc34648c038c3403b4f978d39adfc4126c	1828062841	1828062841	naobingdz407945@163.com	countneurooman	asset detail
+be35bf5c00c08920e948884d1f6743d1be4bb64a	1827041401	1827041401	naobingdz407945@163.com	countneurooman	glitch
+177fc1f396d417289df6f6b1be3f9fca1ea15f74	1825841721	1825841721	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+65b901bddd095fbba1ce986aef8e02517ca8fb33	1825135921	1825135921	naobingdz407945@163.com	countneurooman	Agregado funcionalidad de asset details con send y receive
+38db9d6c3c5112a4d86f03ead3720ab724041fa1	1824616041	1824616041	naobingdz407945@163.com	countneurooman	todo menos err div y top bar
+bdd763120760e0dbc615ad82c417b1cad6e868cf	1824455161	1824455161	naobingdz407945@163.com	countneurooman	spinner
+411ea0f292dab4a419036980ba13db8801b5507a	1824248121	1824248121	naobingdz407945@163.com	countneurooman	mas ajustes
+897c5b5f75d363aedffe82d7e5b6ff224387d550	1822987321	1822987321	naobingdz407945@163.com	countneurooman	hotfix
+4b081f1e46fefbc554b8fbfd0333447baf97313a	1822056441	1822056441	naobingdz407945@163.com	countneurooman	account assets, asset list, other corrections
+cc8477bf5cad5f462dca7cbce0b3b611dc6f3ad4	1821439121	1821439121	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+dc1b30028369b0999e57a7d9f349b9c1be9d23bf	1821336121	1821336121	naobingdz407945@163.com	countneurooman	Resuelto lista de assets
+42c0b9ac668e0ce12cd5c18e2a0e2f5e28abfd26	1820845041	1820845041	naobingdz407945@163.com	countneurooman	redesign and tweaks
+33262b2f42a04ccd95362c3fb1e640fb2476016b	1819941521	1819941521	naobingdz407945@163.com	countneurooman	habilitada asset detail
+4e4058eca43fb5e13d436b6d2c8fe42d76a066cf	1819910401	1819910401	naobingdz407945@163.com	countneurooman	redesigned
+a9b875b699abe6440a15d4bf51573001f594a333	1819660601	1819660601	naobingdz407945@163.com	countneurooman	Agregado funcionamiento de Remove from wallet
+5213c7bbe28d7335ab0eff17ac9dc8891d2c021b	1819136161	1819136161	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+2f5a9fa07e72b5c98100942fc556726eb9d33256	1819034921	1819034921	naobingdz407945@163.com	countneurooman	Resuelto calculo de total en cuentas. Agregado Confirm send en HTML
+4626374f0177a609cb34253d7edb8fb1642a0bb0	1818945601	1818945601	naobingdz407945@163.com	countneurooman	divs arrangement
+9422590dbbc225081533c90ee00790f7668bcbae	1818295881	1818295881	naobingdz407945@163.com	countneurooman	repositioning, HTML cleaning, css styling
+2002f6979d3e8ebd689f0caec508098ee8919aa9	1817968681	1817968681	naobingdz407945@163.com	countneurooman	Agregadas funcionalidades dentro de More. Cambio de lock/unlock. Agregado step2 en creacion. Agregado combo en add
+8962b9ea24043a9740536bb68dafa994c30c2337	1817271721	1817271721	naobingdz407945@163.com	countneurooman	color fix tabs
+577b80cda8049fc65419c8c74cae167f5fcc0b4d	1816807281	1816807281	naobingdz407945@163.com	countneurooman	tabs
+48b9a8c9de023e7a7fc129b360a8f0f0f30eafe1	1816794241	1816794241	naobingdz407945@163.com	countneurooman	more page
+0d830f2e0dc7ea6b7a7200d070ff921336a3aa95	1816058001	1816058001	naobingdz407945@163.com	countneurooman	more subpage adjustements
+a25af61bbd2248447fea443ac90103b8a8db4685	1815102881	1815102881	naobingdz407945@163.com	countneurooman	divs adjustments
+9b337daecb21f24e9e28e4ce81dd7bd94e657b21	1814713841	1814713841	naobingdz407945@163.com	countneurooman	Comportamiento de Assets OK
+f0efb456c3c57891c96fa2a993895052f1fcd3b0	1814059601	1814059601	naobingdz407945@163.com	countneurooman	Conexion de botones Stake, Add y More
+a667103e72b2710231d981b5557efcc9093ba168	1813336281	1813336281	naobingdz407945@163.com	countneurooman	ajustes ok cancel (grial like)
+5f005709a76870d0aaaf5a74d2f6b04c846cce5c	1812390961	1812390961	naobingdz407945@163.com	countneurooman	cambios en index. Agregado make readonly
+b6b399da09c68e937740d446d354484d8deccd5c	1811282201	1811282201	naobingdz407945@163.com	countneurooman	index html, minor changes
+64c5c13e20024579a8a8bd59a4bdcd5193f81541	1810113481	1810113481	naobingdz407945@163.com	countneurooman	mas ajustes
+dfd9fcb511ebb85e9e56ed3af57624e6c73de3bb	1810026241	1810026241	naobingdz407945@163.com	countneurooman	ajustes de css
+ea799ce30675e7385de753be557295f3cbff853f	1809012241	1809012241	naobingdz407945@163.com	countneurooman	Agregado botones OK CANCEL. Cambios de DIV a Buttons
+6240d14e44dbacf8f30ed4004aebbdcd8f950a79	1808523241	1808523241	naobingdz407945@163.com	countneurooman	add create-user
+9bdf050777861795e61f66454d36d09dd6771f3e	1808080361	1808080361	naobingdz407945@163.com	countneurooman	Minor changes
+811bf1859e41304441899d5331c02059c3810b39	1807247401	1807247401	naobingdz407945@163.com	countneurooman	Agregado Implicit account. Coexion de botonoes send y recibe
+f459e640f843abc0a2aa15d76632b2d64c2f1740	1806738160	1806738160	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+0584f480277d8b64ed39e23998e6cfce8f38e1f0	1806196520	1806196520	naobingdz407945@163.com	countneurooman	Agregado Implicit account. Coexion de botonoes send y recibe
+0d2679264be83e867adb6ea24d3bb0ff0641dc34	1805691760	1805691760	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign'
+74cdda67d7d586bc13d4f574a8a27011e889dd77	1805540440	1805540440	naobingdz407945@163.com	countneurooman	add welcome new user
+daa792846bbdb65da684f94197f6ac3ac066ccb8	1804562320	1804562320	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+c19bcdb64ccf57bd416ca3efc2b7eea5c9853c8b	1803764480	1803764480	naobingdz407945@163.com	countneurooman	v3
+fe2a3d91cd7fd68025967d52159e77cd347c711b	1803455360	1803455360	naobingdz407945@163.com	countneurooman	minor changes
+ef3bac592009b0639d61fb2d5791a9940e503381	1803429560	1803429560	naobingdz407945@163.com	countneurooman	minor changes
+06fd932825b1a0e5ee1748dc37f3d4cfd2e74d56	1803069040	1803069040	naobingdz407945@163.com	countneurooman	adjustements
+565e6ae7b62d53af02d0c861a842ec6e594a246b	1802154680	1802154680	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+fb7641f5e7f0d57a04596bc445a297ebfced04af	1801421240	1801421240	naobingdz407945@163.com	countneurooman	connected back link account-selected
+5e54233c8062dc9e8f8c3f8e20fab62597479bb2	1801255000	1801255000	naobingdz407945@163.com	countneurooman	Merge branch 'lala_redesign' of https://github.com/Narwallets/narwallets-extension into lala_redesign
+715f28aa990f9b99127d610aabf9039ea5a84ca8	1800506800	1800506800	naobingdz407945@163.com	countneurooman	select account
+83f76fc500447a5d50d9c708a4fe4a0891c77b8d	1799338400	1799338400	naobingdz407945@163.com	countneurooman	Update index.html
+346b157841e340f4fdbe0b48ced1269cd06ae2ac	1798256480	1798256480	naobingdz407945@163.com	countneurooman	added screens
+fec44fb5e70927e381ab01d863441cbc9849a143	1797650160	1797650160	naobingdz407945@163.com	countneurooman	modificacion listas scrolleables
+5f17f27ab01193be5c56f0726025e09e538c0632	1797145040	1797145040	naobingdz407945@163.com	countneurooman	adjustements to layout
+a116ff8fed1478f4da44b77638728c1b89981473	1796509840	1796509840	naobingdz407945@163.com	countneurooman	buttons and login
+65184a43a996285ab085ae417a518acb453dd8ed	1795690120	1795690120	naobingdz407945@163.com	countneurooman	appface adjustements
+34d15840ca84cb4f10590db7c1f5ee8145cd4632	1795364440	1795364440	naobingdz407945@163.com	countneurooman	buttons added
+281f4d151b9f08ac0b5983c27016d543e5d40284	1794182840	1794182840	naobingdz407945@163.com	countneurooman	glitch
+26ae93e26e2c5bb0fb88d67d8c7acb9885d1f2a2	1794129720	1794129720	naobingdz407945@163.com	countneurooman	ajustements in account dets
+1a36fe7fb7b4a5065445fa0a7339e71794798587	1792876200	1792876200	naobingdz407945@163.com	countneurooman	inter y otros
+457efc9220e62f63242a4d896bb2afaefe022feb	1791682400	1791682400	naobingdz407945@163.com	countneurooman	minor adjustements
+6a46a24f58e70f8a2f1b66a8de4b74d2a55ba2b1	1791663560	1791663560	naobingdz407945@163.com	countneurooman	font rework
+c03c789cf9cb3b2bc2e79dea442e5ff68e01ab95	1790356360	1790356360	naobingdz407945@163.com	countneurooman	formato pagina unlock
+9067760de3cf3c058aa1f100e74a7f7a4e18a5dc	1789137480	1789137480	naobingdz407945@163.com	countneurooman	correccion lista cuentas
+ad0da9dd7175bcbcab706c2c1e07c41b8370271e	1788161920	1788161920	naobingdz407945@163.com	countneurooman	added unlock (no style), show acc list
+4aa9cfac70af96c71344c4b15803e8a91c46b6d0	1787064800	1787064800	naobingdz407945@163.com	countneurooman	network drop down, hamb y aside
+3244e4a7cafcd605ec4086021638607325ff9b61	1787015880	1787015880	naobingdz407945@163.com	countneurooman	ajustes de caja
+56915291fdc7bbc4121079d19af2385241d632fa	1785863840	1785863840	naobingdz407945@163.com	countneurooman	network selector, hamb y aside
+4bc7504017e6e4fbbe6d2c7b7ff20373fc36bc8e	1785439840	1785439840	naobingdz407945@163.com	countneurooman	Update vars.css
+014328a13b9d934673c53f82dc7a66ec3954eafb	1785243600	1785243600	naobingdz407945@163.com	countneurooman	Test push
+a9ab9c2360f6d074496628d44a20c6cfa39a43ae	1785159560	1785159560	naobingdz407945@163.com	countneurooman	V2.0.1 fix transfer less than 1
+88d49b2f7d8e28684d8ebd727d8b850fadc4617f	1784728640	1784728640	naobingdz407945@163.com	countneurooman	npm strart pulls and builds the extension (for developers/testers)
+06ee1ca573af6a4dfda9b5eb77368309a7b33cd3	1784393080	1784393080	naobingdz407945@163.com	countneurooman	remove extension/dist from the repo
+db304477a31af515136725b8e63ff92ba582bbd3	1784378880	1784378880	naobingdz407945@163.com	countneurooman	spelling
+f84ba500211ca2dbbab5d98fa11335f46c4553ea	1784207840	1784207840	naobingdz407945@163.com	countneurooman	json-rpc wallet interface
+0c8b4522a087e53a2416d0d5d7b59b2d239a5b2e	1783155360	1783155360	naobingdz407945@163.com	countneurooman	remove z-attic
+360a8b7d6d21d44da6b4b875ae5568abaecc2200	1782668360	1782668360	naobingdz407945@163.com	countneurooman	better error handling
+87133a06454a47511fd40b42b1ceda4553ea2467	1782341720	1782341720	naobingdz407945@163.com	countneurooman	Merge pull request #5 from Narwallets/light-crypto-ts
+b3204de9496ccd0cd61ab6c45fa024e9a460dbb4	1782129799	1782129799	naobingdz407945@163.com	countneurooman	v2.0.0 pass yoctos and gas as string
+0ccdeaec2ab836e53fd393739e1148a25f262c62	1780908639	1780908639	naobingdz407945@163.com	countneurooman	Merge pull request #3 from Narwallets/light-crypto-ts
+fb35966b08645ec2640980b206fc827524391c3a	1779676759	1779676759	naobingdz407945@163.com	countneurooman	reduced bundle 90% - code reorganization
+c21d8bba9060bd0b2f8cd3a4b1499fbb24404992	1779603879	1779603879	naobingdz407945@163.com	countneurooman	set default auto-unlock to 300s
+b34f3b4ce2626a6bab195e037dad2e7418f9bbc2	1778533359	1778533359	naobingdz407945@163.com	countneurooman	log() instead of console.error()
+264bb89e99bd388e52037a25742df1a1d96fe03f	1777443999	1777443999	naobingdz407945@163.com	countneurooman	90% reduction in bundled-libs, only Buffer remains now and that's OK
+3f082a4e7ae8099e4b2c40307af71ec0f46fa70d	1777428319	1777428319	naobingdz407945@163.com	countneurooman	remove bundled from near-hd-keys .- working
+ceaefe876bfd21e8cef8070e8f51985c591a9a60	1776913239	1776913239	naobingdz407945@163.com	countneurooman	remove bundled dependency on near-hd-key
+760ed76041fddccb026fb7d0dcc6926fb154098b	1776476799	1776476799	naobingdz407945@163.com	countneurooman	use bip39 & BN from crypto-lite
+6a35e45bb6b852fff02fd2224e9c21c8cff17d5d	1776183359	1776183359	naobingdz407945@163.com	countneurooman	v1.0.4 create implicit acc with seed phrase
+1e40c5a0d4b6905138ffd0275e5ccae8fd76d079	1775556479	1775556479	naobingdz407945@163.com	countneurooman	disable debug log
+58562e9b3f1098304c985bf117cd333f20b4cec2	1774975359	1774975359	naobingdz407945@163.com	countneurooman	smaller webpage title
+3f069f8b5a15b0206863079f189ab94e33581a3a	1774062999	1774062999	naobingdz407945@163.com	countneurooman	fix BN usage with f64
+6cc7d91bdc2ef06b31cd7caf2f9c48dfe97d0259	1773712199	1773712199	naobingdz407945@163.com	countneurooman	retry on testnet "acc does not exists"
+e1745b7d96d89008146c693883fa414db08398ad	1772484159	1772484159	naobingdz407945@163.com	countneurooman	remove <form> tags
+a911cea441cbafa86ffe140d55cb58e3865fa9be	1771421119	1771421119	naobingdz407945@163.com	countneurooman	correct version & message to remove debug log
+8031fae0102e3a5c89a0eaf623d59dcfdfa30a9e	1770136239	1770136239	naobingdz407945@163.com	countneurooman	enbale debug log
+2d04d164f437f69681feb871f04c218e80d39797	1769399559	1769399559	naobingdz407945@163.com	countneurooman	include dist to make it easier to load unpacked
+4619aa1461c3e24f07d3e3edd5205178b7a30036	1768132439	1768132439	naobingdz407945@163.com	countneurooman	remove :any hiding type error in approve.ts
+bb56d3b39f855d1c5f678682606d1b5ea0e9c7ae	1767214759	1767214759	naobingdz407945@163.com	countneurooman	Merge branch 'master' of https://github.com/Narwallets/narwallets-extension
+7df23884cdb2b9d82a7d426eda9df235504e7401	1766949439	1766949439	naobingdz407945@163.com	countneurooman	more documentation
+687c5bfd5db8f24e6d3e93fa0b0eb686ea92e535	1766553799	1766553799	naobingdz407945@163.com	countneurooman	syntax
+3f2f30272d8df242945c2a31163d15f1eefb6d63	1765376719	1765376719	naobingdz407945@163.com	countneurooman	better error mngmt when wallet locked
+50ee08e6c82a26da16d7182f7d5469bf18ed6e31	1764347119	1764347119	naobingdz407945@163.com	countneurooman	minor fixes wallet-api doc
+b1a3148d067f30825b7e43ad214bcd4dbb9459b5	1763648439	1763648439	naobingdz407945@163.com	countneurooman	bump version
+64de018df0de83d07738e1afdf0ae36d6911ecf2	1763588999	1763588999	naobingdz407945@163.com	countneurooman	Merge branch 'master' of https://github.com/Narwallets/narwallets-extension
+da237dbfab1411dfb1123de513d799d893404bb9	1762703799	1762703799	naobingdz407945@163.com	countneurooman	syntax
+d2b64d681ff9ae6f874a4353b49d29e32756503e	1761398439	1761398439	naobingdz407945@163.com	countneurooman	fix #2 bug on network change
+d1485b8d4a8088a9a59fddf491781b17460847de	1761124479	1761124479	naobingdz407945@163.com	countneurooman	Update README.md
+34cea6e1df60374af83602c81033719a6ad26e57	1761036879	1761036879	naobingdz407945@163.com	countneurooman	ignore keys while waiting
+5aa98b439afba19ad5c26825cec6df633fb0b978	1759849879	1759849879	naobingdz407945@163.com	countneurooman	update balance on nears attached
+f3dd7fffefc612aa6499576863e0a74377311198	1758633639	1758633639	naobingdz407945@163.com	countneurooman	redme fixes. Install link. v1.0.1
+e7d2ff3ccf1d35b2c3b28813aa7cda9c5c1462c7	1757334839	1757334839	naobingdz407945@163.com	countneurooman	show key on create implicit account
+1aa6e5d539c5e7633d8a2d22cabf27043ae30ade	1756336479	1756336479	naobingdz407945@163.com	countneurooman	json-rpc retry on timeout
+a9ac5f435a4cbd939a302a8a46f7e9b0b2dce421	1755437799	1755437799	naobingdz407945@163.com	countneurooman	better error msg
+3151efce6b0bc4f7a012b780d6170cb64527031b	1755294319	1755294319	naobingdz407945@163.com	countneurooman	Merge branch 'remove-plus-ts' of https://github.com/Narwallets/narwallets-extension into remove-plus-ts
+6838a2017a5f7bd559124e76948cac3532f8eeb9	1754627279	1754627279	naobingdz407945@163.com	countneurooman	chrome store screenshots
+7b62944c20dc5ea583b68debad6a87f7904da835	1754531559	1754531559	naobingdz407945@163.com	countneurooman	option to show private key
+4d968587a8dc41342da7b22e3a80e2680d02129f	1754134639	1754134639	naobingdz407945@163.com	countneurooman	screenshots
+58c534e7e19dd286c2b53c692fa537f933584cba	1753044519	1753044519	naobingdz407945@163.com	countneurooman	show implicit.acc correctly
+f814d53c957e384569ac4634d9950e6bc0a0666c	1752596718	1752596718	naobingdz407945@163.com	countneurooman	button size in windows
+23044bca2aaa4354ef11b2f32c96591dd6882a52	1752061118	1752061118	naobingdz407945@163.com	countneurooman	remove optiond from manifest
+756441d487f45f206eaf7cd11fdbfd5654794c94	1751533838	1751533838	naobingdz407945@163.com	countneurooman	remove plus-ts, cleanup, asideContact/about
+dd4cf837a356d68524507b71c31127450c576cd9	1750527078	1750527078	naobingdz407945@163.com	countneurooman	link API docs
+392c1c63fb4f69e834b79a9f0f74767f3a2c2266	1750303718	1750303718	naobingdz407945@163.com	countneurooman	add API to README
+4478af9d7a603ff950e05bb2f8593f1f3a5be105	1750281758	1750281758	naobingdz407945@163.com	countneurooman	Merge branch 'master' of https://github.com/Narwallets/narwallets-extension
+86b78452f9ce2bc691bcae7ca2efc3f6a2474142	1749344678	1749344678	naobingdz407945@163.com	countneurooman	Merge pull request #1 from willemneal/master
+1f87a07e77ef3307652b96ed4eb58fcaf785af1d	1749214518	1749214518	naobingdz407945@163.com	countneurooman	fix: link to plus-typescript
+75b1517e21c0f9ec6c2d74e5dff5cfc157b85a9f	1748094918	1748094918	naobingdz407945@163.com	countneurooman	log, add implicit account, detailed rewards
+fd1c2d5bedbc8874b0e1d3e2cd1d757db9c9a61f	1747715278	1747715278	naobingdz407945@163.com	countneurooman	bg:save-working-data on suspend, retrieve on load
+16434b92db476fad312905448c93b9ba11ae0306	1746483598	1746483598	naobingdz407945@163.com	countneurooman	moved all to background.js.- successful deposit() on Dapp
+d1894b332d322598e51123b09d0284f521691550	1746008278	1746008278	naobingdz407945@163.com	countneurooman	working- now need to move securestate to background.js
+24c3660144e8a2ab5c35bba8f675fc04202bbe52	1745002198	1745002198	naobingdz407945@163.com	countneurooman	working, using port.connect
+e32480b55f76769ebb2d08e6346311dc3f5c91ef	1743738958	1743738958	naobingdz407945@163.com	countneurooman	best linux font is Ubuntu
+e60dbcacc89106d23be874947d76a24b59fae1d8	1742593918	1742593918	naobingdz407945@163.com	countneurooman	bug fix
+3080738683556a4920dbe949e28c2fe7badcdfcb	1741617638	1741617638	naobingdz407945@163.com	countneurooman	Merge branch 'master' of https://github.com/Narwallets/narwallets-extension into master
+5f3b1db2f07ef4a8140b891bfa5cfabf6e0e8ea1	1741294398	1741294398	naobingdz407945@163.com	countneurooman	consider residual yoctos in the SP
+34a4b0a67168fc3708d46f7090c43541e063fe89	1740396478	1740396478	naobingdz407945@163.com	countneurooman	add warning when redirected to owner acc
+39b3febbf86fb2fc50f707aa2cffba6d5110f5b5	1739893198	1739893198	naobingdz407945@163.com	countneurooman	better message on wrong seed phrase
+32a38f1a97337d3ff7dbb3744200db34676039ee	1739844438	1739844438	naobingdz407945@163.com	countneurooman	font Segoe UI on windows
+6f579e15ad6f87d1f797080bca59cd466828751b	1739207918	1739207918	naobingdz407945@163.com	countneurooman	fix non-dev-tools-opened bugs
+63f639765acd1b9ae147123a3f814563095f023a	1738017678	1738017678	naobingdz407945@163.com	countneurooman	safe-by-default
+e4843ae7335ad8934daaaf8a9262da97bd3c1667	1737603558	1737603558	naobingdz407945@163.com	countneurooman	image
+e293d20d5fa10cc2b61d7831d11aeaf0f6fc62b4	1736330598	1736330598	naobingdz407945@163.com	countneurooman	image
+45df0dc138f293ee85d1b05f97cf33faba875f5a	1735375118	1735375118	naobingdz407945@163.com	countneurooman	add image
+2dee885e3fcdacf6ddbdc11b750222d9251c7283	1734590998	1734590998	naobingdz407945@163.com	countneurooman	objectives - comparision
+2640194bd49b412d05bc607c1dfc1c009a9d4671	1733372798	1733372798	naobingdz407945@163.com	countneurooman	reference bundle
+b1456908669fe8d76a6b04016805dd2d07886c63	1733170958	1733170958	naobingdz407945@163.com	countneurooman	readme fixes - teech debt
+c1308c574abd6268d2c6bd0a8b43f3156ca87b70	1733037918	1733037918	naobingdz407945@163.com	countneurooman	radme -dapp integ model
+a6f540a457dbba8fb260cd3dfec5e4d03de6ac3e	1732113558	1732113558	naobingdz407945@163.com	countneurooman	windows fonts
+1d9072c7fca92eae5bff5660ac035bb5d6114710	1730856718	1730856718	naobingdz407945@163.com	countneurooman	font familiy buttons is Arial
+d22d3d18d0ce9d293a80d0edfd4aa4465c57355b	1730434198	1730434198	naobingdz407945@163.com	countneurooman	adjusted bc windows fonts
+249e83939df5570cd24f17cb8d628d9dad576bfa	1729226478	1729226478	naobingdz407945@163.com	countneurooman	rename extension dir to /extension
+c0c913509fe9016b14af6b03ebf6f5036f3eae27	1728077318	1728077318	naobingdz407945@163.com	countneurooman	fix multiuser bug
+3cbbd574ae3f52f40facd099045c5e02d5bf9cbc	1726910358	1726910358	naobingdz407945@163.com	countneurooman	add transpiled /api files (light-api)
+ce7503a225e758d36d23ec6ea01370a9f6c02e51	1726735678	1726735678	naobingdz407945@163.com	countneurooman	readme
+d43434a7e7a024eec16ffd62e643cda21efe0e4f	1725635598	1725635598	naobingdz407945@163.com	countneurooman	private beta
+60c9315563bdad9413737f8d4dee8eaf7ec284d8	1725135998	1725135998	naobingdz407945@163.com	countneurooman	stake lockupc
+b83174fd9504fe24afc8c24bca96a07bb544ce28	1724417318	1724417318	naobingdz407945@163.com	countneurooman	showing staked and rewards for lockup.c
+b7fedddb4c53750ed801c05146e2a1fc25d01036	1724140798	1724140798	naobingdz407945@163.com	countneurooman	aside nav Net list
+a717f0a703e6d36ca4061e82b455c6d8a01b376e	1723292638	1723292638	naobingdz407945@163.com	countneurooman	cleaner: bind elements at start
+c110910ea905c683a23538675939ed85c725cbdf	1722364357	1722364357	naobingdz407945@163.com	countneurooman	mostly working before svelte
+8e5ddea89053e111078dad859fdfcc99e5ec16f7	1721593997	1721593997	naobingdz407945@163.com	countneurooman	before trying +ts.js hack
+8f6d1cd8d0e10f5a3c19f0a132cb7f2696424663	1720718357	1720718357	naobingdz407945@163.com	countneurooman	first commit

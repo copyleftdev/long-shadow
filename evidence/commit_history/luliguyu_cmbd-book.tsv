@@ -1,0 +1,623 @@
+f2282434a43ede17308f1affd67e4bed77c039fb	2106701070	2106701070	DelacruzDawn1338@outlook.com	luliguyu	update doc metadata lines
+beea6a68f83969827d36f59e4a56a0f7788c5066	2105756190	2105756190	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #159 from dousu/dousu-patch-1
+102a23925126d3c6dfb9f1067c6277c2b3cd289f	2104804910	2104804910	DelacruzDawn1338@outlook.com	luliguyu	Create AGENTS.md with project guidelines and standards
+3c4e4b447b195d37c338e78aea83aa4b1b056595	2103998310	2103998310	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #157 from dousu/dependabot/pip/update-2c2406366a
+5edf2e0ab113fb1fe5df0c8eb8bd85dcc55266f8	2102737990	2102737990	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump the update group across 1 directory with 12 updates
+b37ac7a088f21476b909a863201b439e3a8595bf	2102589030	2102589030	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #153 from dousu/dependabot/github_actions/update-6a14be197d
+2c23b9c50071f315986597b3ce4c0d939674ac57	2102231470	2102231470	DelacruzDawn1338@outlook.com	luliguyu	build(deps): bump the update group across 1 directory with 2 updates
+954e79d040c1e4bb756ac101a83b8edfd2ad910f	2102205789	2102205789	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #156 from dousu/inference
+d211f0e82b67bdc5d1a020e6c80692e57285c17d	2101861709	2101861709	DelacruzDawn1338@outlook.com	luliguyu	fix(evaluation): fix winrate logic
+348d46c703a052a160a11405dc74f33b29e3109a	2101062349	2101062349	DelacruzDawn1338@outlook.com	luliguyu	fix(evaluation): fix winrate logic
+fec9c05ae9775fc887bc43897f9460c349ad090c	2100654269	2100654269	DelacruzDawn1338@outlook.com	luliguyu	style(scripts): 便利スクリプトをscriptsに移動する
+e9b96f598c2df37d934cc75b4c0b220d59fae3ad	2099573229	2099573229	DelacruzDawn1338@outlook.com	luliguyu	fix(loss-function): fix GCEwithNegativePenaltyLoss
+078367a8efaf445c33bafb132ae9828aeb24d6e8	2098520389	2098520389	DelacruzDawn1338@outlook.com	luliguyu	feat(loss-function): update policy loss function
+0c066114553d6f914218ee9d0c72c7d77ba563ae	2097266989	2097266989	DelacruzDawn1338@outlook.com	luliguyu	fix(learn): policyの精度を計算するアルゴリズムの修正
+51d87b958ddade359492935c4af8342d0f7600e7	2096540229	2096540229	DelacruzDawn1338@outlook.com	luliguyu	feat(preprocess): 集計時のchunk処理後の削除を無効化する
+73fd0acb1f88e2dbd2592745ca7413ed83b34160	2095899909	2095899909	DelacruzDawn1338@outlook.com	luliguyu	style(style): fix style
+03a20e6d8c92a3f4226cff0ffb95a3624cca5e5a	2094625949	2094625949	DelacruzDawn1338@outlook.com	luliguyu	refactor(pre-process): プログレスバーを単一化し視認性を向上
+b278f68ee4e10e69fbd0f23217cb9b27280151a2	2093600509	2093600509	DelacruzDawn1338@outlook.com	luliguyu	feat(pre-process): GCS/S3への大規模データ保存とプログレスバー改善
+d8b53ed579c8edc2c1ed0601aa97f75275e52111	2092558269	2092558269	DelacruzDawn1338@outlook.com	luliguyu	perf(pre-process): VACUUM最適化で集約処理を約10分高速化
+8d03e52e6055fca2b01ad2108149c383168506d1	2092551229	2092551229	DelacruzDawn1338@outlook.com	luliguyu	fix(pre-process): move_label_countのsparse圧縮でディスク使用量を140GB→30GBに削減
+7ceb1a62258fc463b796433b37c33d353c4edf96	2092439589	2092439589	DelacruzDawn1338@outlook.com	luliguyu	feat(pre-process): チャンク集約時のプログレスバー追加
+de1b540952de26edff132abbe1ced51ee7404411	2091830629	2091830629	DelacruzDawn1338@outlook.com	luliguyu	fix(pre-process): VACUUM実行条件のバグ修正でディスク使用量を160GB→100GBに削減
+e7c805ea6763c22982419ea2139c414e9817829b	2091445149	2091445149	DelacruzDawn1338@outlook.com	luliguyu	feat(pre-process): チャンク分割出力時の段階的削除でピークディスク使用量を50%削減
+0cb015b1e5d3517806ecebe73a7375f3d5b60fbb	2090559069	2090559069	DelacruzDawn1338@outlook.com	luliguyu	test: テスト失敗の修正
+7107a83cd25f55c8db17e24da21f034800d867bb	2089702149	2089702149	DelacruzDawn1338@outlook.com	luliguyu	feat(pre-process): 中間データベースと最終出力のビットパック圧縮を有効化
+edff15aea34678c9a7c2a42f802986edd8c72df4	2089071909	2089071909	DelacruzDawn1338@outlook.com	luliguyu	fix(infra): シングルプロセス時のキュータイムアウトを無効化
+3d6c4555862349a1c31703c673910d01b45a54b3	2088240029	2088240029	DelacruzDawn1338@outlook.com	luliguyu	fix(pre-process): 並列処理のメモリ効率化（逐次サブミット方式）
+76d16c288bcf17ed6aa81d93ce8d66037ee415d0	2087369829	2087369829	DelacruzDawn1338@outlook.com	luliguyu	feat: ユニーク局面数とメモリ使用量推定スクリプト追加
+3599745f9fbb40a7b9cb4eafc4c6df1babd785aa	2086419309	2086419309	DelacruzDawn1338@outlook.com	luliguyu	docs: ディスクベース前処理とSQLite技術選定のADR追加
+fb44deb91046c4b3c50f43c6011e162950bdcd8e	2086126229	2086126229	DelacruzDawn1338@outlook.com	luliguyu	feat(pre-process): ディスクベース中間データストアによるメモリ効率化
+7ac3974ccc3d96a72ec945a6f44414650f239b37	2085944789	2085944789	DelacruzDawn1338@outlook.com	luliguyu	perf(pre-process): メモリ効率化と実行時間短縮のための最適化
+9dc89edf992f953e9e8c4501016d9718f173a6f2	2085869229	2085869229	DelacruzDawn1338@outlook.com	luliguyu	perf(pre-process): 辞書ベース中間データ管理とユニーク盤面計算の最適化
+d4c268b57546629fda6c23f9cbfebf9fbf224e40	2085678709	2085678709	DelacruzDawn1338@outlook.com	luliguyu	fix(test): スキーマ変更に伴うテスト修正とDeprecationWarning対応
+d7f8ef7dc747353f6c9a5c9208060c355842e65b	2084707189	2084707189	DelacruzDawn1338@outlook.com	luliguyu	fix(test): スキーマ変更に伴うテスト修正とDeprecationWarning対応
+b0fe4aff75b073c568b15521fdb86be4bcdb3e86	2084137549	2084137549	DelacruzDawn1338@outlook.com	luliguyu	refactor(tensorrt): comment
+895fecd44c52cc53e2621951ba09237c681b9948	2083275149	2083275149	DelacruzDawn1338@outlook.com	luliguyu	refactor(tensorrt): test
+f50771a923d11d0ea6203a92b76f0d96ba74dbad	2083164389	2083164389	DelacruzDawn1338@outlook.com	luliguyu	fix(tensorrt): policyの出力がおかしかったので修正する
+8f4565acba38cbafa68ba926165e2267d2b69a8d	2082672469	2082672469	DelacruzDawn1338@outlook.com	luliguyu	refactor(tensorrt): debug
+db0821ec12fe8bf93ae8c5d521ffb852fa3180c9	2082308029	2082308029	DelacruzDawn1338@outlook.com	luliguyu	refactor(tensorrt): debug
+210735dc0b4c65123b8eaaef89ad89fb5c39b540	2082035429	2082035429	DelacruzDawn1338@outlook.com	luliguyu	fix(tensorrt): TensorRT Engineを毎回ONNXから生成するように変更
+bde90952e1493770531d10289aa6368a14d0d382	2081156589	2081156589	DelacruzDawn1338@outlook.com	luliguyu	feat(evaluate): 0手読みコマンドの追加
+d887196cb46cacfbca1d3e02c5b38d7c5a3d03d7	2080155589	2080155589	DelacruzDawn1338@outlook.com	luliguyu	refactor(Loss-Function): MaskedGCEのペナルティのデフォルトが強すぎたので少し修正
+d85720e5712be751f04d654f3af146009eddaad6	2079882068	2079882068	DelacruzDawn1338@outlook.com	luliguyu	fix(pre_process): ラベルからUSIへの変換処理を修正
+e5f6f84c0e6bb36d74600e8abcf62b4a32e8b37c	2079507348	2079507348	DelacruzDawn1338@outlook.com	luliguyu	fix(python): use python3.12
+db8919a7656cd67b1988de661c1314611bd08c19	2079411708	2079411708	DelacruzDawn1338@outlook.com	luliguyu	fix(save_model): upload to cloud storage
+3556a4fecda0eaf4d11a286bdff1caff86f619d5	2079179388	2079179388	DelacruzDawn1338@outlook.com	luliguyu	fix(save_model): コンパイル済みモデルのロード方法を修正
+8fef87b5432731ed5cba31e4c3f49d1d82d4b5ec	2078987228	2078987228	DelacruzDawn1338@outlook.com	luliguyu	fix(Learning): fix typo
+be8da7feed9c3f0ff84f92d309572549c112a132	2078229668	2078229668	DelacruzDawn1338@outlook.com	luliguyu	fix(save_model): save_modelの動かなかった部分の修正
+34f0b80427d6f0e46e8e3bec1fa383e6830aa0ad	2077072668	2077072668	DelacruzDawn1338@outlook.com	luliguyu	fix(save_model): dummy_inputを転送していなくて落ちてしまうのを修正する
+1fea164f30c1e818de15a2e7eb451a6e93219672	2076208668	2076208668	DelacruzDawn1338@outlook.com	luliguyu	fix(tensorrt): cudaバージョンの指定が足りてなかったので追加する
+f08f45476b59568ddcd6c5ce0f6480d6cf9a7f65	2075531708	2075531708	DelacruzDawn1338@outlook.com	luliguyu	feat(learn-model): ONNXとTensorRTでの実行できるような形でのモデルの保存を追加する
+f88ae04aa88bceca522445b02161d750aa571079	2074546348	2074546348	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #152 from dousu/precommit-autoupdate-github-actions-20250901
+0c072f1bc90dea4e795be0f80764d43d38b34507	2074376468	2074376468	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+0ca390ea33c0d6552e52e975cd6a3db285a27d13	2073149308	2073149308	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #149 from dousu/usi-from-label
+1efd267ae70f67ccdef27016a7f3a7a5519c448b	2071845148	2071845148	DelacruzDawn1338@outlook.com	luliguyu	fix(label): fix make_move_from_label
+f4567c6a3e183cadcf7addf796f20d03c44e48bd	2070996868	2070996868	DelacruzDawn1338@outlook.com	luliguyu	refactor(cshogi): cshogiをdomainにクラス作ってラップして入れ替えやすいようにしておく
+54b62e0a3c9dc898ec19153165b2035ec6e9edf4	2069970588	2069970588	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #148 from dousu/usi-from-label
+59e3498a5069911375f3247623f837c93a5a2bac	2069223468	2069223468	DelacruzDawn1338@outlook.com	luliguyu	style(mypy): fix errors
+aabb1d296dbd626ae657a09d96c63fd49b378a31	2068600788	2068600788	DelacruzDawn1338@outlook.com	luliguyu	feat(label): add make_move_from_label inverse conversion function
+01bbe6288d22c07bfd76275267dfc2a70c49eb76	2068594108	2068594108	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #139 from dousu/update-learn
+84d50b72946702e8ad46c980eeb86f5288a40c7a	2068491708	2068491708	DelacruzDawn1338@outlook.com	luliguyu	fix(objectstorage): fix chunking logic in data source
+e7f48aeb677e69250e0c2ebf343ef2698070be11	2068076308	2068076308	DelacruzDawn1338@outlook.com	luliguyu	refactor(object-storage): use tqdm in DataSource
+d792ab5c1e01207594758d455aaee8a6a1eafb5c	2067629868	2067629868	DelacruzDawn1338@outlook.com	luliguyu	fix(format): remove trailing whitespace
+c27b617a0f9c40b334f58aadf6776e43fcca1b7e	2067038308	2067038308	DelacruzDawn1338@outlook.com	luliguyu	fix(resource-monitor): resolve type errors and format issues
+7bf07ecdf9e36818dc9d26e2dd1f644de7cb9e94	2066366188	2066366188	DelacruzDawn1338@outlook.com	luliguyu	feat(benchmark): add CPU/GPU resource monitoring to training benchmark
+24d06e6f5be2d0b6082e135ada1f208f6deb6fad	2066148148	2066148148	DelacruzDawn1338@outlook.com	luliguyu	fix(training-loop): AMP時のdevice typeがcuda固定だったので修正
+8654a6784d86c6ade4ac663d5a903413cc1efcf5	2065301868	2065301868	DelacruzDawn1338@outlook.com	luliguyu	refactor(training-model): add device info in log
+975a365dc78896db03320123ac37f73c35bb1360	2064049188	2064049188	DelacruzDawn1338@outlook.com	luliguyu	refactor(training_loop): fix gpu transfer
+a96de14cfd2d7f6f2d3b1a7f61dda799b4ae3ef7	2062925548	2062925548	DelacruzDawn1338@outlook.com	luliguyu	refactor(learning): consolidate training setup and improve configuration
+479c7a73e791860b2e4c93864486a1c708ed368a	2062892588	2062892588	DelacruzDawn1338@outlook.com	luliguyu	fix(mypy): fix error
+562a14c7a36071d3318766b040eca001df169648	2062510548	2062510548	DelacruzDawn1338@outlook.com	luliguyu	feat(benchmark-training): add model compilation
+4aeb9b14961e7c97c93fbb99312585632419a864	2061875708	2061875708	DelacruzDawn1338@outlook.com	luliguyu	refactor(training-loop): specify total in tqdm
+f2bda9d994db4143bdcfc963737724314e97d3ff	2061846788	2061846788	DelacruzDawn1338@outlook.com	luliguyu	fix(utility-training-benchmark): fix an option
+8771181b4bd1aea65b0df71e683ede7b7f699e71	2061168948	2061168948	DelacruzDawn1338@outlook.com	luliguyu	feat(data-io): add packed array loading and schema conversion functionality
+4e71617a3ec82ec69ea873d595bbe45e50009d60	2060126308	2060126308	DelacruzDawn1338@outlook.com	luliguyu	perf(object-storage): update object storage parallel processing
+46605e1abbb3ae675b9f1cffa0bb2ae746ec8dd8	2060042828	2060042828	DelacruzDawn1338@outlook.com	luliguyu	fix(docstrings): fix docstrings
+eaabc350f8a1a1be455b95f2e721e952d15ec2b0	2059877068	2059877068	DelacruzDawn1338@outlook.com	luliguyu	refactor(learning): cudaの初期化はメインプロセスで行うのでワーカープロセスでは初期化しない
+5436edc80c91e471b2df472cb5d499f1d3a09bbb	2058740748	2058740748	DelacruzDawn1338@outlook.com	luliguyu	fix(training-benchmark): fix KeyError in TimingCallback
+9daf13f005fce4caaa0895272e170d0dee934e5f	2057763427	2057763427	DelacruzDawn1338@outlook.com	luliguyu	fix(console-utility): fix utility
+8ea393b2026548b0394b883982e42311775f7932	2056484147	2056484147	DelacruzDawn1338@outlook.com	luliguyu	fix(object-storage-datasource): fix sample downloading
+b83c29a56abb66cab8db909fcc9002c834b354d6	2055681627	2055681627	DelacruzDawn1338@outlook.com	luliguyu	fix(console): fix learn-model and utility
+9ca1771db1bfb388ac23505916355f1454fa7019	2055240947	2055240947	DelacruzDawn1338@outlook.com	luliguyu	fix(object-storage-datasource): add existing files to file list
+8da9f85eb05f55b9106f8ff3c2cc34d234a3e129	2054540587	2054540587	DelacruzDawn1338@outlook.com	luliguyu	style(mypy): ignore type error
+73ed9f9ec7bd6ffd88012489f0e0fef76b7ac087	2054142107	2054142107	DelacruzDawn1338@outlook.com	luliguyu	fix(hcpe_converter): replace match statement with if-elif for Python 3.9 compatibility
+73bfaa77bbcd81ffcf17457c0f609d1fa54ba5d4	2053164187	2053164187	DelacruzDawn1338@outlook.com	luliguyu	refactor: code formatting and pre-commit config update
+2332b3f2f9c9aa0ac29918c8797002c1eccd79a0	2052925987	2052925987	DelacruzDawn1338@outlook.com	luliguyu	fix(pre-commit): fix alias
+ed39686946995660a6beb3f0e34620f21cf49ea5	2052316267	2052316267	DelacruzDawn1338@outlook.com	luliguyu	refactor(tqdm): update tqdm desc
+d1d84e32f19f2bf31b007ed6fa54d422e6a5d11a	2051603107	2051603107	DelacruzDawn1338@outlook.com	luliguyu	refactor(preprocess): update transform logic
+aa70ff10d9c868a9348ec3431b1b12ca82240d1d	2051138867	2051138867	DelacruzDawn1338@outlook.com	luliguyu	fix(pre-process-cli): fix typo
+ca784852833ca3cc48b1839ada368ad3f991e07f	2050347987	2050347987	DelacruzDawn1338@outlook.com	luliguyu	fix(ObjectStorageFeatureStore): fix bundling
+e8d0c305c4223e31a61ab8f704eb5dd0730366ff	2049264667	2049264667	DelacruzDawn1338@outlook.com	luliguyu	refactor: standardize worker parameter usage in CLI commands
+6d25d07117d95856f2c24a279a151abbba13e752	2048600667	2048600667	DelacruzDawn1338@outlook.com	luliguyu	fix(poetry-lock): update poetry.lock
+5f84a53af4f585e155e499b3575915741cf23ad1	2048426147	2048426147	DelacruzDawn1338@outlook.com	luliguyu	Merge remote-tracking branch 'origin/main' into update-learn
+519e9116eaea01b1a866fd40f1055e4aa4d17d3b	2047572507	2047572507	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #147 from dousu/precommit-autoupdate-github-actions-20250801
+fdff39d0faea39d6b39e4dddcfaec99f99f7d43f	2047538947	2047538947	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+bd7bde83329117f69cf54cf9f2feeb7d52ce79da	2047248187	2047248187	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #146 from dousu/dependabot/pip/update-eaeffcc0cf
+9f8967dab42d6075e87a41ecaf096f2d1cd247c5	2046748827	2046748827	DelacruzDawn1338@outlook.com	luliguyu	build(deps): bump the update group with 2 updates
+46dfdad1558ae7991532be4e079c4e71c117dc84	2046014067	2046014067	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #145 from dousu/precommit-autoupdate-github-actions-20250701
+8999954e352a280121820618ba1a384b5f794305	2045519627	2045519627	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+d106f1f8fe7f7d396bb13f9fccfb1f578e2d7652	2045426547	2045426547	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #144 from dousu/dependabot/pip/update-c91ce9ebbb
+ad2fe37e25c1d02c2ea5e483c91a02ad09615dbf	2044782307	2044782307	DelacruzDawn1338@outlook.com	luliguyu	build(deps): bump the update group across 1 directory with 4 updates
+5ba13755766d9fecd193579ee6613bffcea68d7d	2044149347	2044149347	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #141 from dousu/precommit-autoupdate-github-actions-20250601
+eead7cff16d808e30be898c671274b317c4b0b50	2043310507	2043310507	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+c6b9d6fd6a383601c896348f28d5bc4767db05ad	2042183107	2042183107	DelacruzDawn1338@outlook.com	luliguyu	refactor: major architecture cleanup and data schema refactoring
+817fc7dcc274b39158a2cd7290ed4240fee74e51	2042109387	2042109387	DelacruzDawn1338@outlook.com	luliguyu	fix(console): fix import ordering
+424d4e2f404a0fe02084acbbcec4aa494d052a6e	2042000827	2042000827	DelacruzDawn1338@outlook.com	luliguyu	fix(console): apply linter fixes and cleanup
+c71870f0ba435d86f50542e6bbe481a4a002c859	2040828187	2040828187	DelacruzDawn1338@outlook.com	luliguyu	fix(console): add proper type annotations and __all__ export
+e7dded980c75be0e7853194c648a35c8df933cd7	2040754267	2040754267	DelacruzDawn1338@outlook.com	luliguyu	fix(console): restore missing imports in common.py
+11361000c49c0d36d4cdc590ef04e038e5684322	2039551587	2039551587	DelacruzDawn1338@outlook.com	luliguyu	refactor(console): split app.py into separate command files
+268d959682e4631ffad24946eab0309dc475fac6	2038282227	2038282227	DelacruzDawn1338@outlook.com	luliguyu	fix(bundling): pass array_type to S3/GCS DataSource in benchmark_dataloader
+47c030684aae11569ef9665138cca1700398f2b1	2037157466	2037157466	DelacruzDawn1338@outlook.com	luliguyu	fix(bundling): add .bundle.raw detection for preprocessing array type
+cb949cc20c13091b00796fbffbfd340880b91779	2035971186	2035971186	DelacruzDawn1338@outlook.com	luliguyu	fix(bundling): use .bundle.raw extension for consistent tofile() format
+3dfc4de6525deaf63d5eb3bd5d1759f3956db1b1	2035949186	2035949186	DelacruzDawn1338@outlook.com	luliguyu	fix(bundling): correctly set cumulative start_idx for multiple bundles
+6f89a1d90b844601eae68951b4e96a2a260333bd	2035392706	2035392706	DelacruzDawn1338@outlook.com	luliguyu	fix(bundling): add indices validation and filtering for bundled datasets
+02c8c018671787cfa7584a7302a3ea84a49a16c3	2035095946	2035095946	DelacruzDawn1338@outlook.com	luliguyu	fix(bundling): resolve index range error by moving bundling before train_test_split
+02237993a2a73fae1eee2dec0917d2c96b3546d8	2034248826	2034248826	DelacruzDawn1338@outlook.com	luliguyu	feat(bundling): improve bundle I/O and add automatic file cleanup
+b9bcc5c46d457853a6baa406774c89a2892ec156	2033749866	2033749866	DelacruzDawn1338@outlook.com	luliguyu	fix(architecture): move bundling service access to interface layer
+238986fc87a3fc6e8553d556047b265976c7f8e9	2033202506	2033202506	DelacruzDawn1338@outlook.com	luliguyu	feat: implement bit-packing compression and fix cloud service integration tests
+ccb64d72ed98766cb4f42ea48aa72c90b2b93c5b	2033017786	2033017786	DelacruzDawn1338@outlook.com	luliguyu	feat: implement bit-packing compression and fix cloud service integration tests
+43a06f05c948f828245dacced910f5151455d94c	2032296786	2032296786	DelacruzDawn1338@outlook.com	luliguyu	fix(learning): improve checkpoint loading security and performance
+74ba241305327bbae360730d89c88329eca01e77	2032177826	2032177826	DelacruzDawn1338@outlook.com	luliguyu	docs(claude): reduce CLAUDE.md size from 1475 to 359 lines
+3ed0a6541bff5ad06098eeb757d4b7075ace880f	2031731546	2031731546	DelacruzDawn1338@outlook.com	luliguyu	fix(network): correct stride indices in ResNet layer construction
+10616de452b81ecf5f085d0bfa822ee7b88b1f82	2031244746	2031244746	DelacruzDawn1338@outlook.com	luliguyu	fix: resolve complex numpy dtype access mypy issues
+28541225da519bf06343905976d5bd0f910b4ca1	2029949146	2029949146	DelacruzDawn1338@outlook.com	luliguyu	fix: resolve final mypy type ignore issue
+93f3e9ccdddd0bf70c4402af8f456f2a35fce287	2029190906	2029190906	DelacruzDawn1338@outlook.com	luliguyu	fix: resolve remaining mypy issues in test schema file
+f5145452d383ca9235280ca4ea7a4243b6039777	2028579266	2028579266	DelacruzDawn1338@outlook.com	luliguyu	fix: resolve line length violation in test schema file
+00f761c5b49f7e9b961a44a951808ef47ae2a8d9	2028173666	2028173666	DelacruzDawn1338@outlook.com	luliguyu	fix: resolve final pre-commit hook failures
+f61e7d04e0523ede476bd518c45ec5f7ddba02bd	2027828346	2027828346	DelacruzDawn1338@outlook.com	luliguyu	fix: resolve remaining pre-commit hook failures
+9dc9444761bc0f4309d53e71a9e845235050713e	2027709666	2027709666	DelacruzDawn1338@outlook.com	luliguyu	fix: resolve pre-commit hook failures
+e6918cf92198c305ff4526a6224b3afd86fc8177	2026947106	2026947106	DelacruzDawn1338@outlook.com	luliguyu	feat(data-io): implement high-performance tofile()/fromfile() architecture
+2ef303db9dc5db8731a62528322642fe59bfa017	2026466826	2026466826	DelacruzDawn1338@outlook.com	luliguyu	docs(claude): update CLAUDE.md with data I/O architecture improvements
+7c68602e3b6df55d4c556ba727433862f0e70833	2025929746	2025929746	DelacruzDawn1338@outlook.com	luliguyu	feat(data): implement explicit array type specification system
+f95a764e8365cbe01aa8274cd591e6b10bb4478c	2025054666	2025054666	DelacruzDawn1338@outlook.com	luliguyu	feat(domain): implement centralized numpy dtype and I/O management
+89e2e1d929de7135e457e58f5e055a78c7118d24	2024055946	2024055946	DelacruzDawn1338@outlook.com	luliguyu	refactor(learning): eliminate duplicate training logic with callback system
+1aa00ea980436fc7af24c41998f74d74767c411e	2022916666	2022916666	DelacruzDawn1338@outlook.com	luliguyu	perf(benchmark): limit DataLoader worker count to CPU cores
+8893ecbe657afc9b1c9d91dacaeec35516565686	2022011506	2022011506	DelacruzDawn1338@outlook.com	luliguyu	fix(s3): resolve FileNotFoundError in S3 data source cleanup operations
+9a52e7bb385e069c33a9367076c0c0023f169100	2021381346	2021381346	DelacruzDawn1338@outlook.com	luliguyu	fix(console): resolve line length violation in benchmark training output
+2a7e30dc143a2f84b50169cb66af0155220bee87	2020375786	2020375786	DelacruzDawn1338@outlook.com	luliguyu	docs(claude): update CLAUDE.md with utility benchmarking and mixed precision features
+1d7b93c6d32d0dc87d1a893e916ce86d640312a8	2020312826	2020312826	DelacruzDawn1338@outlook.com	luliguyu	refactor(benchmark_training): sample_ratioが設定されているときにestimationを表示されるように変更する
+3cb2e55926aac80e5e605ae95f997d2633e96e13	2020305066	2020305066	DelacruzDawn1338@outlook.com	luliguyu	perf(label): optimize make_move_label function with lookup tables
+647bbc37f10f94c85833120e9a5e51fafcb13643	2019166146	2019166146	DelacruzDawn1338@outlook.com	luliguyu	refactor(learning): eliminate duplicate device setup in Learning class
+1b494522f33d340ad7fbdb495303916b4fabe8e0	2019141705	2019141705	DelacruzDawn1338@outlook.com	luliguyu	feat(learning): add mixed precision training with torch.amp.autocast
+6f14e1c4d848576c35c37cbdf930a3d7423295c8	2018867145	2018867145	DelacruzDawn1338@outlook.com	luliguyu	fix(feature): fix numpy type
+1099428a6b8dba449fe02cc77c39ef87d56adebb	2017646465	2017646465	DelacruzDawn1338@outlook.com	luliguyu	feat(dataset): convert uint8 tensors to float32 for ML processing
+bbf493bc7a1e5ef977c89c328ea3c1a7a83c1ac6	2016438985	2016438985	DelacruzDawn1338@outlook.com	luliguyu	refactor(PrefetchDataset): remove PrefetchDataset
+692cb47c44485afa98b697608ffca01b128eaa5c	2015614465	2015614465	DelacruzDawn1338@outlook.com	luliguyu	style(config): fix flake8 and ruff configuration conflicts
+2ad6073e3314528ac583cbd0dd186e21e0170327	2014711185	2014711185	DelacruzDawn1338@outlook.com	luliguyu	style(tests): apply ruff-format fixes to test files
+955926264538ad2dfa5913757631e4ef0cbbe6e8	2013916265	2013916265	DelacruzDawn1338@outlook.com	luliguyu	style(tests): fix remaining line length violations
+b2e40da59058343a3388a80a70e6d29903b672c6	2012673545	2012673545	DelacruzDawn1338@outlook.com	luliguyu	style(tests): fix line length violations in test files
+bdab61e8420ed965b5ffc6c799623b0e87a556b4	2012078265	2012078265	DelacruzDawn1338@outlook.com	luliguyu	style(mypy): fix style
+e49f11e0f8e4081a8a79b379ed2d00518019a027	2011190585	2011190585	DelacruzDawn1338@outlook.com	luliguyu	fix(quality): resolve VSCode diagnostic issues
+7767456031c32c94c9312e7cb02aec993510d67d	2010938585	2010938585	DelacruzDawn1338@outlook.com	luliguyu	fix(utility): resolve line length and type check issues in training benchmark
+9659f80a0d9613fea54f0dbe5c1d2deb3be6ee69	2010040905	2010040905	DelacruzDawn1338@outlook.com	luliguyu	fix(learning): add type ignore comments for dataset length access
+7d0ee56132bb978af6b2f81397b836de0a6b1e28	2009209145	2009209145	DelacruzDawn1338@outlook.com	luliguyu	feat(utility): add training benchmark subcommand for 1 epoch time estimation
+499e91170c989b3344b4629a50ef6644c315a8cb	2008539585	2008539585	DelacruzDawn1338@outlook.com	luliguyu	feat(datasource): add sample_ratio parameter for efficient cloud data sampling
+a5b29f4d6906f3479d7f06836f0a5dad38464562	2008389425	2008389425	DelacruzDawn1338@outlook.com	luliguyu	style: fix formatting and line length issues from pre-commit hooks
+c8f67525fd2808fecde547c84a1183328afbb2f4	2007640785	2007640785	DelacruzDawn1338@outlook.com	luliguyu	feat(utility): add DataLoader benchmark subcommand with prefetch-factor support
+3e3429199b53a5d4dc838ba3dd2b0fb552944fab	2006858505	2006858505	DelacruzDawn1338@outlook.com	luliguyu	refactor(interface): add validation
+4d3d18c7ee5c68539480926a09e07dab2d39c1b0	2006168025	2006168025	DelacruzDawn1338@outlook.com	luliguyu	fix(dataloader): timeout
+0435ed02d22f807080eb3439fa7828e27ca1abc8	2005100745	2005100745	DelacruzDawn1338@outlook.com	luliguyu	style(comment): fix comment
+0254cba8fb888a93825e4f8f7047fabf7705ca15	2003854505	2003854505	DelacruzDawn1338@outlook.com	luliguyu	fix(infra): cleanup cloud clients after data download
+3cdc95977a539aa83798ad32e8037c415883bf66	2002567785	2002567785	DelacruzDawn1338@outlook.com	luliguyu	fix(infra): implement full lazy initialization for cloud data sources
+85b061564b1189607ef7535153ad371c922668f0	2002477345	2002477345	DelacruzDawn1338@outlook.com	luliguyu	fix(infra): implement lazy initialization for cloud storage clients
+34056574830e923d171454a481102b5950253661	2002186705	2002186705	DelacruzDawn1338@outlook.com	luliguyu	fix(learn): resolve CUDA multiprocessing initialization error
+70efe28504155e202d33303d6f80606fc2c906ed	2001485745	2001485745	DelacruzDawn1338@outlook.com	luliguyu	feat(learn): implement DataLoader multiprocessing optimization with worker init functions
+7bbd610146e059990edd9e7806ad9e1c40b8c47c	2000870345	2000870345	DelacruzDawn1338@outlook.com	luliguyu	perf(learn): optimize PrefetchDataset parameters to reduce overhead
+07d51558f6f554ba610443ae126b3bc758e0df7b	1999895705	1999895705	DelacruzDawn1338@outlook.com	luliguyu	fix(learn): resolve pin_memory conflict between Dataset and DataLoader
+a8fb6e44cc9e5c0c6d830eee44d263a1b4b81a6b	1999011385	1999011385	DelacruzDawn1338@outlook.com	luliguyu	feat(learn): add PrefetchDataset for background data loading
+fa06fad14216e72fc02c40e4b6917ff3e75e2c51	1997737145	1997737145	DelacruzDawn1338@outlook.com	luliguyu	perf(learn): optimize data loading with torch.from_numpy and pin_memory option
+d7dd7300b552e1eeadce764d3c527a6c8e41d1c1	1996465385	1996465385	DelacruzDawn1338@outlook.com	luliguyu	fix(dataset): use torch.tensor() to avoid numpy read-only warning
+663b2b1195161d00544c1e0b4fe0a96598237785	1995788985	1995788985	DelacruzDawn1338@outlook.com	luliguyu	perf(datasource): eliminate numpy-to-dict conversion bottleneck
+544ea3499daee728726f4c0b5378fe8d234e5315	1995136305	1995136305	DelacruzDawn1338@outlook.com	luliguyu	fix(cloud): update download size estimation from 80KB to 1.5GB per file
+61d806c73b4f379f37719753955fd31398eb2c1a	1993993545	1993993545	DelacruzDawn1338@outlook.com	luliguyu	fix(console): break long line in error message
+333a199c9b5a0cf967325c3184c0247eda21eed4	1993799345	1993799345	DelacruzDawn1338@outlook.com	luliguyu	fix(format): fix pre-commit hook formatting issues
+b9e9bd50887eb56899d4cda5d61d4209db591c5c	1992824545	1992824545	DelacruzDawn1338@outlook.com	luliguyu	docs(gcs): update documentation with GCS support
+8cd05f51409ed53c09ea03308104f346ee1fc238	1991560225	1991560225	DelacruzDawn1338@outlook.com	luliguyu	feat(cli): add GCS support to all CLI commands
+d25123248f65f0cfe233e9969c2e3d29059d7708	1991403865	1991403865	DelacruzDawn1338@outlook.com	luliguyu	feat(gcs): add GCS feature store and data source implementations
+25538c6de65c0ae0f3a8ca49ca138ac2e2a7859e	1990423064	1990423064	DelacruzDawn1338@outlook.com	luliguyu	refactor(learning): remove .checkpoint file saving functionality
+1fabeb94ce6ca1861292b5a1df42f22d23770640	1989456104	1989456104	DelacruzDawn1338@outlook.com	luliguyu	fix(learning): prevent division by zero in training batch logging
+547abd8f94a7e94b96b8f06d065bb2abe35ff759	1988333904	1988333904	DelacruzDawn1338@outlook.com	luliguyu	fix(learning): correct channel mismatch between ResNet backbone and policy/value heads
+65eb129192e5a9cbe2b3d09b821dded23eb198ad	1987243384	1987243384	DelacruzDawn1338@outlook.com	luliguyu	feat(security): improve checkpoint security by saving only model parameters
+cfabfa869ec8aa6a1f92f13232ba7fc1126b116f	1986331864	1986331864	DelacruzDawn1338@outlook.com	luliguyu	docs(architecture): add BottleneckBlock implementation documentation
+9e9e5a9d9ba01258a05e2e73612a276729ad9c1e	1985089344	1985089344	DelacruzDawn1338@outlook.com	luliguyu	feat(learning): implement efficient BottleneckBlock architecture for Shogi AI
+8c6724d54809e4cd67665764a6f216242fbd8041	1984641824	1984641824	DelacruzDawn1338@outlook.com	luliguyu	perf(dir): ディレクトリ作成しなくていいように仕様を統一する
+313ed2c96fae8034006cf2cc66f50671afea6586	1983596664	1983596664	DelacruzDawn1338@outlook.com	luliguyu	fix(s3): correct skip count calculation in sync logging
+c143061a5a2aeea7a29d2bef7ce721f0f1814755	1983029504	1983029504	DelacruzDawn1338@outlook.com	luliguyu	docs(style): standardize Japanese punctuation across codebase
+bd0c304b6414471b7f5fb5b25334af16cdd93218	1982551424	1982551424	DelacruzDawn1338@outlook.com	luliguyu	fix(s3): resolve ServerSideEncryption parameter validation error and enforce encryption
+e94c74dea328f33cebb5c0d67b35b28827c93837	1982037104	1982037104	DelacruzDawn1338@outlook.com	luliguyu	feat(parallel): implement CPU parallelization for hcpe-convert and pre-process commands
+f6356d8daf63653d2974a25e324c4c72b2679e5f	1981071224	1981071224	DelacruzDawn1338@outlook.com	luliguyu	perf(s3): optimize S3FeatureStore for 10x faster pre-processing performance
+b967ece013b13c6047fa42cb6501ee97f65fe9b3	1980456144	1980456144	DelacruzDawn1338@outlook.com	luliguyu	style(docs): standardize docstring formatting across codebase
+f51ec378e28cdec036f3a3f7c5f54b682df871b9	1980153184	1980153184	DelacruzDawn1338@outlook.com	luliguyu	docs(api): add comprehensive docstrings to public APIs
+f66b439bebe535562fc33ebe17fd3539c1cd6b5d	1979555464	1979555464	DelacruzDawn1338@outlook.com	luliguyu	perf(s3): implement TransferManager for AWS CLI v2 equivalent download performance
+0fc396585764be32d1b186cd732a22a8cf7a04b9	1979241184	1979241184	DelacruzDawn1338@outlook.com	luliguyu	feat(docs): enhance CLAUDE.md with comprehensive development guidelines
+6374c2a991ffa9247687f64b3f3c9948c80db7c4	1978447144	1978447144	DelacruzDawn1338@outlook.com	luliguyu	style(s3_data_source): fix style
+fdf662da1077a2764ddbe75705d5e429770ddf9f	1977582664	1977582664	DelacruzDawn1338@outlook.com	luliguyu	perf(s3): S3DataSourceに並列ダウンロード機能を追加
+d10e9b5276a14ce00f7254d59625d60a46419b8e	1976795584	1976795584	DelacruzDawn1338@outlook.com	luliguyu	perf(s3_feature_store): s3 feature storeに並列アップロード機能を追加
+b297d212beb26a6689ac799e0b1546302fef59bf	1975863784	1975863784	DelacruzDawn1338@outlook.com	luliguyu	refactor(s3): 時間のかかる処理にtqdmをいれておいた
+320a362398557b32a73b10ba91665b2f2190dff4	1974806744	1974806744	DelacruzDawn1338@outlook.com	luliguyu	style(workflows): fix end of files
+1a978c67cb6f21d4253d3420380ead29a6b53377	1974483944	1974483944	DelacruzDawn1338@outlook.com	luliguyu	Merge remote-tracking branch 'origin/main' into update-learn
+eaa0d4ded4e3e930145fc75340525b2b2a563053	1973363144	1973363144	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #142 from dousu/add-claude-github-actions-1748962548866
+08ec24744018a1fc2fba212d8d3fd430e7347fee	1973132824	1973132824	DelacruzDawn1338@outlook.com	luliguyu	Add Claude PR Assistant workflow
+f01ac2887b6452b8fe7b97328739dfb6b87a958a	1972888904	1972888904	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #140 from dousu/dependabot/pip/update-b665e367d1
+43da1861ecf29fc8c901fbfce5cd5e3cb4afca9e	1972524544	1972524544	DelacruzDawn1338@outlook.com	luliguyu	build(deps): bump the update group across 1 directory with 4 updates
+8255adaeccbb1b1d6dc1f7b8b8afeeba33f8b6c8	1971263704	1971263704	DelacruzDawn1338@outlook.com	luliguyu	feat(cli): add s3 options
+0876b42e03c2be7e9987220b1aba752e81ef56db	1970888184	1970888184	DelacruzDawn1338@outlook.com	luliguyu	fix(poetry-lock): fix poetry lock
+09aa878becb07cf6483a164560cc52d0c2fe5a74	1970781584	1970781584	DelacruzDawn1338@outlook.com	luliguyu	Merge remote-tracking branch 'origin/main' into update-learn
+111ac771fcb4a1206cd24cce66b1535cce1e2ec6	1969964064	1969964064	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #134 from dousu/dependabot/pip/commitizen-4.6.0
+1e8d48fbda66b35f13d19a0828fffff9e01ec921	1969625024	1969625024	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump commitizen from 4.1.1 to 4.6.0
+d07cfbaf27792200ad7eaa4c8efb8844d06f41ae	1969135584	1969135584	DelacruzDawn1338@outlook.com	luliguyu	Merge remote-tracking branch 'origin/main' into update-learn
+d947ac60e99f254f54e3247db637c005740feafd	1968251424	1968251424	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #137 from dousu/dousu-patch-1
+6ab104fae9b771ae261ff9d4ef2a135a3c9a00bd	1967063784	1967063784	DelacruzDawn1338@outlook.com	luliguyu	Update dependabot.yml
+10f3ebd23bd8979eb4eac419beace418a8d52f82	1965870024	1965870024	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #133 from dousu/dependabot/pip/pre-commit-4.2.0
+c7bda6a1d7e46e868f5782b576b6007a1cb9920f	1964710623	1964710623	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump pre-commit from 4.1.0 to 4.2.0
+86c6657133a960cc3c23fb2af291c373f9dc2f9d	1964528103	1964528103	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #135 from dousu/dependabot/pip/ruff-0.11.7
+2f47b4a6055643f6a80b0f23205e6311104027fb	1964468343	1964468343	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump ruff from 0.11.2 to 0.11.7
+2896a112ed9669067001591864bb4524c95e7843	1964190143	1964190143	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #136 from dousu/precommit-autoupdate-github-actions-20250501
+6cb713fdab7e206e4d6fc98408b17f8f9246f19e	1964114143	1964114143	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+9e93db7ddd5520ae40155b2fc90eeb4e63403f5c	1963097543	1963097543	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #132 from dousu/precommit-autoupdate-github-actions-20250401
+b1083c0cace1c54a42e0a350482daaf98cb04766	1962086023	1962086023	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+10c583be3c8cd2f19c1dad4b0897887bf2b00da3	1961858823	1961858823	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #128 from dousu/dependabot/pip/flake8-7.2.0
+825a93778a684105b4c25ee6461232211de3d4cd	1961635823	1961635823	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump flake8 from 7.1.2 to 7.2.0
+babcf9e93d976decc7f192a5d8236490f4242242	1961497943	1961497943	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #129 from dousu/dependabot/pip/cshogi-0.8.9
+c6c566e821b081eabf9cc7b00a80b5838a8a2d03	1961242703	1961242703	DelacruzDawn1338@outlook.com	luliguyu	build(deps): bump cshogi from 0.8.8 to 0.8.9
+3c6b72a07eb34b6335339f6f35f12f7c58a1739a	1961092943	1961092943	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #127 from dousu/dependabot/pip/yamllint-1.37.0
+e121047dbf15113bf67210bd6c82efd33b369404	1960825063	1960825063	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump yamllint from 1.35.1 to 1.37.0
+0517a54b2a4071c31eb4e4a059b2f07473ec2139	1960309583	1960309583	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #130 from dousu/dependabot/pip/pytest-8.3.5
+b2715aa6e661fd78db56e938708abba1bd5440fe	1960268463	1960268463	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump pytest from 8.3.4 to 8.3.5
+7a49147dbf4e0ce16c0759d400545f42ec54b7bb	1959635063	1959635063	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #131 from dousu/dependabot/pip/ruff-0.11.2
+6915da092735640c769c7ca48962a2c8abde3a66	1959264503	1959264503	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump ruff from 0.9.9 to 0.11.2
+f3fc13fc2d4359f929b0b25f705c56c8599555c4	1958520663	1958520663	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #125 from dousu/dependabot/pip/black-25.1.0
+e676483ae544cf84469c9f97cf2ed241e635eb61	1957761583	1957761583	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump black from 24.10.0 to 25.1.0
+fb430a800b2c5b50180f618bff33af136910c9c2	1956951063	1956951063	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #121 from dousu/dependabot/pip/isort-6.0.1
+b0f29a6131e6992abd466878edbdea5464df7153	1956026423	1956026423	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump isort from 6.0.0 to 6.0.1
+95e154f1e23ddf29bcbcd7c3d069a06ba589c58f	1956023503	1956023503	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #122 from dousu/dependabot/pip/flake8-7.1.2
+903552b83cb4eee7473fc8301e30b7b24df27b67	1955981783	1955981783	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump flake8 from 7.1.1 to 7.1.2
+dacca559d0d4ed47c3f8ef32ea193771bf6ad82e	1955102183	1955102183	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #124 from dousu/dependabot/pip/tensorboard-2.19.0
+1aaf4b22412f575164d96bdf45855fc46d30803f	1953867903	1953867903	DelacruzDawn1338@outlook.com	luliguyu	build(deps): bump tensorboard from 2.18.0 to 2.19.0
+2ff4e703132b2e769d0ad46ceec815aa2c6a167e	1953689263	1953689263	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #123 from dousu/dependabot/pip/ruff-0.9.9
+110250a2e319b172966f6e0ade557fba88ff3ef4	1953386343	1953386343	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump ruff from 0.9.4 to 0.9.9
+3d3fe3a841982e43cb2bc9e8cd2e45a1b685c1de	1952847783	1952847783	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #126 from dousu/precommit-autoupdate-github-actions-20250301
+6aab1bb8ba26597f28740d9bb0066ada39b6932b	1952304063	1952304063	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+17d13e85ac2f60973eb9baddec70d30b2629eba9	1951787663	1951787663	DelacruzDawn1338@outlook.com	luliguyu	style(flake8): fix too long line
+635421da3dbf205c84c5499269c5b74840d91e9a	1951201903	1951201903	DelacruzDawn1338@outlook.com	luliguyu	style(mypy): fix mypy errors
+bc3617b1f258e3536e08633e4bcb44c8f03d5995	1951032263	1951032263	DelacruzDawn1338@outlook.com	luliguyu	style(flake8): fix too long line
+9d1f7ab93d038be7004768b529dd816f6a6e5655	1950472703	1950472703	DelacruzDawn1338@outlook.com	luliguyu	feat(infra): add S3
+42f9989d5509114eaf040fd84eee0ed50122b6bf	1949978383	1949978383	DelacruzDawn1338@outlook.com	luliguyu	style(style): fix style
+9e620b3297e8eb87b34a5daa77be7acb97ca3796	1949609583	1949609583	DelacruzDawn1338@outlook.com	luliguyu	style(mypy): ignore numpy.unicode_
+ed91e68fadb218160e3e460ba76ee90148e6cdf7	1949133783	1949133783	DelacruzDawn1338@outlook.com	luliguyu	style(style): fix style
+e8838a4b17debe6d4e6c722e9e32a7452332ac67	1949048583	1949048583	DelacruzDawn1338@outlook.com	luliguyu	feat(bigquery): infraのbigqueryとのデータをnumpyで行うように変更する
+1b84904f40723e4c1425da0ed7c1ce04afeaa38c	1948002863	1948002863	DelacruzDawn1338@outlook.com	luliguyu	refactor(converter-and-preprocess): pyarrowを使う必要がinfra側でなくなっているのでインターフェースを修正する
+1dd31bcfb0594416ae47ec1bf22829f49dbf2002	1947623863	1947623863	DelacruzDawn1338@outlook.com	luliguyu	fix(dev-initialization): poetry syncの際にcpuをつけておく
+b2a2e5440206472b1b4a52a4072f7643798a9a72	1946768703	1946768703	DelacruzDawn1338@outlook.com	luliguyu	style(claude-code): format
+bbb2cc081526a334682eee9d147bfc7815c057ef	1946199662	1946199662	DelacruzDawn1338@outlook.com	luliguyu	docs(claude-code): add CLAUDE.md
+cd4d20fae9b4bfa868d76c1020023be6309f97fb	1946042822	1946042822	DelacruzDawn1338@outlook.com	luliguyu	feat(infra): add s3
+bf3ce6a88a1d705dc0b73453374f0f7631428e4b	1945507422	1945507422	DelacruzDawn1338@outlook.com	luliguyu	fix(pre-commit): fix pre-push stage
+7d67c4a9100d0c6883af2d2ebddb6b94f8c766e6	1945431062	1945431062	DelacruzDawn1338@outlook.com	luliguyu	fix(pre-commit): fix poetry lock
+8bc87933f5930914ec21ca05d5706df3dcf9fb28	1945352302	1945352302	DelacruzDawn1338@outlook.com	luliguyu	fix(torch): torchのバージョン上げ
+626336c580c47f285f656897d3a01da2ea7fff50	1944858062	1944858062	DelacruzDawn1338@outlook.com	luliguyu	refactor(poetry-check): poetry checkでの指定項目の修正
+3203653523c58ac92e6e9ab3e934f754dcff6d9b	1943813982	1943813982	DelacruzDawn1338@outlook.com	luliguyu	feat(pyproject.toml): add extras
+ed2c247a55c8a54a9129f9385da7df9328bf7531	1942960702	1942960702	DelacruzDawn1338@outlook.com	luliguyu	docs(LLM): add memory bank document
+e5c6ee9a2013ee34aab15161305306dddb8ecbf9	1941904862	1941904862	DelacruzDawn1338@outlook.com	luliguyu	add directories
+06bf71ae09988e058dde72a6df211e87ac5d9e1d	1941719942	1941719942	DelacruzDawn1338@outlook.com	luliguyu	add Dockerfile
+3b0d4bb509a0f27aa5ae39c8048e2ad7aea5254a	1941506462	1941506462	DelacruzDawn1338@outlook.com	luliguyu	style(mypy): fix style
+8350fd7b5f1f2f7d1bb03126db3c4fefe057ed55	1940595902	1940595902	DelacruzDawn1338@outlook.com	luliguyu	feat(bigquery-datasource): numpyで統一
+58ad4e998a2c9338863a5736f376f8d24bceff3d	1940407102	1940407102	DelacruzDawn1338@outlook.com	luliguyu	feat(dl.py): add torch.autograd.set_detect_anomaly
+e1dd9cb74b3691dd33d7c4c555fd59e629a0d417	1940275902	1940275902	DelacruzDawn1338@outlook.com	luliguyu	style(mypy): mypyがシグネチャを間違ってとらえているみたいなのでignoreする
+ec33d17a944c14265321b2110b54b70092b5fadc	1940021142	1940021142	DelacruzDawn1338@outlook.com	luliguyu	perf(bigquery-datasource): ローカルキャッシュ時の効率を改善する
+54edb9a32d1246d9ec39d4cabb91e4f9c60d44f6	1939048142	1939048142	DelacruzDawn1338@outlook.com	luliguyu	fix(learn-model): 勾配クリッピングの実施
+ddcc1d0979e0dc5709277d61310dc0bec67207c0	1938871182	1938871182	DelacruzDawn1338@outlook.com	luliguyu	fix(learn-model): 勾配爆発への対応
+8e37e4b71f8ea4fb74815510d15e27a1a23f4945	1938576382	1938576382	DelacruzDawn1338@outlook.com	luliguyu	style(ruff): fix style
+cea5dfc305e510a671b71e15f5e2a0a3d1616ce8	1938358582	1938358582	DelacruzDawn1338@outlook.com	luliguyu	fix(tensorboard): parameterのヒストグラム記録方法を修正
+9e11f4a59985510c088f54e1736ea02ca2dee556	1937883542	1937883542	DelacruzDawn1338@outlook.com	luliguyu	style(ruff): fix style
+c9395543d974abbd9b019b71b106c6cd8d2b7fd8	1936646902	1936646902	DelacruzDawn1338@outlook.com	luliguyu	feat(cli): BigQueryデータソースのローカルキャッシュに対応する
+6cea4e82d5f989e2bc36170e73c87bd3b7a03a61	1935354062	1935354062	DelacruzDawn1338@outlook.com	luliguyu	fix(learning): fix epoch index
+4edfd89383b7c22451b12ba7bedcf77a731610a8	1934919382	1934919382	DelacruzDawn1338@outlook.com	luliguyu	feat(summarywriter): summarywriterのログをGCSに保存する
+b9bae50d7a271b2865fcea80eb5462332f76282f	1933982262	1933982262	DelacruzDawn1338@outlook.com	luliguyu	style(ruff): fix style
+b39e53da5b6dbc761f8a9a9ed4e846474a340b47	1933656142	1933656142	DelacruzDawn1338@outlook.com	luliguyu	style(ruff): fix style
+ca4b0ce92ba7ca68e2b97cd312794c45c15e31cc	1932877022	1932877022	DelacruzDawn1338@outlook.com	luliguyu	style(ruff): fix style
+85f735b52d61853930f56df4cda7ff77bd6f871c	1932634022	1932634022	DelacruzDawn1338@outlook.com	luliguyu	feat(bigquery-datasource): add pre-load option
+1ec22898ef38690ec78bd2ff0ce64343777b3eaf	1931721942	1931721942	DelacruzDawn1338@outlook.com	luliguyu	feat(gcs): add method to upload a directory
+affe278db20db5c0d7f87711b6566860db98c2f1	1931216542	1931216542	DelacruzDawn1338@outlook.com	luliguyu	refactor(tqdm): add progress bar
+da6d18cd4576febc3c59075ebc0bdc3184dc32a9	1930262822	1930262822	DelacruzDawn1338@outlook.com	luliguyu	feat(tensorboard): add histgram
+ccff6d11b9179ecee41773fe40bdcdee248626fd	1930009702	1930009702	DelacruzDawn1338@outlook.com	luliguyu	fix(log): fix summary writer
+d7148f8094302037f24447fe497a5e073b961521	1928871342	1928871342	DelacruzDawn1338@outlook.com	luliguyu	feat(preprocess): preprocessでパーティションキーを指定できるようにする
+4eea3596e88d94a69959e8ccef8d99807942065b	1928136142	1928136142	DelacruzDawn1338@outlook.com	luliguyu	fix(feature-store): partition keyがリセットされない問題を修正
+194f1309c4e982dfe8d863cd1f979f8ffe0f5bea	1927190662	1927190662	DelacruzDawn1338@outlook.com	luliguyu	refactor(logging): log message
+ed11799d0a08f944df157b03f842bc5ddeb98688	1927083022	1927083022	DelacruzDawn1338@outlook.com	luliguyu	refactor(logging): add a log message
+e766c54e50ee0f48adfda43f72a3413a209fd20b	1925901982	1925901982	DelacruzDawn1338@outlook.com	luliguyu	style(flake8): fix style
+773bef9edbeeee0facba6eeebc571b2ab5b55758	1924602662	1924602662	DelacruzDawn1338@outlook.com	luliguyu	fix(feature-store): 大量データのときにpruningがうまくきかないのでmergeからdelete/insert方式に変更する
+aeac88e5c4b04e29b563432ecfb3590fe4d64062	1923706182	1923706182	DelacruzDawn1338@outlook.com	luliguyu	feat(feature-store): 特徴量保存用のBigQuery Tableをpartitioning requiredに変更
+7ccb56c1f045f2a9ef8e02acf9f4a497f21391fb	1923331462	1923331462	DelacruzDawn1338@outlook.com	luliguyu	fix(variable-name): cacheのバイト数指定の命名を統一
+0584abf7284708183fbc96d3be1751956d0fdaf2	1922376582	1922376582	DelacruzDawn1338@outlook.com	luliguyu	style(ruff): fix style
+0a32a4de454a8331c7b986a3e61f9d2a0ed5061a	1921978622	1921978622	DelacruzDawn1338@outlook.com	luliguyu	style(style): f-stringがnestしているのを解消
+cb0442a952b0ae62cc6415081c73cf8c84079022	1921310982	1921310982	DelacruzDawn1338@outlook.com	luliguyu	style(black): ruffと競合するのでblackを外す
+e7b0c115d3cb239c9260eb74629a6e5c2e3922d0	1920476261	1920476261	DelacruzDawn1338@outlook.com	luliguyu	feat(learning): employ masked GCE
+8aed4fcd9c9ca6a703abf2c419da317e92e08888	1920269101	1920269101	DelacruzDawn1338@outlook.com	luliguyu	fix(GCS): fix gcs path
+c6cacd50a42ec5e4e23081ca7eeed6797cf6782b	1920212581	1920212581	DelacruzDawn1338@outlook.com	luliguyu	Merge remote-tracking branch 'origin/main' into update-learn
+44de30febb0ef3d4c16b70ec4eb00fb0bcc74bf0	1919878541	1919878541	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #120 from dousu/precommit-autoupdate-github-actions-20250201
+ee16d96e98f4551be64a1bf4bb7d08ae006a190c	1918697541	1918697541	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+4e3882e9d6879c065ef6c93c9c264a0a9fabd3f0	1918518781	1918518781	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #115 from dousu/dependabot/pip/ruff-0.9.4
+cfb30740db6bf02665292e2aba25d5a8de87c327	1917689261	1917689261	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump ruff from 0.8.4 to 0.9.4
+9d342a0147b725c844f506e8dfd66d4f827ed703	1916571501	1916571501	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #116 from dousu/dependabot/pip/pre-commit-4.1.0
+dc2bff1f1d563868f67c6c5058c04c171c31246d	1916246421	1916246421	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump pre-commit from 4.0.1 to 4.1.0
+defecb41b9f06293d021d7e533c4974f73672110	1915724461	1915724461	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #118 from dousu/dependabot/pip/commitizen-4.1.1
+c4aef9a757a594b9cdf3e17ce76ec7e2b63cffe3	1914901261	1914901261	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump commitizen from 4.1.0 to 4.1.1
+76ca1192b032e455afdefc24e31faa802dce2e2e	1914081661	1914081661	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #119 from dousu/dependabot/pip/scikit-learn-1.6.1
+056a4f7959653645acfb489b64ef252745ef4a06	1913753381	1913753381	DelacruzDawn1338@outlook.com	luliguyu	build(deps): bump scikit-learn from 1.6.0 to 1.6.1
+a81e786425ba5f43064721a35012153ca7c1b3df	1912817421	1912817421	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #117 from dousu/dependabot/pip/isort-6.0.0
+67af31f710cb17504029b3ca37e013fb90ee7fa7	1912019461	1912019461	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump isort from 5.13.2 to 6.0.0
+7488787bedde6804ddf79147d06e8431f5327cdc	1911272141	1911272141	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #114 from dousu/precommit-autoupdate-github-actions-20250101
+ff05c38a8483003d8bb3f6a2f06f0e137dec63d2	1910608421	1910608421	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+a37d1d1a7b1f88f1ac5e1e71990b81855283a44b	1910009861	1910009861	DelacruzDawn1338@outlook.com	luliguyu	style(mypy): additional_dependencies
+d1ade0e28f1bc7dda8bff1a7730b6c68060748e9	1909281541	1909281541	DelacruzDawn1338@outlook.com	luliguyu	style(mypy): fix mypy
+434e2917b278501f790590f0a8194ab42c540671	1908118901	1908118901	DelacruzDawn1338@outlook.com	luliguyu	feat(preprocess): preprocessの入力をBigQueryに対応する
+ebdd1fa72f6fc8b3777158770515e90e1e633327	1907491661	1907491661	DelacruzDawn1338@outlook.com	luliguyu	feat(bq-datasource): パーティションに対応する
+5b23f71b13056c4e51c752e58789ef6eb5a94e22	1906568741	1906568741	DelacruzDawn1338@outlook.com	luliguyu	perf(hcpe_converter): HCPE Converter employ partitioning table
+4fcce0a7c0121d464d250baeaf9b62c59817f96b	1906501701	1906501701	DelacruzDawn1338@outlook.com	luliguyu	feat(hcpe_converter): add clustering key
+b748686d0233b67225eacfadf44103d0cfc43588	1905567461	1905567461	DelacruzDawn1338@outlook.com	luliguyu	style(style): fix Generator
+b6ad6f6471aca4cd9fec9e88d912d1dd9b073e90	1904723181	1904723181	DelacruzDawn1338@outlook.com	luliguyu	style(style): fix Generator
+bf106194d0486b16b86a31217c7564003b03667e	1903937461	1903937461	DelacruzDawn1338@outlook.com	luliguyu	fix(cli): fix help message
+054f56ce417038b25c17d8217f4254363c297a68	1903739421	1903739421	DelacruzDawn1338@outlook.com	luliguyu	fix(hcpe_converter): fix typo
+0250c983349628760aea8dc6ffc69de69e591dcd	1903039061	1903039061	DelacruzDawn1338@outlook.com	luliguyu	style(mypy): fix style
+77d3138c1c083f6b521c423626c9e5e04d165ed4	1902319581	1902319581	DelacruzDawn1338@outlook.com	luliguyu	style(formater): remove black
+c7d33d446d63bb30877fe878ad1e4cfa47aa9425	1902077981	1902077981	DelacruzDawn1338@outlook.com	luliguyu	feat(learn-model): BigQueryをデータソースとして選べるようにした
+f4daff78bda56ba4fc5bd5c5177bbd9cb8aef8f7	1901724301	1901724301	DelacruzDawn1338@outlook.com	luliguyu	refactor(bigquery-data-source): add tests
+20a6097e28fb03e26191c9cbda68ce39d79963e2	1901398901	1901398901	DelacruzDawn1338@outlook.com	luliguyu	refactor(test_app_hcpe_converter.py): refactor
+b817ccf0b13bdbd3da6a7ac667a252feb891d1f9	1900272661	1900272661	DelacruzDawn1338@outlook.com	luliguyu	refactor(hcpe-converter): BigQueryを使ったテストを導入する
+05fc9ebb63483ce1c77966bc6600580d726dd48c	1899714101	1899714101	DelacruzDawn1338@outlook.com	luliguyu	fix(bigquery): fix a comment
+0c9cc9cb43f874673e3c33fadcc9c0a65f865b3e	1898504501	1898504501	DelacruzDawn1338@outlook.com	luliguyu	style(flake8): fix style
+5e126d0f697063e40691285243a80f8e7ebcdd06	1898064941	1898064941	DelacruzDawn1338@outlook.com	luliguyu	refactor(bigquery-data-source): add tests
+f5832a8b5d997160170958fa35d25ab220053a07	1898056941	1898056941	DelacruzDawn1338@outlook.com	luliguyu	fix(test): fix typo
+407665d78fd91acfe3fc5b1d9aff7d16a3a25633	1897194941	1897194941	DelacruzDawn1338@outlook.com	luliguyu	fix(feature-store): デストラクタで実行される処理の中でloggerを実行するとcloseしたIOを参照してしまうバグの修正
+f88c4101e135eaaaa3ed4741213ec968d258e413	1896316301	1896316301	DelacruzDawn1338@outlook.com	luliguyu	feat(bigquery-data-source): add bigquery data source
+f407e721094eee969f49bc34c8ffdf73c285bc54	1896159901	1896159901	DelacruzDawn1338@outlook.com	luliguyu	perf(bigquery): ストレージ課金はPHYSICALに修正する
+03e10526682abf690913181eabe8dbd554d9dbe6	1895485541	1895485541	DelacruzDawn1338@outlook.com	luliguyu	style(mypy): fix mypy
+1ba3e68d54265660335340820ac36947f24f10d1	1895293020	1895293020	DelacruzDawn1338@outlook.com	luliguyu	style(mypy): fix mypy
+33ba586996f772591683873424d485616bec00a2	1895154100	1895154100	DelacruzDawn1338@outlook.com	luliguyu	refactor(data-source): 構成変更の事前準備
+46b7896b24732ed79f1283668a9a05ab8e17e1ab	1894396300	1894396300	DelacruzDawn1338@outlook.com	luliguyu	fix(mypy): type annotation
+c04b0cd9a0b939de3cfae31ac4ca134d8913b44b	1893593780	1893593780	DelacruzDawn1338@outlook.com	luliguyu	fix(mypy): type annotation
+263ec6f68ef3f94b71a7f46eec26089c4d000fbd	1893571340	1893571340	DelacruzDawn1338@outlook.com	luliguyu	fix(tests): fix tests
+a29ef629b06fd82b3012af29956dddd617c1e7ce	1893264420	1893264420	DelacruzDawn1338@outlook.com	luliguyu	fix(test): fix tests
+1be15b62cf128d58dcacfdf86b19c6d1f6ef4598	1892376860	1892376860	DelacruzDawn1338@outlook.com	luliguyu	temp
+158853677dd3095fdbe38c2659154337634b5e02	1892099140	1892099140	DelacruzDawn1338@outlook.com	luliguyu	fix(hcpe_converter): fix bigquery types
+56fb3b85bdb29a3d9c8c1f801a4f71b37ff40678	1891791180	1891791180	DelacruzDawn1338@outlook.com	luliguyu	style(flake8): fix style
+8aaa03ac7a5e105a3b8091aa7cc65c8c9695a61e	1891686500	1891686500	DelacruzDawn1338@outlook.com	luliguyu	style(poetry-lock): lock dependencies
+91ab81267f714e5c4edeaefdb24ff885a739a265	1890779740	1890779740	DelacruzDawn1338@outlook.com	luliguyu	style(mypy): fix type annotation
+aaae5324ef79d020768185bafbd9bf1355b56b33	1889653820	1889653820	DelacruzDawn1338@outlook.com	luliguyu	feat(GCP): GCSとBigQueryに保存できるようにした
+46ddd1a200dd1856b0adef8ea937bbd72756a97c	1888493060	1888493060	DelacruzDawn1338@outlook.com	luliguyu	feat(learn): pytorchのfloat32の精度がそこまで求められるものではないと思ったので少し下げておいた
+9ee63aa0deaa5a63b0bac5d8f74b8d1145607062	1887347020	1887347020	DelacruzDawn1338@outlook.com	luliguyu	refactor(learn): batchの数をログに表示する
+5ffe24da716d07bbcc8bbc02b5c9e383ff18f0af	1886704580	1886704580	DelacruzDawn1338@outlook.com	luliguyu	fix(hcpe_converter): moveがないファイルに対応
+677a0ec3f8b3ee144e3db00e7e9a7a88e1cbf850	1885732380	1885732380	DelacruzDawn1338@outlook.com	luliguyu	refactor(debug): どうしてもわからないエラーがあるのでファイルを調べられるようにする
+cd5e2cd0b91078c69ecf2829b8a71afbad47b901	1885137300	1885137300	DelacruzDawn1338@outlook.com	luliguyu	refactor(hcpe_converter): これでも無駄なファイルできないことテストしていたので戻す
+1da2d53e597845d98c793459cc072e1303b9fdab	1884270580	1884270580	DelacruzDawn1338@outlook.com	luliguyu	fix(hcpe_converter): 空のファイルを保存しないように修正
+973cc06c03f9a6e21785c00a6c505ff455edf1f8	1883952860	1883952860	DelacruzDawn1338@outlook.com	luliguyu	refactor(hcpe_converter): ログが出すぎなので調整
+9a20a9d52699032910ed4a143c51686097075412	1883488900	1883488900	DelacruzDawn1338@outlook.com	luliguyu	fix(hcpe_converter): moveが0も以上であるので省くようにした
+f59b3c4ba7adda3f7363b81e49e510d994b87909	1883055540	1883055540	DelacruzDawn1338@outlook.com	luliguyu	refactor(transform): ログメッセージの修正
+a1797b7d0730a9bbc2ff6ae2fcdeb5d829a8a323	1882182740	1882182740	DelacruzDawn1338@outlook.com	luliguyu	refactor(transform): エラー時にその手を指したらcshogi上どうなるのか
+734d444d069d31212e08610fbbbca8143f77ef6e	1881491380	1881491380	DelacruzDawn1338@outlook.com	luliguyu	style(learning): fix style
+8e54319930af93136daa9d136c796ba1d5dcab87	1880302620	1880302620	DelacruzDawn1338@outlook.com	luliguyu	refactor(learning): ちょっとログを足してみた
+f3b8d24eb87112839047de2f708a3060e4f58e0c	1879961220	1879961220	DelacruzDawn1338@outlook.com	luliguyu	refactor(transform): hcpesのshapeをログに出す
+aaa0d8536a66c133e166152f6d5be2df4948bb5a	1879604300	1879604300	DelacruzDawn1338@outlook.com	luliguyu	perf(hcpe_converter): moveにおかしな値が入ってそうなのでもしあったら例外を投げる
+8751541d3b3dcb30a172c78dfe8dae4dd7a8287b	1879205460	1879205460	DelacruzDawn1338@outlook.com	luliguyu	Update hcpe_converter.py
+fa59fb174bb0abb75b5a8fb10e4ab615dbca909a	1879097220	1879097220	DelacruzDawn1338@outlook.com	luliguyu	refactor(hcpe_converter): add a comment
+537d953d3a3672a52c61c2d49bbe9c8350d9a356	1877846340	1877846340	DelacruzDawn1338@outlook.com	luliguyu	style(flake8): fix style
+37dde4765cdd6d6ebf1b3135ddbc7ed1297336c5	1876599420	1876599420	DelacruzDawn1338@outlook.com	luliguyu	feat(hcpe_converter): 特定のmoveのhcpesを除外するオプションを追加する
+51144cd83a6fea8a98d1711680e864201f7e8c2f	1875658900	1875658900	DelacruzDawn1338@outlook.com	luliguyu	fix(learning): pin_memoryはCPUとGPU間の転送で使うためいったんすべてのケースでfalseにする
+7b99a3650ef512ce565e56b5acd023bcad38bb1e	1875367660	1875367660	DelacruzDawn1338@outlook.com	luliguyu	fix(transform): tensorを作るときにdeviceの設定をつけるように変更する
+c66fdaab5e9e90d5362fb26bf7e13a54bd28f6d7	1874606300	1874606300	DelacruzDawn1338@outlook.com	luliguyu	docs(kifdataset): add a comment
+612882950de9c5761d66517dff62f30e34bcb7e0	1873317220	1873317220	DelacruzDawn1338@outlook.com	luliguyu	fix(kifdataset): 最初にtransformするとメモリ足りなくて落ちるので後からtransformに戻す
+f2fb6e31e108d43fbcf86edc6f8d74ee6a7955f9	1873047220	1873047220	DelacruzDawn1338@outlook.com	luliguyu	fix(kifdataset): なぜか途中でプログラムが終了するのでself.dataがかぶっている仮説で修正する
+4f702ca1f72da7bf435db51231e7c6ed4945a8a1	1872333100	1872333100	DelacruzDawn1338@outlook.com	luliguyu	fix(kifdatase): 進捗率の表示を粗くするところの条件が抜けていたので修正
+2a1baee07bc1e777c2dc8f30de42f7de13d48da9	1871863580	1871863580	DelacruzDawn1338@outlook.com	luliguyu	fix(kifdataset): 例外を創出しないポイントを間違えていたので修正する
+ac6f5340b4f1e2154daf4f5efd1ab3048c1aca9d	1871442860	1871442860	DelacruzDawn1338@outlook.com	luliguyu	refactor(kifdataset): hcpeの変換進捗率をloggerにだす
+82ba3a3e309b991d53d3985fba798f8c577bdf9c	1870286900	1870286900	DelacruzDawn1338@outlook.com	luliguyu	fix(transform): move labelへの変換時にエラーが出たら無視する
+d4490ae2b8406aedc67feff0d4d7d270bdc55c55	1869646980	1869646980	DelacruzDawn1338@outlook.com	luliguyu	refactor(kifdataset): ちょっとだけ改良
+2ec729c0de2fca7f29f45a0c860a6fbc2fd4d4b2	1868383300	1868383300	DelacruzDawn1338@outlook.com	luliguyu	refactor(kifdataset): initの時点でtransformを実行することでデバッグしやすくする
+cd6591e33d56858e9a3040b97741c257c8f1bcf1	1867817699	1867817699	DelacruzDawn1338@outlook.com	luliguyu	fix(hcpe_converter): 空のlistだった時に対応する
+ef98b0f08c33eefa5011beb365d92b98b38fe457	1866963779	1866963779	DelacruzDawn1338@outlook.com	luliguyu	feat(hcpe_converter): オプション追加
+2a28872875050dc265c0419c2c778414bbae2ba1	1865958539	1865958539	DelacruzDawn1338@outlook.com	luliguyu	style(flake8): fix style
+b6a1b7f03ba46128c9032a8091067abe6b2b0c06	1864670099	1864670099	DelacruzDawn1338@outlook.com	luliguyu	refactor(logger): transformationの時のエラーメッセージを追加
+8a23cf81dd08c1a470483b13bd3ac373f86126c6	1864055699	1864055699	DelacruzDawn1338@outlook.com	luliguyu	feat(hcpe_converter): HCPEコンバーターで進捗率をログに出す
+a812d2e5f76a64a2ba102253d4339112e303e57f	1863998699	1863998699	DelacruzDawn1338@outlook.com	luliguyu	style(mypy): fix style
+a2de185cbcb7877c35665214085c1e116e2ae8cd	1863682979	1863682979	DelacruzDawn1338@outlook.com	luliguyu	feat(log): accuracy表示を追加
+536d0e50e54abb27124bbf6424f9c25657d8afcb	1863540139	1863540139	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #113 from dousu/learning
+27dbf2cfa4ab64adc39eb0753952ae8bc15d0dff	1862737499	1862737499	DelacruzDawn1338@outlook.com	luliguyu	style(flake8): fix style
+ce5e6c8e033fe903bf413836870626d8261a2eb1	1862454139	1862454139	DelacruzDawn1338@outlook.com	luliguyu	feat(learning): add new subcommand learn-model
+f828155b823f2c676d1d476f11f9a7eda18c0122	1862207579	1862207579	DelacruzDawn1338@outlook.com	luliguyu	fix(learning): 学習部分が回るように少し修正
+ee51446275e119c9a7078f0b77a5890f2d36e4b2	1861783579	1861783579	DelacruzDawn1338@outlook.com	luliguyu	perf(feature): 正解ラベルから無駄なラベルを取り除いた
+7da27329fca384c6e7f9a0f58151ad481c4aac00	1860574819	1860574819	DelacruzDawn1338@outlook.com	luliguyu	style(flake8,mypy): fix style
+ed49d794d13a53672a56f99e6f977f2ac1ccdf54	1860430139	1860430139	DelacruzDawn1338@outlook.com	luliguyu	feat(learning): 学習部分をひとまず追加
+9707216c4f7d6095739d1cb56759bd22bc5b8968	1860331019	1860331019	DelacruzDawn1338@outlook.com	luliguyu	style(feature): fix style
+43180044dddf95a203682aa58fd0df57cd847941	1859326659	1859326659	DelacruzDawn1338@outlook.com	luliguyu	feat(特徴量生成): 特徴量生成部分を追記する
+f69fea667645498345e3787478125d183b8b0d5d	1858606739	1858606739	DelacruzDawn1338@outlook.com	luliguyu	Merge remote-tracking branch 'origin/main' into learning
+f588da8e68f246b1c686bff9273c6cc11b5d985c	1858320979	1858320979	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #112 from dousu/precommit-autoupdate-github-actions-20241201
+55712a4d437c7919f02d2de45fce748d1e28ff0f	1857767579	1857767579	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+81caab8771cef15dcf4a8225c5ded4190c843a34	1857088099	1857088099	DelacruzDawn1338@outlook.com	luliguyu	build(poetry-lock): update poetry lock file
+2adf6c0b5d9c9e735835dc540713be9f760a2abd	1856238259	1856238259	DelacruzDawn1338@outlook.com	luliguyu	fix(test): pytestを実行したときのログをファイルに出すようにした
+12059df80603a4087a5329ff37f952e14e18e45d	1855013459	1855013459	DelacruzDawn1338@outlook.com	luliguyu	docs(test_hcpe_converter): 不要なコメント削除
+40876281f2594f9bbc52786daf3241744ea46cbd	1853903979	1853903979	DelacruzDawn1338@outlook.com	luliguyu	build(poetry): update poetry lock
+88e6c54b485bfabff7100de7b2659d17e5936821	1853882579	1853882579	DelacruzDawn1338@outlook.com	luliguyu	Merge remote-tracking branch 'origin/main' into learning
+fabfea5dc681cf20ef4a4fe992c266c6311ccbee	1852787379	1852787379	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #111 from dousu/dependabot/pip/commitizen-4.0.0
+596e3865dc8bdf1f3fb40fe272d7c5508ab7f76e	1851524339	1851524339	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump commitizen from 3.30.0 to 4.0.0
+fcc3daa5e0ffe043b1ebe53b426b652aceb899a1	1850351899	1850351899	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #110 from dousu/dependabot/pip/ruff-0.8.1
+4da08397591852a9ee4dbaf2e1315d164149a9a7	1849938659	1849938659	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump ruff from 0.7.2 to 0.8.1
+2894d638c1df0b3457b095ebb018462c09d461e9	1849238659	1849238659	DelacruzDawn1338@outlook.com	luliguyu	build(poetry): update poetry lock file
+716029860c21b7c078e75bb638ed0beb141b9854	1848262419	1848262419	DelacruzDawn1338@outlook.com	luliguyu	refactor(all): 学習部分作る前準備
+c95053ff08189d55909f3858a217bab2ab69b5c8	1847292019	1847292019	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #109 from dousu/refactor
+228c02420f901ed5e24281cfe92baa3e9e66b00e	1846084499	1846084499	DelacruzDawn1338@outlook.com	luliguyu	ci(pre-commit): fix configuration
+3e7c7bf128a6d5a1e69d9ce976522bc4be280d78	1846015219	1846015219	DelacruzDawn1338@outlook.com	luliguyu	refactor(hcpe-converter): 依存性の注入をクラスメソッドに変更する
+3863b6da1acd33bbae72478ee0bebd8ce328b1e7	1845531099	1845531099	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #108 from dousu/dependabot/pip/ruff-0.7.2
+1f001f748702169f4b8f219a5beb3d4a523403de	1845067899	1845067899	DelacruzDawn1338@outlook.com	luliguyu	build(deps-dev): bump ruff from 0.6.9 to 0.7.2
+2d482876369200ca68576a5a921e4f7b29ae45a2	1844530299	1844530299	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #107 from dousu/pre-processing
+592a80c33679ae4d43ba63bd233b5d85706e045c	1843558659	1843558659	DelacruzDawn1338@outlook.com	luliguyu	style(dependabot): devcontainersを追加
+ce0519632bde0c699a0ba564039b1754db7494fa	1842304899	1842304899	DelacruzDawn1338@outlook.com	luliguyu	Merge remote-tracking branch 'origin/main' into pre-processing
+ffaa9999f094dcbbf689554cf5c591509a492c0f	1842008299	1842008299	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #103 from dousu/dependabot/pip/commitizen-3.30.0
+9fc95c70fc8dcc5d480465c1c50b9a31dee09697	1841284259	1841284259	DelacruzDawn1338@outlook.com	luliguyu	Bump commitizen from 3.29.1 to 3.30.0
+ac5c53de061b1e98286ac307614af0a79971ede8	1841200659	1841200659	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #104 from dousu/dependabot/pip/black-24.10.0
+01bc90d18db49f36c95131c2228f84e11f77b591	1839945858	1839945858	DelacruzDawn1338@outlook.com	luliguyu	Bump black from 24.8.0 to 24.10.0
+c8b52653dddaa562454eb166576bc28ad2f90fed	1839608818	1839608818	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #105 from dousu/dependabot/pip/pre-commit-4.0.1
+f277849e18f753b9003ae7b55e957ddf36c43153	1839395658	1839395658	DelacruzDawn1338@outlook.com	luliguyu	Bump pre-commit from 3.8.0 to 4.0.1
+761567d5b9daf0c8f7e98a3e65ac6780484091e1	1838166338	1838166338	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #106 from dousu/precommit-autoupdate-github-actions-20241101
+bd285818b42ed522846a5bad9ab197f410f19a3c	1837702018	1837702018	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+14285566d5e6d4d8c2a4f47519a50360c625299e	1836549018	1836549018	DelacruzDawn1338@outlook.com	luliguyu	style(poetry-lock): poetry lock
+b34a5947d033e34c21040b7f59bb62593d7dffb4	1836034578	1836034578	DelacruzDawn1338@outlook.com	luliguyu	style(hcpe_convert-test): mypyの指摘に対応
+a45e0706a6a1f933249fff146e96b9688504d67a	1835798418	1835798418	DelacruzDawn1338@outlook.com	luliguyu	style(test-data): trim trailing spaces
+2a7032d3e732d65bfda3c151f685e273e01ebb6c	1835501218	1835501218	DelacruzDawn1338@outlook.com	luliguyu	test(hcpe_convert): HCPE convertにテストを追加
+e57e187ab998827819b2ff6a12612604b3334115	1835454698	1835454698	DelacruzDawn1338@outlook.com	luliguyu	style(整理): ちょっと気になっていたところを修正
+b0e798cc37e5a3e103966dfe4ae1dac07150658c	1834556138	1834556138	DelacruzDawn1338@outlook.com	luliguyu	docs(pre-commit): pre-commitの設定スクリプト追加
+dbff1db3d848064658a3af43dba2001bfe1dbcdf	1834028058	1834028058	DelacruzDawn1338@outlook.com	luliguyu	perf(hcpe_converter): 複数ファイルの変換に対応
+7cf01ed1e88d1be39e809aa272ecba526bd0ab83	1833175378	1833175378	DelacruzDawn1338@outlook.com	luliguyu	docs(python): Pythonのアップデート方法について記載
+03b195a8fa1be2b86a7b2359fe9864865fdc3887	1833068698	1833068698	DelacruzDawn1338@outlook.com	luliguyu	perf(python): bump up python version
+d5a17e2966ccdb09b517bbed28ab0fcb2a1ab225	1832920378	1832920378	DelacruzDawn1338@outlook.com	luliguyu	docs(editor): ruffの設定追加修正
+a1395d05fc762846218c7e2a2ec7c364c39092e9	1832650578	1832650578	DelacruzDawn1338@outlook.com	luliguyu	docs(editor): ruffをVScodeで有効にしてみる
+d5785c16c79294fab35b096dd0e3acf7a3379f6a	1832126738	1832126738	DelacruzDawn1338@outlook.com	luliguyu	docs(commitizen): commitizenの設定追加
+84a41e0ec5b22b0a93ea8eed0ff3cf555f05806d	1831829858	1831829858	DelacruzDawn1338@outlook.com	luliguyu	feat(hcpe_converter): ひとまずhcpeをファイルで出せるようになった
+b5b784e277dec1dadb964c5ddf0c461faaab6790	1831423698	1831423698	DelacruzDawn1338@outlook.com	luliguyu	Merge remote-tracking branch 'origin/main' into pre-processing
+9bba2d626a83618b227023d874fd60695ccbbb9f	1831414658	1831414658	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #100 from dousu/dependabot/pip/commitizen-3.29.1
+a3c8ce63ece39bf40e857d143ba261ab37dd17e2	1830864338	1830864338	DelacruzDawn1338@outlook.com	luliguyu	Bump commitizen from 3.29.0 to 3.29.1
+108f39894cff9e51115f01e3816a5bf003d3c854	1830088258	1830088258	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #101 from dousu/dependabot/pip/pytest-8.3.3
+63c5024dc7e0287cb2e0f34f108703360a3e7832	1829135058	1829135058	DelacruzDawn1338@outlook.com	luliguyu	Bump pytest from 8.3.2 to 8.3.3
+915f36e8e4b1716480cd7969bb7b6142810e29f7	1828670178	1828670178	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #102 from dousu/precommit-autoupdate-github-actions-20241001
+48780a2703df32b227ecfc5827e984869454f971	1827959258	1827959258	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+9941ab3eccbde621cd091ea5f721dbb26b36490b	1827319218	1827319218	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #99 from dousu/precommit-autoupdate-github-actions-20240901
+8c67820aabb7b9ed57d3ee42b995d277cb615b82	1826762658	1826762658	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+5db11a0306a6c4973ac7a8cfebf6151768bcbee1	1826673818	1826673818	DelacruzDawn1338@outlook.com	luliguyu	ちょっと構成変更
+5456abd1f719713b132cd69cf29d2aeaf18f62a8	1826140618	1826140618	DelacruzDawn1338@outlook.com	luliguyu	base architecture
+19ed9f9685bff0b34f8876a7add4d5ab4b5410c1	1826138738	1826138738	DelacruzDawn1338@outlook.com	luliguyu	update devcontainer
+2522146a057b64d029a930209b0f23dd8038b4db	1825986618	1825986618	DelacruzDawn1338@outlook.com	luliguyu	docker-in-docker
+3c96706e98ddf66b811e5bdef1ac47d2dced429e	1825929498	1825929498	DelacruzDawn1338@outlook.com	luliguyu	sample implementaion
+19385c862c65a169e2fe186043ce1eca298fcb32	1825849098	1825849098	DelacruzDawn1338@outlook.com	luliguyu	employ ruff
+52c975d05460e39ea80e711b1f045c3b4128a88c	1825212618	1825212618	DelacruzDawn1338@outlook.com	luliguyu	add mypy in pre-commit check
+39da8a882cf9537377416752679edfa57d3cb9b8	1824306178	1824306178	DelacruzDawn1338@outlook.com	luliguyu	update pre-commit config
+6a6c6d43b0fe55b994be7d8b8e93b30ef225b106	1824200058	1824200058	DelacruzDawn1338@outlook.com	luliguyu	add sample kif data
+8379c53b87ceb3ae7e5878f4c1475e7eb8a9f2d0	1823924898	1823924898	DelacruzDawn1338@outlook.com	luliguyu	update architecture
+a267f3a2034edc51c8ebe48f9e17459121dff9c4	1823856418	1823856418	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #92 from dousu/dependabot/pip/pre-commit-3.8.0
+e032c9998787621ada4aed169815edfd0f20b18e	1822635018	1822635018	DelacruzDawn1338@outlook.com	luliguyu	Bump pre-commit from 3.7.1 to 3.8.0
+dcc52e5441d443a71693651803ae849ae65529b2	1821900578	1821900578	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #94 from dousu/dependabot/pip/pytest-8.3.2
+bdfd93bd0f3ed9488ec41f7209e60d4ca8b1b798	1821147817	1821147817	DelacruzDawn1338@outlook.com	luliguyu	Bump pytest from 8.2.2 to 8.3.2
+b3d404ca18945ca0d56f3be7af4961245731eb27	1820293697	1820293697	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #98 from dousu/dependabot/pip/flake8-7.1.1
+0bc35d5e96b89367236c21a33121e0f208d64795	1819461177	1819461177	DelacruzDawn1338@outlook.com	luliguyu	Bump flake8 from 7.1.0 to 7.1.1
+a7c748e1c8ff9b1a5083f9116631868400f25826	1819035257	1819035257	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #97 from dousu/dependabot/pip/black-24.8.0
+5cb49779055fed2f80b974e11e1bac603d5e3542	1818589297	1818589297	DelacruzDawn1338@outlook.com	luliguyu	Bump black from 24.4.2 to 24.8.0
+03619fa1747fb2ee7bd33cc6a6e1341721ee2fad	1817488537	1817488537	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #95 from dousu/precommit-autoupdate-github-actions-20240801
+5a088fa81e1bc1369805c73bf4432832038224b4	1816341617	1816341617	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+3c44cee8d99e0462708d0ed5677970606c56f30f	1815546257	1815546257	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #96 from dousu/dependabot/pip/commitizen-3.29.0
+1eba24f2cc7fbeeab810ebfdd11db29b2c05e9bd	1815341217	1815341217	DelacruzDawn1338@outlook.com	luliguyu	Bump commitizen from 3.27.0 to 3.29.0
+3d8e16596bd0f1a8f254241eb48c8d571ea138e8	1814260137	1814260137	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #85 from dousu/dependabot/pip/pre-commit-3.7.1
+858f2767372159faa3c7428a4056a9c692909c7a	1813463937	1813463937	DelacruzDawn1338@outlook.com	luliguyu	Bump pre-commit from 3.7.0 to 3.7.1
+2bb161d1b2198c43f607b471faa0b34d8957752a	1813015937	1813015937	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #90 from dousu/dependabot/pip/flake8-7.1.0
+ceb642737b8a903cf81e0a7280ec09d3a95380f8	1812157617	1812157617	DelacruzDawn1338@outlook.com	luliguyu	Bump flake8 from 7.0.0 to 7.1.0
+e0b05ac77ddae991d82bffcb3dc382219ad11cc2	1810996337	1810996337	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #89 from dousu/dependabot/pip/pytest-8.2.2
+903a7d23985e04b9f28af4d47ce680eac6966413	1810542017	1810542017	DelacruzDawn1338@outlook.com	luliguyu	Bump pytest from 8.2.0 to 8.2.2
+d4f1102a2812d7f273760dedcf552de5d78bc606	1809602657	1809602657	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #86 from dousu/dependabot/pip/commitizen-3.27.0
+191e0ba90809947f7d6d29001ab4cc44760a03f9	1808342537	1808342537	DelacruzDawn1338@outlook.com	luliguyu	Bump commitizen from 3.25.0 to 3.27.0
+bc0b0fa3875cfd7ccb9739166def00ee8a2cbd96	1807346057	1807346057	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #91 from dousu/precommit-autoupdate-github-actions-20240701
+05ac6804b385d180bb0f311c7d437b4034efab13	1807178657	1807178657	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+3dfa29261bdafedf55a0d126a43e3cd0fb1cbaaa	1806795097	1806795097	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #81 from dousu/dependabot/pip/black-24.4.2
+e6fef45684047c730bc029fe859ebf4fbe9e49f0	1806578217	1806578217	DelacruzDawn1338@outlook.com	luliguyu	Bump black from 24.3.0 to 24.4.2
+96afe04a01cb9eb6341dc8897af76dd7f3c6099d	1806462177	1806462177	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #82 from dousu/dependabot/pip/commitizen-3.25.0
+6ea50dcedd5ddcae4c212d3aedd24dce2c15eb71	1805838937	1805838937	DelacruzDawn1338@outlook.com	luliguyu	Bump commitizen from 3.21.3 to 3.25.0
+fa2bfa402b125b675e14ac6aba57cef52d2f07c8	1805119977	1805119977	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #83 from dousu/dependabot/pip/pytest-8.2.0
+06dbe91f4ebffda826af78baf3d2bb6c724de9f5	1804835057	1804835057	DelacruzDawn1338@outlook.com	luliguyu	Bump pytest from 8.1.1 to 8.2.0
+7426cd22229ac531ce92332cf410e47b560ee01a	1804157617	1804157617	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #72 from dousu/dependabot/pip/yamllint-1.35.1
+41015244ffacd16edb704e8e6ede557fb6c16e64	1803374417	1803374417	DelacruzDawn1338@outlook.com	luliguyu	Bump yamllint from 1.33.0 to 1.35.1
+40b21d118ddebf578dd7d379c0c61577b7b46ac6	1803128017	1803128017	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #84 from dousu/precommit-autoupdate-github-actions-20240501
+a6e4e0ee3e6d69e12b0f2204111c48f42d034e81	1802836897	1802836897	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+aa8b155597369b5cc5926aad8142f7a40a311b7a	1802122177	1802122177	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #77 from dousu/dependabot/pip/black-24.3.0
+6f6d52cb41ae16ad5c4c39755a2b3cbe07e0cb3c	1801439497	1801439497	DelacruzDawn1338@outlook.com	luliguyu	Bump black from 24.1.1 to 24.3.0
+1ecd790bdf6c50aedf1591839aaf88bcb7711625	1801369017	1801369017	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #79 from dousu/dependabot/pip/pytest-8.1.1
+44ccf77e4a09e3085bd835c3fa4b2852afabf250	1800584737	1800584737	DelacruzDawn1338@outlook.com	luliguyu	Bump pytest from 8.0.0 to 8.1.1
+1e6726d2aae39e9089cd1d60f3098285338f5191	1799642697	1799642697	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #78 from dousu/dependabot/pip/commitizen-3.21.3
+8a2407a9a9942def7c49fa9ca90fde747fdacc19	1799130857	1799130857	DelacruzDawn1338@outlook.com	luliguyu	Bump commitizen from 3.14.0 to 3.21.3
+64902be7e3b6bfcc6acef9d307e6ad57dceb5ebc	1797828777	1797828777	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #76 from dousu/dependabot/pip/pre-commit-3.7.0
+6659538395e4524b8244ee67e9ec34c429bd3fd1	1797734857	1797734857	DelacruzDawn1338@outlook.com	luliguyu	Bump pre-commit from 3.6.0 to 3.7.0
+252eb17069ff13f092b39b50b2e4a99413a13124	1797402817	1797402817	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #80 from dousu/precommit-autoupdate-github-actions-20240401
+ccb817485c55c70b67f127e4bde1070b8352a231	1796551657	1796551657	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+01d85cf7ff8061bde4dca22fe799ef437253080d	1795870497	1795870497	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #67 from dousu/dependabot/pip/black-24.1.1
+1c3b9b022da5e3b654bf18bb2625abdd07904f45	1794599096	1794599096	DelacruzDawn1338@outlook.com	luliguyu	Bump black from 23.12.1 to 24.1.1
+8c1008dd8aac25bff8028958bb6fbb160a3c0662	1793692056	1793692056	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #66 from dousu/dependabot/pip/flake8-7.0.0
+ab424d30d8958d24a6420dd98b7f70475b421696	1793276416	1793276416	DelacruzDawn1338@outlook.com	luliguyu	Bump flake8 from 6.1.0 to 7.0.0
+cb656ee5d5556c931ec1aaf220e32db99eca3e68	1792477096	1792477096	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #65 from dousu/dependabot/pip/commitizen-3.14.0
+eb29f84834cbe4cd82a99f27424f6ec4c97e23ca	1791439856	1791439856	DelacruzDawn1338@outlook.com	luliguyu	Bump commitizen from 3.13.0 to 3.14.0
+92a36b77fcd557a3759a618271b9d382cdabcc25	1790544256	1790544256	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #68 from dousu/dependabot/pip/pytest-8.0.0
+371121423061715b547e1775f29073c18be4e641	1790429216	1790429216	DelacruzDawn1338@outlook.com	luliguyu	Bump pytest from 7.4.4 to 8.0.0
+86f895bd49044fcfe368b88f28c3ff4fd9ee9ae1	1789790576	1789790576	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #69 from dousu/precommit-autoupdate-github-actions-20240201
+7363482d568b81026fa939cb34dc5dafb9c5460f	1789120976	1789120976	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+32522cf8d9ddda331a5415a7e349b40d2198e29a	1788496256	1788496256	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #61 from dousu/dependabot/pip/pytest-7.4.4
+25e3f508cb92d56a4889340953b815ecd14ed134	1787887376	1787887376	DelacruzDawn1338@outlook.com	luliguyu	Bump pytest from 7.4.3 to 7.4.4
+eab66f111db515bf886288e60d2c71f39ed7e47f	1786931696	1786931696	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #60 from dousu/dependabot/pip/black-23.12.1
+9be93b20946bb55883af1e1b825d83939bbe82d8	1786148456	1786148456	DelacruzDawn1338@outlook.com	luliguyu	Bump black from 23.11.0 to 23.12.1
+8d6ad854b58c30ef2b81d8028c190cf409a0aaf4	1785848896	1785848896	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #63 from dousu/dependabot/pip/isort-5.13.2
+584aa424adfe33abdc8b73fcfb1c47e30d5bacb9	1784996896	1784996896	DelacruzDawn1338@outlook.com	luliguyu	Bump isort from 5.12.0 to 5.13.2
+ffa02c54d286e4ebce2657de33529535af24e700	1784283536	1784283536	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #59 from dousu/dependabot/pip/commitizen-3.13.0
+f146333235629520dd744791554a6070112ee4c4	1784010296	1784010296	DelacruzDawn1338@outlook.com	luliguyu	Bump commitizen from 3.12.0 to 3.13.0
+3997192ae913d40ce45a152fc4aa1918296168bd	1783075856	1783075856	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #62 from dousu/dependabot/pip/pre-commit-3.6.0
+fcb340926c2a7ba4cad391e67638f75f52a855f3	1782536376	1782536376	DelacruzDawn1338@outlook.com	luliguyu	Bump pre-commit from 3.5.0 to 3.6.0
+5f4a10eb9b3805685063dd410e58f3d8140a6b74	1781796536	1781796536	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #64 from dousu/precommit-autoupdate-github-actions-20240101
+e11515e05a681c018f5e7a088280f10a5bf63ef1	1781102816	1781102816	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+177ad4778e2c6cd8b10bf2b0e989cc9203008de5	1780408936	1780408936	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #58 from dousu/dependabot/github_actions/actions/setup-python-5
+ab171dfa451ec0e509b932ce9b195ed361ecea45	1779570496	1779570496	DelacruzDawn1338@outlook.com	luliguyu	Bump actions/setup-python from 4 to 5
+b73c26aa8d06512ab85e5427ae0f4c6613b05273	1778268616	1778268616	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #56 from dousu/dependabot/pip/yamllint-1.33.0
+5abb490ffcb5fc601b0dab148216e13dbb5c2791	1777311336	1777311336	DelacruzDawn1338@outlook.com	luliguyu	Bump yamllint from 1.32.0 to 1.33.0
+e74986993b4be3b3bcc77fc3c2e859e1c1717e02	1776782536	1776782536	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #52 from dousu/dependabot/pip/pytest-7.4.3
+d610aa130accd814e92160b6c28ca0f65172fc5c	1775709736	1775709736	DelacruzDawn1338@outlook.com	luliguyu	Bump pytest from 7.4.2 to 7.4.3
+258a359c18f082a9df721985a865949ff59554f9	1775112176	1775112176	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #51 from dousu/dependabot/pip/pre-commit-3.5.0
+6fdd4ea8f9e293025ccbe859d0d5bf3736d1ad5e	1774448136	1774448136	DelacruzDawn1338@outlook.com	luliguyu	Bump pre-commit from 3.4.0 to 3.5.0
+2891b161ed8b8baded16eecc955579b6daeb7a5a	1773567016	1773567016	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #55 from dousu/dependabot/pip/black-23.11.0
+76623c20d2730f4381adb9dbe3740df4dcf50121	1773400136	1773400136	DelacruzDawn1338@outlook.com	luliguyu	Bump black from 23.9.1 to 23.11.0
+ae2e2b11079bc45ff68fb24f5bbafe09bbc2a92a	1772883216	1772883216	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #50 from dousu/dependabot/pip/commitizen-3.12.0
+39e460bbbc73ad78c2279f6aadaa6a7ff11720d6	1772004736	1772004736	DelacruzDawn1338@outlook.com	luliguyu	Bump commitizen from 3.10.0 to 3.12.0
+16bbf1e80c9cce5a8f06bbb9c23d07cd211be372	1771284336	1771284336	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #54 from dousu/precommit-autoupdate-github-actions-20231101
+89c3e5419caaf777c5c2076752d8425650dcd3af	1770770896	1770770896	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+af4db907f49a5c813b99e14160dae90719b0c699	1770311136	1770311136	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #43 from dousu/dependabot/pip/commitizen-3.10.0
+7ceebd965d1d419413d0e7f92d7561a7b0e00a63	1769308856	1769308856	DelacruzDawn1338@outlook.com	luliguyu	Bump commitizen from 3.7.0 to 3.10.0
+9c3e8af53678993839da346ed91061cc38de11dc	1768962775	1768962775	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #44 from dousu/dependabot/pip/pytest-7.4.2
+cb0fe7ab33468d0b0754add3081353dbe8cf61aa	1768172655	1768172655	DelacruzDawn1338@outlook.com	luliguyu	Bump pytest from 7.4.1 to 7.4.2
+976a044d67612a99ea8a8c1748fa08bad2801401	1766883575	1766883575	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #45 from dousu/dependabot/pip/click-8.1.7
+c4e5206cda765041603b5239f240e3469f1e8b0d	1766661935	1766661935	DelacruzDawn1338@outlook.com	luliguyu	Bump click from 8.1.3 to 8.1.7
+2663e26f3366d962a534631bd210d93d25ccc715	1765792215	1765792215	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #46 from dousu/dependabot/pip/flake8-6.1.0
+d46bbfb6d9072dbd690211e759752a22d314ea47	1765498815	1765498815	DelacruzDawn1338@outlook.com	luliguyu	Bump flake8 from 6.0.0 to 6.1.0
+3aaaeaeb1d514f39590045ae10effa2e319af55d	1765290135	1765290135	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #47 from dousu/dependabot/pip/black-23.9.1
+78ea14e603caa84f07bfb3a6911f6965337ae36c	1764422655	1764422655	DelacruzDawn1338@outlook.com	luliguyu	Bump black from 23.7.0 to 23.9.1
+94e7026ea0a8fb08c8bc78617b4fd71bcf5a74e4	1763923015	1763923015	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #48 from dousu/dependabot/github_actions/actions/checkout-4
+187f314588907b49c632090cc8aec55c37ade0e0	1763919535	1763919535	DelacruzDawn1338@outlook.com	luliguyu	Bump actions/checkout from 3 to 4
+359c6f92425884978468b2f4b69d4a3b3aabd963	1762654575	1762654575	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #49 from dousu/precommit-autoupdate-github-actions-20231001
+809f254fade2cefc5b68bdc5a1003440b7a1b00a	1761460215	1761460215	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+f680cb2b432b8a14c898298b6e5ca2d6a8263892	1761257535	1761257535	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #29 from dousu/dependabot/pip/yamllint-1.32.0
+c457f96009a3880496876bfc0ecd790fcb92dace	1760591095	1760591095	DelacruzDawn1338@outlook.com	luliguyu	Bump yamllint from 1.29.0 to 1.32.0
+53145a875964c35355c3921df61e40da8dd2008e	1759300655	1759300655	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #34 from dousu/dependabot/pip/black-23.7.0
+6a3a5d31b08cd70e24843df32e710bdb751d2390	1758168815	1758168815	DelacruzDawn1338@outlook.com	luliguyu	Bump black from 23.3.0 to 23.7.0
+86fbc75a09646983ee5b4b44eed622d4e335ca55	1757652455	1757652455	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #42 from dousu/dependabot/pip/pytest-7.4.1
+c9ed5772bda7e9e9e9fb56630150263575876b27	1757505175	1757505175	DelacruzDawn1338@outlook.com	luliguyu	Bump pytest from 7.2.2 to 7.4.1
+a614ec277589f3b595cb43b0714f1308473e302f	1756613575	1756613575	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #41 from dousu/dependabot/pip/pre-commit-3.4.0
+249b01899309c0aaea5b847b073b7d126c47d191	1755964295	1755964295	DelacruzDawn1338@outlook.com	luliguyu	Bump pre-commit from 3.2.0 to 3.4.0
+9733e3fd9ecee6ea1b4984fae46d762213a283c9	1755189295	1755189295	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #40 from dousu/precommit-autoupdate-github-actions-20230901
+a15fa371e0ce81615ff0aa7bb1b3349220fe8cf7	1754363775	1754363775	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+45d2bfe5640fa1cdd5c5041e001e3aa5f3731de7	1754063935	1754063935	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #39 from dousu/dependabot/pip/commitizen-3.7.0
+8b2ce0e7da15a86aebc6e0be861d21ad40646f1f	1752883255	1752883255	DelacruzDawn1338@outlook.com	luliguyu	Bump commitizen from 2.42.1 to 3.7.0
+f396d7949f1f5738d28089ea3572718943fbf81c	1752010695	1752010695	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #21 from dousu/dependabot/pip/black-23.3.0
+b6cdbd6197e8d86a20127da7ac0380cf1241675e	1751560055	1751560055	DelacruzDawn1338@outlook.com	luliguyu	Bump black from 23.1.0 to 23.3.0
+00bd3ee1c6abda376eb5d0198fdf8ca4d05a33bc	1750708615	1750708615	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #33 from dousu/precommit-autoupdate-github-actions-20230701
+60b5a5f9e33e8c4afe871a7fb5f9d375a1b8fb74	1750471775	1750471775	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+c41f5f46b02a16de090dfe9d47c1136c999c2c58	1749373655	1749373655	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #19 from dousu/dousu-patch-1
+6b6e0fbeaa60eed99e24d5939635b2822ccb2022	1748550615	1748550615	DelacruzDawn1338@outlook.com	luliguyu	Update pre-commit_autoupdate.yml
+7c072169b1522de49e4954b65804e623e8c780fa	1747799335	1747799335	DelacruzDawn1338@outlook.com	luliguyu	Update dependabot.yml
+b5dcf2b3eb8d66eaee9cf884084926de3537f8d1	1747663215	1747663215	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #18 from dousu/dependabot/pip/pre-commit-3.2.0
+a8676122f666f55e82441f10256c8ec7f5cfdd0c	1747496735	1747496735	DelacruzDawn1338@outlook.com	luliguyu	Bump pre-commit from 3.1.1 to 3.2.0
+ecc23ddf1d574206004989737bef506a6a6cba8e	1746333375	1746333375	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #15 from dousu/dependabot/pip/black-23.1.0
+aa86f19f2478ae359c381d240e4774a1d038519d	1745689415	1745689415	DelacruzDawn1338@outlook.com	luliguyu	Bump black from 22.12.0 to 23.1.0
+08a836f3e742d7e89b289957c3ac89c178567d87	1745678775	1745678775	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #14 from dousu/dependabot/pip/pytest-7.2.2
+ac96d570ff2bb8204f69b56296c6df04b73e32d7	1745592415	1745592415	DelacruzDawn1338@outlook.com	luliguyu	Bump pytest from 7.2.1 to 7.2.2
+b45f46e073716496a4d1e23dfe7bce5e70f26a23	1745542255	1745542255	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #17 from dousu/precommit-autoupdate-github-actions-20230318
+44cc3836893ce262524a26e122d1b0d7e7149f38	1744449615	1744449615	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+b26533b2e5c9deac406201b9c1f8029f6b4a0d9b	1743255895	1743255895	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #16 from dousu/dependabot/pip/flake8-6.0.0
+15dbfb2d2d56e027dbd077f773442ec6ccffb5b1	1742305735	1742305735	DelacruzDawn1338@outlook.com	luliguyu	Bump flake8 from 5.0.4 to 6.0.0
+1abafeb55ff5ab0105547165c5cc5cc527223b00	1741990934	1741990934	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #13 from dousu/dependabot/pip/commitizen-2.42.1
+cc9eba532ffcf80bada19ad00aff27bcfcbd3e00	1741054974	1741054974	DelacruzDawn1338@outlook.com	luliguyu	Bump commitizen from 2.42.0 to 2.42.1
+97ff7c279190c42945ea603ddd9fc66aea2f071e	1740666734	1740666734	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #12 from dousu/dependabot/pip/pre-commit-3.1.1
+807c5f6fed7da2efcb12ecaf65c120f55e6c0dc4	1739825894	1739825894	DelacruzDawn1338@outlook.com	luliguyu	Bump pre-commit from 2.21.0 to 3.1.1
+022dad46df6bcace941fca91300e43cfcd2f5fee	1739686134	1739686134	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #11 from dousu/precommit-autoupdate-github-actions-20230304
+41116ef4a38a08aa313b2930baeb955d5f85c790	1738780294	1738780294	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+a3733cb465dd5d97cadcb1481a9861953281e83f	1738058334	1738058334	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #10 from dousu/precommit-autoupdate-github-actions-20230225
+3c794bb78ca587af5e78af02948b9cc49fe515c7	1737078974	1737078974	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+63ebd8d05ca2a718b4e9cee378a1e97e67e267b5	1736939254	1736939254	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #9 from dousu/dependabot/pip/commitizen-2.42.0
+3b0bd3b9ffff3b53e5379033c6dc2ee77b51e388	1736434574	1736434574	DelacruzDawn1338@outlook.com	luliguyu	Bump commitizen from 2.40.0 to 2.42.0
+c76192a64cbda407d76143cece4b0916903cea33	1735763054	1735763054	DelacruzDawn1338@outlook.com	luliguyu	Update pre-commit_autoupdate.yml
+5e15a3c11babd98d648d514268d821d6c7c6e82c	1734601054	1734601054	DelacruzDawn1338@outlook.com	luliguyu	Update pre-commit_autoupdate.yml
+be67fa229cc4122e9c03889feb550336a0ac79e6	1734104414	1734104414	DelacruzDawn1338@outlook.com	luliguyu	Update pre-commit_autoupdate.yml
+676c5038cc1824af3accdc87b550aeaf0fb3a22f	1733714974	1733714974	DelacruzDawn1338@outlook.com	luliguyu	Update pre-commit_autoupdate.yml
+8e6f853a087c49a44c1d2de572e99e058f681b7d	1733579294	1733579294	DelacruzDawn1338@outlook.com	luliguyu	Update pre-commit_autoupdate.yml
+75f46431e763b456bd0ccd23c89a6783dabeccf8	1733551054	1733551054	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #6 from dousu/precommit-autoupdate-github-actions-20230211
+b4fb7042bed6cf8ebe405e3c37cca611cee39a88	1732663054	1732663054	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+5a512968aa6f935e47577f239316dc6e9cc4f9fb	1731781174	1731781174	DelacruzDawn1338@outlook.com	luliguyu	Update pre-commit_autoupdate.yml
+7bdb8d73698ef7018d402d79a32a3fa68e3dc6f0	1731101294	1731101294	DelacruzDawn1338@outlook.com	luliguyu	Update pre-commit_autoupdate.yml
+1b0f13c38c24d578001cde57b81447bd9bb54293	1730163494	1730163494	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #5 from dousu/dependabot/pip/isort-5.12.0
+2231ac1f323f3226ab95eb6535ec0e871531d734	1729290374	1729290374	DelacruzDawn1338@outlook.com	luliguyu	Bump isort from 5.11.4 to 5.12.0
+e536d54dda9fe8d9a82eeb052a3f57a1dda9b17f	1728301654	1728301654	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #4 from dousu/dependabot/pip/commitizen-2.40.0
+621490653a4a608f403b9d9475b6af6203d84a4d	1727080454	1727080454	DelacruzDawn1338@outlook.com	luliguyu	Bump commitizen from 2.39.1 to 2.40.0
+6b2f0d83cb7d75b959685c2eaa4c65aa833ae094	1725783174	1725783174	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #3 from dousu/dependabot/pip/yamllint-1.29.0
+c6650bffc47ff7c0b282b82be54a8baffc60d9a1	1725414054	1725414054	DelacruzDawn1338@outlook.com	luliguyu	Bump yamllint from 1.28.0 to 1.29.0
+5790149389ea373996c7af3876670e26c925597c	1725066254	1725066254	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #2 from dousu/dependabot/pip/pytest-7.2.1
+bfe0cebcbc1b412253b4a3d6f3a052632441b4e1	1724812374	1724812374	DelacruzDawn1338@outlook.com	luliguyu	Bump pytest from 7.2.0 to 7.2.1
+daca1135d397177f0144880edfc0a3368e3ac485	1724619334	1724619334	DelacruzDawn1338@outlook.com	luliguyu	Merge pull request #1 from dousu/20230114-precommit-autoupdate-github-actions
+eb46813bf19bd68fc29c59371f2ac9471b4c2ef4	1724115894	1724115894	DelacruzDawn1338@outlook.com	luliguyu	pre-commit autoupdate
+35043896101b3ab434536be79e0e35930adbd1bd	1723497414	1723497414	DelacruzDawn1338@outlook.com	luliguyu	Update pre-commit_autoupdate.yml
+788a5769103e718e4bcab85bf23dde383a424df4	1722854454	1722854454	DelacruzDawn1338@outlook.com	luliguyu	Update pre-commit_autoupdate.yml
+17c56d11d7d95ca1cb3911c2f1af651e80c51a39	1721993334	1721993334	DelacruzDawn1338@outlook.com	luliguyu	ci(github-actions): fix typo
+ad6ca08eb8ace604339280203307365b2b4ac8d6	1721451854	1721451854	DelacruzDawn1338@outlook.com	luliguyu	ci(pytest): employ pytest
+2a49d6c57188ce8f5b0de8e48d7585f55e15b235	1720582734	1720582734	DelacruzDawn1338@outlook.com	luliguyu	ci(pytest): add pytest
+a57175c1073d8dfdcf46ecb1e47e6ca880210c07	1720022334	1720022334	DelacruzDawn1338@outlook.com	luliguyu	Update dependabot.yml
+ad3ae03414d021d904a38d9b0ff3620373bc8905	1719115414	1719115414	DelacruzDawn1338@outlook.com	luliguyu	Create pre-commit_autoupdate.yml
+d3d5094960f801aa8f021f9fb2b1b7cdfad434ba	1718763654	1718763654	DelacruzDawn1338@outlook.com	luliguyu	ci(pre-commit): pre-commit autoupdate
+396dac26decfea63e679b1d55d3c3dd19114b81f	1718244814	1718244814	DelacruzDawn1338@outlook.com	luliguyu	Create dependabot.yml
+2ec31560ac0aba36d24d73138a6fd576ac39252d	1717575213	1717575213	DelacruzDawn1338@outlook.com	luliguyu	style(git): add commitizen
+b9d6385fe6b334250533b460357f7108b8db603f	1717029973	1717029973	DelacruzDawn1338@outlook.com	luliguyu	update dev-init.sh
+241cc24c44605e6b5d4b8d500372e60381d404ef	1716854533	1716854533	DelacruzDawn1338@outlook.com	luliguyu	add check-toml
+e6742144b45ef8d066bd972efe252c4976a3e486	1716400133	1716400133	DelacruzDawn1338@outlook.com	luliguyu	update development environment
+7cfbc286a9c3762d2e815005a62e2726c6c0b916	1715752813	1715752813	DelacruzDawn1338@outlook.com	luliguyu	add pre-commit
+ed8e5aa1f51064c694923e562a9209f49d0e067a	1714950453	1714950453	DelacruzDawn1338@outlook.com	luliguyu	poetry init
+a1d4bdc156a20e7e2c776ba4fe3f7de5d27133cd	1714342293	1714342293	DelacruzDawn1338@outlook.com	luliguyu	add hadolint
+787ffb297f4c4b6ba12a227f2a40a736095b8cea	1714191813	1714191813	DelacruzDawn1338@outlook.com	luliguyu	update dev container
+fbebe7633b84d20050c68254a7bc7fbb2e6ccba1	1713460573	1713460573	DelacruzDawn1338@outlook.com	luliguyu	add dev container
+674e1b063f401a1dc68b164fc79845e8e678ab58	1712482373	1712482373	DelacruzDawn1338@outlook.com	luliguyu	Initial commit

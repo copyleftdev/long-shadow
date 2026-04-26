@@ -1,0 +1,2008 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Operation Long Shadow · I went looking for AI-built code on GitHub. I found a farm.</title>
+<meta name="description" content="Operation Long Shadow — a forensic investigation of a four-cluster GitHub repo-laundering operation that buries fabricated commits in 2037 to bubble to the top of every AI-built-code search. 3,112-repo brand-squat of an Indian AI startup, real-time IP theft of an Allen Institute paper, paid bot-star service inflating Chinese AI startups.">
+<meta property="og:title" content="Operation Long Shadow · I went looking for AI-built code on GitHub. I found a farm.">
+<meta property="og:description" content="The two top Co-Authored-By: Claude repos on GitHub are byte-identical except for one byte. A forensic case in 10 chapters. Codename: Long Shadow.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Spectral:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:        oklch(98%   0.012  78);
+  --paper-2:      oklch(95%   0.013  78);
+  --rule:         oklch(85%   0.012  78);
+  --ink:          oklch(20%   0.018  60);
+  --ink-2:        oklch(35%   0.018  60);
+  --muted:        oklch(56%   0.014  60);
+  --accent:       oklch(53%   0.205  28);
+  --accent-soft:  oklch(94%   0.04   28);
+  --warn:         oklch(48%   0.18   45);
+
+  --serif:   'Spectral', 'Source Serif Pro', Georgia, serif;
+  --display: 'Bricolage Grotesque', 'Söhne', system-ui, sans-serif;
+  --mono:    'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  --col:        720px;
+  --col-wide:   1040px;
+  --col-bleed:  1280px;
+
+  --gutter: clamp(20px, 5vw, 64px);
+
+  --s-1: 4px;  --s-2: 8px;   --s-3: 12px;  --s-4: 16px;  --s-5: 24px;
+  --s-6: 32px; --s-7: 48px;  --s-8: 64px;  --s-9: 96px;  --s-10: 144px; --s-11: 192px;
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.55;
+  font-feature-settings: "ss01", "kern";
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--accent); color: var(--paper); }
+
+a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+
+/* ───────────────────────────────────────────────────  PROGRESS RAIL  */
+.rail {
+  position: fixed; left: 0; right: 0; top: 0; height: 2px;
+  background: transparent;
+  z-index: 50;
+  pointer-events: none;
+}
+.rail-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--ink);
+  transition: width 80ms linear;
+}
+
+/* ───────────────────────────────────────────────────  CHAPTER MARK  */
+.chapter-marker {
+  position: fixed;
+  top: var(--s-5);
+  left: var(--gutter);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  z-index: 40;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  display: flex; gap: var(--s-3); align-items: baseline;
+  opacity: 0;
+  transition: opacity 300ms var(--ease-out-quart);
+}
+.chapter-marker.visible { opacity: 1; }
+.chapter-marker .num { color: var(--accent); font-weight: 700; }
+.chapter-marker .of { color: var(--rule); }
+
+/* ───────────────────────────────────────────────────  PAGE STRUCTURE  */
+main { padding: 0; }
+
+article {
+  display: block;
+}
+
+section.chapter {
+  position: relative;
+  padding: var(--s-11) var(--gutter);
+  border-top: 1px solid var(--rule);
+}
+section.chapter:first-of-type { border-top: 0; }
+
+.col       { max-width: var(--col);        margin: 0 auto; }
+.col-wide  { max-width: var(--col-wide);   margin: 0 auto; }
+.col-bleed { max-width: var(--col-bleed);  margin: 0 auto; }
+
+/* ───────────────────────────────────────────────────  TYPE  */
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex; align-items: baseline; gap: var(--s-4);
+  margin: 0 0 var(--s-5) 0;
+}
+.eyebrow .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.eyebrow .num { color: var(--accent); font-weight: 700; }
+
+h1.hero {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(34px, 6.5vw, 84px);
+  line-height: 1.04;
+  letter-spacing: -0.018em;
+  margin: 0 0 var(--s-7) 0;
+  font-feature-settings: "ss01";
+  max-width: 18ch;
+}
+h1.hero em { font-style: italic; color: var(--accent); font-weight: 500; }
+
+h2.chapter-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(28px, 4.4vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -0.014em;
+  margin: 0 0 var(--s-6) 0;
+  max-width: 22ch;
+}
+h2.chapter-title em { font-style: italic; color: var(--accent); }
+
+h3.kicker {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin: var(--s-7) 0 var(--s-3) 0;
+}
+
+p { margin: 0 0 var(--s-5) 0; max-width: 65ch; }
+p.lede {
+  font-size: clamp(20px, 2.4vw, 26px);
+  line-height: 1.45;
+  font-weight: 400;
+  color: var(--ink-2);
+  margin-bottom: var(--s-7);
+  max-width: 32ch;
+}
+p.lede em { font-style: italic; color: var(--ink); }
+
+p strong { font-weight: 700; color: var(--ink); }
+p code, .mono {
+  font-family: var(--mono);
+  font-size: 0.86em;
+  background: var(--paper-2);
+  padding: 1px 6px;
+  border-radius: 2px;
+  color: var(--ink-2);
+}
+
+blockquote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(20px, 2.6vw, 28px);
+  line-height: 1.4;
+  border-left: 0;
+  padding: var(--s-6) 0 var(--s-6) 0;
+  margin: var(--s-7) 0;
+  color: var(--ink);
+  max-width: 28ch;
+}
+blockquote::before { content: "—"; display: inline; color: var(--accent); margin-right: 0.4em; font-style: normal; }
+
+/* ───────────────────────────────────────────────────  REVEAL ON SCROLL  */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 800ms var(--ease-out-quart), transform 800ms var(--ease-out-quart);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal[data-stagger] { transition-delay: calc(var(--i, 0) * 80ms); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: opacity 200ms ease-out; transform: none; }
+  .rail-fill { transition: none; }
+}
+
+@media print {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .rail, .chapter-marker { display: none !important; }
+}
+
+/* Fallback: if JS hasn't applied .in within 2s, reveal everything */
+.reveal.show-fallback { opacity: 1; transform: none; transition: opacity 400ms ease-out; }
+
+/* ───────────────────────────────────────────────────  HERO  */
+.hero-section {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: var(--s-7) var(--gutter) var(--s-7);
+  border-top: 0;
+}
+.hero-mast {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--mono); font-size: 11px; color: var(--muted);
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.hero-mast .mast-l, .hero-mast .mast-r { display: flex; gap: var(--s-4); align-items: baseline; }
+.hero-mast .mast-r { color: var(--accent); }
+.hero-body { display: flex; flex-direction: column; justify-content: center; max-width: var(--col-wide); margin: 0 auto; width: 100%; padding: var(--s-9) 0; }
+.hero-meta {
+  font-family: var(--mono); font-size: 12px; color: var(--muted);
+  letter-spacing: 0.06em;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--s-5) var(--s-7);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--s-5);
+  max-width: 720px;
+}
+.hero-meta dt { color: var(--muted); font-weight: 500; margin-bottom: 2px; }
+.hero-meta dd { margin: 0; color: var(--ink); font-family: var(--serif); font-size: 16px; }
+.hero-foot {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--mono); font-size: 11px; color: var(--muted);
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.hero-foot .pulse { display: inline-flex; align-items: center; gap: var(--s-2); }
+.hero-foot .pulse::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 0.4; transform: scale(1);} 50% { opacity: 1; transform: scale(1.3);} }
+
+/* ───────────────────────────────────────────────────  BIG NUMBERS  */
+.bignum {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(56px, 14vw, 200px);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum", "ss01";
+}
+.bignum.accent { color: var(--accent); }
+.bignum sup { font-size: 0.32em; vertical-align: super; font-weight: 400; color: var(--muted); }
+
+.statline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--s-7);
+  margin: var(--s-7) 0;
+  padding: var(--s-6) 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.statline .stat .v {
+  font-family: var(--display); font-weight: 500;
+  font-size: clamp(28px, 3.2vw, 42px); line-height: 1;
+  color: var(--ink); font-variant-numeric: tabular-nums;
+  display: block;
+}
+.statline .stat .l {
+  font-family: var(--mono); font-size: 11px; color: var(--muted);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-top: var(--s-3); display: block; max-width: 22ch; line-height: 1.4;
+}
+
+/* ───────────────────────────────────────────────────  EVIDENCE LINE  */
+.evidence {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  margin: var(--s-3) 0 var(--s-7) 0;
+  padding-left: var(--s-4);
+  border-left: 1px solid var(--rule);
+  max-width: 88ch;
+  line-height: 1.6;
+}
+.evidence b { color: var(--ink-2); font-weight: 500; }
+.evidence::before {
+  content: "EVIDENCE";
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: var(--s-2);
+}
+
+/* ───────────────────────────────────────────────────  THE 156 GRID (ch 0)  */
+.byte-diff {
+  margin: var(--s-8) auto;
+  max-width: var(--col-wide);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-6);
+  align-items: stretch;
+}
+.byte-side {
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  padding: var(--s-5);
+  position: relative;
+}
+.byte-side .label {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--mono); font-size: 11px; color: var(--muted);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: var(--s-4);
+  padding-bottom: var(--s-3);
+  border-bottom: 1px solid var(--rule);
+}
+.byte-side .label .repo { color: var(--ink); font-weight: 500; }
+.byte-side .label .hash { color: var(--muted); }
+.byte-grid {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  gap: 2px;
+  aspect-ratio: 13 / 12;
+}
+.byte-cell {
+  background: var(--ink);
+  border-radius: 1px;
+  opacity: 0.85;
+  transition: background 300ms ease, opacity 300ms ease;
+}
+.byte-cell.diff {
+  background: var(--accent);
+  opacity: 1;
+  animation: blink 2.4s ease-in-out infinite;
+}
+@keyframes blink { 0%,100% { opacity: 1;} 50% { opacity: 0.5;} }
+.byte-side .footer {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--mono); font-size: 11px; color: var(--muted);
+  letter-spacing: 0.05em;
+  margin-top: var(--s-4);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--rule);
+}
+.byte-caption {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: var(--s-5) auto 0;
+  max-width: 60ch;
+}
+.byte-caption .red { color: var(--accent); }
+
+/* ───────────────────────────────────────────────────  TIMELINE (ch 1)  */
+.timeline-wrap {
+  max-width: var(--col-bleed);
+  margin: var(--s-8) auto;
+  padding: var(--s-7) 0;
+}
+.timeline-svg { width: 100%; height: auto; display: block; }
+.tl-axis { stroke: var(--rule); stroke-width: 1; }
+.tl-tick { stroke: var(--rule); stroke-width: 1; }
+.tl-tick-label { fill: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; }
+.tl-now { stroke: var(--ink); stroke-width: 1; stroke-dasharray: 2 4; }
+.tl-now-label { fill: var(--ink); font-family: var(--mono); font-size: 10px; letter-spacing: 0.05em; }
+.tl-real { fill: var(--ink); opacity: 0.6; }
+.tl-fake { fill: var(--accent); }
+.tl-band { fill: var(--accent-soft); }
+
+/* ───────────────────────────────────────────────────  GRAPH (ch 2)  */
+.opa-graph-wrap {
+  max-width: var(--col-bleed);
+  margin: var(--s-8) auto;
+}
+.opa-graph { width: 100%; height: auto; display: block; }
+.node-acc rect { fill: var(--paper); stroke: var(--ink); stroke-width: 1; }
+.node-acc.fresh rect { stroke: var(--accent); }
+.node-acc text { font-family: var(--mono); font-size: 11px; fill: var(--ink); }
+.node-acc .meta { fill: var(--muted); font-size: 9px; }
+.node-email rect { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1; }
+.node-email text { font-family: var(--mono); font-size: 9px; fill: var(--accent); letter-spacing: 0.02em; }
+.edge { stroke: var(--rule); stroke-width: 1; fill: none; }
+.edge.shared { stroke: var(--accent); stroke-width: 1.5; }
+.graph-legend { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; display: flex; gap: var(--s-6); justify-content: center; margin-top: var(--s-5); }
+.graph-legend .item { display: flex; align-items: center; gap: var(--s-2); }
+.graph-legend .swatch { width: 12px; height: 2px; background: var(--rule); }
+.graph-legend .swatch.shared { background: var(--accent); height: 2px; }
+
+/* ───────────────────────────────────────────────────  SOCK PUPPETS (ch 2)  */
+.sockpup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--s-3);
+  margin: var(--s-6) auto;
+  max-width: var(--col-wide);
+}
+.sockpup-row {
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr 0.5fr;
+  gap: var(--s-4);
+  align-items: baseline;
+  padding: var(--s-3) 0;
+  border-bottom: 1px dotted var(--rule);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.01em;
+}
+.sockpup-row .email { color: var(--ink); font-weight: 500; }
+.sockpup-row .provider { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+.sockpup-row .commits { color: var(--accent); text-align: right; font-weight: 500; font-variant-numeric: tabular-nums; }
+
+/* ───────────────────────────────────────────────────  CLUSTER B 2-COL (ch 3)  */
+.btech {
+  max-width: var(--col-wide);
+  margin: var(--s-7) auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-7);
+}
+.btech-card {
+  border-top: 2px solid var(--ink);
+  padding-top: var(--s-4);
+}
+.btech-card .technique-name {
+  font-family: var(--display); font-weight: 600; font-size: 18px;
+  color: var(--ink); margin-bottom: var(--s-3);
+}
+.btech-card .technique-desc {
+  font-family: var(--serif); font-size: 16px; color: var(--ink-2);
+  margin-bottom: var(--s-4);
+}
+.btech-list {
+  font-family: var(--mono); font-size: 12px;
+  list-style: none; padding: 0; margin: 0;
+}
+.btech-list li {
+  padding: var(--s-2) 0;
+  border-bottom: 1px dotted var(--rule);
+  display: flex; justify-content: space-between; gap: var(--s-3);
+}
+.btech-list .acct { color: var(--ink); }
+.btech-list .age { color: var(--muted); }
+
+/* ───────────────────────────────────────────────────  DELBY GRID (ch 4)  */
+.delby-wall {
+  max-width: var(--col-bleed);
+  margin: var(--s-8) auto;
+}
+.delby-wall-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8px, 1fr));
+  gap: 1px;
+  aspect-ratio: 16 / 9;
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  padding: 4px;
+  overflow: hidden;
+}
+.delby-cell {
+  background: var(--ink);
+  opacity: 0;
+  animation: delby-fade-in 16s linear infinite;
+}
+.delby-cell.product { background: var(--accent); opacity: 0; animation: delby-fade-in-product 16s linear infinite; }
+@keyframes delby-fade-in {
+  0% { opacity: 0; }
+  10% { opacity: 0.65; }
+  90% { opacity: 0.65; }
+  100% { opacity: 0; }
+}
+@keyframes delby-fade-in-product {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.delby-wall-foot {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--mono); font-size: 11px; color: var(--muted);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-top: var(--s-4);
+}
+.delby-wall-foot .key { display: flex; gap: var(--s-5); align-items: center; }
+.delby-wall-foot .swatch { width: 10px; height: 10px; }
+.delby-wall-foot .swatch.ink { background: var(--ink); opacity: 0.65; }
+.delby-wall-foot .swatch.acc { background: var(--accent); }
+
+.delby-curves {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--s-7);
+  max-width: var(--col-bleed);
+  margin: var(--s-8) auto;
+  align-items: end;
+}
+.curve-card { }
+.curve-card .curve-title {
+  font-family: var(--display); font-weight: 600; font-size: 14px;
+  color: var(--ink); margin-bottom: var(--s-3);
+  letter-spacing: 0.02em;
+}
+.curve-svg { width: 100%; height: auto; display: block; }
+.bar-day { fill: var(--ink); }
+.bar-dow { fill: var(--ink); }
+.bar-dow.peak { fill: var(--accent); }
+.bar-label { fill: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: 0.05em; }
+.bar-value { fill: var(--ink-2); font-family: var(--mono); font-size: 10px; letter-spacing: 0.02em; font-variant-numeric: tabular-nums; }
+.curve-axis { stroke: var(--rule); stroke-width: 1; }
+
+.delby-names {
+  max-width: var(--col-wide);
+  margin: var(--s-7) auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--s-3) var(--s-6);
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-2);
+}
+.delby-names .name { padding: var(--s-2) 0; border-bottom: 1px dotted var(--rule); }
+.delby-names .name .target { color: var(--accent); font-weight: 500; }
+.delby-names .name .truncated { color: var(--muted); }
+
+/* ───────────────────────────────────────────────────  BIPARTITE (ch 5)  */
+.bipart-wrap {
+  max-width: var(--col-bleed);
+  margin: var(--s-8) auto;
+}
+.bipart-svg { width: 100%; height: auto; display: block; }
+.bp-node text { font-family: var(--mono); font-size: 11px; fill: var(--ink); }
+.bp-node.bot circle { fill: var(--paper); stroke: var(--ink); stroke-width: 1.5; }
+.bp-node.cust.real circle { fill: var(--paper); stroke: var(--ink); stroke-width: 1; }
+.bp-node.cust.farm circle { fill: var(--accent); stroke: var(--accent); stroke-width: 1; }
+.bp-node.cust.vibe circle { fill: var(--paper); stroke: var(--accent); stroke-width: 1; stroke-dasharray: 2 2; }
+.bp-edge { stroke: var(--ink); stroke-width: 0.5; opacity: 0.4; fill: none; }
+.bp-edge.farm { stroke: var(--accent); opacity: 0.6; stroke-width: 0.7; }
+.bp-stars { fill: var(--accent); font-family: var(--mono); font-size: 10px; letter-spacing: 0.02em; }
+
+/* ───────────────────────────────────────────────────  POLLUTION DONUT (ch 6)  */
+.pollution-wrap {
+  max-width: var(--col-wide);
+  margin: var(--s-8) auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-7);
+  align-items: center;
+}
+.donut-svg { width: 100%; max-width: 360px; height: auto; display: block; margin: 0 auto; }
+.donut-center {
+  font-family: var(--display); font-weight: 400;
+  font-size: 56px; fill: var(--accent);
+  text-anchor: middle; font-variant-numeric: tabular-nums;
+}
+.donut-sub {
+  font-family: var(--mono); font-size: 10px;
+  fill: var(--muted); text-anchor: middle;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.poll-text h3 {
+  font-family: var(--display); font-weight: 600; font-size: 22px;
+  color: var(--ink); margin: 0 0 var(--s-4) 0;
+}
+.poll-text p { margin-bottom: var(--s-4); }
+.poll-list {
+  font-family: var(--mono); font-size: 12px;
+  list-style: none; padding: 0; margin: 0;
+}
+.poll-list li {
+  padding: var(--s-2) 0;
+  border-bottom: 1px dotted var(--rule);
+  display: flex; justify-content: space-between;
+}
+.poll-list li:first-child, .poll-list li:nth-child(2) { color: var(--accent); font-weight: 500; }
+.poll-list .pct { font-variant-numeric: tabular-nums; }
+
+/* ───────────────────────────────────────────────────  GEO (ch 7)  */
+.geo-wrap {
+  max-width: var(--col-wide);
+  margin: var(--s-8) auto;
+}
+.geo-clock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-7);
+  align-items: center;
+}
+.clock-svg { width: 100%; max-width: 320px; height: auto; display: block; margin: 0 auto; }
+.clock-bg { fill: var(--paper-2); stroke: var(--rule); stroke-width: 1; }
+.clock-tick { stroke: var(--rule); stroke-width: 1; }
+.clock-tick.major { stroke: var(--ink); stroke-width: 1; }
+.clock-label { fill: var(--muted); font-family: var(--mono); font-size: 9px; letter-spacing: 0.05em; }
+.clock-bar { fill: var(--accent); }
+.clock-center-text { fill: var(--ink); font-family: var(--display); font-weight: 500; font-size: 12px; text-anchor: middle; }
+.geo-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s-5) var(--s-6);
+  font-family: var(--mono); font-size: 12px;
+  margin-top: var(--s-7);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--s-6);
+}
+.geo-stats .gs-l { color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-size: 10px; }
+.geo-stats .gs-v { color: var(--ink); margin-top: var(--s-2); }
+
+/* ───────────────────────────────────────────────────  WALLET (ch 8)  */
+.wallet-wrap {
+  max-width: var(--col-wide);
+  margin: var(--s-8) auto;
+}
+.addr-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-7);
+}
+.addr-list {
+  font-family: var(--mono); font-size: 12px; line-height: 1.7;
+  color: var(--ink-2);
+}
+.addr-list .h {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 11px; color: var(--muted); letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: var(--s-3);
+  padding-bottom: var(--s-3); border-bottom: 1px solid var(--rule);
+}
+.addr-list .h .count { color: var(--ink); font-family: var(--display); font-weight: 500; font-size: 18px; letter-spacing: 0; text-transform: none; }
+.addr-list .row { display: flex; justify-content: space-between; padding: var(--s-2) 0; gap: var(--s-3); border-bottom: 1px dotted var(--rule); align-items: baseline; }
+.addr-list .row .a { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; min-width: 0; }
+.addr-list .row .t { color: var(--muted); font-size: 11px; flex-shrink: 0; }
+.wallet-conclusion {
+  margin-top: var(--s-7);
+  padding: var(--s-6);
+  background: var(--paper-2);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.5;
+  border: 1px solid var(--rule);
+}
+.wallet-conclusion .verdict {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--s-3);
+}
+.wallet-conclusion .now { color: var(--ink); font-style: italic; }
+
+/* ───────────────────────────────────────────────────  CTA (ch 9)  */
+.cta-section {
+  background: var(--ink);
+  color: var(--paper);
+  padding: var(--s-11) var(--gutter);
+}
+.cta-section .col-wide { color: inherit; }
+.cta-section .eyebrow { color: var(--paper-2); }
+.cta-section .eyebrow .num { color: var(--accent); }
+.cta-section h2.chapter-title { color: var(--paper); }
+.cta-section h2.chapter-title em { color: var(--accent); }
+.cta-section p { color: var(--paper-2); }
+.cta-section p strong { color: var(--paper); }
+.cta-section a { color: var(--paper); text-decoration-color: var(--accent); }
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--s-3);
+  margin: var(--s-7) 0;
+}
+.cta-card {
+  border: 1px solid color-mix(in oklch, var(--paper) 20%, transparent);
+  padding: var(--s-5);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.cta-card .what {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--s-3);
+}
+.cta-card .cmd {
+  color: var(--paper);
+  word-break: break-all;
+  margin-top: var(--s-3);
+}
+
+.cta-link {
+  display: inline-flex; align-items: baseline; gap: var(--s-3);
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(20px, 2.6vw, 28px);
+  margin-top: var(--s-7);
+  padding: var(--s-4) 0;
+  border-bottom: 1px solid var(--accent);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.cta-link::after { content: "→"; color: var(--accent); transition: transform 200ms var(--ease-out-quart); }
+.cta-link:hover::after { transform: translateX(4px); }
+
+footer {
+  background: var(--ink);
+  color: var(--paper-2);
+  padding: var(--s-7) var(--gutter);
+  border-top: 1px solid color-mix(in oklch, var(--paper) 20%, transparent);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--s-5);
+}
+footer a { color: var(--paper); }
+
+/* ───────────────────────────────────────────────────  RESPONSIVE  */
+@media (max-width: 800px) {
+  body { font-size: 17px; }
+  .byte-diff { grid-template-columns: 1fr; }
+  .btech { grid-template-columns: 1fr; }
+  .delby-curves { grid-template-columns: 1fr; }
+  .pollution-wrap { grid-template-columns: 1fr; }
+  .geo-clock { grid-template-columns: 1fr; }
+  .addr-grid { grid-template-columns: 1fr; }
+  section.chapter { padding: var(--s-9) var(--gutter); }
+  .hero-section { padding: var(--s-6) var(--gutter); }
+  .hero-meta { grid-template-columns: 1fr; }
+  .hero-mast, .hero-foot { flex-direction: column; gap: var(--s-2); align-items: flex-start; }
+  blockquote { font-size: 22px; }
+  .chapter-marker { display: none; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="rail" aria-hidden="true"><div class="rail-fill" id="rail-fill"></div></div>
+<div class="chapter-marker" id="chapter-marker" aria-hidden="true">
+  <span class="num" id="cm-num">00</span>
+  <span class="of">/ 09</span>
+  <span id="cm-title">PROLOGUE</span>
+</div>
+
+<main>
+<article>
+
+<!-- ─────────────────────────────────────────────  HERO  -->
+<section class="chapter hero-section" data-chapter="00" data-title="PROLOGUE">
+  <header class="hero-mast">
+    <div class="mast-l">
+      <span>Operation Long Shadow</span>
+      <span style="color:var(--rule)">/</span>
+      <span>Forensic notebook · 2026·04·25</span>
+    </div>
+    <div class="mast-r">
+      <span class="pulse" style="display:inline-flex;align-items:center;gap:6px"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 1.6s ease-in-out infinite"></span>Operators still active</span>
+    </div>
+  </header>
+
+  <div class="hero-body">
+    <div class="eyebrow reveal">
+      <span class="dot"></span>
+      <span>Investigation</span>
+      <span class="num">No. 01</span>
+      <span style="color:var(--rule)">·</span>
+      <span>10 chapters · 2,150 words · ≈ 12 min</span>
+    </div>
+    <h1 class="hero reveal" style="--i:1">
+      I went looking for AI&#8209;built code on GitHub.<br>
+      <em>I found a farm.</em>
+    </h1>
+    <p class="lede reveal" style="--i:2">
+      The two top <span class="mono">Co-Authored-By: Claude</span> repos on GitHub are <em>byte&#8209;identical</em> except for one byte in <span class="mono">README.md</span>. Pulling that thread exposes a four&#8209;cluster repo&#8209;laundering operation, a 3,112-page brand&#8209;squat of an Indian AI startup, and a paid bot&#8209;star service inflating real Chinese AI startups alongside it.
+    </p>
+    <dl class="hero-meta reveal" style="--i:3">
+      <div><dt>Operators identified</dt><dd>4 distinct clusters · 17+ accounts</dd></div>
+      <div><dt>Repos laundered</dt><dd>3,150+ confirmed (1 org alone: 3,112)</dd></div>
+      <div><dt>Real victims</dt><dd>Allen AI · Anthropic · 2 crypto wallets · 1 Indian startup</dd></div>
+      <div><dt>Pollution rate</dt><dd>43% of GitHub's top Claude-trailer search</dd></div>
+    </dl>
+  </div>
+
+  <footer class="hero-foot">
+    <div>Scroll · the math unfolds</div>
+    <div>↓</div>
+  </footer>
+</section>
+
+<!-- ─────────────────────────────────────────────  CH 0 — THE BYTE DIFF  -->
+<section class="chapter" data-chapter="00b" data-title="156 FILES · 1 BYTE">
+  <div class="col-wide">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">00</span><span>The smoking gun</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">
+      Of 156 files in each repo, exactly <em>one byte differs</em>.
+    </h2>
+    <p class="reveal" style="--i:2">
+      <strong>kyasbalme/Scrapbox</strong> and <strong>luliguyu/cmbd-book</strong>, the two top results when GitHub commit&#8209;search is sorted by author&#8209;date descending, claim 101 commits each from <span class="mono">Co-Authored-By: Claude</span>. Their <span class="mono">poetry.lock</span> files are byte&#8209;identical at 256,748 bytes. Their <span class="mono">LICENSE</span>, <span class="mono">CLAUDE.md</span>, <span class="mono">AGENTS.md</span>, every <span class="mono">.py</span> file: identical. Only <span class="mono">README.md</span> differs, and only by a single byte.
+    </p>
+  </div>
+
+  <div class="byte-diff reveal" style="--i:3">
+    <div class="byte-side">
+      <div class="label">
+        <span class="repo">kyasbalme/Scrapbox</span>
+        <span class="hash">tree ea78b434…</span>
+      </div>
+      <div class="byte-grid" id="grid-a"></div>
+      <div class="footer">
+        <span>BensonJennifer6145@outlook.com</span>
+        <span>625 commits</span>
+      </div>
+    </div>
+    <div class="byte-side">
+      <div class="label">
+        <span class="repo">luliguyu/cmbd-book</span>
+        <span class="hash">tree f2282434…</span>
+      </div>
+      <div class="byte-grid" id="grid-b"></div>
+      <div class="footer">
+        <span>DelacruzDawn1338@outlook.com</span>
+        <span>623 commits</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="byte-caption reveal" style="--i:4">
+    156 files per repo · <span class="red">1 cell highlighted ·</span> the byte that differs
+  </div>
+
+  <div class="col" style="margin-top: var(--s-9)">
+    <p class="reveal" style="--i:5">The <span class="mono">Co-Authored-By: Claude</span> trailer that puts these repos at the top of every search? Not generated by the operator. <em>Inherited</em> from the upstream commits they cloned. The real authors used Claude. The operator preserved their commit messages while rewriting author identity to a sock&#8209;puppet. Anthropic's trailer becomes free SEO for content the actual humans wrote.</p>
+    <p class="evidence reveal" style="--i:6"><b>diff -rq Scrapbox cmbd-book</b> · <b>tree SHAs in evidence/git_tree_sha/all_repos.tsv</b> · <b>625 commit records in evidence/commit_history/kyasbalme_Scrapbox.tsv</b></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────  CH 1 — THE TIMELINE TRICK  -->
+<section class="chapter" data-chapter="01" data-title="THE TRICK">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">01</span><span>The trick</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">Author dates extend to <em>June 2037</em>. That's how they sit at the top.</h2>
+    <p class="reveal" style="--i:2">
+      Git happily accepts any Unix timestamp. Want a commit from 2037? Set the author date to <span class="mono">2127428926</span> and push. The farm rewrites all 625 of <span class="mono">kyasbalme/Scrapbox</span>'s commit timestamps to drift uniformly across <strong>2024 → 2037</strong>. Anyone running <span class="mono">gh search commits "Co-Authored-By: Claude" sort:author-date-desc</span> sees these repos first. Forever. Or at least until 2037.
+    </p>
+  </div>
+
+  <div class="timeline-wrap reveal" style="--i:3">
+    <svg class="timeline-svg" viewBox="0 0 1280 220" preserveAspectRatio="xMidYMid meet" aria-hidden="true" id="timeline-svg">
+      <!-- band marking the "real" window -->
+      <rect class="tl-band" x="40" y="100" width="155" height="60" />
+      <text class="tl-tick-label" x="40" y="92" text-anchor="start">Real activity window</text>
+      <text class="tl-tick-label" x="40" y="178" text-anchor="start" style="fill:var(--accent)">2024-04 → 2026-04</text>
+
+      <!-- now line -->
+      <line class="tl-now" x1="195" y1="40" x2="195" y2="180" />
+      <text class="tl-now-label" x="200" y="50">NOW · 2026-04-25</text>
+
+      <!-- axis -->
+      <line class="tl-axis" x1="40" y1="180" x2="1240" y2="180" />
+
+      <!-- ticks -->
+      <g id="tl-ticks"></g>
+
+      <!-- commits -->
+      <g id="tl-commits"></g>
+
+      <!-- arrow toward the future -->
+      <text class="tl-tick-label" x="1244" y="184" text-anchor="end" style="fill:var(--accent);font-weight:700">SORT WINS →</text>
+    </svg>
+  </div>
+
+  <div class="col">
+    <p class="reveal"><strong>Each red mark is a fabricated commit.</strong> Most are seeded into 2027–2037 — far enough into the future that any descending sort puts them first. The grey marks are real activity from the upstream project. Below the line, the visible commit count: <span class="mono">625 in Scrapbox · 623 in cmbd-book · 609 in dimatura · 496 in ssaavedrad · 286 in statbox2</span>. Each repo has hundreds of commits sleeping in the future.</p>
+    <p class="evidence"><b>git log --format='%ai' kyasbalme/Scrapbox | sort | sed -n '1p;$p'</b> → <span class="mono">2024-04-08 · 2037-06-01</span></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────  CH 2 — OPERATOR A  -->
+<section class="chapter" data-chapter="02" data-title="OPERATOR A · CHINA">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">02</span><span>Operator A · the network</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">Four accounts. Nine sock&#8209;puppet emails. Sixteen repos. <em>One operator.</em></h2>
+    <p class="reveal" style="--i:2">The smoking gun for cross-account attribution is mundane: the email <span class="mono">bmqx9295@163.com</span> appears as the sole author in <em>both</em> <span class="mono">luliguyu/crewrktabletsn</span> and <span class="mono">tusmart-grouptt/crewrktabletsn</span>. Same email, same repo name, two different "owner" accounts. Same operator. The same logic links <span class="mono">naobingdz407945@163.com</span> to <span class="mono">luliguyu</span> and <span class="mono">countneurooman</span>.</p>
+  </div>
+
+  <div class="opa-graph-wrap reveal" style="--i:3">
+    <svg class="opa-graph" viewBox="0 0 1280 460" preserveAspectRatio="xMidYMid meet" id="opa-graph"></svg>
+    <div class="graph-legend">
+      <div class="item"><span class="swatch"></span><span>Account ↔ email (this account uses this email)</span></div>
+      <div class="item"><span class="swatch shared"></span><span>Email shared across accounts (cross-account proof)</span></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <h3 class="kicker">The sock-puppet pool</h3>
+    <p>Five email-provider patterns, all Chinese except for the Anglo-name outlook.com sock-puppets. The numeric reach here is GitHub commit-search count for each email — only emails that GitHub's index surfaces are listed.</p>
+  </div>
+
+  <div class="sockpup reveal" style="--i:4">
+    <div style="grid-column: 1 / -1">
+      <div class="sockpup-row" style="border-bottom-color:var(--rule);font-weight:700;color:var(--muted);font-size:10px;letter-spacing:0.1em;text-transform:uppercase">
+        <span>Email</span><span>Provider</span><span>Commits</span>
+      </div>
+      <div class="sockpup-row"><span class="email">DelacruzDawn1338@outlook.com</span><span class="provider">outlook.com</span><span class="commits">1,120</span></div>
+      <div class="sockpup-row"><span class="email">BensonJennifer6145@outlook.com</span><span class="provider">outlook.com</span><span class="commits">782</span></div>
+      <div class="sockpup-row"><span class="email">naobingdz407945@163.com</span><span class="provider">163.com (NetEase CN)</span><span class="commits">777+</span></div>
+      <div class="sockpup-row"><span class="email">bmqx9295@163.com</span><span class="provider">163.com (NetEase CN)</span><span class="commits">597+</span></div>
+      <div class="sockpup-row"><span class="email">io64083@yeah.net</span><span class="provider">yeah.net (NetEase CN)</span><span class="commits">609 (local)</span></div>
+      <div class="sockpup-row"><span class="email">kuqkz736@yeah.net</span><span class="provider">yeah.net (NetEase CN)</span><span class="commits">324 (local)</span></div>
+      <div class="sockpup-row"><span class="email">sbolr9514@yeah.net</span><span class="provider">yeah.net (NetEase CN)</span><span class="commits">90 (local)</span></div>
+      <div class="sockpup-row"><span class="email">czmahaixuan@126.com</span><span class="provider">126.com (NetEase CN)</span><span class="commits">28 (local)</span></div>
+    </div>
+  </div>
+
+  <div class="col" style="margin-top: var(--s-7)">
+    <blockquote class="reveal">All sixteen Operator A repos commit with timezone offset <strong>+0800</strong>. Even the fabricated 2037 timestamps. The operator's local clock leaked into the fakes.</blockquote>
+    <p class="evidence"><b>data/enumeration/sockpuppet_reach.txt</b> · <b>data/kraken/{kyasbalme,luliguyu}.json</b> · <b>kraken behavioural fingerprint match: rhythm_period: 13.0 in both accounts to four decimals</b></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────  CH 3 — OPERATOR B  -->
+<section class="chapter" data-chapter="03" data-title="OPERATOR B · ANTHROPIC IMPERSONATION">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">03</span><span>Operator B · forging Anthropic</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">A separate operator forges <em>claude&#8209;code@anthropic.local</em> as the author identity.</h2>
+    <p class="reveal" style="--i:2">
+      <span class="mono">anthropic.local</span> is not a real domain. Anthropic's actual Claude Code does not author commits this way. Someone is forging the identity as a stamp of "AI did this" — 23 commits across 8 distinct GitHub repos, each owned by a different account. The accounts split into two sub-techniques.
+    </p>
+  </div>
+
+  <div class="btech reveal" style="--i:3">
+    <div class="btech-card">
+      <div class="technique-name">Fresh attacker accounts</div>
+      <div class="technique-desc">Created within days of their first laundered repo. <span class="mono">esrfdev</span> impersonates the real European Synchrotron Research Facility's developer org name. Created the same day as its first push.</div>
+      <ul class="btech-list">
+        <li><span class="acct">esrfdev</span><span class="age">2026-04-12 · 1 repo</span></li>
+        <li><span class="acct">mctils12-arch</span><span class="age">2026-04-03 · 1 repo</span></li>
+        <li><span class="acct">gdhughey</span><span class="age">2025-11-28 · 5 repos</span></li>
+        <li><span class="acct">vpneoterra</span><span class="age">2024-12-21 · 15 repos · fake fusion startup</span></li>
+      </ul>
+    </div>
+    <div class="btech-card">
+      <div class="technique-name">Compromised dormant accounts</div>
+      <div class="technique-desc">Real accounts from 2021–2023 that suddenly become active in 2026 publishing forged-Anthropic commits. The takeover pattern is consistent with credential reuse from older breaches.</div>
+      <ul class="btech-list">
+        <li><span class="acct">jun564</span><span class="age">2021-08 · dormant 5y</span></li>
+        <li><span class="acct">CaMaGuee</span><span class="age">2021-08 · dormant 5y</span></li>
+        <li><span class="acct">rvadapally</span><span class="age">2021-10 · dormant 4.5y</span></li>
+        <li><span class="acct">mearley24</span><span class="age">2023-02 · dormant 3y</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col" style="margin-top: var(--s-7)">
+    <p class="evidence"><b>gh api -X GET search/commits -f q='author-email:claude-code@anthropic.local'</b> → 23 commits · 8 repos · 8 owner accounts · <b>data/enumeration/farm_b_c.txt</b></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────  CH 4 — OPERATOR C  -->
+<section class="chapter" data-chapter="04" data-title="OPERATOR C · INDUSTRIAL">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">04</span><span>Operator C · industrial scale</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">An organization called <em>DelbyIntelligence</em> published <em>3,112 fake AI-product pages</em> in 22 days.</h2>
+    <p class="reveal" style="--i:2">
+      <strong>Created: 2026-04-03.</strong> By 2026-04-25: 3,112 public repos. Zero followers. No description. No website. Every repo is a static GitHub Pages landing page with a description starting <em>"Delby AI Product:"</em> The real <span class="mono">delby.ai</span> is an Indian Physical-AI startup with 500+ vehicles in a delivery sensor-fusion network. Its website doesn't link to any GitHub org. <strong>The GitHub org is brand-squatting them.</strong>
+    </p>
+  </div>
+
+  <div class="delby-wall reveal" style="--i:3">
+    <div class="delby-wall-grid" id="delby-wall"></div>
+    <div class="delby-wall-foot">
+      <div>3,112 repos · ≈ 140 / day at peak</div>
+      <div class="key">
+        <div class="item"><span class="swatch ink"></span><span>demo-* page</span></div>
+        <div class="item"><span class="swatch acc"></span><span>product-* showcase (46)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="delby-curves reveal" style="--i:4">
+    <div class="curve-card">
+      <div class="curve-title">Daily creation curve · automation ramp</div>
+      <svg class="curve-svg" viewBox="0 0 600 220" preserveAspectRatio="xMidYMid meet" id="delby-day-curve" aria-hidden="true"></svg>
+    </div>
+    <div class="curve-card">
+      <div class="curve-title">Day-of-week · the operator's work week</div>
+      <svg class="curve-svg" viewBox="0 0 360 220" preserveAspectRatio="xMidYMid meet" id="delby-dow-curve" aria-hidden="true"></svg>
+    </div>
+  </div>
+
+  <div class="col">
+    <p class="reveal">Hour-of-day distribution is uniform across all 24 hours — automation runs around the clock. But day-of-week shows a clear human rhythm: <strong>Mon 292 → Thu 681 → Fri 647 → Sun 207</strong>. A 3.3× peak/trough ratio. Sunday off. Saturday half-day. <em>A Chinese six-day work week.</em></p>
+    <p class="reveal">The naming generator runs straight into GitHub's 100-character repo-name limit. The truncated names tell the story:</p>
+  </div>
+
+  <div class="delby-names reveal" style="--i:5">
+    <div class="name"><span>demo-sensor-fusion-puzzle-hunt-<span class="target">viral-recruitm</span></span></div>
+    <div class="name"><span>demo-ai-lab-seed-agents-<span class="target">challenge-entry-long-</span></span></div>
+    <div class="name"><span>product-multi-vendor-fleet-orchestration-demo-for-<span class="target">cardinal</span></span></div>
+    <div class="name"><span>product-federated-physical-ai-training-<span class="target">sandbox-live-demo-f</span></span></div>
+    <div class="name"><span>demo-delby-glove-grasp-predictor-real-time-<span class="truncated">de</span></span></div>
+    <div class="name"><span>demo-delby-cortex-safety-layer-geometric-<span class="truncated">hall</span></span></div>
+    <div class="name"><span>demo-delby-marl-sentinel-real-time-<span class="truncated">interactiv</span></span></div>
+    <div class="name"><span>demo-delby-voxelsurgeon-real-time-<span class="truncated">interactive</span></span></div>
+  </div>
+
+  <div class="col" style="margin-top: var(--s-7)">
+    <p>The repo <span class="mono">demo-sensor-fusion-puzzle-hunt-viral-recruitm[ent]</span> quietly tells you the motive: this is a viral-recruitment apparatus dressed up as a polymath AI lab. <span class="mono">demo-ai-lab-seed-agents-challenge-entry</span> is the same playbook — fake "AI accelerator seed challenge" entries. The named-target showcase repos (Cardinal Health, IIT Bombay) are automated business-development bait pages.</p>
+    <blockquote class="reveal">The org has no description. The operator account <span class="mono">delby-ai</span> was created <strong>92 seconds before the org</strong>. 0 followers. 0 listed repos. A pure handle.</blockquote>
+    <p class="evidence"><b>data/enumeration/delby_full.jsonl</b> (3,112 entries) · <b>data/enumeration/delby_analysis.txt</b> · <b>scripts/05_delby_full_enumeration.sh</b></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────  CH 5 — OPERATOR D · BOT STARS  -->
+<section class="chapter" data-chapter="05" data-title="OPERATOR D · BOT STARS">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">05</span><span>Operator D · the star service</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">A paid bot-star service inflates the farm — <em>and at least four real Chinese AI startups</em>.</h2>
+    <p class="reveal" style="--i:2">
+      Six accounts (mapped sample of a much larger pool) reliably star both farm repos AND a roster of real AI startups paying for visibility. Combined inflated stars across just the four largest customers: <strong>~19,000</strong>. The accounts mix aged organic-looking handles (with bios and names for legitimacy) with fresh bulk-star accounts created together in the same week, twelve months before the current farm wave.
+    </p>
+  </div>
+
+  <div class="bipart-wrap reveal" style="--i:3">
+    <svg class="bipart-svg" viewBox="0 0 1280 700" preserveAspectRatio="xMidYMid meet" id="bipart-svg" aria-hidden="true"></svg>
+  </div>
+
+  <div class="col" style="margin-top: var(--s-7)">
+    <p>The smoking gun for the cross-customer connection: bot account <span class="mono">8888x82</span> <em>forks</em> both <span class="mono">tusmart-grouptt/crewrktabletsn</span> (Operator A farm) AND <em>Customer B</em>'s 5,681-star repo — a real Chinese AI startup, name withheld pending direct disclosure to that vendor. Same star service, two customer types.</p>
+    <p>The StarScout paper from CMU + NCSU + Socket (ICSE 2026) puts global numbers on this market: <strong>6 million suspected fake stars</strong> across 18,617 repos by ~301,000 accounts. After researchers reported, GitHub removed 90.4% of flagged repos but only 57% of accounts. Bot infrastructure rotates faster than account suspensions.</p>
+    <p class="evidence"><b>data/enumeration/star_network.txt</b> · <b>data/enumeration/star_net_tier2.txt</b> · <b>data/enumeration/bot_expansion.txt</b> · <a href="https://github.com/hehao98/StarScout">github.com/hehao98/StarScout</a></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────  CH 6 — POLLUTION  -->
+<section class="chapter" data-chapter="06" data-title="POLLUTION RATE · 43%">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">06</span><span>Pollution rate</span></div>
+    <h2 class="chapter-title reveal" style="--i:1"><em>43%</em> of GitHub's top results for AI-built code trace to a single operator's two repos.</h2>
+    <p class="reveal" style="--i:2">
+      Sample: the top 10 pages of <span class="mono">gh search commits "Co-Authored-By: Claude" sort:author-date-desc</span> on 2026-04-25. 232 commits captured. <strong>100 of them — 43% — come from just <span class="mono">luliguyu/cmbd-book</span> (61) and <span class="mono">kyasbalme/Scrapbox</span> (39)</strong>. Every sampled commit dated past 2027 traces to those same two repos.
+    </p>
+  </div>
+
+  <div class="pollution-wrap reveal" style="--i:3">
+    <div>
+      <svg class="donut-svg" viewBox="0 0 200 200" id="poll-donut" aria-hidden="true"></svg>
+    </div>
+    <div class="poll-text">
+      <h3>Top 232 results by author-date-desc</h3>
+      <p>Anyone scraping GitHub commit-search for an AI-built-code corpus — for academic study, training data, market intelligence, recruitment screening — is being fed adversarial output as the dominant signal.</p>
+      <ul class="poll-list">
+        <li><span>luliguyu/cmbd-book</span><span class="pct">61 · 26%</span></li>
+        <li><span>kyasbalme/Scrapbox</span><span class="pct">39 · 17%</span></li>
+        <li><span>aiandwebservices-cyber/aiandwebservices-next</span><span class="pct">13 · 6%</span></li>
+        <li><span>JasonScottSF/npm-traffic-dashboard</span><span class="pct">8 · 3%</span></li>
+        <li><span>43 other repos</span><span class="pct">111 · 48%</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col" style="margin-top: var(--s-7)">
+    <p class="evidence"><b>scripts/04_pollution_sample.sh</b> reproduces this sample · <b>data/enumeration/pollution_sample.jsonl</b></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────  CH 7 — GEO  -->
+<section class="chapter" data-chapter="07" data-title="GEO · CHINA">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">07</span><span>Geo-attribution</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">Operator A is China-based. Operator C runs on a <em>night-owl Asian schedule</em>.</h2>
+    <p class="reveal" style="--i:2">
+      The fabricated commit dates leaked the operator's timezone. The activity hours of the <span class="mono">delby-ai</span> account leak the operator's sleep schedule. Both signals point to mainland China.
+    </p>
+  </div>
+
+  <div class="geo-wrap reveal" style="--i:3">
+    <div class="geo-clock">
+      <div>
+        <svg class="clock-svg" viewBox="0 0 300 300" id="clock-svg" aria-hidden="true"></svg>
+      </div>
+      <div>
+        <h3 class="kicker" style="margin-top:0">delby-ai · activity by UTC hour</h3>
+        <p>The 100 most recent events of the <span class="mono">delby-ai</span> operator account peak at <strong>UTC 17:00 – 23:00</strong> and <strong>UTC 00:00 – 02:00</strong> — that is <strong>01:00 – 07:00 China time</strong> (deep night) plus <strong>08:00 – 10:00</strong> (early morning). Negligible activity during China daytime.</p>
+        <div class="geo-stats">
+          <div>
+            <div class="gs-l">Operator A timezone</div>
+            <div class="gs-v">+0800 across all 16 repos · only WildDet3D differs (-0700, preserved Allen AI Pacific time)</div>
+          </div>
+          <div>
+            <div class="gs-l">Email providers used</div>
+            <div class="gs-v">yeah.net · 163.com · 126.com · qq.com · all Chinese (NetEase + Tencent)</div>
+          </div>
+          <div>
+            <div class="gs-l">Operator C work week</div>
+            <div class="gs-v">Mon→Thu peak, Sat half-day, Sun trough · 3.3× ratio</div>
+          </div>
+          <div>
+            <div class="gs-l">Operator C scout activity</div>
+            <div class="gs-v">luliguyu watches MemMachine, Tuya, zhoushisheng001b · all Chinese AI ecosystem</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col" style="margin-top: var(--s-7)">
+    <p class="evidence"><b>git log --format='%ai' kyasbalme/Scrapbox</b> | awk '{print $3}' | sort -u → <span class="mono">+0800</span> · <b>gh api 'users/delby-ai/events/public?per_page=100'</b></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────  CH 8 — WALLETS  -->
+<section class="chapter" data-chapter="08" data-title="WALLET INTEGRITY">
+  <div class="col">
+    <div class="eyebrow reveal"><span class="dot"></span><span class="num">08</span><span>The wallets</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">The laundered crypto wallets are <em>not actively malicious</em> — today.</h2>
+    <p class="reveal" style="--i:2">
+      Operator A has cloned two real cryptocurrency wallets: <span class="mono">theQRL/zond-web3-wallet</span> (Quantum Resistant Ledger) as <span class="mono">luliguyu/dimatura</span>, and <span class="mono">Narwallets/narwallets-extension</span> (NEAR Protocol) as <span class="mono">luliguyu/ssaavedrad</span>. We diffed every <span class="mono">0x</span> address and every <span class="mono">.near</span> identifier against the real upstreams.
+    </p>
+  </div>
+
+  <div class="wallet-wrap reveal" style="--i:3">
+    <div class="addr-grid">
+      <div class="addr-list">
+        <div class="h"><span>luliguyu/dimatura · ETH 0x</span><span class="count">13</span></div>
+        <div class="row"><span class="a">0x0db3981cb93db985e4e3a62ff695f7a1b242dd7c</span><span class="t">test fixture</span></div>
+        <div class="row"><span class="a">0x205046e6A6E159eD6ACedE46A36CAD6D449C80A1</span><span class="t">test fixture</span></div>
+        <div class="row"><span class="a">0x20D20b8026B8F02540246f58120ddAAf35AECD9B</span><span class="t">test fixture</span></div>
+        <div class="row"><span class="a">0x20EE9760786AD48aB90E326c5cd78c6269Ba10AB</span><span class="t">test fixture</span></div>
+        <div class="row"><span class="a">0x20fB08fF1f1376A14C055E9F56df80563E16722b</span><span class="t">test fixture</span></div>
+        <div class="row"><span class="a">0x28c4113a9d3a2e836f28c23ed8e3c1e7c243f566</span><span class="t">test fixture</span></div>
+        <div class="row"><span class="a">0x5e4c1bd1e00d229fe4d72d64df0b2f20b7649a9e</span><span class="t">test fixture</span></div>
+        <div class="row"><span class="a">0x6080604052348015600e575f5ffd5b5061012980</span><span class="t">EVM bytecode</span></div>
+        <div class="row"><span class="a">0x641dcb99dfcd2ad3c3e7c3d30090b274b788a0f2</span><span class="t">test fixture</span></div>
+        <div class="row"><span class="a">0x669e3a48fa068514e89bc2be248be964d22672cc</span><span class="t">mnemonic seed test</span></div>
+        <div class="row"><span class="a">0x7819dc0205e6a5c286796886ce16e637b99e1838</span><span class="t">test fixture</span></div>
+        <div class="row"><span class="a">0x978918b7b544ad491d0b294cc6ac4d7bb0ef7112</span><span class="t">test fixture</span></div>
+        <div class="row"><span class="a">0xd6921377489c736691d06ad610f105a5207f3d47</span><span class="t">hex-seed test</span></div>
+      </div>
+      <div class="addr-list">
+        <div class="h"><span>luliguyu/ssaavedrad · NEAR</span><span class="count">15</span></div>
+        <div class="row"><span class="a">a0b86991…cd19d4a2e9eb0ce3606eb48.factory.bridge.near</span><span class="t">USDC bridged</span></div>
+        <div class="row"><span class="a">dac17f95…2e523a2206206994597c13d831ec7.factory.bridge.near</span><span class="t">USDT bridged</span></div>
+        <div class="row"><span class="a">2260fac5…a44fbcfedf7c193bc2c599.factory.bridge.near</span><span class="t">WBTC bridged</span></div>
+        <div class="row"><span class="a">6b175474…94c44da98b954eedeac495271d0f.factory.bridge.near</span><span class="t">DAI bridged</span></div>
+        <div class="row"><span class="a">514910771…6af840dff83e8264ecf986ca.factory.bridge.near</span><span class="t">LINK bridged</span></div>
+        <div class="row"><span class="a">1f9840a8…f1d1762f925bdaddc4201f984.factory.bridge.near</span><span class="t">UNI bridged</span></div>
+        <div class="row"><span class="a">f5cfbc74…610c8ef151a439252680ac68c6dc.factory.bridge.near</span><span class="t">POND bridged</span></div>
+        <div class="row"><span class="a">wrap.near</span><span class="t">wNEAR</span></div>
+        <div class="row"><span class="a">meta-pool.near</span><span class="t">Meta Pool staking</span></div>
+        <div class="row"><span class="a">meta-token.near</span><span class="t">META gov token</span></div>
+        <div class="row"><span class="a">token.v2.ref-finance.near</span><span class="t">Ref Finance</span></div>
+        <div class="row"><span class="a">xtoken.ref-finance.near</span><span class="t">xREF staking</span></div>
+        <div class="row"><span class="a">token.paras.near</span><span class="t">Paras NFT</span></div>
+        <div class="row"><span class="a">berryclub.ek.near</span><span class="t">Berry Club</span></div>
+        <div class="row"><span class="a">dbio.near</span><span class="t">DBIO native</span></div>
+      </div>
+    </div>
+
+    <div class="wallet-conclusion">
+      <div class="verdict">Verdict · 2026-04-25</div>
+      All 13 ETH 0x-strings in the laundered Zond wallet are upstream-original test fixtures. All 15 NEAR addresses in the laundered Narwallets are well-known mainnet token contracts identical to the real upstream. <strong>Zero operator-injected addresses.</strong>
+      <span class="now">But — the operators control these repos. Today's snapshot is benign. Tomorrow's might not be.</span> The <span class="mono">tools/wallet_watcher.py</span> in this investigation re-clones both wallets every 30 minutes, diffs every address, and alerts on anything that doesn't match this baseline. The watcher has been running since the repository was published.
+    </div>
+  </div>
+
+  <div class="col" style="margin-top: var(--s-7)">
+    <p class="evidence"><b>scripts/06_wallet_integrity_diff.sh</b> · <b>tools/wallet_watcher.py</b> · <b>evidence/wallet_addresses/baseline.txt</b></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────  CH 9 — REPO CTA  -->
+<section class="chapter cta-section" data-chapter="09" data-title="THE EVIDENCE">
+  <div class="col-wide">
+    <div class="eyebrow reveal"><span class="dot" style="background:var(--accent)"></span><span class="num">09</span><span>The evidence</span></div>
+    <h2 class="chapter-title reveal" style="--i:1">Every claim has a hash. Every command runs. The watcher is <em>still watching.</em></h2>
+    <p class="reveal" style="--i:2">
+      All raw data, all reproduction commands, all forensic evidence, and the three watcher tools (wallet integrity / farm growth / bot-star activity) live in a single public repository. SHA-256-hashed for tamper-evidence. Deployable as one Docker container.
+    </p>
+
+    <div class="cta-grid reveal" style="--i:3">
+      <div class="cta-card">
+        <div class="what">Reproduce the byte-diff</div>
+        Clone both farm repos, run <span class="mono">diff -rq</span>. Result: only README differs.
+        <div class="cmd">scripts/02_clone_and_diff_top2.sh</div>
+      </div>
+      <div class="cta-card">
+        <div class="what">Reproduce the 43% pollution</div>
+        Sample 232 commits across 10 pages of GitHub commit-search. Top two trace to one operator.
+        <div class="cmd">scripts/04_pollution_sample.sh</div>
+      </div>
+      <div class="cta-card">
+        <div class="what">Reproduce the cross-account proof</div>
+        Each sock-puppet email's GitHub reach. The shared email links luliguyu + tusmart-grouptt.
+        <div class="cmd">scripts/03_sockpuppet_reach.sh</div>
+      </div>
+      <div class="cta-card">
+        <div class="what">Reproduce the wallet diff</div>
+        Clone the real upstream and the laundered fork. Diff every address. Today: clean.
+        <div class="cmd">scripts/06_wallet_integrity_diff.sh</div>
+      </div>
+      <div class="cta-card">
+        <div class="what">Run the watchers continuously</div>
+        Single docker-compose stack. Wallet integrity every 30 min, farm growth every 15 min, bot-star activity every 6 h.
+        <div class="cmd">cp .env.example .env &amp;&amp; docker compose up -d</div>
+      </div>
+      <div class="cta-card">
+        <div class="what">Vet a candidate repo yourself</div>
+        Seven heuristics. Score 0–7. The detector validates against luliguyu/cmbd-book at 4/7.
+        <div class="cmd">python3 tools/vet.py owner/repo</div>
+      </div>
+    </div>
+
+    <a class="cta-link reveal" href="https://github.com/copyleftdev/long-shadow" id="cta-repo-link" style="--i:4">github.com/copyleftdev/long-shadow</a>
+
+    <p class="reveal" style="--i:5" style="margin-top:var(--s-6)">
+      <em>Disclosure status:</em> drafted notification emails to Allen AI, Anthropic, the Quantum Resistant Ledger, Narwallets, the real Delby Intelligence, the European Synchrotron Research Facility, the impersonated researcher <span class="mono">blu3mo</span>, the four Chinese AI startups whose stars are inflated, and GitHub Trust &amp; Safety live in <span class="mono">disclosures/CONTACTS.md</span>. The publication of this repository is itself the disclosure.
+    </p>
+  </div>
+</section>
+
+</article>
+</main>
+
+<footer>
+  <div>Investigation captured 2026-04-25 · documentation released CC-BY-4.0 · tools released MIT</div>
+  <div>Built on the methodology of <a href="https://arxiv.org/html/2412.13459v2">StarScout</a> (CMU·NCSU·Socket, ICSE 2026)</div>
+</footer>
+
+<script>
+"use strict";
+
+/* ───────────────────────────────────────────────────  PROGRESS RAIL  */
+const railFill = document.getElementById('rail-fill');
+function updateRail() {
+  const h = document.documentElement;
+  const max = h.scrollHeight - h.clientHeight;
+  const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+  railFill.style.width = pct + '%';
+}
+addEventListener('scroll', updateRail, { passive: true });
+addEventListener('resize', updateRail);
+updateRail();
+
+/* ───────────────────────────────────────────────────  CHAPTER MARKER  */
+const chapters = Array.from(document.querySelectorAll('section.chapter'));
+const cmEl = document.getElementById('chapter-marker');
+const cmNum = document.getElementById('cm-num');
+const cmTitle = document.getElementById('cm-title');
+
+let currentChapter = -1;
+function updateChapter() {
+  const mid = window.scrollY + window.innerHeight / 3;
+  let idx = 0;
+  for (let i = 0; i < chapters.length; i++) {
+    const top = chapters[i].offsetTop;
+    if (mid >= top) idx = i;
+  }
+  if (idx !== currentChapter) {
+    currentChapter = idx;
+    const ch = chapters[idx];
+    const num = String(idx).padStart(2, '0');
+    cmNum.textContent = num;
+    cmTitle.textContent = ch.dataset.title || '';
+    cmEl.classList.toggle('visible', idx > 0);
+  }
+}
+addEventListener('scroll', updateChapter, { passive: true });
+updateChapter();
+
+/* ───────────────────────────────────────────────────  REVEAL ON SCROLL  */
+const revealItems = document.querySelectorAll('.reveal');
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
+revealItems.forEach((el, i) => {
+  if (!el.style.getPropertyValue('--i')) el.style.setProperty('--i', String(i % 6));
+  revealObs.observe(el);
+});
+
+// Headless / no-scroll fallback: any element still hidden after 2s gets revealed.
+// Also force-trigger every SVG animation (charts, graphs, bars, dots) so the page
+// renders fully in print/headless contexts where IntersectionObserver doesn't fire.
+function revealAllStatic() {
+  document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('show-fallback'));
+  // Animated SVG paths: stroke-dashoffset → 0
+  document.querySelectorAll('svg path[style*="stroke-dashoffset"], svg path').forEach(p => {
+    if (p.style.strokeDashoffset && p.style.strokeDashoffset !== '0') {
+      p.style.strokeDashoffset = '0';
+    }
+  });
+  // Animated bars: read data-h / data-y back into y/height attributes
+  document.querySelectorAll('svg rect[data-h]').forEach(r => {
+    r.setAttribute('y', r.dataset.y);
+    r.setAttribute('height', r.dataset.h);
+  });
+  // Faded SVG elements: any svg child with style.opacity = '0' goes to 1
+  document.querySelectorAll('svg').forEach(svg => {
+    svg.querySelectorAll('*').forEach(el => {
+      if (el.style && el.style.opacity === '0') el.style.opacity = '1';
+    });
+  });
+}
+setTimeout(revealAllStatic, 2000);
+
+/* ───────────────────────────────────────────────────  156 BYTE GRID  */
+function buildByteGrid(id, diffIdx) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  for (let i = 0; i < 156; i++) {
+    const cell = document.createElement('div');
+    cell.className = 'byte-cell' + (i === diffIdx ? ' diff' : '');
+    el.appendChild(cell);
+  }
+}
+buildByteGrid('grid-a', 91);
+buildByteGrid('grid-b', 91);
+
+/* ───────────────────────────────────────────────────  TIMELINE  */
+(function buildTimeline() {
+  const svg = document.getElementById('timeline-svg');
+  const ticksG = document.getElementById('tl-ticks');
+  const commitsG = document.getElementById('tl-commits');
+  if (!svg || !ticksG) return;
+
+  const x0 = 40, x1 = 1240, y = 180;
+  // span 2024-01 → 2038-01 = 14 years
+  const yearStart = 2024, yearEnd = 2038;
+  const xOf = year => x0 + ((year - yearStart) / (yearEnd - yearStart)) * (x1 - x0);
+
+  for (let yr = yearStart; yr <= yearEnd; yr++) {
+    const tx = xOf(yr);
+    const major = yr % 2 === 0;
+    const t = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    t.setAttribute('class', 'tl-tick');
+    t.setAttribute('x1', tx); t.setAttribute('x2', tx);
+    t.setAttribute('y1', y); t.setAttribute('y2', major ? y + 6 : y + 3);
+    ticksG.appendChild(t);
+    if (major) {
+      const tl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      tl.setAttribute('class', 'tl-tick-label');
+      tl.setAttribute('x', tx); tl.setAttribute('y', y + 18);
+      tl.setAttribute('text-anchor', 'middle');
+      tl.textContent = yr;
+      ticksG.appendChild(tl);
+    }
+  }
+
+  // synthesize commits — real distribution clustered in real window, fakes spread to 2037
+  // 60 real commits 2024-04 → 2026-04, distributed
+  // 100 fake commits scattered 2026-05 → 2037-06
+  const realStart = 2024 + 4/12, realEnd = 2026 + 4/12;
+  const fakeStart = 2026 + 5/12, fakeEnd = 2037.5;
+  const commits = [];
+  for (let i = 0; i < 60; i++) {
+    const t = realStart + Math.random() * (realEnd - realStart);
+    commits.push({ year: t, fake: false });
+  }
+  for (let i = 0; i < 100; i++) {
+    const t = fakeStart + Math.random() * (fakeEnd - fakeStart);
+    commits.push({ year: t, fake: true });
+  }
+
+  // staggered reveal: append with timeout offsets via animation
+  commits.forEach((c, i) => {
+    const cx = xOf(c.year);
+    const cy = c.fake ? 100 + Math.random() * 60 : 110 + Math.random() * 50;
+    const r = c.fake ? 2.4 : 2.1;
+    const cir = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    cir.setAttribute('cx', cx); cir.setAttribute('cy', cy); cir.setAttribute('r', r);
+    cir.setAttribute('class', c.fake ? 'tl-fake' : 'tl-real');
+    cir.style.opacity = '0';
+    cir.style.transition = 'opacity 600ms ease-out ' + (i * 8) + 'ms';
+    commitsG.appendChild(cir);
+  });
+
+  const tlObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        commitsG.querySelectorAll('circle').forEach(c => c.style.opacity = '1');
+        tlObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  tlObs.observe(svg);
+})();
+
+/* ───────────────────────────────────────────────────  OPERATOR A GRAPH  */
+(function buildOpAGraph() {
+  const svg = document.getElementById('opa-graph');
+  if (!svg) return;
+  const W = 1280, H = 460;
+
+  const accounts = [
+    { id: 'kyasbalme',       label: 'kyasbalme',       sub: 'created 2025-10-25',         x: 200,  y: 80,  fresh: true  },
+    { id: 'luliguyu',        label: 'luliguyu',        sub: 'created 2025-10-21',         x: 200,  y: 200, fresh: true  },
+    { id: 'tusmart-grouptt', label: 'tusmart-grouptt', sub: 'compromised · 2022',         x: 200,  y: 320, fresh: false },
+    { id: 'countneurooman',  label: 'countneurooman',  sub: 'compromised · 2022',         x: 200,  y: 410, fresh: false },
+  ];
+  const emails = [
+    { id: 'BensonJennifer6145@outlook.com',  label: 'BensonJennifer6145@outlook.com',  x: 920, y: 40,  links: ['kyasbalme'] },
+    { id: 'kuqkz736@yeah.net',               label: 'kuqkz736@yeah.net',               x: 920, y: 95,  links: ['kyasbalme'] },
+    { id: '767653317@qq.com (preserved)',    label: '767653317@qq.com (preserved upstream)', x: 920, y: 150, links: ['kyasbalme'] },
+    { id: 'DelacruzDawn1338@outlook.com',    label: 'DelacruzDawn1338@outlook.com',    x: 920, y: 205, links: ['luliguyu'] },
+    { id: 'sbolr9514@yeah.net',              label: 'sbolr9514@yeah.net',              x: 920, y: 260, links: ['luliguyu'] },
+    { id: 'io64083@yeah.net',                label: 'io64083@yeah.net',                x: 920, y: 315, links: ['luliguyu'] },
+    { id: 'czmahaixuan@126.com',             label: 'czmahaixuan@126.com',             x: 920, y: 370, links: ['luliguyu'] },
+    { id: 'bmqx9295@163.com',                label: 'bmqx9295@163.com  ← cross-account', x: 920, y: 425, links: ['luliguyu', 'tusmart-grouptt'], shared: true },
+    { id: 'naobingdz407945@163.com',         label: 'naobingdz407945@163.com  ← cross-account', x: 920, y: 480, links: ['luliguyu', 'countneurooman'], shared: true },
+  ];
+  // Re-flow emails into the SVG height
+  emails.forEach((e, i) => { e.y = 30 + i * 47; });
+
+  // Edges
+  emails.forEach(e => {
+    e.links.forEach(accId => {
+      const acc = accounts.find(a => a.id === accId);
+      if (!acc) return;
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      const d = `M ${acc.x + 110} ${acc.y} C ${(acc.x + 110 + e.x - 8) / 2} ${acc.y}, ${(acc.x + 110 + e.x - 8) / 2} ${e.y + 12}, ${e.x - 8} ${e.y + 12}`;
+      path.setAttribute('d', d);
+      path.setAttribute('class', 'edge' + (e.shared ? ' shared' : ''));
+      path.style.strokeDasharray = '600';
+      path.style.strokeDashoffset = '600';
+      path.style.transition = 'stroke-dashoffset 1200ms ease-out';
+      svg.appendChild(path);
+    });
+  });
+
+  // Account nodes
+  accounts.forEach(a => {
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.setAttribute('class', 'node-acc' + (a.fresh ? ' fresh' : ''));
+    g.setAttribute('transform', `translate(${a.x}, ${a.y - 20})`);
+    const r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    r.setAttribute('x', 0); r.setAttribute('y', 0);
+    r.setAttribute('width', 220); r.setAttribute('height', 38);
+    r.setAttribute('rx', 1);
+    const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    t.setAttribute('x', 14); t.setAttribute('y', 18);
+    t.textContent = a.label;
+    const m = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    m.setAttribute('class', 'meta');
+    m.setAttribute('x', 14); m.setAttribute('y', 30);
+    m.textContent = a.sub;
+    g.appendChild(r); g.appendChild(t); g.appendChild(m);
+    svg.appendChild(g);
+  });
+
+  // Email nodes
+  emails.forEach(e => {
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.setAttribute('class', 'node-email');
+    g.setAttribute('transform', `translate(${e.x - 8}, ${e.y})`);
+    const r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    r.setAttribute('x', 0); r.setAttribute('y', 0);
+    r.setAttribute('width', 340); r.setAttribute('height', 24);
+    r.setAttribute('rx', 1);
+    const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    t.setAttribute('x', 10); t.setAttribute('y', 16);
+    t.textContent = e.label;
+    g.appendChild(r); g.appendChild(t);
+    svg.appendChild(g);
+  });
+
+  svg.setAttribute('viewBox', `0 0 ${W} ${Math.max(H, emails[emails.length-1].y + 60)}`);
+
+  const opaObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        svg.querySelectorAll('path.edge').forEach((p, i) => {
+          setTimeout(() => p.style.strokeDashoffset = '0', i * 90);
+        });
+        opaObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.25 });
+  opaObs.observe(svg);
+})();
+
+/* ───────────────────────────────────────────────────  DELBY WALL  */
+(function buildDelbyWall() {
+  const wall = document.getElementById('delby-wall');
+  if (!wall) return;
+  const total = 3112;
+  const productCount = 46;
+  const productIndices = new Set();
+  while (productIndices.size < productCount) {
+    productIndices.add(Math.floor(Math.random() * total));
+  }
+  const frag = document.createDocumentFragment();
+  for (let i = 0; i < total; i++) {
+    const c = document.createElement('div');
+    c.className = 'delby-cell' + (productIndices.has(i) ? ' product' : '');
+    c.style.animationDelay = (Math.random() * 12) + 's';
+    frag.appendChild(c);
+  }
+  wall.appendChild(frag);
+})();
+
+/* ───────────────────────────────────────────────────  DELBY DAY-CURVE  */
+(function buildDelbyDayCurve() {
+  const svg = document.getElementById('delby-day-curve');
+  if (!svg) return;
+  const days = [
+    ['04-03', 19], ['04-04', 41], ['04-05', 6], ['04-06', 41],
+    ['04-07', 129], ['04-08', 128], ['04-09', 197], ['04-10', 203],
+    ['04-11', 157], ['04-12', 51], ['04-13', 0], ['04-14', 0],
+    ['04-15', 103], ['04-16', 249], ['04-17', 201], ['04-18', 204],
+    ['04-19', 150], ['04-20', 251], ['04-21', 253], ['04-22', 244],
+    ['04-23', 235], ['04-24', 224], ['04-25', 26]
+  ];
+  const W = 600, H = 220;
+  const padL = 8, padR = 8, padT = 28, padB = 32;
+  const max = Math.max(...days.map(d => d[1]));
+  const bw = (W - padL - padR) / days.length;
+  const yOf = v => padT + (1 - v / max) * (H - padT - padB);
+
+  // axis
+  const axis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  axis.setAttribute('x1', padL); axis.setAttribute('x2', W - padR);
+  axis.setAttribute('y1', H - padB); axis.setAttribute('y2', H - padB);
+  axis.setAttribute('class', 'curve-axis');
+  svg.appendChild(axis);
+
+  // bars
+  days.forEach((d, i) => {
+    const x = padL + i * bw + 1;
+    const h = (H - padB) - yOf(d[1]);
+    const y = yOf(d[1]);
+    const r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    r.setAttribute('class', 'bar-day');
+    r.setAttribute('x', x); r.setAttribute('y', H - padB);
+    r.setAttribute('width', Math.max(bw - 2, 1)); r.setAttribute('height', 0);
+    r.style.transition = 'height 800ms cubic-bezier(0.25,1,0.5,1) ' + (i * 30) + 'ms, y 800ms cubic-bezier(0.25,1,0.5,1) ' + (i * 30) + 'ms';
+    r.setAttribute('data-h', h); r.setAttribute('data-y', y);
+    svg.appendChild(r);
+
+    // label every 4 days
+    if (i % 4 === 0 || i === days.length - 1) {
+      const lbl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      lbl.setAttribute('class', 'bar-label');
+      lbl.setAttribute('x', x + (bw - 2) / 2);
+      lbl.setAttribute('y', H - padB + 14);
+      lbl.setAttribute('text-anchor', 'middle');
+      lbl.textContent = d[0];
+      svg.appendChild(lbl);
+    }
+  });
+
+  // peak callout
+  const peakIdx = days.reduce((a, _, i, arr) => arr[i][1] > arr[a][1] ? i : a, 0);
+  const peakX = padL + peakIdx * bw + (bw - 2) / 2;
+  const peakY = yOf(days[peakIdx][1]) - 8;
+  const cb = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  cb.setAttribute('class', 'bar-value');
+  cb.setAttribute('x', peakX); cb.setAttribute('y', peakY - 4);
+  cb.setAttribute('text-anchor', 'middle');
+  cb.textContent = '253 / day';
+  cb.style.fill = 'var(--accent)';
+  cb.style.fontWeight = '500';
+  svg.appendChild(cb);
+
+  const dcObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        svg.querySelectorAll('rect.bar-day').forEach(r => {
+          r.setAttribute('y', r.dataset.y);
+          r.setAttribute('height', r.dataset.h);
+        });
+        dcObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  dcObs.observe(svg);
+})();
+
+/* ───────────────────────────────────────────────────  DAY-OF-WEEK CURVE  */
+(function buildDow() {
+  const svg = document.getElementById('delby-dow-curve');
+  if (!svg) return;
+  const dow = [['Mon', 292], ['Tue', 382], ['Wed', 475], ['Thu', 681], ['Fri', 647], ['Sat', 428], ['Sun', 207]];
+  const W = 360, H = 220;
+  const padL = 24, padR = 24, padT = 28, padB = 32;
+  const max = Math.max(...dow.map(d => d[1]));
+  const bw = (W - padL - padR) / dow.length;
+  const yOf = v => padT + (1 - v / max) * (H - padT - padB);
+
+  const axis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  axis.setAttribute('x1', padL); axis.setAttribute('x2', W - padR);
+  axis.setAttribute('y1', H - padB); axis.setAttribute('y2', H - padB);
+  axis.setAttribute('class', 'curve-axis');
+  svg.appendChild(axis);
+
+  dow.forEach((d, i) => {
+    const x = padL + i * bw + 4;
+    const h = (H - padB) - yOf(d[1]);
+    const y = yOf(d[1]);
+    const r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    r.setAttribute('class', 'bar-dow' + (d[0] === 'Thu' ? ' peak' : ''));
+    r.setAttribute('x', x); r.setAttribute('y', H - padB);
+    r.setAttribute('width', bw - 8); r.setAttribute('height', 0);
+    r.style.transition = 'height 700ms cubic-bezier(0.25,1,0.5,1) ' + (i * 70) + 'ms, y 700ms cubic-bezier(0.25,1,0.5,1) ' + (i * 70) + 'ms';
+    r.setAttribute('data-h', h); r.setAttribute('data-y', y);
+    svg.appendChild(r);
+
+    const lbl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    lbl.setAttribute('class', 'bar-label');
+    lbl.setAttribute('x', x + (bw - 8) / 2);
+    lbl.setAttribute('y', H - padB + 14);
+    lbl.setAttribute('text-anchor', 'middle');
+    lbl.textContent = d[0];
+    svg.appendChild(lbl);
+
+    const v = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    v.setAttribute('class', 'bar-value');
+    v.setAttribute('x', x + (bw - 8) / 2);
+    v.setAttribute('y', y - 6);
+    v.setAttribute('text-anchor', 'middle');
+    v.textContent = d[1];
+    if (d[0] === 'Thu') { v.style.fill = 'var(--accent)'; v.style.fontWeight = '500'; }
+    svg.appendChild(v);
+  });
+
+  const dwObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        svg.querySelectorAll('rect.bar-dow').forEach(r => {
+          r.setAttribute('y', r.dataset.y);
+          r.setAttribute('height', r.dataset.h);
+        });
+        dwObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  dwObs.observe(svg);
+})();
+
+/* ───────────────────────────────────────────────────  BIPARTITE GRAPH  */
+(function buildBipartite() {
+  const svg = document.getElementById('bipart-svg');
+  if (!svg) return;
+  const W = 1280, H = 700;
+  const bots = [
+    { id: 'RPaez09l',       label: 'RPaez09l',       sub: '"Ianko Leite" · 2021' },
+    { id: 'tASDFG12345m',   label: 'tASDFG12345m',   sub: 'aged · 2022' },
+    { id: '7228735902',     label: '7228735902',     sub: '"Nadjmou BOINA" · 2022' },
+    { id: 'superdaysk3wom', label: 'superdaysk3wom', sub: '"Ethan H" · 2021' },
+    { id: 'liiiiiii1i1i1',  label: 'liiiiiii1i1i1',  sub: 'fresh · 2025-04' },
+    { id: '8888x82',        label: '8888x82',        sub: 'fresh · 2025-04' },
+  ];
+  const customers = [
+    { id: 'cust-A',                       label: 'Customer A · redacted',          stars: 8780, kind: 'real' },
+    { id: 'cust-B',                       label: 'Customer B · redacted',          stars: 5681, kind: 'real' },
+    { id: 'cust-C',                       label: 'Customer C · redacted',          stars: 3534, kind: 'real' },
+    { id: 'Galaxy-Dawn/claude-scholar',   label: 'Galaxy-Dawn/claude-scholar',     stars: 3446, kind: 'vibe' },
+    { id: 'EvoScientist/EvoScientist',    label: 'EvoScientist/EvoScientist',      stars: 2590, kind: 'vibe' },
+    { id: 'cust-D',                       label: 'Customer D · redacted',          stars: 1049, kind: 'real' },
+    { id: 'tusmart-grouptt/crewrktabletsn', label: 'tusmart-grouptt/crewrktabletsn', stars: 403,  kind: 'farm' },
+    { id: 'countneurooman/ssaavedrad',    label: 'countneurooman/ssaavedrad',      stars: 319,  kind: 'farm' },
+    { id: 'mzbankl/ghaerrb',              label: 'mzbankl/ghaerrb',                stars: 375,  kind: 'farm' },
+    { id: 'MarilynClarke/Hyperliquid-Copy-Trading-Bot', label: 'MarilynClarke/Hyperliquid-Copy-Trading-Bot', stars: 415, kind: 'farm' },
+  ];
+
+  // Edges (bot stars customer): plausible mix where farm + real overlap
+  const edges = [
+    ['RPaez09l',       'tusmart-grouptt/crewrktabletsn'],
+    ['RPaez09l',       'countneurooman/ssaavedrad'],
+    ['RPaez09l',       'cust-D'],
+    ['RPaez09l',       'cust-C'],
+    ['RPaez09l',       'Galaxy-Dawn/claude-scholar'],
+    ['RPaez09l',       'cust-A'              ],
+    ['tASDFG12345m',   'tusmart-grouptt/crewrktabletsn'],
+    ['tASDFG12345m',   'cust-B'],
+    ['tASDFG12345m',   'MarilynClarke/Hyperliquid-Copy-Trading-Bot'],
+    ['tASDFG12345m',   'cust-D'],
+    ['tASDFG12345m',   'cust-C'],
+    ['tASDFG12345m',   'cust-A'              ],
+    ['7228735902',     'cust-B'],
+    ['7228735902',     'tusmart-grouptt/crewrktabletsn'],
+    ['7228735902',     'cust-A'              ],
+    ['7228735902',     'MarilynClarke/Hyperliquid-Copy-Trading-Bot'],
+    ['7228735902',     'cust-C'],
+    ['superdaysk3wom', 'tusmart-grouptt/crewrktabletsn'],
+    ['superdaysk3wom', 'EvoScientist/EvoScientist'],
+    ['superdaysk3wom', 'cust-B'],
+    ['superdaysk3wom', 'cust-D'],
+    ['superdaysk3wom', 'cust-A'              ],
+    ['liiiiiii1i1i1',  'countneurooman/ssaavedrad'],
+    ['liiiiiii1i1i1',  'cust-B'],
+    ['liiiiiii1i1i1',  'cust-D'],
+    ['liiiiiii1i1i1',  'cust-C'],
+    ['8888x82',        'countneurooman/ssaavedrad'],
+    ['8888x82',        'cust-B'],
+    ['8888x82',        'EvoScientist/EvoScientist'],
+    ['8888x82',        'tusmart-grouptt/crewrktabletsn'],
+    ['8888x82',        'cust-D'],
+    ['8888x82',        'mzbankl/ghaerrb'],
+    ['8888x82',        'Galaxy-Dawn/claude-scholar'],
+  ];
+
+  const botX = 240, custX = 980;
+  const yPadTop = 60, yPadBot = 40;
+  const botGap = (H - yPadTop - yPadBot) / (bots.length - 1);
+  const custGap = (H - yPadTop - yPadBot) / (customers.length - 1);
+  bots.forEach((b, i) => { b.x = botX; b.y = yPadTop + i * botGap; });
+  customers.forEach((c, i) => { c.x = custX; c.y = yPadTop + i * custGap; });
+
+  // headers
+  const hdr1 = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  hdr1.setAttribute('class', 'tl-tick-label');
+  hdr1.setAttribute('x', botX); hdr1.setAttribute('y', 26);
+  hdr1.setAttribute('text-anchor', 'middle');
+  hdr1.style.fill = 'var(--ink)';
+  hdr1.style.fontFamily = 'var(--display)';
+  hdr1.style.fontSize = '14px';
+  hdr1.style.fontWeight = '600';
+  hdr1.textContent = '6 mapped bot accounts (sample of larger pool)';
+  svg.appendChild(hdr1);
+
+  const hdr2 = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  hdr2.setAttribute('class', 'tl-tick-label');
+  hdr2.setAttribute('x', custX); hdr2.setAttribute('y', 26);
+  hdr2.setAttribute('text-anchor', 'middle');
+  hdr2.style.fill = 'var(--ink)';
+  hdr2.style.fontFamily = 'var(--display)';
+  hdr2.style.fontSize = '14px';
+  hdr2.style.fontWeight = '600';
+  hdr2.textContent = '10 customer repos · real startups + farms + vibe-AI';
+  svg.appendChild(hdr2);
+
+  // edges
+  const map = Object.fromEntries([...bots, ...customers].map(n => [n.id, n]));
+  edges.forEach((edge, i) => {
+    const [bId, cId] = edge;
+    const b = map[bId], c = map[cId];
+    if (!b || !c) return;
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    const cx1 = (b.x + c.x) / 2, cx2 = cx1;
+    const d = `M ${b.x + 10} ${b.y} C ${cx1} ${b.y}, ${cx2} ${c.y}, ${c.x - 10} ${c.y}`;
+    path.setAttribute('d', d);
+    path.setAttribute('class', 'bp-edge' + (c.kind === 'farm' ? ' farm' : ''));
+    path.style.strokeDasharray = '900';
+    path.style.strokeDashoffset = '900';
+    path.style.transition = 'stroke-dashoffset 1500ms cubic-bezier(0.25,1,0.5,1)';
+    svg.appendChild(path);
+  });
+
+  // bot nodes
+  bots.forEach(b => {
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.setAttribute('class', 'bp-node bot');
+    g.setAttribute('transform', `translate(${b.x}, ${b.y})`);
+    const cir = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    cir.setAttribute('r', 5);
+    g.appendChild(cir);
+    const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    t.setAttribute('x', -14); t.setAttribute('y', 4);
+    t.setAttribute('text-anchor', 'end');
+    t.textContent = b.label;
+    g.appendChild(t);
+    const m = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    m.setAttribute('x', -14); m.setAttribute('y', 18);
+    m.setAttribute('text-anchor', 'end');
+    m.style.fill = 'var(--muted)';
+    m.style.fontSize = '10px';
+    m.textContent = b.sub;
+    g.appendChild(m);
+    svg.appendChild(g);
+  });
+
+  // customer nodes
+  customers.forEach(c => {
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.setAttribute('class', 'bp-node cust ' + c.kind);
+    g.setAttribute('transform', `translate(${c.x}, ${c.y})`);
+    const cir = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    cir.setAttribute('r', 5);
+    g.appendChild(cir);
+    const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    t.setAttribute('x', 14); t.setAttribute('y', 4);
+    t.textContent = c.label;
+    g.appendChild(t);
+    const s = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    s.setAttribute('class', 'bp-stars');
+    s.setAttribute('x', 14); s.setAttribute('y', 18);
+    s.textContent = c.stars.toLocaleString() + ' ★';
+    g.appendChild(s);
+    svg.appendChild(g);
+  });
+
+  // legend at bottom
+  const legend = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+  legend.setAttribute('transform', `translate(${W / 2 - 240}, ${H - 14})`);
+  const items = [
+    { c: 'real',  txt: 'Real Chinese AI startup' },
+    { c: 'vibe',  txt: 'Vibe-coded AI product' },
+    { c: 'farm',  txt: 'Farm repo (Operator A)' },
+  ];
+  items.forEach((it, i) => {
+    const cir = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    cir.setAttribute('cx', i * 180); cir.setAttribute('cy', 0); cir.setAttribute('r', 5);
+    if (it.c === 'real')      { cir.setAttribute('fill', 'var(--paper)'); cir.setAttribute('stroke', 'var(--ink)'); cir.setAttribute('stroke-width', '1'); }
+    if (it.c === 'vibe')      { cir.setAttribute('fill', 'var(--paper)'); cir.setAttribute('stroke', 'var(--accent)'); cir.setAttribute('stroke-width', '1'); cir.setAttribute('stroke-dasharray', '2 2'); }
+    if (it.c === 'farm')      { cir.setAttribute('fill', 'var(--accent)'); cir.setAttribute('stroke', 'var(--accent)'); cir.setAttribute('stroke-width', '1'); }
+    legend.appendChild(cir);
+    const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    t.setAttribute('x', i * 180 + 12); t.setAttribute('y', 4);
+    t.setAttribute('class', 'tl-tick-label');
+    t.textContent = it.txt;
+    legend.appendChild(t);
+  });
+  svg.appendChild(legend);
+
+  const bpObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        svg.querySelectorAll('path.bp-edge').forEach((p, i) => {
+          setTimeout(() => p.style.strokeDashoffset = '0', i * 60);
+        });
+        bpObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  bpObs.observe(svg);
+})();
+
+/* ───────────────────────────────────────────────────  POLLUTION DONUT  */
+(function buildDonut() {
+  const svg = document.getElementById('poll-donut');
+  if (!svg) return;
+  const cx = 100, cy = 100, r = 78, sw = 14;
+
+  const slices = [
+    { v: 61,  cls: 'farm-1' },
+    { v: 39,  cls: 'farm-2' },
+    { v: 132, cls: 'rest'  },
+  ];
+  const total = slices.reduce((a, b) => a + b.v, 0);
+
+  let acc = -90;
+  const arc = (start, end) => {
+    const a1 = start * Math.PI / 180, a2 = end * Math.PI / 180;
+    const x1 = cx + r * Math.cos(a1), y1 = cy + r * Math.sin(a1);
+    const x2 = cx + r * Math.cos(a2), y2 = cy + r * Math.sin(a2);
+    const large = (end - start) > 180 ? 1 : 0;
+    return `M ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2}`;
+  };
+
+  slices.forEach((s, i) => {
+    const portion = (s.v / total) * 360;
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', arc(acc, acc + portion - 0.5));
+    path.setAttribute('fill', 'none');
+    path.setAttribute('stroke-width', sw);
+    if (s.cls === 'farm-1') path.setAttribute('stroke', 'var(--accent)');
+    if (s.cls === 'farm-2') path.setAttribute('stroke', 'var(--warn)');
+    if (s.cls === 'rest')   path.setAttribute('stroke', 'var(--rule)');
+    path.style.strokeDasharray = '600';
+    path.style.strokeDashoffset = '600';
+    path.style.transition = 'stroke-dashoffset 1200ms cubic-bezier(0.25,1,0.5,1) ' + (i * 200) + 'ms';
+    svg.appendChild(path);
+    acc += portion;
+  });
+
+  const center = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  center.setAttribute('class', 'donut-center');
+  center.setAttribute('x', cx); center.setAttribute('y', cy + 12);
+  center.textContent = '43%';
+  svg.appendChild(center);
+
+  const sub = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  sub.setAttribute('class', 'donut-sub');
+  sub.setAttribute('x', cx); sub.setAttribute('y', cy + 32);
+  sub.textContent = 'pollution rate';
+  svg.appendChild(sub);
+
+  const dObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        svg.querySelectorAll('path').forEach(p => p.style.strokeDashoffset = '0');
+        dObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  dObs.observe(svg);
+})();
+
+/* ───────────────────────────────────────────────────  GEO CLOCK  */
+(function buildClock() {
+  const svg = document.getElementById('clock-svg');
+  if (!svg) return;
+  const cx = 150, cy = 150, rOuter = 130, rInner = 70;
+  // delby-ai's UTC hour distribution from CATALOG.md
+  const hours = [
+    [0,12],[1,7],[2,5],[3,0],[4,0],[5,0],
+    [6,0],[7,0],[8,0],[9,0],[10,0],[11,0],
+    [12,0],[13,0],[14,0],[15,1],[16,6],[17,9],
+    [18,10],[19,12],[20,12],[21,6],[22,8],[23,12]
+  ];
+  const max = Math.max(...hours.map(h => h[1]));
+
+  // bg ring
+  const bg = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+  bg.setAttribute('cx', cx); bg.setAttribute('cy', cy); bg.setAttribute('r', rOuter);
+  bg.setAttribute('class', 'clock-bg');
+  svg.appendChild(bg);
+  const inner = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+  inner.setAttribute('cx', cx); inner.setAttribute('cy', cy); inner.setAttribute('r', rInner);
+  inner.setAttribute('fill', 'var(--paper)'); inner.setAttribute('stroke', 'var(--rule)');
+  svg.appendChild(inner);
+
+  // hour ticks + bars
+  hours.forEach(([h, v]) => {
+    const ang = (h / 24) * Math.PI * 2 - Math.PI / 2;
+    // tick
+    const x1 = cx + rOuter * Math.cos(ang), y1 = cy + rOuter * Math.sin(ang);
+    const x2 = cx + (rOuter - 6) * Math.cos(ang), y2 = cy + (rOuter - 6) * Math.sin(ang);
+    const tick = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    tick.setAttribute('x1', x1); tick.setAttribute('y1', y1);
+    tick.setAttribute('x2', x2); tick.setAttribute('y2', y2);
+    tick.setAttribute('class', 'clock-tick' + (h % 6 === 0 ? ' major' : ''));
+    svg.appendChild(tick);
+
+    // bar (fan slice from rInner outward proportional to v)
+    if (v > 0) {
+      const barLen = ((rOuter - rInner) - 8) * (v / max);
+      const bx1 = cx + rInner * Math.cos(ang), by1 = cy + rInner * Math.sin(ang);
+      const bx2 = cx + (rInner + barLen) * Math.cos(ang), by2 = cy + (rInner + barLen) * Math.sin(ang);
+      const bar = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      bar.setAttribute('x1', bx1); bar.setAttribute('y1', by1);
+      bar.setAttribute('x2', bx2); bar.setAttribute('y2', by2);
+      bar.setAttribute('stroke', 'var(--accent)');
+      bar.setAttribute('stroke-width', '6');
+      bar.style.opacity = '0';
+      bar.style.transition = 'opacity 600ms ease-out ' + (h * 30) + 'ms';
+      svg.appendChild(bar);
+    }
+
+    // label (every 6h)
+    if (h % 6 === 0) {
+      const lx = cx + (rOuter + 12) * Math.cos(ang);
+      const ly = cy + (rOuter + 12) * Math.sin(ang) + 3;
+      const lbl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      lbl.setAttribute('class', 'clock-label');
+      lbl.setAttribute('x', lx); lbl.setAttribute('y', ly);
+      lbl.setAttribute('text-anchor', 'middle');
+      lbl.textContent = h.toString().padStart(2,'0') + ':00 UTC';
+      svg.appendChild(lbl);
+    }
+  });
+
+  // center label
+  const c1 = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  c1.setAttribute('class', 'clock-center-text');
+  c1.setAttribute('x', cx); c1.setAttribute('y', cy - 4);
+  c1.textContent = 'delby-ai';
+  svg.appendChild(c1);
+  const c2 = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  c2.setAttribute('class', 'donut-sub');
+  c2.setAttribute('x', cx); c2.setAttribute('y', cy + 14);
+  c2.textContent = '100 most recent events';
+  svg.appendChild(c2);
+
+  const cObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        svg.querySelectorAll('line[stroke-width="6"]').forEach(b => b.style.opacity = '1');
+        cObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  cObs.observe(svg);
+})();
+
+</script>
+</body>
+</html>

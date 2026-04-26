@@ -1,0 +1,73 @@
+{"tier":"T1","repo":"SWE-bench/SWE-bench","stars":4781,"role":"benchmark-host","note":"Original SWE-bench dataset — paired AI attempts vs human merged fixes"}
+{"tier":"T1","repo":"SWE-bench/experiments","stars":260,"role":"trajectory-store","note":"Open-sourced predictions, execution logs, trajectories from many models"}
+{"tier":"T1","repo":"SWE-agent/mini-swe-agent","stars":4002,"role":"agent","note":"Compact SWE-bench agent (>74% verified)"}
+{"tier":"T1","repo":"AutoCodeRoverSG/auto-code-rover","stars":3068,"role":"agent","note":"Autonomous program improvement agent — 46.2% on SWE-bench verified"}
+{"tier":"T1","repo":"openai/SWELancer-Benchmark","stars":1440,"role":"benchmark-host","note":"$1M freelance SWE benchmark — long-horizon paired tasks"}
+{"tier":"T1","repo":"augmentcode/augment-swebench-agent","stars":869,"role":"agent","note":"#1 open-source SWE-bench Verified implementation"}
+{"tier":"T1","repo":"scaleapi/SWE-bench_Pro-os","stars":363,"role":"benchmark-host","note":"Long-horizon SWE-bench Pro tasks"}
+{"tier":"T1","repo":"multi-swe-bench/multi-swe-bench","stars":332,"role":"benchmark-host","note":"Multilingual issue-resolving benchmark"}
+{"tier":"T1","repo":"jd-opensource/joycode-agent","stars":329,"role":"agent","note":"Repository-level repair agent (JD)"}
+{"tier":"T1","repo":"microsoft/SWE-bench-Live","stars":185,"role":"benchmark-host","note":"NeurIPS 2025 — live SWE-bench"}
+{"tier":"T1","repo":"CognitionAI/devin-swebench-results","stars":126,"role":"trajectory-store","note":"Devin's SWE-bench methodology + results"}
+{"tier":"T1","repo":"Aider-AI/aider-swe-bench","stars":81,"role":"trajectory-store","note":"Aider SWE-bench harness + results"}
+{"tier":"T2","repo":"OpenHands/OpenHands-Web","ai_tool":"openhands","commits_observed":8,"note":"OpenHands platform's own web frontend — agent self-development"}
+{"tier":"T2","repo":"enyst/openhands-sdk","ai_tool":"openhands","commits_observed":9,"note":"OpenHands SDK fork by core contributor"}
+{"tier":"T2","repo":"OpenHands/benchmarks","ai_tool":"openhands","commits_observed":3}
+{"tier":"T2","repo":"OpenHands/OpenHands-CLI","ai_tool":"openhands","commits_observed":2}
+{"tier":"T2","repo":"OpenHands/docs","ai_tool":"openhands","commits_observed":3}
+{"tier":"T2","repo":"OpenHands/agent-server-gui","ai_tool":"openhands","commits_observed":2}
+{"tier":"T3","repo":"wolfSSL/wolfssh","ai_tool":"copilot-swe-agent","commits_observed":4,"note":"Security-critical SSH library — copilot bot active in production code"}
+{"tier":"T3","repo":"replicatedhq/replicated","ai_tool":"copilot-swe-agent","commits_observed":4,"note":"Enterprise SaaS vendor — copilot bot in real prod codebase"}
+{"tier":"T3","repo":"ai-primitives/mdxe-v1","ai_tool":"copilot-swe-agent","commits_observed":15}
+{"tier":"T3","repo":"dongmuni/elastic-socks-proxy","ai_tool":"copilot-swe-agent","commits_observed":8}
+{"tier":"T3","repo":"Festas/Immo-Invest-Tool","ai_tool":"devin","commits_observed":13}
+{"tier":"T3","repo":"mt20careercoach/mt2.0-queuing-system","ai_tool":"devin","commits_observed":12}
+{"tier":"T3","repo":"Sohday677/SOCKS","ai_tool":"devin","commits_observed":7}
+{"tier":"T3","repo":"apidong/apidong","ai_tool":"devin","commits_observed":6}
+{"tier":"T3","repo":"Bibicentric/Bukky","ai_tool":"devin","commits_observed":6}
+{"tier":"T2","repo":"bedardg71-codexnumeris/Monitorage_v6","ai_tool":"aider","commits_observed":11}
+{"tier":"T2","repo":"Rhodawk-AI/Rhodawk-devops-engine","ai_tool":"aider","commits_observed":10}
+{"tier":"T2","repo":"kyasbalme/Scrapbox","ai_tool":"claude","commits_observed":101,"note":"All-Claude build candidate — top observed concentration"}
+{"tier":"T2","repo":"luliguyu/cmbd-book","ai_tool":"claude","commits_observed":101,"note":"Tied for most concentrated Claude authorship — likely all-AI"}
+{"tier":"T2","repo":"huizongsong/deepchat","ai_tool":"claude","commits_observed":12,"note":"Likely fork — chat application"}
+{"tier":"T2","repo":"Paipaiddle/zenstack","ai_tool":"claude","commits_observed":8,"note":"Fork of zenstackhq/zenstack (real ORM/auth tool) — AI-assisted contributions to real software"}
+{"tier":"T2","repo":"FrancescoCiulla/NLWeb","ai_tool":"claude","commits_observed":7,"note":"Fork of microsoft/NLWeb — AI on Microsoft project"}
+{"tier":"T2","repo":"SethRobertsonq/stagewise","ai_tool":"claude","commits_observed":4,"note":"Likely stagewise-io fork"}
+{"tier":"T2","repo":"daichilata/hammer","ai_tool":"claude","commits_observed":8}
+{"tier":"T2","repo":"aiandwebservices-cyber/aiandwebservices-next","ai_tool":"claude","commits_observed":4}
+{"tier":"T3","repo":"camunda/camunda-modeler","ai_tool":"copilot-swe-agent","commits_observed":1,"note":"PRODUCTION BPMN modeler — Camunda enterprise platform. Bot active in mature codebase. KEY case study."}
+{"tier":"T3","repo":"microsoft/Spartan2","ai_tool":"copilot-swe-agent","commits_observed":1,"note":"Microsoft Research repo — Copilot bot active"}
+{"tier":"T3","repo":"demaconsulting/VHDLTest","ai_tool":"copilot-swe-agent","commits_observed":3,"note":"Real VHDL testing tool"}
+{"tier":"T3","repo":"where-is-my-org/ContosoUniversity","ai_tool":"copilot-swe-agent","commits_observed":5,"note":"Microsoft canonical sample app fork"}
+{"tier":"T3","repo":"Festas/Immo-Invest-Tool","ai_tool":"copilot-swe-agent+devin","commits_observed":37,"note":"DUAL-AI signal: 13 Devin + 24 Copilot bot commits — best within-repo cross-AI comparison"}
+{"tier":"T3","repo":"AceDataCloud/Nexior","ai_tool":"copilot-swe-agent","commits_observed":1}
+{"tier":"T3","repo":"ai-primitives/mdxe-v1","ai_tool":"copilot-swe-agent+devin","commits_observed":115,"note":"DUAL-AI signal: 100 Devin + 15 Copilot bot commits. Real project (Markdown executable). HIGHEST observed AI-author concentration in real software."}
+{"tier":"T3","repo":"USDiseaseTracker/USDiseaseTracker-Docs","ai_tool":"copilot-swe-agent","commits_observed":19,"note":"Public health documentation"}
+{"tier":"T2","repo":"PotatoCodez127/Crypto_LLM","ai_tool":"aider","commits_observed":55,"note":"Heavy Aider use on crypto/LLM project"}
+{"tier":"T2","repo":"Zloool/manyfaced-honeypot","ai_tool":"aider","commits_observed":5,"note":"Security honeypot — real research project"}
+{"tier":"T2","repo":"paul-gauthier/paul-gauthier.github.io","ai_tool":"aider","commits_observed":1,"note":"Aider creator's personal site — dogfooding"}
+{"tier":"T4","repo":"django/django","language":"python","stars":87333,"created":"2012-04-28","note":"Mature Python web framework. Pre-2021 slice = pure-human web framework baseline."}
+{"tier":"T4","repo":"pallets/flask","language":"python","stars":71451,"created":"2010-04-06","note":"Long-lived microframework — clean pre-LLM history slice"}
+{"tier":"T4","repo":"scrapy/scrapy","language":"python","stars":61450,"created":"2010-02-22","note":"Mature scraping framework. Pre-2021 slice."}
+{"tier":"T4","repo":"ansible/ansible","language":"python","stars":68422,"created":"2012-03-06","note":"Large mature codebase, many contributors — strong kraken signal"}
+{"tier":"T4","repo":"scikit-learn/scikit-learn","language":"python","stars":65921,"created":"2010-08-17","note":"ML lib — interesting domain pair vs AI-tool repos"}
+{"tier":"T4","repo":"home-assistant/core","language":"python","stars":86233,"created":"2013-09-17","note":"Massive codebase, 1000s of contributors — kraken stress-test"}
+{"tier":"T4","repo":"golang/go","language":"go","stars":133642,"created":"2014-07-06","note":"Language compiler/runtime — high-discipline contributor pool"}
+{"tier":"T4","repo":"gohugoio/hugo","language":"go","stars":87772,"created":"2013-07-04","note":"Mature SSG. Pre-2021 slice."}
+{"tier":"T4","repo":"syncthing/syncthing","language":"go","stars":83107,"created":"2013-11-26"}
+{"tier":"T4","repo":"prometheus/prometheus","language":"go","stars":63779,"created":"2012-11-24","note":"Observability infra. Pre-2021 slice."}
+{"tier":"T4","repo":"moby/moby","language":"go","stars":71490,"created":"2013-01-18","note":"Docker engine. Pre-2021 slice."}
+{"tier":"T4","repo":"redis/redis","language":"c","stars":74007,"created":"2009-03-21","note":"Mature C systems code. Pre-2021 slice = pure-human systems baseline."}
+{"tier":"T4","repo":"git/git","language":"c","stars":60563,"created":"2008-07-23","note":"Long history, mailing-list workflow — distinctive human cadence"}
+{"tier":"T4","repo":"curl/curl","language":"c","stars":41390,"created":"2010-03-18","note":"30+ year codebase, single-author dominant — sharp kraken fingerprint"}
+{"tier":"T4","repo":"openssl/openssl","language":"c","stars":30063,"created":"2013-01-15","note":"Crypto lib — pair vs wolfSSL/wolfssh (T3)"}
+{"tier":"T4","repo":"jqlang/jq","language":"c","stars":34558,"created":"2012-07-18"}
+{"tier":"T4","repo":"servo/servo","language":"rust","stars":36550,"created":"2012-02-08","note":"Rust browser engine. Pre-2021 slice."}
+{"tier":"T4","repo":"BurntSushi/ripgrep","language":"rust","stars":62940,"created":"2016-03-11","note":"Single-author dominant — sharp baseline fingerprint"}
+{"tier":"T4","repo":"alacritty/alacritty","language":"rust","stars":63665,"created":"2016-02-18"}
+{"tier":"T4","repo":"tokio-rs/tokio","language":"rust","stars":31772,"created":"2016-09-09"}
+{"tier":"T4","repo":"fish-shell/fish-shell","language":"rust","stars":33292,"created":"2012-05-10","note":"Now Rust, long history — multi-language drift case"}
+{"tier":"T4","repo":"atom/atom","language":"javascript","stars":60833,"created":"2012-01-20","note":"ARCHIVED — frozen pre-LLM codebase. Perfect uncontaminated human baseline."}
+{"tier":"T4","repo":"facebook/react","language":"javascript","stars":244673,"created":"2013-05-24","note":"Massive contributor base. Pre-2021 slice."}
+{"tier":"T4","repo":"expressjs/express","language":"javascript","stars":68978,"created":"2009-06-26"}
+{"tier":"T4","repo":"webpack/webpack","language":"javascript","stars":65786,"created":"2012-03-10"}

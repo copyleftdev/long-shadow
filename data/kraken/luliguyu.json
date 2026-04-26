@@ -1,0 +1,128 @@
+{
+  "summary": "1 persons, 1 emails, 0 corporate domains, 0 academic — from seed 'luliguyu' depth 2, 1 users, 4 repos, 1 GQL pts, 1.4s",
+  "seed": "luliguyu",
+  "depth": 2,
+  "stats": {
+    "users_visited": 1,
+    "repos_scanned": 4,
+    "identities": 1,
+    "unique_persons": 1,
+    "corporate_domains": 0,
+    "academic_domains": 0,
+    "graphql_points": 1,
+    "clones": 0,
+    "duration_secs": 1.377399513
+  },
+  "persons": [
+    {
+      "name": "luliguyu",
+      "github_logins": [
+        "luliguyu"
+      ],
+      "emails": [
+        {
+          "email": "delacruzdawn1338@outlook.com",
+          "names": [
+            "luliguyu"
+          ],
+          "domain": "outlook.com",
+          "domain_kind": "personal",
+          "repos": [
+            "luliguyu/cmbd-book",
+            "luliguyu/grammar_11",
+            "luliguyu/one-click",
+            "luliguyu/statbox2"
+          ],
+          "commits": 752
+        }
+      ],
+      "affiliations": [],
+      "total_commits": 752,
+      "repos": [
+        "luliguyu/cmbd-book",
+        "luliguyu/grammar_11",
+        "luliguyu/one-click",
+        "luliguyu/statbox2"
+      ],
+      "orgs": [],
+      "depth": 0,
+      "profile": {
+        "company": "のサポートペ",
+        "followers": 1
+      },
+      "timezone": {
+        "utc_offset": 1,
+        "confidence": 0.3696808510638298,
+        "region": "Central Europe (CET)",
+        "hour_histogram": [
+          17,
+          16,
+          22,
+          11,
+          15,
+          17,
+          12,
+          12,
+          24,
+          13,
+          17,
+          18,
+          13,
+          22,
+          18,
+          14,
+          12,
+          11,
+          11,
+          18,
+          14,
+          12,
+          24,
+          13
+        ]
+      },
+      "work_pattern": {
+        "weekday_ratio": 0.6914893617021277,
+        "peak_day": 5,
+        "pattern": "mixed"
+      },
+      "centrality": {
+        "betweenness": 0.0,
+        "degree": 0,
+        "weighted_degree": 0.0
+      },
+      "languages": [
+        "C++",
+        "PHP",
+        "Python",
+        "TeX"
+      ],
+      "fingerprint": {
+        "language_entropy": 2.0,
+        "repo_size_gini": 0.33987084429562303,
+        "star_concentration": 0.0,
+        "rhythm_period": 13.0,
+        "rhythm_strength": 0.12002400778447977,
+        "weekday_ratio": 0.6914893617021277,
+        "tz_offset": 1.0,
+        "explore_build_ratio": 0.005319148936170213,
+        "burst_rate": 0.0,
+        "career_hops": 0,
+        "vector": [
+          2.0,
+          0.33987084429562303,
+          0.0,
+          0.43333333333333335,
+          0.12002400778447977,
+          0.6914893617021277,
+          0.5416666666666666,
+          0.005319148936170213,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ],
+  "collaborations": [],
+  "domains": {}
+}

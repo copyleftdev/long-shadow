@@ -1,0 +1,18 @@
+upstream_owner,upstream_repo,upstream_full_name,upstream_stars,upstream_created_at,laundered_as,launder_owner_account,launder_lag,severity,evidence_file
+allenai,WildDet3D,allenai/WildDet3D,505,2026-04-03T00:41:20Z,luliguyu/WildDet3D,luliguyu,4 days,critical (academic IP theft real-time),data/enumeration/evidence_pack.txt
+yikart,AiToEarn,yikart/AiToEarn,9765,2025-02-24T08:03:24Z,kyasbalme/AiToEarn + tusmart-grouptt/AiToEarn,kyasbalme + tusmart-grouptt,~6 months,major (Chinese AI content-monetization platform),data/enumeration/evidence_pack.txt
+theQRL,zond-web3-wallet,theQRL/zond-web3-wallet,unknown,older,luliguyu/dimatura,luliguyu,unknown,major (CRYPTO WALLET republished as personal-fork camouflage; stale snapshot of upstream's QRL→Zond rename mid-state),catalog/CATALOG.md
+Narwallets,narwallets-extension,Narwallets/narwallets-extension,unknown,older,luliguyu/ssaavedrad + countneurooman/ssaavedrad,luliguyu + countneurooman,upstream now at v4.0.7 / launder is v4.0.3,major (NEAR CRYPTO WALLET; stale 4 versions behind = security regression for any user installing the laundered version),catalog/CATALOG.md
+matteonerini,5g-network-slicing-for-wifi-networks,matteonerini/5g-network-slicing-for-wifi-networks,unknown,older,luliguyu/sachinDevloop,luliguyu,unknown,minor (academic 5G research),data/enumeration/upstream_candidates.txt
+bakercp,ofxEdsdk,bakercp/ofxEdsdk,unknown,older,luliguyu/academ,luliguyu,unknown,minor (openFrameworks Canon SDK addon),data/enumeration/upstream_candidates.txt
+tetsu-osaka-physics,statbox2,tetsu-osaka-physics/statbox2,unknown,older,luliguyu/statbox2,luliguyu,unknown,minor (Japanese physics LaTeX styles),data/enumeration/upstream_candidates.txt
+khsk,AviUtl-LocalFontPlugin,khsk/AviUtl-LocalFontPlugin,unknown,older,kyasbalme/robokssay (combined with sigma-axis/MediaPipe),kyasbalme,unknown,minor (Japanese AviUtl video editor plugin),data/enumeration/upstream_candidates.txt
+sigma-axis,MediaPipe,sigma-axis/MediaPipe,unknown,older,kyasbalme/robokssay,kyasbalme,unknown,minor,data/enumeration/upstream_candidates.txt
+delby.ai,(corporate),delby.ai (Indian Physical AI co.),n/a,2025-09-08 domain registration,DelbyIntelligence GitHub org with 3112 fake-product pages,delby-ai (operator),~7 months from domain registration,critical (industrial-scale brand-squat impersonation of real Indian AI startup),data/enumeration/delby_full.jsonl
+nota,Scrapbox,nota/Scrapbox (real Japanese wiki product by Nota Inc.),n/a,older,description text lifted into kyasbalme/Scrapbox,kyasbalme,unknown,minor (description-text impersonation only),catalog/CATALOG.md
+blu3mo,(personal),blu3mo.com (real Japanese researcher),n/a,n/a,kyasbalme profile.website field,kyasbalme,unknown,major (personal-identity impersonation),data/kraken/kyasbalme.json
+allenai.org,(corporate),Allen Institute for AI,n/a,n/a,esrfdev — wait this is a different impersonation,n/a,n/a,n/a,n/a
+European Synchrotron Research Facility,esrfdev,real esrfdev developer org,n/a,n/a,esrfdev (Cluster B account name impersonation),esrfdev,n/a,major (institutional account impersonation),data/enumeration/farm_b_c.txt
+Anthropic,Claude Code,Anthropic Claude Code (claude.ai/code),n/a,n/a,claude-code@anthropic.local forged author identity,8 Cluster B accounts,n/a,major (vendor identity impersonation),data/enumeration/farm_b_c.txt
+microsoft,microwindows (Nano-X),Nano-X Window System,unknown,older,mzbankl/ghaerrb (375 stars),mzbankl,unknown,minor (description-confirmed laundering),data/enumeration/star_net_tier2.txt
+GitHub Classroom student,unknown,i-am-poor-android-htian4 (student assignment),n/a,older,Brusselso/londonapa (329 stars),Brusselso,unknown,minor (student work laundered),data/enumeration/star_net_tier2.txt

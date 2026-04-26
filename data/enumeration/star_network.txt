@@ -1,0 +1,43 @@
+===== Bot RPaez09l profile =====
+{"bio":null,"created_at":"2021-11-12T10:51:46Z","followers":1,"following":4,"login":"RPaez09l","name":"Ianko Leite","public_repos":28,"type":"User"}
+
+===== Bot RPaez09l starred repos (sample 30) =====
+["Brusselso/londonapa","dtsola/xiaoyaosearch","huxiuhan/civ-finish-quotes","NUST-Machine-Intelligence-Laboratory/KTSE","xuanhuaz1022/TraeOfflineRAG","Galaxy-Dawn/claude-scholar","openvort/openvort","cchenax/px-kvstore","mzbankl/ghaerrb","avinashcodeer/PentHertz","minimaxir/hacker-news-undocumented","lenhyluo/xianmin","google/grumpy","Karmacoke/chargen","tusmart-grouptt/crewrktabletsn","TSA-Contest/tsa-contest-baseline","iflytek/astron-agent","rShetty/awesome-podcasts","LinLLLL/MaskST","httpie/cli","ckoepp/TwitterSearch","wenqingyu/ralphy-openspec","ecmadao/hacknical","53AI/53AIHub","zhou-you/RxEasyHttp","countneurooman/ssaavedrad","h2database/h2database","aiflowy/aiflowy","tallesl/Rich-Hickey-fanclub","MemMachine/MemMachine"]
+
+===== Bot tASDFG12345m profile =====
+{"bio":null,"created_at":"2022-05-11T15:34:30Z","followers":0,"following":3,"login":"tASDFG12345m","name":null,"public_repos":24,"type":"User"}
+
+===== Bot tASDFG12345m starred repos (sample 30) =====
+["Soul-AILab/SoulX-LiveAct","PhyAgentOS/PhyAgentOS","Galaxy-Dawn/pubfig","MemMachine/MemMachine","wangziqi06/724-office","lzjever/llm-universal-proxy","Lab-Overflow/prompt-optimizer-lite","zhoushisheng001b/Aziiizx","aiming-lab/MetaClaw","Pangu-Immortal/KeepAlivePerfect","1Password/for-open-source","MarilynClarke/Hyperliquid-Copy-Trading-Bot","lenhyluo/xianmin","zhihu/Matisse","Karmacoke/chargen","scotch-io/scotch-box","tusmart-grouptt/crewrktabletsn","ejholmes/active_admin_editor","shuyu-labs/WebCode","v2ray/v2ray-core","UnicomAI/wanwu","tallesl/Rich-Hickey-fanclub","bafuka/HotArmor","google/gson","Vinodh-G/ParallaxTableViewHeader","iflytek/astron-rpa","so898/XcodePaI","aiflowy/aiflowy","ppoffice/hexo-theme-icarus","BoCloud/folib"]
+
+===== Bot 7228735902 profile =====
+{"bio":"Ethical Hacker | B.Tech Student | Web Developer","created_at":"2022-06-20T07:15:05Z","followers":0,"following":1,"login":"7228735902","name":"Nadjmou BOINA","public_repos":18,"type":"User"}
+
+===== Bot 7228735902 starred repos (sample 30) =====
+["openocta/openocta","HCPLab-SYSU/CausalVLR","EvoScientist/EvoScientist","iflytek/skillhub","MemMachine/MemMachine","PharmChemMemo/PharmChemMemo","DesignOps6ix9/OpenDeepResearch","vuejs/awesome-vue","tusmart-grouptt/crewrktabletsn","learn-co-students/rack-http-request-readme-v-000","MarilynClarke/Hyperliquid-Copy-Trading-Bot","eggjs/egg-boilerplate-ts","linkesch/medium-editor-insert-plugin","zzhoujay/RichEditor","js-cookie/js-cookie","BoCloud/folib","53AI/53AIHub","handong1587/handong1587.github.io","xup6jammy/AI-INVOICE-OCR-ENGINE","yikart/AiToEarn","iflytek/astron-agent","bridgetkromhout/devops-against-humanity","Urinx/iOSAppHook","Internet-Architecture-and-Security/PacketScope","petkaantonov/bluebird","animate-css/animate.css","gabrielecirulli/2048","ReactiveX/RxJava","GalaxyGeneralRobotics/OpenTrack","mleibman/SlickGrid"]
+
+===== Bot liiiiiii1i1i1 profile =====
+{"bio":null,"created_at":"2025-04-13T06:20:48Z","followers":0,"following":1,"login":"liiiiiii1i1i1","name":null,"public_repos":5,"type":"User"}
+
+===== Bot liiiiiii1i1i1 starred repos (sample 30) =====
+["lewislulu/llm-wiki-skill","HCPLab-SYSU/CausalVLR","zhoushisheng001b/Aziiizx","agbcloud/agbcloud-sdk","Meituan-Dianping/mpvue","tastejs/hacker-news-pwas","eteran/edb-debugger","FreeRDP/FreeRDP","iflytek/astron-agent","fffaraz/awesome-cpp","countneurooman/ssaavedrad","agents-flex/agents-flex","aiflowy/aiflowy","Anonyfox/node-webkit-hipster-seed","53AI/53AIHub","tigshop/Tigshop","Weizhi-Zhao-quant/Quantitative-Research-Projects","zenangst/Hue","healthchecks/healthchecks","iflytek/astron-rpa","Poseidon-fan/Gung","MemMachine/MemMachine","kolodny/immutability-helper","louislili/GodlikeAI","impress/impress.js","OpenCSGs/csghub-server","laravel/laravel","awesome-selfhosted/awesome-selfhosted","Matt-Esch/virtual-dom","ycm-core/YouCompleteMe"]
+
+===== Bot 8888x82 profile =====
+{"bio":null,"created_at":"2025-04-16T13:21:10Z","followers":0,"following":1,"login":"8888x82","name":null,"public_repos":12,"type":"User"}
+
+===== Bot 8888x82 starred repos (sample 30) =====
+["ChenqiKONG/PIM","SenseTime-Copilot/raccoon-dataanalysis-skill","ShandaAI/PackForcing","zht8506/Easy-LLM-Post-Training","aiming-lab/MetaClaw","EvoScientist/EvoScientist","zevorn/rt-claw","soruly/trace.moe","qustavo/httplab","epitome-AISS/epitome","53AI/53AIHub","HeartMuLa/heartlib","jaredly/hexo-admin","DaRL-GenAI/instructional_agents","nwjs/nw.js","countneurooman/ssaavedrad","SpecterOps/BloodHound-Legacy","shadowsocks/shadowsocks-android","iflytek/astron-agent","iflytek/astron-rpa","xup6jammy/AI-INVOICE-OCR-ENGINE","vercel/hazel","prakhar1989/awesome-courses","yikart/AiToEarn","tigshop/Tigshop","lodash/lodash","fffaraz/awesome-cpp","postcss/autoprefixer","sindresorhus/awesome","serhii-londar/open-source-mac-os-apps"]
+
+===== Bot superdaysk3wom profile =====
+{"bio":"I make stuff.","created_at":"2021-12-29T01:53:44Z","followers":0,"following":3,"login":"superdaysk3wom","name":"Ethan H","public_repos":17,"type":"User"}
+
+===== Bot superdaysk3wom starred repos (sample 30) =====
+["PueblaRyan/Freebo","anne-creator/meetscribe","EvoScientist/EvoScientist","UnicomAI/wanwu","Claw-Company/clawcompany","fjb040911/ai-rules","MemMachine/MemMachine","Galaxy-Dawn/pubtab","ccfos/huatuo","xjtulyc/MedgeClaw","tusmart-grouptt/crewrktabletsn","github/scientist","yangdongchao/UniAudio2","iflytek/astron-rpa","verdaccio/verdaccio","53AI/53AIHub","google/git-appraise","aiflowy/aiflowy","Liansheng-Wang/Super-LIO","liabru/jquery-match-height","DaRL-GenAI/instructional_agents","facelessuser/BracketHighlighter","caorushizi/mediago","lokesh/color-thief","alg-bug-engineer/cogniflow","github/hubot-scripts","pypa/hatch","xup6jammy/AI-INVOICE-OCR-ENGINE","hummingbird-me/kitsu-tools","muzishen/IMAGHarmony"]
+
+===== Stargazers of luliguyu/Scrapbox-equivalent — too small. Check tusmart-grouptt/AiToEarn (laundered AiToEarn) =====
+{"forks":0,"stars":0}
+
+===== Sample stargazers of tusmart-grouptt/AiToEarn =====
+[]
+
+===== DONE =====

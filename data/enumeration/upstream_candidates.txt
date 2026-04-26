@@ -1,0 +1,626 @@
+===== luliguyu_academ =====
+--- top dirs/files ---
+example
+libs
+license.md
+ofxaddons_thumbnail.png
+readme.md
+src
+--- README first 50 lines ---
+# ofxEdsdk
+
+ofxEdsdk requires the EDSDK library from Canon.
+
+ofxEdsdk was developed with support from YCAM http://www.ycam.jp/
+
+
+## Installation/Usage
+
+1. Apply for a developer's license from [Canon's website](http://consumer.usa.canon.com/cusa/support/consumer/eos_slr_camera_systems/eos_digital_slr_cameras/digital_rebel_xt?fileURL=ps_sdk_form&pageKeyCode=downloadLicense&id=0901e02480057a74_1&productOverviewCid=0901e0248003ce28&keycode=Sdk_Lic) 
+2. After you have been approved (can take anywhere from minutes to a day or two), follow the download instructions included in your confirmation email from Canon.
+3. Download this repo as a zip file, unzip, and place contents in your addons folder.
+4. Edit the folder name so that it only says "ofxEdsdk."
+5. Open the Canon EDSDK .dmg image and save the files somewhere you can get at them if you need to. 
+6. Copy the EDSDK folder into this directory: OF > addons > ofEdsdk > src
+7. Open the OF Project Generator application and build a new app, including the ofxEdsdk addon.
+
+Following these steps will include Canon's developer library and this wrapper for all its functions for use in OF. You should be able to run the blank project successfully.
+
+ofxEdsdk is tested with Canon SDK 2.14, on both OS X and Windows 8.1 with openFrameworks 0.9.0
+
+	Update: updated and tested and with Canon SDK 3.4.0 on OS X with openFrameworks 0.9.2--- package metadata ---
+
+===== luliguyu_crewrktabletsn =====
+--- top dirs/files ---
+Core
+Deals
+LICENSE
+Pipelines
+README.md
+--- README first 50 lines ---
+# PipeDrive connectors for GDataStudio
+Google Data Studio connectors to fetch data from PipeDrive API.
+
+## Connectors organization
+There is a main connector called `Core`: it retrieves and handles data to bring it properly for GDS and it sets the authentication method.
+Children connectors (Deals, Pipelines, ...) use Core functions and also have specific functions for their API endpoint.
+
+## How to use them on GDS
+
+### Setup Core connector
+1. Go to [Google Apps Script](https://script.google.com)
+2. Create a new project
+3. Name it
+4. Go to project settings
+5. Check `Display appsscript.json manifest file`
+6. Take note about Script ID (useful for children connectors)
+7. Go back to code window
+8. Create files and set code for Core connector
+
+### Setup child connector
+1. Go to [Google Apps Script](https://script.google.com)
+2. Create a new project
+3. Name it
+4. Go to project settings
+5. Check `Display appsscript.json manifest file`
+7. Go back to code window
+8. Create files and set code for the child connector
+9. In `appsscript.json`, change `Dependencies` > `Libraries` > `LibraryID` to the Core script ID you took note
+10. Deploy it (easiest by going through `Use old editor` button > `Publish` > `Publish from manifest file`)
+
+### Use connectors in GDS
+1. Go to [Google Data Studio](https://datastudio.google.com)
+2. Create > Data source
+3. Search for your deployed child connector
+4. Fill credentials
+5. Now you can import it in your GDS reports
+
+## To create a new PipeDrive connector
+First, copy Deals or Pipelines connector.
+
+[Link to API](https://developers.pipedrive.com/docs/api/v1), where you can find data for below steps.
+
+Then you have 3 things to change :
+1. Change `endpoint` global var to API endpoint name : 
+api/v1/__deals__?api_token=XXX
+```javascript
+// core.gs
+var endpoint = 'deals';
+```
+2. Put fetchable fields from API
+--- package metadata ---
+
+===== luliguyu_dimatura =====
+--- top dirs/files ---
+LICENSE
+README.md
+babel.config.json
+components.json
+eslint.config.js
+index.html
+jest.config.ts
+jest.setup.ts
+manifest.json
+misc
+package-lock.json
+package.json
+postcss.config.js
+public
+src
+tailwind.config.js
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+--- README first 50 lines ---
+![Zond Web3 Wallet Preview Cover](misc/zond_web3_wallet_preview_cover.png)
+
+# Zond Web3 Wallet
+
+A wallet for creating accounts, importing accounts and sending transactions over the zond blockchain. This is an extension for web browsers(like [Google Chrome](https://www.google.com/chrome/)), for performing operations on the [Zond](https://www.theqrl.org/blog/project-zond-qrls-next-generation-network-reaches-betatestnet/) blockchain.
+
+## :keyboard: Build and run locally
+
+- Run `git clone https://github.com/theQRL/zond-web3-wallet.git` for cloning this repo to your machine.
+- Run `npm install` for installing all dependencies of this project.
+- Run `npm run build` to generate a production build of the extension to the `Extension` folder.
+- The production build output folder is named `Extension` (not `dist`) and this folder alone is enough to run the extension.
+- Load the [Extension](Extension) folder as an extension package from the settings page of the browser.
+- See [install_instructions.pdf](misc/install_instructions.pdf) for further details.
+
+## :dna: Features list
+
+| Feature              | Description                                                                                                                                                                                                                                           | Related files                                                                                                                                                                                                                       | Status         |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| Extension manifest   | Browser extensions should always have this file in the project root directory, inorder to be considered an extension. Manifest file can be found at the `root` level of project, and will be copied to the output `Extension` directory during build. | [manifest.json](manifest.json)                                                                                                                                                                                                      | :green_circle: |
+| Theming              | Based on the system theme, extension will be displayed in light or dark theme.                                                                                                                                                                        | [index.css](src/index.css) [tailwind.config.js](tailwind.config.js)                                                                                                                                                                 | :green_circle: |
+| Blockchain selection | The user can connect the wallet to a local zond node, zond testnet or zond mainnet. Mainnet can be used for real transactions, and the other two can be used for testing and demo.                                                                    | [ConnectionBadge.tsx](src/components/ZondWeb3Wallet/Body/Home/ConnectionBadge/ConnectionBadge.tsx)                                                                                                                                  | :green_circle: |
+| Create account       | The user can create a new account just with the click of a button. The newly created account address along with its secret recovery phrases will be presented to the user for download.                                                               | [CreateAccount.tsx](src/components/ZondWeb3Wallet/Body/CreateAccount/CreateAccount.tsx)                                                                                                                                             | :green_circle: |
+| Import account       | If the user has recovery phrases of an account created in the past, that account can be imported to the wallet.                                                                                                                                       | [ImportAccount.tsx](src/components/ZondWeb3Wallet/Body/ImportAccount/ImportAccount.tsx)                                                                                                                                             | :green_circle: |
+| Account list         | List of accounts created or imported are stored locally, and displayed to the user. The user can switch to a different account in the wallet.                                                                                                         | [AccountList.tsx](src/components/ZondWeb3Wallet/Body/AccountList/AccountList.tsx)                                                                                                                                                   | :green_circle: |
+| User Password        | Ideally, the user entered password should be used to encrypt the account recovery phrases, so that the user can use their password for transactions each time. This needs to be first implemented in the zond web3.js library.                        | [AccountUnlock.tsx](src/components/ZondWeb3Wallet/Body/Home/AccountUnlock/AccountUnlock.tsx)                                                                                                                                        | :red_circle:   |
+| Transaction          | The user can send `ZND` to other addresses. The receiver's account address, the amount and the user's secret mnemonic phrases(user's password will be used in the future) are required to make the transaction.                                       | [TokenTransfer.tsx](src/components/ZondWeb3Wallet/Body/TokenTransfer/TokenTransfer.tsx)                                                                                                                                             | :green_circle: |
+| Gas Fee              | Before making a transaction, the user can see an estimated gas fee amount.                                                                                                                                                                            | [GasFeeNotice.tsx](src/components/ZondWeb3Wallet/Body/TokenTransfer/GasFeeNotice/GasFeeNotice.tsx)                                                                                                                                  | :green_circle: |
+| Wallet connect       | Online dapps presents the user with a `Connect` button. To connect the wallet with the dapps, multiwallet support based on EIP-6963 is implemented.                                                                                                   | [DAppRequest.tsx](src/components/ZondWeb3Wallet/DAppRequest/DAppRequest.tsx) [middlewares](src/scripts/middlewares) [inPageScript.ts](src/scripts/inPageScript.ts)                                                                  | :green_circle: |
+| ZRC-20 Tokens        | The wallet supports `ZRC-20` tokens. The users can import and send the ZRC-20 tokens from the wallet.                                                                                                                                                 | [ImportToken.tsx](src/components/ZondWeb3Wallet/Body/ImportToken/ImportToken.tsx) [TokensCardContent.tsx](src/components/ZondWeb3Wallet/Body/Home/AccountCreateImport/ActiveAccountDisplay/TokensCardContent/TokensCardContent.tsx) | :green_circle: |
+
+## :hammer_and_wrench: Built with
+
+[The QRL](https://github.com/theQRL/QRL), [Vite](https://vitejs.dev/), [React](https://react.dev/), [Typescript](https://www.typescriptlang.org/), [Jest](https://jestjs.io/), [MobX](https://mobx.js.org/README.html), [Shadcn](https://ui.shadcn.com/), [React hook form](https://www.react-hook-form.com/), [TailwindCSS](https://tailwindcss.com/)
+--- package metadata ---
+[package.json]
+{
+  "name": "zond-web3-wallet",
+  "description": "A browser extension, for creating accounts, signing transactions and sending transactions over the zond blockchain.",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "test": "jest",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@eslint/js": "^9.8.0",
+    "@hookform/resolvers": "^3.9.0",
+    "@jest/globals": "^29.7.0",
+    "@radix-ui/react-alert-dialog": "^1.1.1",
+    "@radix-ui/react-checkbox": "^1.1.2",
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-dropdown-menu": "^2.1.1",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-separator": "^1.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.3",
+    "@radix-ui/react-tooltip": "^1.1.2",
+
+===== luliguyu_grammar_11 =====
+--- top dirs/files ---
+KINECT_SDK_Advent_Calendar_2011
+README.md
+face_detect
+kinect_cpp_wrapper
+kinect_sdk_samples
+kinect_sdk_samples_cs
+mssdk_openni_bridge_sample
+--- README first 50 lines ---
+# grammar_11
+
+## ライセンス
+ライセンスは｢MIT ライセンス｣とします。
+http://ja.wikipedia.org/wiki/MIT_License
+
+## 免責事項
+本ソフトウェアは使用者の責任において利用してください。
+このプログラムによって発生した、いかなる障害・損害も作成者は一切責任を負わないものとします。
+
+--- package metadata ---
+
+===== luliguyu_one-click =====
+--- top dirs/files ---
+404.php
+README.md
+about.php
+ajax
+config.php
+core
+css
+dbExport_hiwihi.sql
+debugLogin.php
+guestLogin.php
+img
+include
+index.php
+js
+login.php
+logout.php
+pass_reminder.php
+signup.php
+timeline.php
+tweet.php
+--- README first 50 lines ---
+# one-click
+====  
+
+## Overview - 概要
+ﾋｳｨｯﾋﾋｰ(one-click)とは、とある駆け出しエンジニアが練習のために作ったtwitterもどきのwebサービスです。
+
+### 公開URL　
+https://ce-ya.net/app/one-click
+
+## Screenshot 
+![トップページ](https://i.imgur.com/hhz71k0.png)
+![タイムライン](https://i.imgur.com/MUlMc6C.png)
+
+## Description - 詳細
+php+MySQL+js+css+htmlの練習のためにTwitterの真似して作ったオモチャです。実用性はないです。
+
+githubにアップしたのもあくまで練習のためです。
+アンライセンス(CC0)で公開してます。
+煮るなり焼くなり魔改造するなりマサカリ投げつけるなり好きにしてください。
+
+MAMPなどのphpmyadminで dbExport_one-click.sql をインポートして、config.php でDBのユーザー名やパスワードを合わせればたぶん動くと思います。
+
+制作後記にもっといろいろと詳細を書いてます
+https://ce-ya.net/one-click-postscript/
+
+## Feature - 機能
+* ユーザー登録機能
+  * メールアドレス登録はセキュリティやらプライバシーの観点でややこしくなりそうなので無効化中
+* ログイン機能
+* ツイート投稿・編集・削除機能
+* 全体タイムラインに投稿されたすべてのツイートを10件ずつ表示
+* プロフィール編集機能（ユーザー名、bio、アイコンのみ）
+* ユーザーページで、そのユーザーの投稿したツイートのみを表示
+* ユーザー登録しなくても、ゲストとしてログインしてツイートできます。
+
+### 実装したかったけどまだ未実装の機能
+ * パスワードリマインダー
+ * フォロー機能
+ * リプライ機能
+ * リツイート機能
+ * ふぁぼ機能
+
+
+## License
+
+These codes are licensed under CC0.
+
+[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")](http://creativecommons.org/publicdomain/zero/1.0/deed.ja)
+--- package metadata ---
+
+===== luliguyu_sachinDevloop =====
+--- top dirs/files ---
+LICENSE
+README.md
+csv
+figs
+run_wifi.py
+run_wifi_1ch.py
+run_wifi_dynamic.py
+run_wifi_static.py
+scratch-simulator.cc
+subdir
+wifi.cc
+wifi_1ch.cc
+wifi_dynamic.cc
+wifi_static.cc
+--- README first 50 lines ---
+# 5G Network Slicing for Wi-Fi Networks
+
+This code package is related to the paper:
+
+M. Nerini and D. Palma, "[5G Network Slicing for Wi-Fi Networks](https://ieeexplore.ieee.org/document/9463988)," 2021 IFIP/IEEE International Symposium on Integrated Network Management (IM), 2021.
+
+If you use this code or any modified part of it, please cite our paper.
+An extended version of the paper is also available [here](https://arxiv.org/abs/2101.12644).
+
+## Introduction
+
+This project aims to provide a framework to develop and evaluate network slicing techniques for Wi-Fi networks. We provide a customizable Wi-Fi indoor scenario, realized with the *ns-3* network simulator, in which several mobile Stations (STAs) are connected to an Access Point (AP) placed in the centre of a room. In general, the STAs have distinct performance requirements, and are grouped in different networks slices (e.g. eMBB, mMTC and URLLC).
+
+On top of this scenario, we facilitate the implementation and the testing of radio resources allocation algorithms to realize network slicing in the radio access segment of Wi-Fi networks. In particular, three steps need to be followed:
+* Configure the environment parameters, such as the number of Wi-Fi STAs, required throughput in each slice and the dimensions of the room.
+* Write a dynamic algorithm which allocates radio resources at each time slot, by receiving in input the run-time Key Performance Indicators (KPIs) of the network. There is no limit on the kind of algorithm which can be implemented, and also Machine Learning (ML) techniques are supported.
+* Finally, when the simulation time is over, the experienced performance (i.e. throughput, error probability, latency, energy consumption and spectrum efficiency) can be accessed from a .csv file.
+
+<p align="center"> 
+<img src="https://github.com/matteonerini/5g-network-slicing-for-wifi-networks/blob/main/figs/scenario.png" width="50%">
+</p>
+
+## Description
+
+This repository contains Python codes which call the relative *ns-3* C++ scripts, simulating the considered Wi-Fi scenario with different seeds and different initializations, if required.
+
+To validate your own original network slicing algorithm through simulations you will need to use the files ```run_wifi.py``` and ```wifi.cc``` properly configured. Detailed instructions about it are provided in the Section Usage.
+
+Instead, you can reproduce the results presented in the paper "5G Network Slicing for Wi-Fi Networks" with the additional files. More precisely:
+* Launch ```run_wifi_1ch.py``` to reproduce the *single channel* approach. This file will call the ```wifi_1ch.cc``` *ns-3* script to simulate the today's Wi-Fi access technique, in which only one wireless channel is available for all the STAs connected to the AP. We suggest to use this as a reference for the evaluation of your original resources allocation algorithms.
+* Launch ```run_wifi_static.py``` to reproduce the *static network slicing* approach. This file will call the ```wifi_static.cc``` *ns-3* script.
+* Launch ```run_wifi_dynamic.py``` to reproduce the *dynamic network slicing* approach. This file will call the ```wifi_dynamic.cc``` *ns-3* script.
+
+Furthermore, the ```csv``` folder contains the outputs of the simulations generated by ```wifi_1ch.cc```, ```wifi_static.cc``` and ```wifi_dynamic.cc```, in form of .csv files. In order to parse and plot relevant information from them, three Python scripts are available:
+* Launch ```data_wifi_pe_lat.py``` to plot the packet error probability and the latency experienced in the three slices.
+* Launch ```data_wifi_ptx_B.py``` to plot the transmission power utilized by the three slices. This is particularly relevant for mMTC devices, slice B in our paper.
+* Launch ```data_wifi_se.py``` to plot the spectrum efficiency achieved in the three slices.
+
+## Usage
+
+In this section, you can find detailed instructions on how to use our framework to validate your network slicing algorithms through simulations in *ns-3*. First of all, execute the following steps to be able to use our codes:
+* Install the *ns-3* network simulator in your machine following the instructions from the main website [nsnam.org](https://www.nsnam.org/).
+* Download this repository as a .zip and extract it.
+* Paste its content inside the ```scratch``` directory, which is inside the *ns-3* release directory, automatically created upon the *ns-3* installation.
+
+Alternatively, you can download only the specific files you want to use and paste them in the ```scratch``` directory. Everything is now ready.
+
+To launch a Python script, for example ```run_wifi.py```, open a terminal in the ```scratch``` directory and type:
+
+```
+--- package metadata ---
+
+===== luliguyu_ssaavedrad =====
+--- top dirs/files ---
+API-design.md
+LICENSE.md
+README.md
+docs
+extension
+makezip.bat
+package-lock.json
+package.json
+screenshots
+src
+tsconfig-sourcemap.json
+tsconfig.json
+--- README first 50 lines ---
+# Narwallet Chrome Extension 
+
+## Installation
+
+Install [Narwallets from the Chrome Web Store](https://chrome.google.com/webstore/detail/narwallets/bnbmlmjhaohpobnjfifeghjmamjfolnb)
+
+## Objectives
+* Be the deafult chrome-extension wallet for NEAR DApps
+* What Metamask does for ethereum, we intend to do for NEAR
+
+## Comparision with NEAR Official Web Wallet
+* Narwallets-extension aims to be a simpler and complemetary tool to the official NEAR Web wallet
+* Narwallets is designed for a desktop/laptop experience with a chromium based browser, NEAR Web wallet works on any browser and mobile
+* Narwallets is available only in english, NEAR Web wallet supports multiple languages
+* Narwallets is not yet integrated with Ledger or other HW Wallets
+* Narwallets has only one option regading account recovery: Write-down the seed phrase. NEAR Web Wallet has other user-friendly recovery options (email & phone recovery).
+* Narwallets, aiming at simplicity, has no 2FA support yet.
+
+The good:
+* It's an extension-wallet: You'll be able to interact with DApps without leaving the DApp web site
+* Provides a similar experience as Metamask/other extension-wallets, easing the onboard of ethereum users into the NEAR ecosystem.
+* Each wallet can have multiple accounts. You can see the sum of all your accounts in the wallet
+* You can have multiple wallets by providing different user/passwords. 
+* Accounts are first added to in safe-by-default read-only mode (no keys)
+* All private data is stored encrypted on chrome local storage
+ - [x] Create free *implict accounts* (no near required)
+ - [x] Lockup contract accounts are auto-discovered and treated as another account in the group
+ - [x] Advanced mode allows you to take full control of your lockup contract account
+ - [x] Integration with DApps. New model: wallet initiated connection to active tab, resulting in chain & wallet agnostic DApps. See [Wallet integration API Documentation here](API-design.md)
+
+![multiple accounts and total](docs/images/multiple-accounts-and-total.png)
+
+## Road Map
+* Trello Board at https://trello.com/b/SRbigp2g
+
+## Future versions
+* Ledger integration
+* 2FA Support
+* Manage Create named account (currently redirecting to NEAR Web Wallet)
+
+## Dev Tooling (v0.1)
+* This project uses typescript
+* Being a chrome extension, no bundler/minimizer is needed 
+* No frameworks are used neither, this is plain typescript and a main index.html
+
+## Dev Flow (v0.1)
+* Chrome Dev Tools: Map folder to Narwallets-extension/extension
+* Use Chrome Dev Tools as an quick-and-dirty IDE with Edit & Continue
+* Use VSCode as the main IDE - Ctrl-Shift-B to build with typescript
+
+--- package metadata ---
+[package.json]
+{
+  "name": "narwallet-extension",
+  "version": "4.0.0",
+  "description": "Narwallet chrome-extension wallet for NEAR protocol",
+  "author": "Lucio Tato <luciotato@gmail.com>",
+  "homepage": "www.narwallets.com",
+  "type": "module",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Narwallets/narwallets-extension.git"
+  },
+  "scripts": {
+    "build": "tsc -b -verbose tsconfig-sourcemap.json && rm -rf test-new-install-ln && ln -sTf extension test-new-install-ln",
+    "buildw": "tsc -b -verbose -w tsconfig-sourcemap.json",
+    "start": "git pull && npm run build && echo done. open the extension form the browser",
+    "test": "chrome chrome://extensions/"
+  },
+  "keywords": [
+    "NEAR",
+    "Narwallet"
+  ],
+  "devDependencies": {
+    "@types/chrome": "^0.0.197"
+  }
+}
+
+===== luliguyu_statbox2 =====
+--- top dirs/files ---
+Fcntr.sty
+README.md
+Wdate.sty
+ansframe.sty
+enumitem_extended.sty
+eqnum_extended.sty
+exam_a.sty
+exam_p.sty
+exam_s.sty
+figcap_ext.sty
+h2_ensyu_p.sty
+h2_ensyu_s.sty
+h2_rt_asheet.sty
+h2a_rt_p.sty
+h2a_rt_s.sty
+h2b_c_p.sty
+h2b_c_s.sty
+h2b_rt_p.sty
+h2b_rt_s.sty
+h3_center_p.sty
+--- README first 50 lines ---
+# statbox2
+## 内容
+それぞれのstyファイルの詳しい情報は[wiki](https://github.com/tetsu-osaka-physics/statbox2/wiki)を参照．
+* `enumitem_extended.sty`：`enumerate`環境のラベルの種類を増やす．
+* `eqnumber_extended.sty`：`align`環境での数式番号の種類を増やす．
+* `Fcntr.sty`：穴埋めの四角枠を作る．
+* `uw.sty`：波線を引く．
+
+## 初回導入時の設定
+ターミナル：
+```sh
+brew install git
+mv ~/FOR/get-sty.sh ~/Desktop/get-sty.sh
+chmod a+x ~/Desktop/get-sty.sh
+```
+**ターミナルでしたい人向け**
+```sh
+cp ~/Desktop/get-sty.sh /usr/local/bin/get-sty.sh
+chmod a+x /usr/local/bin/get-sty.sh
+```
+
+## アップデート方法
+デスクトップ上にある`get-sty.sh`を開く．パスワードの入力が必要．
+たまに開発陣がstyファイルを更新するので，時々デスクトップの`get-sty.sh`を実行しましょう．
+--- package metadata ---
+
+===== kyasbalme_robokssay =====
+--- top dirs/files ---
+LICENSE
+README.md
+assets
+detours
+localfont2.cpp
+localfont2.sln
+localfont2.vcxproj
+localfont2.vcxproj.filters
+--- README first 50 lines ---
+# robokssay
+
+AviUtl のフォント管理を便利なように調整できるプラグインです．
+
+1.  システムにインストールされていないフォントを一時的に AviUtl で使えるようにできます．
+
+    `Font` フォルダに入っているフォントファイルを，AviUtl のみで使えるように追加します．
+
+1.  逆にシステムにインストールされているけれどAviUtlでは使う予定のないフォントを，テキストオブジェクトのドロップダウンリストから隠すこともできます．
+
+    `Excludes.txt` ファイルに除外フォントを列挙することで，隠すことができます．
+
+    - `Whitelist.txt` で「ホワイトリスト」での指定も可能です．
+
+1.  フォントにエイリアス名（別名 / ニックネーム）を付けることができます．
+
+    - よく使うフォントを，リストの探しやすい位置に並ぶような名前に登録できます．
+    - 「字幕用」「本文用」など目的特化の名前を設定できます．
+    - フォント名が長すぎて (Shift-JIS で 32 バイト以上) AviUtl では本来扱えなかったフォントも，短い名前のエイリアス名を割り当てると使用することができるようになります．
+
+khsk様の [LocalFont プラグイン](https://github.com/khsk/AviUtl-LocalFontPlugin)の拡張版です．
+
+[ダウンロードはこちら．](https://github.com/sigma-axis/MediaPipe/releases) [紹介動画．](https://www.nicovideo.jp/watch/sm43771122)
+
+## 動作要件
+
+- AviUtl 1.10 + 拡張編集 0.92
+
+  http://spring-fragrance.mints.ne.jp/aviutl
+
+  - AviUtl 1.00 や 拡張編集 0.93rc1 等でも動作しますが推奨しません．
+
+- Visual C++ 再頒布可能パッケージ（\[2015/2017/2019/2022\] の x86 対応版が必要）
+
+  https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist
+
+## 導入方法
+
+以下のフォルダのいずれかに `localfont2.aul` と `Fonts` フォルダをコピーしてください．
+
+1. `aviutl.exe` のあるフォルダ
+1. (1) のフォルダにある `plugins` フォルダ
+
+## 使い方
+
+### フォントの追加方法
+
+`Fonts` フォルダの中に AviUtl に追加・使用したいフォントファイルを配置してください．サブフォルダ内のフォントも検索します（階層無制限）．
+
+- 階層構造の例:
+--- package metadata ---
+
+===== kyasbalme_vovo =====
+--- top dirs/files ---
+CONTRIBUTING.md
+README.md
+backendjvm
+backendshared
+build.gradle.kts
+dtos
+foreground_icon.svg
+foreground_icon_inkscape.svg
+foreground_icon_min.svg
+frontendandroid
+frontenddesktop
+frontendios
+frontendshared
+gradle
+gradle.properties
+gradlew
+gradlew.bat
+icon_complex.png
+icon_complex_no_bg.png
+local.properties.template
+--- README first 50 lines ---
+# Initiative Tracker
+
+## Summary
+
+### Technical Overview
+
+This application consists of a backend and a frontend application. Both frontend and backend have multiple targets.
+
+- Frontend can currently target Android and Desktop JVM. Plans to add iOS and Desktop Native once they are more stable.
+- Backend can target JVM and native Linux. The Linux target allows for smaller docker containers.
+
+### Functionality Overview
+
+This app is used during D&D 5e Combat, to reduce the workload on the DM, increase the player immersion and speed up the combat.
+More in Detail on this below. The app can probably be applied to most initiative based combat systems.
+
+## Functional Details
+
+### Features
+The initiative tracker provides multiple features that improve combat. The current combat situation is hosted by the DM
+and in real time shared with the players using Websockets and the backend.
+
+- Never again forget whose turn it is. **The app tracks the initiative order** during the combat and removes
+  that task from the DM.
+- **No more HP tracking for the DM**. The app can do that by itself. Even better, the players can input the damage and
+  the DM only has to approve or apply resistance/vulnerability. Significantly reduces DM overhead during turns
+  and improves immersion as the DM is not busy calculating numbers but can describe what the hit looked like.
+- Have you had your players ask "How damaged does this enemy look?" "Has that enemy been hurt?" "Which one looks the weakest?"
+  No more! **The tracker shows monster health in approximated steps** to the player, representing "hurt", "bloodied" and "injured".
+  The players can already plan to attack the weakest enemy without waiting for a chance to ask about the health states!
+- Ever asked everyone for initiative and got it all in the wrong order? **The players can join a combat in the tracker
+  by themselves** and are automatically sorted.
+- The dm can **skip rolling the monster initiatives**. The app can roll those
+- If you use D&D 5e, you don't need to look up some basic monster stats, like the HP points. The tracker uses a backend
+  with all official monster blocks and can automatically get stats for them. (currently limited to D&D 5e and no homebrew)
+- Hide monsters from the players. All they see is an initiative entry with `hidden` as the name. Increases the tension
+  while you don't forget the creature in the order.
+- Exclude creatures from the initiative until you need them.
+- Name the Monsters in a way that makes it more immersive for the players, like "brain with legs" instead of "intellect devourer"
+  while you still have the actual monster type available to yourself. (WIP #95)
+- Remind players they are next in order (ISSUE #97)
+
+### User guide
+
+I hope it's quite intuitive to use. Maybe worth mentioning, for the dungeon master, once you finished setting up
+your monsters, you can "start" a combat with the play button on top. That adds the button for advancing initiative, and
+it changes the swipe actions.
+
+## Technical Details Frontend
+
+--- package metadata ---
+

@@ -1,0 +1,12 @@
+email,pattern_class,provider,used_in_repos,total_observed_commits,linked_owner_accounts,first_seen_repo,evidence_file
+BensonJennifer6145@outlook.com,FirstnameLastname+4digits@outlook.com,outlook.com,kyasbalme/Scrapbox + ojosama + robokssay,782,kyasbalme,kyasbalme/Scrapbox,data/enumeration/sockpuppet_reach.txt
+DelacruzDawn1338@outlook.com,FirstnameLastname+4digits@outlook.com,outlook.com,luliguyu/cmbd-book + grammar_11 + one-click + statbox2,1120,luliguyu,luliguyu/cmbd-book,data/enumeration/sockpuppet_reach.txt
+kuqkz736@yeah.net,random-alphanumeric,yeah.net (NetEase CN),kyasbalme/vovo,324,kyasbalme,kyasbalme/vovo,data/enumeration/sockpuppet_reach.txt
+sbolr9514@yeah.net,random-alphanumeric,yeah.net (NetEase CN),luliguyu/academ,90,luliguyu,luliguyu/academ,data/enumeration/sockpuppet_reach.txt
+io64083@yeah.net,random-alphanumeric,yeah.net (NetEase CN),luliguyu/dimatura,609,luliguyu,luliguyu/dimatura,data/enumeration/sockpuppet_reach.txt
+bmqx9295@163.com,random-alphanumeric,163.com (NetEase CN),luliguyu/crewrktabletsn + tusmart-grouptt/{crewrktabletsn,YoloV3,custodial},597+,luliguyu + tusmart-grouptt,luliguyu/crewrktabletsn,data/enumeration/sockpuppet_reach.txt
+naobingdz407945@163.com,random-alphanumeric,163.com (NetEase CN),luliguyu/ssaavedrad + countneurooman/magicwang-cnx,777+,luliguyu + countneurooman,luliguyu/ssaavedrad,data/enumeration/sockpuppet_reach.txt
+czmahaixuan@126.com,pinyin+suffix,126.com (NetEase CN),luliguyu/sachinDevloop,28,luliguyu,luliguyu/sachinDevloop,data/enumeration/sockpuppet_reach.txt
+767653317@qq.com,QQ-numeric,qq.com (Tencent CN),kyasbalme/AiToEarn (preserved upstream Chinese contributor),687,n/a (preserved upstream),kyasbalme/AiToEarn,evidence/commit_history/kyasbalme_AiToEarn.tsv
+weikaih@allenai.org,real-allenai-author,allenai.org,luliguyu/WildDet3D (preserved upstream Allen AI researcher),17,n/a (preserved upstream),luliguyu/WildDet3D,evidence/commit_history/luliguyu_WildDet3D.tsv
+claude-code@anthropic.local,anthropic-impersonation,anthropic.local (FAKE DOMAIN),CaMaGuee/invest.co.kr + esrfdev/ESRF-clean + gdhughey/CISTracker + jun564/jwcore-review + mctils12-arch/voltradeai + mearley24/AI-Server + rvadapally/PracticeX.App + vpneoterra/forge-ecs-platform,23,Cluster B (8 separate owner accounts),jun564/jwcore-review,data/enumeration/farm_b_c.txt

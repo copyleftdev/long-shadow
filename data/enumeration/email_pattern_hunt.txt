@@ -1,0 +1,245 @@
+===== Pull Claude-trailer commits, page 1, sample author emails =====
+{"author":"Abhijeet Mishra1","email":"abhijeetmishra1@Abhijeets-MacBook-Pro.local","repo":"abhijeetMishra101/jhund"}
+{"author":"Allison Frye","email":"59905527+afrye1997@users.noreply.github.com","repo":"afrye1997/fetchd_quick_demo"}
+{"author":"Amr Omer","email":"aomer@atalantatx.com","repo":"aomer92/msd-4pl-analysis"}
+{"author":"Aradune Medicaid","email":"aradune-medicaid@proton.me","repo":"Aradune-Policy/aradune-main"}
+{"author":"Arylmera","email":"guillaume@lemer.be","repo":"Arylmera/TheGreenGauntlet"}
+{"author":"Brent Cordis","email":"994259+bcordis@users.noreply.github.com","repo":"Joomla-Bible-Study/Proclaim"}
+{"author":"Brian Abent","email":"brian@headsupresults.com","repo":"brianpabent/open-enzyme"}
+{"author":"Brian Hoang","email":"bri.hoang@gmail.com","repo":"brihoang/pokerincometracker"}
+{"author":"David D'Onofrio","email":"ddonofrio@DMD-M5-9.local","repo":"dave-renusa/gateway"}
+{"author":"David Fuller A","email":"dfuller@buk.cl","repo":"dtfuller/meeting-transcription"}
+{"author":"Dimitrios Charalampidis","email":"dimitrios@charalampidis.pro","repo":"thecodingidiot-com/.github"}
+{"author":"Erlend Synnes-Sandberg","email":"erlend.sandberg@gmail.com","repo":"erlendsandberg/essconsulting"}
+{"author":"Francisco","email":"fran@MacBook-Pro-de-Francisco.local","repo":"SWLConsultingIT/SWLCRMAPP"}
+{"author":"Giacomo Genna","email":"giacomo@MacBook-Pro-de-Giacomo.local","repo":"GiacomoGenna/giacomo-board"}
+{"author":"Hadi Shokeir","email":"hadishokeir@gmail.com","repo":"hadi-shokeir/arabic-enthusiast-students"}
+{"author":"HansBug","email":"hansbug@buaa.edu.cn","repo":"HansBug/arxiv-paper-layout-dataset"}
+{"author":"Henry","email":"henry@nucbox","repo":"henryrocks7800/hermes-agent-ui-v1.0"}
+{"author":"Isha vijay`","email":"ishavijay@Ishas-MacBook-Air.local","repo":"harshit2624/autoaijarvis1"}
+{"author":"James Floyd","email":"jamesfloydbiz@gmail.com","repo":"jamesfloydbiz/jamesworld"}
+{"author":"Keenway","email":"info@gokeenway.com","repo":"Keenwayllc/qalt-quote-widget"}
+{"author":"Komiljon Maksudov","email":"maksudov@viadukt.de","repo":"milimyname/taijobi"}
+{"author":"Kyungsuk Lee","email":"havenothing2say@gmail.com","repo":"illegaluser/airgap-test-toolchain"}
+{"author":"Leo Gallego","email":"993814+leogallego@users.noreply.github.com","repo":"leogallego/ee-preflight"}
+{"author":"Leonardo Gallego","email":"993814+leogallego@users.noreply.github.com","repo":"leogallego/ee-preflight"}
+{"author":"Louis Beaumont","email":"louis.beaumont@gmail.com","repo":"screenpipe/screenpipe"}
+{"author":"Man-BAL","email":"manon.ballester@lesemulsionneurs.fr","repo":"LabAixBidouille/wikilab"}
+{"author":"Manuel Corcos","email":"manucorcos@gmail.com","repo":"mcorcos/landing"}
+{"author":"Marcel Roozekrans","email":"marcel@roozekrans.nl","repo":"ZeroAlloc-Net/ZeroAlloc.Outbox"}
+{"author":"Marshall Powell","email":"mpowell@gensco.com","repo":"powellm4/actorsaccess"}
+{"author":"MarvinNL046","email":"marvinsmit1988@gmail.com","repo":"MarvinNL046/Skilllinkup"}
+{"author":"Matthias Bender","email":"matthias@MacBookPro.fritz.box","repo":"matthias1309/project_buddy"}
+{"author":"Milen Kouylekov","email":"kouylekov@gmail.com","repo":"kouylekov/nixos"}
+{"author":"Mumblemanatee","email":"96999980+Mumblemanatee@users.noreply.github.com","repo":"sgraal-ai/core"}
+{"author":"Peterson souza da costa","email":"Peter.costa@outlook.com","repo":"PeterSCosta/UNIVALI_aula"}
+{"author":"Pietro Pugliesi","email":"pietropugliesi@icloud.com","repo":"pietro1704/Epub-to-Mp3"}
+{"author":"Samy Abboute","email":"samyabboute5@gmail.com","repo":"samyabboute/docline"}
+{"author":"Sandeep Sharma","email":"gosandeepsharma@gmail.com","repo":"gosandeepsharma/Alfred-v1"}
+{"author":"Tarmo Saranen","email":"tarmo.saranen@gmail.com","repo":"Finrandojin/alexandria-audiobook"}
+{"author":"Todd Tanner","email":"todd@spawndev.com","repo":"LostBeard/SpawnDev.WebTorrent"}
+{"author":"Toly","email":"1397674+AnatolyRugalev@users.noreply.github.com","repo":"nubo-db/dynoxide"}
+{"author":"TosyneDev","email":"ogunlowooluwatosin28@gmail.com","repo":"TosyneDev/bitelyze"}
+{"author":"alexlarinalt2-cyber","email":"alarin0923@gmail.com","repo":"alexlarinalt2-cyber/zombiebreakout"}
+{"author":"barborabadia","email":"barborabadia@gmail.com","repo":"barborabadia/fitbook"}
+{"author":"gcifuentes","email":"gcifuentes@rvcuatro.com","repo":"GabrielCifuentes26/rv4"}
+{"author":"jerem","email":"jerem.gt@proton.me","repo":"jerem-gt/cash-ctrl"}
+{"author":"john-prodigypromos","email":"john.prodigypromos@gmail.com","repo":"john-prodigypromos/Prodigy-Blaster"}
+{"author":"nickgreenquist","email":"nickgreenquist@gmail.com","repo":"nickgreenquist/Game-Recommender-System-PyTorch-TwoTower-Model"}
+{"author":"pitrus42-create","email":"pitrus42@gmail.com","repo":"pitrus42-create/serwispro"}
+{"author":"pypoulin-git","email":"py.poulin@gmail.com","repo":"pypoulin-git/ciel-natal"}
+{"author":"semblable","email":"kamil.u.1998@gmail.com","repo":"semblable/Lingua_read2"}
+{"author":"smallpaul60","email":"issielou8@protonmail.com","repo":"smallpaul60/noblemind-study"}
+{"author":"thepradip","email":"thepradip@users.noreply.github.com","repo":"thepradip/HarnessAgent"}
+{"author":"thomascortebeeck-kidsnovel","email":"thomas.cortebeeck@kids-novel.com","repo":"thomascortebeeck-kidsnovel/trader"}
+{"author":"vd1","email":"vincent@mangrove.exchange","repo":"vd1/heated-debate"}
+{"author":"zombielabsv2","email":"jindal.rahul@gmail.com","repo":"zombielabsv2/lotus-lane"}
+
+===== Pull Claude-trailer commits, page 2 =====
+{"author":"Alexandru Calcan","email":"Alex.Calcan@alcagrup.local","repo":"alexcalcan/sancris_android"}
+{"author":"Amit Jakubowicz","email":"amit@Amits-MacBook-Pro.local","repo":"acequianueva/water-ticket-platform"}
+{"author":"Beryndil","email":"beryndil@users.noreply.github.com","repo":"beryndil/Bearings"}
+{"author":"Chad Bercea","email":"chadbercea@gmail.com","repo":"chadbercea/human-agent-system-design-blog"}
+{"author":"Chika","email":"cumeadi@gmail.com","repo":"cumeadi/fartcoin-alpha"}
+{"author":"Claude Code","email":"claude-code@anthropic.local","repo":"jun564/jwcore-review"}
+{"author":"Cristian Cedacero","email":"44513825+ccedacero@users.noreply.github.com","repo":"ccedacero/nyc-property-intel"}
+{"author":"David Pulis","email":"AIandWEBservices@gmail.com","repo":"aiandwebservices-cyber/aiandwebservices-next"}
+{"author":"Denis Saparbek","email":"founder.den@gmail.com","repo":"founder-den/One-Percent-Better-App"}
+{"author":"ElSpaniard97","email":"ezekielcorrea2016@gmail.com","repo":"ElSpaniard97/hermes-mission-control"}
+{"author":"Fortuné","email":"fortunedev@gmail.com","repo":"mastajigga/sakata-vault"}
+{"author":"FrancescoCiulla","email":"francescociullaroma@outlook.com","repo":"FrancescoCiulla/NLWeb"}
+{"author":"Guy Yogev","email":"guyy67@gmail.com","repo":"guy-yo/ndtm-visualizer"}
+{"author":"JaeHwan Kim","email":"cbkjh02252@gmail.com","repo":"Jaeboong/rts"}
+{"author":"Jason Scott","email":"jason.scott.sf@gmail.com","repo":"JasonScottSF/npm-traffic-dashboard"}
+{"author":"John Knopf","email":"johnknopf5@gmail.com","repo":"johnkf5-ops/Atelier"}
+{"author":"Juan Aguilar Guisado","email":"juaggu@gmail.com","repo":"4gentic/obelus"}
+{"author":"Lasaro","email":"lasaro@weilliptic.com","repo":"lasarojc/c_notes"}
+{"author":"Luis Pedro","email":"luispehb@gmail.com","repo":"luispehb/hap"}
+{"author":"Muath000","email":"Muath@MacBook-Pro-7.local","repo":"muathalismail/KFSHER"}
+{"author":"Safwen Soker","email":"safwen.soker@pyxis.com.tn","repo":"SafwenSoker/log-analysis-and-optimization"}
+{"author":"Sankalp Kumar","email":"sankalpkumar@Sankalps-MacBook-Air.local","repo":"snklpp/capstone"}
+{"author":"SethRobertsonq","email":"mvortizraris@outlook.com","repo":"SethRobertsonq/stagewise"}
+{"author":"SoapyRED","email":"soapyred@users.noreply.github.com","repo":"SoapyRED/n8n-nodes-freightutils"}
+{"author":"William GM1989","email":"will.sz.ana@hotmail.com","repo":"WilliamGM1989/financeiro-familiar"}
+{"author":"Willis75","email":"wumniam@gmail.com","repo":"Willis75/vi-metallum-infra"}
+{"author":"YerlanGit","email":"ken.erlan04@gmail.com","repo":"YerlanGit/Investment-advisor"}
+{"author":"Your Name","email":"your.email@example.com","repo":"krander/2026-portfolio"}
+{"author":"[Ali Sulas Hidayat]","email":"[ahid0009@student.monash.edu]","repo":"alisulas/my-thesis-on-Deep-Learning"}
+{"author":"ashik","email":"ashikagumbe@gmail.com","repo":"ashiknm/nenpu"}
+{"author":"fabianoomura","email":"130321706+fabianoomura@users.noreply.github.com","repo":"fabianoomura/MCP-Server-Totvs-Moda"}
+{"author":"hansmeldgaard","email":"hans@meldgaard.net","repo":"hansmeldgaard/MonCTL"}
+{"author":"hovhanneshovhannisyan","email":"hovhanneshovhannisyan@cloud.upwork.com","repo":"nes0v/LogSlate"}
+{"author":"huizongsong","email":"huizongsong@outlook.com","repo":"huizongsong/deepchat"}
+{"author":"hyunjin","email":"guswls3028@naver.com","repo":"guswls3028-art/academy-frontend"}
+{"author":"kidow","email":"wcgo2ling@gmail.com","repo":"kidow/skills"}
+{"author":"luliguyu","email":"DelacruzDawn1338@outlook.com","repo":"luliguyu/cmbd-book"}
+{"author":"magalisolle","email":"magalisolle92@gmail.com","repo":"magalisolle/Portfolio"}
+{"author":"osanchezh6661","email":"osanchez.ehidalgo@gmail.com","repo":"osanchezh6661/av2r"}
+{"author":"xzawed","email":"47019855+xzawed@users.noreply.github.com","repo":"xzawed/ArcanaInsight"}
+{"author":"yana","email":"yana.tarasova@paytm.com","repo":"ytarasova/ark"}
+{"author":"숙녀","email":"sugnyeo@sugnyeoui-MacBookAir.local","repo":"doolysim7-web/afm-2th-weekday"}
+
+===== Pull Claude-trailer commits, page 3 =====
+{"author":"Aaron Pomeranz","email":"aaron.pomeranz@maine.edu","repo":"Apomera/AlloFlow"}
+{"author":"Alexandru Calcan","email":"Alex.Calcan@alcagrup.local","repo":"alexcalcan/sancris_android"}
+{"author":"Amit Jakubowicz","email":"amit@Amits-MacBook-Pro.local","repo":"acequianueva/water-ticket-platform"}
+{"author":"Beryndil","email":"beryndil@users.noreply.github.com","repo":"beryndil/Bearings"}
+{"author":"Chad Bercea","email":"chadbercea@gmail.com","repo":"chadbercea/human-agent-system-design-blog"}
+{"author":"Claude Code","email":"claude-code@anthropic.local","repo":"jun564/jwcore-review"}
+{"author":"Cristian Cedacero","email":"44513825+ccedacero@users.noreply.github.com","repo":"ccedacero/nyc-property-intel"}
+{"author":"David Pulis","email":"AIandWEBservices@gmail.com","repo":"aiandwebservices-cyber/aiandwebservices-next"}
+{"author":"Denis Saparbek","email":"founder.den@gmail.com","repo":"founder-den/One-Percent-Better-App"}
+{"author":"ElSpaniard97","email":"ezekielcorrea2016@gmail.com","repo":"ElSpaniard97/hermes-mission-control"}
+{"author":"Fortuné","email":"fortunedev@gmail.com","repo":"mastajigga/sakata-vault"}
+{"author":"FrancescoCiulla","email":"francescociullaroma@outlook.com","repo":"FrancescoCiulla/NLWeb"}
+{"author":"Guy Yogev","email":"guyy67@gmail.com","repo":"guy-yo/ndtm-visualizer"}
+{"author":"JaeHwan Kim","email":"cbkjh02252@gmail.com","repo":"Jaeboong/rts"}
+{"author":"Jason Scott","email":"jason.scott.sf@gmail.com","repo":"JasonScottSF/npm-traffic-dashboard"}
+{"author":"John Knopf","email":"johnknopf5@gmail.com","repo":"johnkf5-ops/Atelier"}
+{"author":"Juan Aguilar Guisado","email":"juaggu@gmail.com","repo":"4gentic/obelus"}
+{"author":"Lasaro","email":"lasaro@weilliptic.com","repo":"lasarojc/c_notes"}
+{"author":"Luis Pedro","email":"luispehb@gmail.com","repo":"luispehb/hap"}
+{"author":"Muath000","email":"Muath@MacBook-Pro-7.local","repo":"muathalismail/KFSHER"}
+{"author":"Safwen Soker","email":"safwen.soker@pyxis.com.tn","repo":"SafwenSoker/log-analysis-and-optimization"}
+{"author":"Sankalp Kumar","email":"sankalpkumar@Sankalps-MacBook-Air.local","repo":"snklpp/capstone"}
+{"author":"SethRobertsonq","email":"mvortizraris@outlook.com","repo":"SethRobertsonq/stagewise"}
+{"author":"SoapyRED","email":"soapyred@users.noreply.github.com","repo":"SoapyRED/n8n-nodes-freightutils"}
+{"author":"William GM1989","email":"will.sz.ana@hotmail.com","repo":"WilliamGM1989/financeiro-familiar"}
+{"author":"Willis75","email":"wumniam@gmail.com","repo":"Willis75/vi-metallum-infra"}
+{"author":"YerlanGit","email":"ken.erlan04@gmail.com","repo":"YerlanGit/Investment-advisor"}
+{"author":"Your Name","email":"your.email@example.com","repo":"krander/2026-portfolio"}
+{"author":"ashik","email":"ashikagumbe@gmail.com","repo":"ashiknm/nenpu"}
+{"author":"daichilata","email":"jbsn91909@outlook.com","repo":"daichilata/hammer"}
+{"author":"fabianoomura","email":"130321706+fabianoomura@users.noreply.github.com","repo":"fabianoomura/MCP-Server-Totvs-Moda"}
+{"author":"gloomdev","email":"gloomdev@users.noreply.github.com","repo":"thegloomyr/Gloomyr"}
+{"author":"hansmeldgaard","email":"hans@meldgaard.net","repo":"hansmeldgaard/MonCTL"}
+{"author":"hovhanneshovhannisyan","email":"hovhanneshovhannisyan@cloud.upwork.com","repo":"nes0v/LogSlate"}
+{"author":"huizongsong","email":"huizongsong@outlook.com","repo":"huizongsong/deepchat"}
+{"author":"hyunjin","email":"guswls3028@naver.com","repo":"guswls3028-art/academy-frontend"}
+{"author":"kidow","email":"wcgo2ling@gmail.com","repo":"kidow/skills"}
+{"author":"luliguyu","email":"DelacruzDawn1338@outlook.com","repo":"luliguyu/cmbd-book"}
+{"author":"osanchezh6661","email":"osanchez.ehidalgo@gmail.com","repo":"osanchezh6661/av2r"}
+{"author":"xzawed","email":"47019855+xzawed@users.noreply.github.com","repo":"xzawed/ArcanaInsight"}
+{"author":"yana","email":"yana.tarasova@paytm.com","repo":"ytarasova/ark"}
+{"author":"숙녀","email":"sugnyeo@sugnyeoui-MacBookAir.local","repo":"doolysim7-web/afm-2th-weekday"}
+
+===== Pull Claude-trailer commits, page 4 =====
+{"author":"Aaron Pomeranz","email":"aaron.pomeranz@maine.edu","repo":"Apomera/AlloFlow"}
+{"author":"Alexandru Calcan","email":"Alex.Calcan@alcagrup.local","repo":"alexcalcan/sancris_android"}
+{"author":"Andrew Popovych","email":"512800+shellguard@users.noreply.github.com","repo":"shellguard/homebrew-tap"}
+{"author":"Chika","email":"cumeadi@gmail.com","repo":"cumeadi/fartcoin-alpha"}
+{"author":"Claude Code","email":"claude-code@anthropic.local","repo":"jun564/jwcore-review"}
+{"author":"Cristian Cedacero","email":"44513825+ccedacero@users.noreply.github.com","repo":"ccedacero/nyc-property-intel"}
+{"author":"Crosby Styles","email":"crosbystyles@MacBook-Pro.local","repo":"CEstilos/skillpathIQ"}
+{"author":"David Pulis","email":"AIandWEBservices@gmail.com","repo":"aiandwebservices-cyber/aiandwebservices-next"}
+{"author":"ElSpaniard97","email":"ezekielcorrea2016@gmail.com","repo":"ElSpaniard97/hermes-mission-control"}
+{"author":"EmGi","email":"martingebhardt61@gmail.com","repo":"EmGi96/TrailPrint3D_web"}
+{"author":"Friday","email":"friday@nervestaple-friday.github.com","repo":"nervestaple-friday/nyc-restaurants"}
+{"author":"Jason Scott","email":"jason.scott.sf@gmail.com","repo":"JasonScottSF/npm-traffic-dashboard"}
+{"author":"Jayy4rl","email":"onyinwajei@gmail.com","repo":"OlaGreat/NovaSupport"}
+{"author":"Jessica Mayumi","email":"jessica.mayumi@cgptech.com.br","repo":"JessicaMayumi/portfolio"}
+{"author":"John Knopf","email":"johnknopf5@gmail.com","repo":"johnkf5-ops/Atelier"}
+{"author":"Lewis","email":"priorlewis43@gmail.com","repo":"lprior-repo/gastown-feeder"}
+{"author":"Martin Couderc","email":"martin@sabaisystem.com","repo":"sabaisystem/villa-sabaijai-content"}
+{"author":"Mehmet Acar","email":"mehmetacar683@gmail.com","repo":"macaris64/build-with-opus"}
+{"author":"Muath000","email":"Muath@MacBook-Pro-7.local","repo":"muathalismail/KFSHER"}
+{"author":"NeuralIO444","email":"3093834+NeuralIO444@users.noreply.github.com","repo":"NeuralIO444/Dimension"}
+{"author":"Nick","email":"nickrpollack@gmail.com","repo":"BeardedBats/Pitcher-Dashboard"}
+{"author":"Roman Kharitonov","email":"rkharito@yandex.ru","repo":"refaim/snapjaw"}
+{"author":"Safwen Soker","email":"safwen.soker@pyxis.com.tn","repo":"SafwenSoker/log-analysis-and-optimization"}
+{"author":"Sanghyuk Jung","email":"benelog@gmail.com","repo":"benelog/presentations"}
+{"author":"TakujiNakada","email":"54903866+TakujiNakada@users.noreply.github.com","repo":"iloc-inc/renovate-config"}
+{"author":"Timur Taşdoğan","email":"timoel@Timurs-MacBook-Pro.local","repo":"timurael/alche_app"}
+{"author":"ToothMC","email":"michael@mmhammer.org","repo":"ToothMC/home4u-app"}
+{"author":"Willis75","email":"wumniam@gmail.com","repo":"Willis75/vi-metallum-infra"}
+{"author":"YerlanGit","email":"ken.erlan04@gmail.com","repo":"YerlanGit/Investment-advisor"}
+{"author":"Your Name","email":"your.email@example.com","repo":"krander/2026-portfolio"}
+{"author":"[Ali Sulas Hidayat]","email":"[ahid0009@student.monash.edu]","repo":"alisulas/my-thesis-on-Deep-Learning"}
+{"author":"ashik","email":"ashikagumbe@gmail.com","repo":"ashiknm/nenpu"}
+{"author":"hyunjin","email":"guswls3028@naver.com","repo":"guswls3028-art/academy-frontend"}
+{"author":"ibrahim-00223","email":"ibrahim.kante.pro@gmail.com","repo":"ibrahim-00223/mirakle-gtm-app"}
+{"author":"joshjay11","email":"wigginsjason40@gmail.com","repo":"Joshjay11/bub-youtube-site"}
+{"author":"kidow","email":"wcgo2ling@gmail.com","repo":"kidow/skills"}
+{"author":"magalisolle","email":"magalisolle92@gmail.com","repo":"magalisolle/Portfolio"}
+{"author":"palgabor94","email":"palgabor94@gmail.com","repo":"palgabor94/lullabook"}
+{"author":"rm-info","email":"contact@rm-info.fr","repo":"rm-info/synth-app"}
+{"author":"thomasjvidal","email":"seu-email@exemplo.com","repo":"thomasjvidal/JosephPay"}
+{"author":"tokyandria001","email":"toky.andrianjafy2001@gmail.com","repo":"tokyandria001/TalariaV2"}
+{"author":"weerasuriyas","email":"26372663+weerasuriyas@users.noreply.github.com","repo":"weerasuriyas/northern_blue"}
+{"author":"숙녀","email":"sugnyeo@sugnyeoui-MacBookAir.local","repo":"doolysim7-web/afm-2th-weekday"}
+
+===== Pull Claude-trailer commits, page 5 =====
+{"author":"Aaron Pomeranz","email":"aaron.pomeranz@maine.edu","repo":"Apomera/AlloFlow"}
+{"author":"Agency Group","email":"geral@agencygroup.pt","repo":"cfeiteira73-cmd/agency-group-platform"}
+{"author":"Alexandre Pineau Poupelin","email":"alexandrepineaupoupelin@Host-003.lan","repo":"Alexandre-Pineau-Poupelin/reservation-tsm"}
+{"author":"Amit Jakubowicz","email":"amit@Amits-MacBook-Pro.local","repo":"acequianueva/water-ticket-platform"}
+{"author":"Anatolii Anishchenko","email":"tolik.ttaaa@gmail.com","repo":"tolikttaaa/GridKit"}
+{"author":"Anouar massioui","email":"anouarmassioui@Anouars-MacBook-Air.local","repo":"cirobay111/drivenow"}
+{"author":"BenjaminSisk","email":"siskb@purdue.edu","repo":"Purdue-Solar/artermis26-startup-board"}
+{"author":"Beryndil","email":"beryndil@users.noreply.github.com","repo":"beryndil/Bearings"}
+{"author":"Biagio Distefano","email":"biagio@biagiodistefano.io","repo":"letsrevel/revel-backend"}
+{"author":"Chad","email":"chad@example.com","repo":"thesameoldthing88/echo"}
+{"author":"Chad Bercea","email":"chadbercea@gmail.com","repo":"chadbercea/human-agent-system-design-blog"}
+{"author":"Chika","email":"cumeadi@gmail.com","repo":"cumeadi/fartcoin-alpha"}
+{"author":"Chintan Shelat","email":"cdshelat@gmail.com","repo":"chintan-dshel/lyceum"}
+{"author":"Claude Code","email":"claude-code@anthropic.local","repo":"jun564/jwcore-review"}
+{"author":"Cristian Cedacero","email":"44513825+ccedacero@users.noreply.github.com","repo":"ccedacero/nyc-property-intel"}
+{"author":"Crosby Styles","email":"crosbystyles@MacBook-Pro.local","repo":"CEstilos/skillpathIQ"}
+{"author":"Daniel","email":"danielhustler.hacker@gmail.com","repo":"danielstriver/simba-2"}
+{"author":"Jacob Morgan","email":"jtuba05@gmail.com","repo":"devclef/slackwatch"}
+{"author":"John Knopf","email":"johnknopf5@gmail.com","repo":"johnkf5-ops/Atelier"}
+{"author":"Joris Portegies Zwart","email":"joris.portegies.zwart@ximedes.com","repo":"jorispz/whatson"}
+{"author":"KawOwl","email":"kawowl@KawOwls-MacBook-Pro.local","repo":"KawOwl/IVNEditor"}
+{"author":"Maksim Korinets","email":"mkorinets@gmail.com","repo":"yentsun/photo-quest"}
+{"author":"Manuel Bruña","email":"manu@incubit.com.ar","repo":"tecnomanu/control-cursor-with-hand"}
+{"author":"Martin Couderc","email":"martin@sabaisystem.com","repo":"sabaisystem/villa-sabaijai-content"}
+{"author":"Mehmet Acar","email":"mehmetacar683@gmail.com","repo":"macaris64/build-with-opus"}
+{"author":"Mirza Sarıbıyık","email":"mrzsrbyk06@gmail.com","repo":"mirza-dev/erp2"}
+{"author":"Morris Witthein","email":"morris.witthein@hansemerkur.de","repo":"MorrisWitthein/nousdeux"}
+{"author":"NeuralIO444","email":"3093834+NeuralIO444@users.noreply.github.com","repo":"NeuralIO444/Dimension"}
+{"author":"Nick","email":"nickrpollack@gmail.com","repo":"BeardedBats/Pitcher-Dashboard"}
+{"author":"Patrick","email":"patrick@megabrain.local","repo":"piterclark/lp-biasong"}
+{"author":"Peter Kang","email":"peter.kang@barrelny.com","repo":"peterkang34/holdco-tycoon"}
+{"author":"Simon Strandgaard","email":"neoneye@gmail.com","repo":"PlanExeOrg/PlanExe"}
+{"author":"SoapyRED","email":"soapyred@users.noreply.github.com","repo":"SoapyRED/n8n-nodes-freightutils"}
+{"author":"Timur Taşdoğan","email":"timoel@Timurs-MacBook-Pro.local","repo":"timurael/alche_app"}
+{"author":"Willis75","email":"wumniam@gmail.com","repo":"Willis75/vi-metallum-infra"}
+{"author":"YerlanGit","email":"ken.erlan04@gmail.com","repo":"YerlanGit/Investment-advisor"}
+{"author":"bp-high","email":"bhavishpahwa@gmail.com","repo":"bp-high/openenv_financial_task_env"}
+{"author":"feedeterra","email":"ffedericoterrazas@gmail.com","repo":"feedeterra/app-mascotas"}
+{"author":"hyunjin","email":"guswls3028@naver.com","repo":"guswls3028-art/academy-frontend"}
+{"author":"ibrahim-00223","email":"ibrahim.kante.pro@gmail.com","repo":"ibrahim-00223/mirakle-gtm-app"}
+{"author":"jackieclawhorn","email":"jackieclawhorn@proton.me","repo":"monkbuddy62/openhouse-finder"}
+{"author":"jevalrepo","email":"valdezgzz.22@gmail.com","repo":"jevalrepo/app-qrbarcode"}
+{"author":"joshjay11","email":"wigginsjason40@gmail.com","repo":"Joshjay11/bub-youtube-site"}
+{"author":"kidow","email":"wcgo2ling@gmail.com","repo":"kidow/skills"}
+{"author":"musastack","email":"musastack@users.noreply.github.com","repo":"musastack/quantyx-advisory"}
+{"author":"programacionmsb","email":"programacion.msb@gmail.com","repo":"programacionmsb/ubicat"}
+{"author":"thomasjvidal","email":"seu-email@exemplo.com","repo":"thomasjvidal/JosephPay"}
+{"author":"tokyandria001","email":"toky.andrianjafy2001@gmail.com","repo":"tokyandria001/TalariaV2"}
+{"author":"unknown","email":"chrihazakaria@email.com","repo":"Zakariae-Chriha/FlixCoach"}
+{"author":"xzawed","email":"47019855+xzawed@users.noreply.github.com","repo":"xzawed/ArcanaInsight"}
+{"author":"zerevor-hue","email":"zerevor@nate.com","repo":"zerevor-hue/Test"}
+{"author":"“axcc-hsad”","email":"“axcc@hsad.co.kr”","repo":"axcc-hsad/dash-photo-studio"}
+
+===== DONE =====

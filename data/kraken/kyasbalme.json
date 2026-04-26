@@ -1,0 +1,127 @@
+{
+  "summary": "1 persons, 1 emails, 0 corporate domains, 0 academic — from seed 'kyasbalme' depth 2, 1 users, 4 repos, 1 GQL pts, 1.3s",
+  "seed": "kyasbalme",
+  "depth": 2,
+  "stats": {
+    "users_visited": 1,
+    "repos_scanned": 4,
+    "identities": 1,
+    "unique_persons": 1,
+    "corporate_domains": 0,
+    "academic_domains": 0,
+    "graphql_points": 1,
+    "clones": 0,
+    "duration_secs": 1.304888124
+  },
+  "persons": [
+    {
+      "name": "kyasbalme",
+      "github_logins": [
+        "kyasbalme"
+      ],
+      "emails": [
+        {
+          "email": "bensonjennifer6145@outlook.com",
+          "names": [
+            "kyasbalme"
+          ],
+          "domain": "outlook.com",
+          "domain_kind": "personal",
+          "repos": [
+            "kyasbalme/Scrapbox",
+            "kyasbalme/ojosama",
+            "kyasbalme/robokssay"
+          ],
+          "commits": 514
+        }
+      ],
+      "affiliations": [],
+      "total_commits": 514,
+      "repos": [
+        "kyasbalme/Scrapbox",
+        "kyasbalme/ojosama",
+        "kyasbalme/robokssay"
+      ],
+      "orgs": [],
+      "depth": 0,
+      "profile": {
+        "bio": "CS & Philosophy @ Columbia\r\n",
+        "location": "NYC & Tokyo",
+        "website": "http://blu3mo.com/",
+        "followers": 0
+      },
+      "timezone": {
+        "utc_offset": 3,
+        "confidence": 0.3657587548638132,
+        "region": "Moscow / East Africa",
+        "hour_histogram": [
+          11,
+          9,
+          10,
+          9,
+          8,
+          9,
+          15,
+          12,
+          12,
+          9,
+          12,
+          13,
+          11,
+          10,
+          6,
+          12,
+          14,
+          13,
+          9,
+          9,
+          11,
+          9,
+          14,
+          10
+        ]
+      },
+      "work_pattern": {
+        "weekday_ratio": 0.7198443579766537,
+        "peak_day": 2,
+        "pattern": "mixed"
+      },
+      "centrality": {
+        "betweenness": 0.0,
+        "degree": 0,
+        "weighted_degree": 0.0
+      },
+      "languages": [
+        "C++",
+        "Kotlin",
+        "Python"
+      ],
+      "fingerprint": {
+        "language_entropy": 1.584962500721156,
+        "repo_size_gini": 0.6481006160164271,
+        "star_concentration": 0.0,
+        "rhythm_period": 13.0,
+        "rhythm_strength": 0.17737935663225018,
+        "weekday_ratio": 0.7198443579766537,
+        "tz_offset": 3.0,
+        "explore_build_ratio": 0.005836575875486381,
+        "burst_rate": 0.0,
+        "career_hops": 0,
+        "vector": [
+          1.584962500721156,
+          0.6481006160164271,
+          0.0,
+          0.43333333333333335,
+          0.17737935663225018,
+          0.7198443579766537,
+          0.625,
+          0.005836575875486381,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ],
+  "collaborations": [],
+  "domains": {}
+}

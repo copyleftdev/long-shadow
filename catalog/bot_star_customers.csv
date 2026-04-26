@@ -1,0 +1,25 @@
+customer_repo,stars,forks,created_at,homepage,real_or_farm,bots_starred_by_count_of_6,description_excerpt,evidence_file
+[ANONYMIZED · Customer A · pending disclosure],8780,909,2025-09-19T08:46:01Z,[redacted],real (major Chinese AI co),4,Enterprise-grade agentic workflow platform — name withheld pending direct disclosure to vendor,data/enumeration/star_net_tier2.txt
+[ANONYMIZED · Customer B · pending disclosure],5681,587,2025-04-24T11:24:11Z,[redacted],real (Chinese AI portal),5,Open-source AI portal — name withheld pending direct disclosure,data/enumeration/star_net_tier2.txt
+Galaxy-Dawn/claude-scholar,3446,321,2026-01-27T10:32:17Z,,real-or-farm-ambiguous,3+,"Semi-automated research assistant for academic research and software development",data/enumeration/bot_expansion.txt
+[ANONYMIZED · Customer C · pending disclosure],3534,170,2025-08-15T16:40:53Z,[redacted on GitHub Pages],real (US-domain AI memory product),5,Universal memory layer for AI Agents — name withheld pending direct disclosure,data/enumeration/star_net_tier2.txt
+EvoScientist/EvoScientist,2590,167,2026-01-26T11:19:26Z,https://EvoScientist.ai/,real-or-farm-ambiguous,3+,"Harness Vibe Research with Self-evolving AI Scientists",data/enumeration/star_net_tier2.txt
+Soul-AILab/SoulX-LiveAct,1209,106,2026-03-12T09:24:27Z,,real (EACL'26 paper code),1+,"Official inference code for SoulX-LiveAct: Real-Time Human Animation",data/enumeration/star_net_tier2.txt
+[ANONYMIZED · Customer D · pending disclosure],1049,150,2025-12-15T07:39:51Z,[redacted],real (Java AI platform),4,Enterprise Java AI app dev platform — name withheld pending direct disclosure,data/enumeration/star_net_tier2.txt
+wangziqi06/724-office,1047,167,2026-03-17T05:56:13Z,,vibe-AI-product,1+,"7/24 Office Self-evolving AI Agent system 36 tools 10000 lines pure Python",data/enumeration/bot_expansion.txt
+DaRL-GenAI/instructional_agents,725,147,2025-10-06T18:34:18Z,,real (EACL'26 paper fork),2+,"Instructional Agents reducing Teaching Faculty Workload",data/enumeration/star_net_tier2.txt
+zevorn/rt-claw,693,unknown,2026-03-11T15:59:36Z,,vibe-AI-product,1+,"Making AI Assistants Cheap Again",data/enumeration/farm_b_c.txt (luliguyu watched)
+openvort/openvort,543,83,2026-03-02T03:01:29Z,,vibe-AI-product,1+,"Open-source AI Employee Platform",data/enumeration/bot_expansion.txt
+tuya/tuya-openclaw-skills,584,unknown,2026-03-12T11:13:18Z,,real (Tuya major Chinese IoT/AI co),1+,"Tuya AI Skill Library for OpenClaw/TuyaClaw",data/enumeration/farm_b_c.txt (luliguyu watched)
+MarilynClarke/Hyperliquid-Copy-Trading-Bot,415,294,2022-06-03T06:33:30Z,,crypto-grift,2+,"Hyperliquid Copy Trading Bot",data/enumeration/star_net_tier2.txt
+tusmart-grouptt/crewrktabletsn,403,302,2022-03-18T04:40:40Z,,FARM (Operator A),4,"(no description)",data/enumeration/deep_dive.txt
+zhoushisheng001b/Aziiizx,383,282,2022-04-18T01:57:51Z,,FARM,2+,"motion detection and lock & unlock door via telegram bot",data/enumeration/bot_expansion.txt
+lenhyluo/xianmin,379,303,2023-05-26T04:41:38Z,,FARM-or-real-fork,2+,"Xianmin's personal web-site generated using ox-hugo + Hugo",data/enumeration/bot_expansion.txt
+mzbankl/ghaerrb,375,317,2022-03-15T04:19:34Z,,FARM (Nano-X laundered),1+,"The Nano-X Window System",data/enumeration/bot_expansion.txt
+Brusselso/londonapa,329,250,2023-04-13T04:37:43Z,,FARM (student assignment laundered),1+,"i-am-poor-android-htian4 created by GitHub Classroom",data/enumeration/bot_expansion.txt
+countneurooman/ssaavedrad,319,254,2022-04-18T14:05:35Z,,FARM (Operator A),3,"Automatically exported from code.google.com/p/elpa-on-appengine",data/enumeration/deep_dive.txt
+PhyAgentOS/PhyAgentOS,211,35,2026-03-12T05:12:10Z,https://phy-agent-os.net/,vibe-AI-product (on GitHub Pages),1+,"PhyAgentOS self-evolving embodied AI operating system",data/enumeration/star_net_tier2.txt
+xup6jammy/AI-INVOICE-OCR-ENGINE,163,3,2025-11-27T03:46:16Z,,FARM-likely,3,"(no description)",data/enumeration/star_net_tier2.txt
+Karmacoke/chargen,151,6,2026-02-06T06:29:33Z,https://karmacoke.github.io/chargen/,vibe-AI-product,2+,"AI-powered character generator built with React for TRPG/Novel",data/enumeration/star_net_tier2.txt
+DesignOps6ix9/OpenDeepResearch,39,0,2026-02-22T20:48:36Z,,vibe-AI-product,1+,"OpenDeepResearch: 让你保持对于深度研究过程的掌控感",data/enumeration/bot_expansion.txt
+louislili/GodlikeAI,54,0,2025-11-02T02:09:13Z,,vibe-AI-product,1+,"GodlikeAI 让机器像神一样思考 (Make machines think like gods)",data/enumeration/bot_expansion.txt

@@ -1,0 +1,17 @@
+ebbb93c1be39fcd91dcdd341aa7d59cb69a48883	1775577086	1775577086	weikaih@allenai.org	Weikai Huang	Add paper badge
+b4bb16531a823c307e4bdceaece8b90e592ebeee	1775573075	1775573075	weikaih@allenai.org	Weikai Huang	Move demo video link above title
+1cca7330002ab70de58227d121b3c545d1715e73	1775572999	1775572999	weikaih@allenai.org	Weikai Huang	Add watch full demo video link under title
+fe3d7ca293aa407526d09dd455ddc9f3dcf64ed1	1775572949	1775572949	weikaih@allenai.org	Weikai Huang	Link banner SVG to demo video, remove thumbnail preview
+3c974284d7f3e9425f45d41f6b732cf213c781b9	1775572814	1775572814	weikaih@allenai.org	Weikai Huang	Move video preview above Demo section
+c26a512cf8a9267ebca27b81356b020281ff502c	1775572696	1775572696	weikaih@allenai.org	Weikai Huang	Add iPhone walkthrough video link
+cea0b3532e849224d5713602aa8b3ba6ae22dd3a	1775572644	1775572644	weikaih@allenai.org	Weikai Huang	Remove README links from Meta Quest and Robotics demos
+7c45d59fc92c6108d6207c60cd290937c2cb24c6	1775572610	1775572610	weikaih@allenai.org	Weikai Huang	Add compressed demo videos for Meta Quest and Robotics
+ebb1b7f6d07f9ce3105ff77ab8be47cef84a2252	1775572419	1775572419	weikaih@allenai.org	Weikai Huang	Replace Meta Quest and Robotics demo images with GIF clips
+5703c564da1d370c47d69be72d9690c236e2100f	1775572234	1775572234	weikaih@allenai.org	Weikai Huang	Change heart color to pink
+c83ad217f6a376049a0d5548796abb907a6903e9	1775566239	1775566239	weikaih@allenai.org	Weikai Huang	Update contents, remove dependencies_licenses.csv
+74aafeb3bb5179715e8796fa2c6a243f52e40f7f	1775564766	1775564766	weikaih@allenai.org	Weikai Huang	Add technical website badge
+612b221bdff55246a63567608babdf49a6619b12	1775564554	1775564554	weikaih@allenai.org	Weikai Huang	Add blog badge
+ab871e9960a054b83c9cad4e2de1260e971959ff	1775563352	1775563352	weikaih@allenai.org	Weikai Huang	Show both with/without intrinsics usage in inference example
+24c91432aa1d1938691b892bdb30e8cfb2aa543a	1775563257	1775563257	weikaih@allenai.org	Weikai Huang	Fix intrinsics note: default matrix, not predicted
+db2331c28b928104282ea771fba796d62b04a47d	1775563236	1775563236	weikaih@allenai.org	Weikai Huang	Fix inference examples: exemplar prompt, checkpoint name, intrinsics/depth notes
+7e36722253807983b07259e22682708965179cf1	1775563033	1775563028	weikaih@allenai.org	Weikai Huang	Initial release of WildDet3D

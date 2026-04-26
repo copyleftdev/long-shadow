@@ -1,0 +1,324 @@
+5f11ab159b8cfd7d88c45432f27705334f80ef67	1928183011	1928183011	kuqkz736@yeah.net	MargaratDavis	Bump io.mockk:mockk from 1.13.9 to 1.13.10
+5c4056379992f0bf52cb596079c7505aa6ac2685	1928093371	1928093371	kuqkz736@yeah.net	MargaratDavis	Update versions
+ea1d13ab111b6e53f32259062d6d698d85142220	1926962771	1926962771	kuqkz736@yeah.net	MargaratDavis	Update versions
+d195a7b54f857537cd4430c42f5febadf0b846c7	1926058931	1926058931	kuqkz736@yeah.net	MargaratDavis	Encapsulate ErrorState
+d004351e734abeb2afb2303a2d3cda9e1a1f198b	1925113771	1925113771	kuqkz736@yeah.net	MargaratDavis	Bump io.github.aakira:napier from 2.6.1 to 2.7.1
+a4ab9ebaf1736d7753206da8705d45c2b325c7be	1924599850	1924599850	kuqkz736@yeah.net	MargaratDavis	Bump io.mockk:mockk from 1.13.8 to 1.13.9
+8d9d09eed36e33e1f300f368d44a6ab2d2a4006c	1924452650	1924452650	kuqkz736@yeah.net	MargaratDavis	Bump com.aallam.openai:openai-client from 3.6.1 to 3.6.3
+caabd8052fea4557ef6c712fd09f1c4fe9448738	1924124490	1924124490	kuqkz736@yeah.net	MargaratDavis	Added Tome of beast sources
+e462edd2456c99ee3850c91b3a4e267c7d128134	1923254930	1923254930	kuqkz736@yeah.net	MargaratDavis	Update Versions
+049b979966eadd6b37e3221d11dd60452d426e7f	1923177210	1923177210	kuqkz736@yeah.net	MargaratDavis	Add extensions on Immutable Collections
+bd25c31947d660928507b2ae842e3ed70abd85fe	1922181890	1922181890	kuqkz736@yeah.net	MargaratDavis	Can apply aoe
+1f3e88e4712c6118a76be654ce163cf23b1d4307	1921923170	1921923170	kuqkz736@yeah.net	MargaratDavis	Add option for client to finish turn
+d02964ae5e0e7a53989ccbbdbd2e88384a64fb34	1921459290	1921459290	kuqkz736@yeah.net	MargaratDavis	Add Autoconfirm damage option
+346af48169d6ac50a7f82f5145d111581526d0d4	1921453330	1921453330	kuqkz736@yeah.net	MargaratDavis	Use CoroutineScope not CoroutineWrapper
+5e137f1d9f4f45489a572c446e38f0a91f19a8f1	1921134530	1921134530	kuqkz736@yeah.net	MargaratDavis	Use callback instead of passing MutableState
+161bb5c6483934bd1878691b775043405f77aa52	1920354250	1920354250	kuqkz736@yeah.net	MargaratDavis	Update Version
+e132d3450bd1b1f63bc193dd2e6daacf52b8657e	1920311770	1920311770	kuqkz736@yeah.net	MargaratDavis	Update Version
+14cd32ab549b0201ceee8f7e1ca23ab4f9afd20a	1920062370	1920062370	kuqkz736@yeah.net	MargaratDavis	Fix multiple handling of key event
+1894e9671aef7de7ae1acefd586c24e1aadd503b	1918782850	1918782850	kuqkz736@yeah.net	MargaratDavis	Allow enter on error dialog
+e76f5cc61afad8a0573853f9069cef801aeba3ac	1917626530	1917626530	kuqkz736@yeah.net	MargaratDavis	Add Dialog for processing recording
+141b7832c72eff1c8bb21d37ab4f9063665f2539	1917219010	1917219010	kuqkz736@yeah.net	MargaratDavis	Handle Exceptions better for Transcriptions
+c448f6bddaca423b6df004330c7bc1022acd20c2	1916386730	1916386730	kuqkz736@yeah.net	MargaratDavis	Use SupervisorJob for CoroutineScope in Compose
+11ddc239c808591de5dcf150c668f0727d42edf5	1915745410	1915745410	kuqkz736@yeah.net	MargaratDavis	Add Extension functions for Result
+07c6aa8a26363ac535895a8b9ef7634f7bf97a7c	1914939050	1914939050	kuqkz736@yeah.net	MargaratDavis	Fix Bestiary Deserialization
+e814abead4033f831ecd2ae7733dd62819260b94	1913943090	1913943090	kuqkz736@yeah.net	MargaratDavis	Add ShortcutManager to allow for Shortcuts app-wide on desktop
+7e5dcf7948149aa7eef1a7ab8664a4a4b27e3585	1913868890	1913868890	kuqkz736@yeah.net	MargaratDavis	Add DefaultFocussed
+02d1fe808bb45bd125e6e8e961299d72e26daa08	1912990810	1912990810	kuqkz736@yeah.net	MargaratDavis	Improve logging
+b1a9fd2a5b37c81f4424cac3c1283089ff510b16	1912821930	1912821930	kuqkz736@yeah.net	MargaratDavis	Change to CamelCase in Version catalog
+86257be3aecc0ee53a2bdc8bcc70e88f59329d0a	1912565370	1912565370	kuqkz736@yeah.net	MargaratDavis	Suppress unnecessary warning
+41bdabf5625c3384a32e6b148612ab6ffd19da95	1912434210	1912434210	kuqkz736@yeah.net	MargaratDavis	Improve log output
+a7cab0064e1a7c8bd5ca548f0f41dfa4798a2e66	1912191690	1912191690	kuqkz736@yeah.net	MargaratDavis	Add confirm damage with number keys
+d5cbbf7305901f1ad5c4a3a45df5cbe8267eef02	1911111810	1911111810	kuqkz736@yeah.net	MargaratDavis	Slowly fade out unnecessary GeneralDialog
+bfb2e8c0b846660130d3ddd65f0417c546317772	1910438930	1910438930	kuqkz736@yeah.net	MargaratDavis	Submit damage dialog with enter
+0abb8936c56d5bf69dd29d1646ccfae2718b82c3	1909629850	1909629850	kuqkz736@yeah.net	MargaratDavis	Update versions
+66f861489eb858f13b6be1a2f7eb863bc397e34c	1908733690	1908733690	kuqkz736@yeah.net	MargaratDavis	Bump com.aallam.openai:openai-client from 3.6.0 to 3.6.1
+906629db3dbfe7db56f207c604a65a6bfd0e2762	1908332730	1908332730	kuqkz736@yeah.net	MargaratDavis	Update Contributing
+41c8be2e76edb2e4b3c94bd66a898c8f48e949c9	1907799290	1907799290	kuqkz736@yeah.net	MargaratDavis	Bump org.apache.commons:commons-compress from 1.24.0 to 1.25.0
+f6f8dc45e641a519124db6511c0a4bb3742bfa94	1906529410	1906529410	kuqkz736@yeah.net	MargaratDavis	Bump com.aallam.openai:openai-client from 3.5.0 to 3.6.0
+8222bd3ed2613a0c782ea12818c44ece1f3bc725	1905385410	1905385410	kuqkz736@yeah.net	MargaratDavis	Bump kotlinx-serialization-json from 1.6.0 to 1.6.1
+7114081d5e7e0343da183c207b63d4e147a2860a	1905264650	1905264650	kuqkz736@yeah.net	MargaratDavis	Bump multiplatform-settings from 1.1.0 to 1.1.1
+d5943fe5addd832a7c95867b34d8138b8c1f75b0	1904184970	1904184970	kuqkz736@yeah.net	MargaratDavis	Use keys in remember functions
+f2163e290d22846b3e053bc51824c37559615914	1903115490	1903115490	kuqkz736@yeah.net	MargaratDavis	Add run configuration to generate compose report
+9c1b89442b8521640e5ee8f5fb31dcfde7fba7e5	1903038130	1903038130	kuqkz736@yeah.net	MargaratDavis	Make composable functions skippable where possible
+e06408df8411889285fb76b3826e0c7c2a692c70	1902899730	1902899730	kuqkz736@yeah.net	MargaratDavis	Remove CombatantViewModel
+2215e839a567a5fd94481b934a3c0eee2261b59d	1902253090	1902253090	kuqkz736@yeah.net	MargaratDavis	Adjust prompt
+376f40da37f895eb47e932c157105d22f39cf6c8	1901766570	1901766570	kuqkz736@yeah.net	MargaratDavis	Migrate Versioning
+8e7dea0b7323c03df2cd8120b98d463ba8977a63	1901436090	1901436090	kuqkz736@yeah.net	MargaratDavis	Can Interpret simple damage command
+1a3a3c8a0c1b50f2e77e01feabc6c78805835dc6	1900551570	1900551570	kuqkz736@yeah.net	MargaratDavis	Modify dialogs to pass in viewModels
+f928cb1ae96852ccb20f3f4c7737d7e0cc1fdc60	1900056370	1900056370	kuqkz736@yeah.net	MargaratDavis	Rudimentary transcription is working!
+a229ff2ddd1b2c2d6977fb2b391243bbe8295193	1899299890	1899299890	kuqkz736@yeah.net	MargaratDavis	Add Contributing.md
+49de1fa2993bd7e8e0b5abc39b6801af117199ff	1898746770	1898746770	kuqkz736@yeah.net	MargaratDavis	Remove start imports
+39d577852e4b098fe822b8ea4e6bcb7c6907b418	1898407890	1898407890	kuqkz736@yeah.net	MargaratDavis	Upgrade gradle android tools
+c031941dd7d0a3f90b1ba0bc051a8c3453b23422	1897904050	1897904050	kuqkz736@yeah.net	MargaratDavis	Remove versions plugin
+f3e1884f15cfae77bbca3ad87f043b281fa78d70	1897666130	1897666130	kuqkz736@yeah.net	MargaratDavis	Replace dependencies with version catalog
+c8854c978015246bb19011498028b5717ae95612	1897661089	1897661089	kuqkz736@yeah.net	MargaratDavis	Remove HostCombatViewModel Interface
+d4b3540278f3bcbc04e221007c6ab4b978d7daa6	1896857169	1896857169	kuqkz736@yeah.net	MargaratDavis	Fix for iOS until https://github.com/JetBrains/compose-multiplatform/issues/3900 is resolved
+ac7855ac363c7c4153a77831b8aa5ee65c81a81b	1896612569	1896612569	kuqkz736@yeah.net	MargaratDavis	Show hp even if no monster is present
+05616d24b62551446b5e23e76286dc14d3bb3a4b	1896380089	1896380089	kuqkz736@yeah.net	MargaratDavis	Migrate Icon to be vector based
+4e9aecb1b52fa050d760ed006015f6c5c63e4844	1896058449	1896058449	kuqkz736@yeah.net	MargaratDavis	Remove unused permission to avoid privacy policy requirement
+cc61b04c24e45a83abc2822f82d57ea94f7ff8f3	1895240929	1895240929	kuqkz736@yeah.net	MargaratDavis	Fix release android version
+32eb7b79bc108fd73b25d623316bdb3f3719a0a9	1894591049	1894591049	kuqkz736@yeah.net	MargaratDavis	Make sure composables are only passed as parameter if they actually contain something
+35cd99b64961f4dee52412323c10b065fc03d4fc	1893834249	1893834249	kuqkz736@yeah.net	MargaratDavis	Migrate control flow
+1d86bd857c8009ef44d3261602246c1119c93a33	1893192889	1893192889	kuqkz736@yeah.net	MargaratDavis	Minor fixes
+5d2c11ad619e7b21031a141f81890b242162993b	1892520649	1892520649	kuqkz736@yeah.net	MargaratDavis	Update Ktor Version
+41016e5622b2ff55b93fb23ac1903509eb5c6951	1891697249	1891697249	kuqkz736@yeah.net	MargaratDavis	Fix Title of edit screen
+ba807abc1fc07dc4d50f40c0843cfe1f997f867d	1890398289	1890398289	kuqkz736@yeah.net	MargaratDavis	Add classes for the different IDs
+f9ddc38e983a9406a58b47bcafe09d52c7deaecc	1889106889	1889106889	kuqkz736@yeah.net	MargaratDavis	Remove unused interface
+392a6259e9ee2e5235b9c60f6fd0974d70c5b200	1888250769	1888250769	kuqkz736@yeah.net	MargaratDavis	Load Bestiary parallel
+3abbd4549e1ef4ed4f7c02857c893cc151f18856	1887320089	1887320089	kuqkz736@yeah.net	MargaratDavis	Load name for monsters
+8fb7eccaa9ed6f70c86ac6ef3a1beb53ac1c9d7c	1886044809	1886044809	kuqkz736@yeah.net	MargaratDavis	Support Monsters that copy stats
+efcea584952b9ddfa99b25dbca5e34bbda7d25d2	1885619249	1885619249	kuqkz736@yeah.net	MargaratDavis	Fix test
+405be51cf17ebccebb7e582e36128047d5a43984	1884708489	1884708489	kuqkz736@yeah.net	MargaratDavis	Settings Page
+2421a797ef900d65eb1b0f35f08c0a4322bc418c	1884229129	1884229129	kuqkz736@yeah.net	MargaratDavis	Add information when sharing combat
+6e33e204d561fc024648b820cfe27f1aacec8011	1883427249	1883427249	kuqkz736@yeah.net	MargaratDavis	Use new Backend information instead of BuildKonfig
+e23c6c0f2413f6c730c677db205f4ccbd37f1794	1883305809	1883305809	kuqkz736@yeah.net	MargaratDavis	Replace TODO with TASK unless relevant to the current assignement
+29a2ec3ea1e7e17931540d3e07541283a8a39436	1883001729	1883001729	kuqkz736@yeah.net	MargaratDavis	Implement new JoinScreen
+6dbf829ef0d486bfa86c39eb601c8ff0735fcc66	1882698169	1882698169	kuqkz736@yeah.net	MargaratDavis	Update Color Schemes
+9a4243dd25c9e3673eb7939f37a458153782143a	1882268569	1882268569	kuqkz736@yeah.net	MargaratDavis	Load environment variables in iOS Kotlin Buildscript
+fce48b971ce86efa9f5380a55b1f4bc4485c3d9d	1881180609	1881180609	kuqkz736@yeah.net	MargaratDavis	Increase Size iOS icon
+7b6aca090cf3654597296b43c8574f260471c6c8	1880231369	1880231369	kuqkz736@yeah.net	MargaratDavis	Replace App Icon with more minimalist Style
+de2421caacc4edeb62f1521485006f2cee5e1e40	1880047609	1880047609	kuqkz736@yeah.net	MargaratDavis	Add App Icon iOS
+b007b4474aeee3f8ef8b8a2ae4297fe2e4141af6	1879590969	1879590969	kuqkz736@yeah.net	MargaratDavis	Add App Icon Android
+80b24406dc6487fd5ac45378c98d78ce2c7c3b5e	1878410969	1878410969	kuqkz736@yeah.net	MargaratDavis	Create extension to avoid explicitly passing serializer
+2c2aab1f35b7e442f33b1e7591499b66980569f7	1877240409	1877240409	kuqkz736@yeah.net	MargaratDavis	Clean up setup and add tests
+5d93ecea3d399a00a7b28880aad6f10eb3a4875d	1876824049	1876824049	kuqkz736@yeah.net	MargaratDavis	Upgrade version of android compose compiler
+48139ef7899e857a5cbc389065b64f6fabafb4b9	1875735929	1875735929	kuqkz736@yeah.net	MargaratDavis	Upgrade version of buildKonfig
+02472d258686b281e97b6a2a8ca6a89ba787a36a	1875272289	1875272289	kuqkz736@yeah.net	MargaratDavis	Undo the unwrapping of dependencies to make errors more clear
+a91e0c3b055e7313c5b0f1a634a63452688d7c56	1874863689	1874863689	kuqkz736@yeah.net	MargaratDavis	Upgrade Kotlin version and use new features in build.gradle
+8a44db0ab0e041d1cdbecd65b714bd4a853e4f35	1874288569	1874288569	kuqkz736@yeah.net	MargaratDavis	Add error handling
+704ff5a4b1a1b87f83a6e6fbc811d6a504fb999f	1874162809	1874162809	kuqkz736@yeah.net	MargaratDavis	Update versions
+afa394b158c944fa3aaf98aec9cef442d328b412	1873659089	1873659089	kuqkz736@yeah.net	MargaratDavis	Update intellij settings
+2fc9c16b393b543d3cb9e52814b84c0bc5fbadf4	1873125689	1873125689	kuqkz736@yeah.net	MargaratDavis	Update Versions
+502ed6261ede2fef76a38975e9be4b1355121da7	1871967809	1871967809	kuqkz736@yeah.net	MargaratDavis	Remove reusing last name
+4c559375fb3f55d299bad5d33779cc9bcfd2e620	1870714729	1870714729	kuqkz736@yeah.net	MargaratDavis	Add label for no characters available
+21ad22623446b5be9abbf815016c1f7217268d43	1870096809	1870096809	kuqkz736@yeah.net	MargaratDavis	Replace Android with AndroidTarget
+209eb3d43f030aecb31acc27b851911c4f40e517	1869321489	1869321489	kuqkz736@yeah.net	MargaratDavis	Refactoring
+427ad3d5cc7a7040fff0b18b8208e4e607700ab4	1869272449	1869272449	kuqkz736@yeah.net	MargaratDavis	Fix the added status bar
+01957080165f340a770019cec15fba69673a9561	1868509609	1868509609	kuqkz736@yeah.net	MargaratDavis	Add HP to Combatant Information
+289387a245d10b598bd63fdc4d29cc09ad8347d5	1867459569	1867459569	kuqkz736@yeah.net	MargaratDavis	Remove unused android theming
+07f1abf67d82bfb98321ded5ba7974d1a021367d	1866480809	1866480809	kuqkz736@yeah.net	MargaratDavis	Update versions
+8e7e31ad1fc5315915880ffba39fad45b89ebe87	1865192849	1865192849	kuqkz736@yeah.net	MargaratDavis	Update versions
+74ff7ad760e052234457cd0ec2fb869db9bea2f3	1864010209	1864010209	kuqkz736@yeah.net	MargaratDavis	Update versions
+3a61a8b1392cab6f75ff435a8eb006c030f017dd	1863930889	1863930889	kuqkz736@yeah.net	MargaratDavis	Add Image.
+da299ce004c08aa9f731b936425c60ab63358494	1862917608	1862917608	kuqkz736@yeah.net	MargaratDavis	Working on #103
+99c451081c5cab84261a5c597f26bd4cb0e3d075	1862368368	1862368368	kuqkz736@yeah.net	MargaratDavis	Use BoxWithConstraints for two pane layout
+2e3577903d58cf658cc28861f2bdd80d0031916b	1861073968	1861073968	kuqkz736@yeah.net	MargaratDavis	Fix Typo
+b094eba965ae4b27cc0cbed9464f73d1f102e14d	1860813288	1860813288	kuqkz736@yeah.net	MargaratDavis	Remove unnecessary ViewModel Interface
+3c2498cace4d2abd488c0aa38852ae9e9d19a1ca	1860252448	1860252448	kuqkz736@yeah.net	MargaratDavis	Fix bugs
+5f631ac39035335d0fff661ce92988d954718ee3	1860038568	1860038568	kuqkz736@yeah.net	MargaratDavis	Added log to backend
+4e53494b19047b73d54887edf9b81a9c7069ae47	1859520168	1859520168	kuqkz736@yeah.net	MargaratDavis	Completely remove ping from client
+78dfeb3ab708a5e9562e67eb1759e4691588c2e7	1859193488	1859193488	kuqkz736@yeah.net	MargaratDavis	Move ping responsibility to backend
+e1ea24aaad1da405a5f4b137bcfbdfd34c72f3fd	1858972008	1858972008	kuqkz736@yeah.net	MargaratDavis	Unnecessarily optimize the loading of the monsterMap to wait until fetching is complete
+fd426b348688ae4bd69016d823288e9710744106	1858884848	1858884848	kuqkz736@yeah.net	MargaratDavis	Fix DropdownMenu name collision
+3eb57887ba5e689c7073d4b156f22e47015f987e	1857648648	1857648648	kuqkz736@yeah.net	MargaratDavis	Remove unnecessary code and add title to Damage combatant
+72f5945d729ea9f4d2f8bb16a6df06b66b56a0c0	1856594368	1856594368	kuqkz736@yeah.net	MargaratDavis	Use data object
+56ef47575bdf59d7551998d8c35855a4b31ddc58	1856302088	1856302088	kuqkz736@yeah.net	MargaratDavis	The app runs on iOS
+a62e650f4939de114ed87996acf288e44cd8c318	1855388088	1855388088	kuqkz736@yeah.net	MargaratDavis	Implement expect functions on iOS
+79707fab6844c99692432e43cc7d8bef3d489cf4	1854240488	1854240488	kuqkz736@yeah.net	MargaratDavis	Remove synchronized. These classes just have to be called on main thread
+3fa8501f809c1e6e00e9f9c6dad1b546a812a6a3	1853924848	1853924848	kuqkz736@yeah.net	MargaratDavis	Fix some warnings
+c1723f90912c9c5b74244727885c6fc141f7c433	1853142488	1853142488	kuqkz736@yeah.net	MargaratDavis	Add iOS Target (not yet functional)
+2fca8a0a4406e8b505a7ab8d1ad95b087d1d73d1	1852316248	1852316248	kuqkz736@yeah.net	MargaratDavis	Remove OKHttp from commonMain
+6d771ead8394bc3456c96f4ccecd7afe23723d05	1851136568	1851136568	kuqkz736@yeah.net	MargaratDavis	Clean up Gradle plugins
+2a1140bdda02715520dd677b5282d3d73418f5f2	1850763408	1850763408	kuqkz736@yeah.net	MargaratDavis	Use new Dialog
+ec9b8d699cc6251de34cdb1e8140b3546d059083	1850433448	1850433448	kuqkz736@yeah.net	MargaratDavis	Adjust to new gradle version
+b7edcaae5a07e04a2701af16afa35096245ee796	1849532608	1849532608	kuqkz736@yeah.net	MargaratDavis	Upgrade kotlinx serialization
+7d09c70b9cf53996be4a195fdc95562edd6e09f0	1849461688	1849461688	kuqkz736@yeah.net	MargaratDavis	Upgrade gradle version
+fa4928ac9b73e2228eaa7b711bb19c5d9f7ebe55	1849444768	1849444768	kuqkz736@yeah.net	MargaratDavis	Upgrade openai client library
+b494a57dad7569b32c11f3ffb44922e62f0a9dc6	1849238688	1849238688	kuqkz736@yeah.net	MargaratDavis	Upgrade compose version
+515b42c474b324224761a28d417271ca29766143	1847964448	1847964448	kuqkz736@yeah.net	MargaratDavis	Update gradle version
+188874d06d8cd6d7822650aa45bf637873952cf4	1846815888	1846815888	kuqkz736@yeah.net	MargaratDavis	Update Ktor version
+99b30fb204d326f31275a17708434d1b82d87a0e	1845657248	1845657248	kuqkz736@yeah.net	MargaratDavis	Reduce ping duration to handle package loss
+a6165f78912ff174458b988194a86aee63925fd5	1845072968	1845072968	kuqkz736@yeah.net	MargaratDavis	Add back button functionality
+b77bf4479671f56374aeecb2d901510e46f523ad	1845013008	1845013008	kuqkz736@yeah.net	MargaratDavis	Remove "Show Session Id" option when not sharing.
+8ad4882e1eebe3b81dfb05709db832d6eb424495	1843901088	1843901088	kuqkz736@yeah.net	MargaratDavis	Use bestiary before it is completely loaded.
+c2d29960aceae42e23f5618697b746d914f58909	1842732488	1842732488	kuqkz736@yeah.net	MargaratDavis	Rework some modifiers, work on combatantList
+42eabd086707da25511ff7a5da5c450bb6e7b313	1842227608	1842227608	kuqkz736@yeah.net	MargaratDavis	Fix applying monster type on open
+61022326cc56296416d618fb1296dddb48f915fb	1842120008	1842120008	kuqkz736@yeah.net	MargaratDavis	Add Preview option
+7ba37f10badd0e9d4c7a10d51b178e5c6849543d	1841362688	1841362688	kuqkz736@yeah.net	MargaratDavis	Small formatting changes
+ae6455e91e60f58fa53752014681debde912c071	1840792448	1840792448	kuqkz736@yeah.net	MargaratDavis	Capitalize monster names
+c5a9652f19229f575f10f5bf99c28b784cb3bdba	1840283448	1840283448	kuqkz736@yeah.net	MargaratDavis	Move android code to android specific part in shared.
+89c361727d534c708b2d0de9a7657eb3ffa4d2dc	1839823008	1839823008	kuqkz736@yeah.net	MargaratDavis	Update versions
+ac9e746886a75b053fa0b9c3aabeb9a285fecdc2	1838919408	1838919408	kuqkz736@yeah.net	MargaratDavis	Improve ConfirmDamageDialog. Add surface on mobile in background.
+83977cbf73eed307430717f436407dc3fba33cd6	1838918608	1838918608	kuqkz736@yeah.net	MargaratDavis	Improve information in ConfirmDamageDialog
+e5c04cd8db51d19cb8dca1b5e7f837a5055b1b71	1837898328	1837898328	kuqkz736@yeah.net	MargaratDavis	Fix openai system prompt and search for monsters ignore case
+a204f20b8ac2b3e2fb9dd2e632ca4e31c22deaa8	1836755128	1836755128	kuqkz736@yeah.net	MargaratDavis	When cancelling the first edit, delete the combatant
+83a8a6d6a601a6f5b31cf2418c6b53798793b773	1835582848	1835582848	kuqkz736@yeah.net	MargaratDavis	Implement name suggestion based on monster type
+d6f2b29227148e7a6ad3a258f18d5d4bcd5501c7	1835259968	1835259968	kuqkz736@yeah.net	MargaratDavis	Offline Bestiary Client
+572b87ef5942487928baaed47a9de9979d5b5f42	1834566168	1834566168	kuqkz736@yeah.net	MargaratDavis	Implement OpenAi client
+04f4944c27254c39e68cc65907de401e7d481a8a	1833807488	1833807488	kuqkz736@yeah.net	MargaratDavis	Fix minor bug when no internet connection
+539613972831e60b991101a0b79ebdf4ec3de508	1833537328	1833537328	kuqkz736@yeah.net	MargaratDavis	Upgrade versions
+bb332e452669c5a44413ec9d23f5fd2a1fae058f	1832769488	1832769488	kuqkz736@yeah.net	MargaratDavis	Minor fixes
+8c704443220e1abc1309c26f0bb721f0b64dd3d7	1831853288	1831853288	kuqkz736@yeah.net	MargaratDavis	Improve naming, documentation and separation.
+5a8b2825b3e8d0a16038836a8827fdfbb6bce127	1830746807	1830746807	kuqkz736@yeah.net	MargaratDavis	Improve documentation
+5314f3b45b41235913f499939ff557102aadf577	1829736247	1829736247	kuqkz736@yeah.net	MargaratDavis	Trying to add the kotlin src dirs to the main java. doesn't seem to work
+402d533d34bb3e23f65975b7e5bf7980f5329fbb	1828604767	1828604767	kuqkz736@yeah.net	MargaratDavis	WIP Jib plugin
+a2114782b64b76500c2fbb44732124985c3a31d7	1827588887	1827588887	kuqkz736@yeah.net	MargaratDavis	Native Docker image success!
+f746ef24aaee0bcab1d6634e80934bca54c8b323	1826664687	1826664687	kuqkz736@yeah.net	MargaratDavis	jvm multiplatform builds
+255c9e64068a159daffb33826b4de6752b04b130	1826293087	1826293087	kuqkz736@yeah.net	MargaratDavis	Migrate shared commands package to multiplatform
+dd0a9b7af67dd2a0dc099cc2814dc894eb94eead	1826012447	1826012447	kuqkz736@yeah.net	MargaratDavis	Fix test to work with embeddedServer
+c9743f8453791f57074d9e3e91c20374a1a06ba9	1825158967	1825158967	kuqkz736@yeah.net	MargaratDavis	Remove context receiver from backend in preparation for native target
+12b9bffad9d4ea3ad2c623f1ea4fb4535953f868	1824330047	1824330047	kuqkz736@yeah.net	MargaratDavis	Remove unused app-engine config
+0996fe1844b7feb96269498fd494954876293ded	1823735367	1823735367	kuqkz736@yeah.net	MargaratDavis	Remove unused docker config in backend. Also extend readme.
+7e41143078191ace641386a4e571917e2f5fb2f7	1822811007	1822811007	kuqkz736@yeah.net	MargaratDavis	Clean up backend
+4a9000fc45aaeb2d1ca65432c46429518c716742	1822217127	1822217127	kuqkz736@yeah.net	MargaratDavis	Use Dice rolling text field for joining combat
+67d74791609579c1d449122684a08c016b7b694e	1821969127	1821969127	kuqkz736@yeah.net	MargaratDavis	Add Dice rolling text field
+749a1b950f0b649d1d00ba6ce8719b8dd3036250	1821318407	1821318407	kuqkz736@yeah.net	MargaratDavis	Added dice roller logic
+09d353bcfdb2bf85b6201f820dc40f50ffb14a0c	1820207127	1820207127	kuqkz736@yeah.net	MargaratDavis	Make hostWebsocketSession mutable, to avoid writing to the sessions map.
+88ec7d42eefec8acde646c59ed20d99e0285fc2b	1818983847	1818983847	kuqkz736@yeah.net	MargaratDavis	Allow restarting connection on error
+ebe5f8404660b821bbb96b4e0dc298b7e4d4f284	1818430687	1818430687	kuqkz736@yeah.net	MargaratDavis	Minor improvements.
+c363d5492a5827099b402adec2468ec2484ed3bb	1818285487	1818285487	kuqkz736@yeah.net	MargaratDavis	Keep Screen active when in active combat
+c4378b0dc72fce157c291c7c517b7ab2c9d79b7a	1817528727	1817528727	kuqkz736@yeah.net	MargaratDavis	Change name to match git repository because annoying otherwise
+d3877abbb1106a932d82c19e7a39fa6dc6d550e8	1816673927	1816673927	kuqkz736@yeah.net	MargaratDavis	Update versions
+801ced6ead51758ce0964941fa24844fe2260884	1816244087	1816244087	kuqkz736@yeah.net	MargaratDavis	Implement submit dialog for monster stats
+471001f6ccdccd6b59996499538992b762d4dc9b	1815040607	1815040607	kuqkz736@yeah.net	MargaratDavis	Implement Monster type and take values when applicable
+102a1f918bd9c365c0d3aec3e69a2031ee4e32fc	1814000007	1814000007	kuqkz736@yeah.net	MargaratDavis	Enable EditTextField to have value set from outside
+6f85453df797fb97c1f07cdd9ea55c9d0e192875	1813127647	1813127647	kuqkz736@yeah.net	MargaratDavis	Add Monster Cache
+dd826295ea4dd178b1405555d70f9ead3f9e78cf	1812810887	1812810887	kuqkz736@yeah.net	MargaratDavis	Upgrade ktor
+729fdecf6bb6b4e315370042a2a244c4bc61cc0d	1811724487	1811724487	kuqkz736@yeah.net	MargaratDavis	Remove DTO Layer, it was just adding work
+dec00a359ec0452d59a2c797214061806cd25e65	1811649807	1811649807	kuqkz736@yeah.net	MargaratDavis	Show dialog on client for assign damage
+26182473e42ba2cb8beb252e6c5d34a86f554648	1810421887	1810421887	kuqkz736@yeah.net	MargaratDavis	Implement client damage and confirm damage
+7ab989ba8b2911e9269541f6ed2295ad0576ddf9	1809784407	1809784407	kuqkz736@yeah.net	MargaratDavis	Minor fixes
+7c72cdc8e7d0a0f7bb339412cacfe33c802555e7	1809385927	1809385927	kuqkz736@yeah.net	MargaratDavis	Rename Models to ViewModels where appropriate
+223865406f9b0497090cd53a4b16e88dff8d0a18	1808693767	1808693767	kuqkz736@yeah.net	MargaratDavis	Implement client editing owned combatants
+8077260faed76b827c0504af711e88ab3c87cc4a	1808442047	1808442047	kuqkz736@yeah.net	MargaratDavis	Add Loading spinner to edit combatant save
+2d3d48ec893ee3fdd953bba1b6df25972fdf349b	1808269447	1808269447	kuqkz736@yeah.net	MargaratDavis	Remove unnecessary newline
+5ff7803a539363d2bb57e68328db51b1e042ec93	1806979687	1806979687	kuqkz736@yeah.net	MargaratDavis	Further minimize code duplication
+d585a6723546d0153c1adabadd44a66e02fcb80e	1805989447	1805989447	kuqkz736@yeah.net	MargaratDavis	Added OwnerId
+2fc7991db2cc8eab266e4a6441e9ffc229d6c7c6	1805415927	1805415927	kuqkz736@yeah.net	MargaratDavis	Implement websocket ping
+70e5f59bad5f3e137cfac59c9a83b997231709de	1805149527	1805149527	kuqkz736@yeah.net	MargaratDavis	Suppress opt in warning
+ac29f2df525ad94db866cf737d008975c7abce77	1804297807	1804297807	kuqkz736@yeah.net	MargaratDavis	List-Detail Layout implemented.
+6f1872b0e1357820eb10eae36be3b7fadb65c5bb	1803781207	1803781207	kuqkz736@yeah.net	MargaratDavis	Implement hidden names
+dc5c2a04e76861cb13959a27dd755839465fb8f3	1802656327	1802656327	kuqkz736@yeah.net	MargaratDavis	Improve edit dialog
+a0712fbf7cf09fb3a4530fc4ab9edae12b4244ea	1802411367	1802411367	kuqkz736@yeah.net	MargaratDavis	Implement disabled Combatants
+8fdbf15bb806c25dadd2d1a6afaa3628262a984c	1801116607	1801116607	kuqkz736@yeah.net	MargaratDavis	Implement different swipe to dismiss options
+a70aa85348b33bd6a5242d86245db7599325dc8d	1800520047	1800520047	kuqkz736@yeah.net	MargaratDavis	Add all parameters to TopBar Composable explicitly
+34d2fe7ecf5668577d626df86482ec196e278c83	1800106647	1800106647	kuqkz736@yeah.net	MargaratDavis	Implemented add combatant logic
+85b6aa0799c835a4b6f60abf564bb8d3782ae46c	1799881807	1799881807	kuqkz736@yeah.net	MargaratDavis	Show hp as color background
+1279763989166bad3fece41a3711b1c669d3208e	1799717127	1799717127	kuqkz736@yeah.net	MargaratDavis	Fix app build
+dbaae543a94e881fee4d430d8059c0dfaa8e59a3	1799483647	1799483647	kuqkz736@yeah.net	MargaratDavis	Fix warnings
+d48bd771bedbfdf4e6debb49fef1639be599de39	1799269727	1799269727	kuqkz736@yeah.net	MargaratDavis	remove maven entry again
+0e824e191e5be85329d45537c1970d048c303512	1798647527	1798647527	kuqkz736@yeah.net	MargaratDavis	Reorder packages
+ca5fcb2fec67a74ccd078448b122c5da3caf2e8c	1798112086	1798112086	kuqkz736@yeah.net	MargaratDavis	Fix buildImage command
+69952c8616a7178b8f4e820cf838e91dd97521d1	1797953966	1797953966	kuqkz736@yeah.net	MargaratDavis	Add Maven plugin repository for ktor plugin
+c182ba39837b96962661cc08a58937f8bca19896	1797165006	1797165006	kuqkz736@yeah.net	MargaratDavis	Update Github actions
+2af6eff36a240a8a58adaff0f34a2101bd50a754	1797042006	1797042006	kuqkz736@yeah.net	MargaratDavis	Last migration from old app
+24f0c7457ed571e145ce942d6e73d307061529b4	1796538206	1796538206	kuqkz736@yeah.net	MargaratDavis	Version upgrades
+b3309a4b083a203027396fd93b1ce8d01d148909	1795807326	1795807326	kuqkz736@yeah.net	MargaratDavis	Hopefully fixed the HostScreen bug
+a49197cecc1d601a5e3a6975ee089f5c89a93182	1795430886	1795430886	kuqkz736@yeah.net	MargaratDavis	Cleanup
+12369cefb33a987ff19fe8688899cd7364e5dd3f	1794345606	1794345606	kuqkz736@yeah.net	MargaratDavis	Migrate Character Screen
+21333e68a7c2e13684bbd9e417fffd13db366c20	1793733526	1793733526	kuqkz736@yeah.net	MargaratDavis	Fix Snackbar
+4a25cf3cbec6db366a7594cb7d8c44bb0e398f0d	1792703486	1792703486	kuqkz736@yeah.net	MargaratDavis	Fix little recomposition problem
+b8eda804e7c389ac416a086167eee9e192727764	1792160846	1792160846	kuqkz736@yeah.net	MargaratDavis	Migrate to android app
+8c8eb7633b1ec9d638f9d418c546f4c9e6fee621	1791619726	1791619726	kuqkz736@yeah.net	MargaratDavis	Complete backend connection
+8e7e2a6f47ff3bd68baf49eba874020d807d12f3	1791298286	1791298286	kuqkz736@yeah.net	MargaratDavis	Implement ClientScreen
+5dd70b38ee3ec61956ed0659b5bf8883cef6f19e	1790740166	1790740166	kuqkz736@yeah.net	MargaratDavis	Extract Swiping
+f73513b4d565e77327672be15b52bbf70bc95abc	1789437646	1789437646	kuqkz736@yeah.net	MargaratDavis	Implement Hosting remote combat
+b4d5193564d351eb062c0cf3733c6406703972a3	1788765006	1788765006	kuqkz736@yeah.net	MargaratDavis	Moving classes around
+58d3ed6141ae193899e83d52ebd882459986c71b	1787574966	1787574966	kuqkz736@yeah.net	MargaratDavis	Implement client combat
+ad0c3ac1c9680fa08739c0c863479902b719df6c	1787161206	1787161206	kuqkz736@yeah.net	MargaratDavis	Added settings and combat link repository
+928744e746631b3c7b9cd88f62e17ae6829cb4dc	1786448566	1786448566	kuqkz736@yeah.net	MargaratDavis	Commit the code style files so it stops annoying
+bfb0ef764fabd65dbb510abf57f33d57ffddf899	1785246886	1785246886	kuqkz736@yeah.net	MargaratDavis	Add join combat and main screen navigation
+3f591d741e749e574c80132946e79d017b0c09f9	1784260646	1784260646	kuqkz736@yeah.net	MargaratDavis	Remove unused Platform function
+e8ea7ad0054680c73423ca88a750d78c19afb73d	1784141606	1784141606	kuqkz736@yeah.net	MargaratDavis	Add Menu items
+00b7ba734ed5d0cbf9d8bb2a89fc6978a0d866aa	1782952646	1782952646	kuqkz736@yeah.net	MargaratDavis	migrating HostScreen
+67ef84b899ecd2e60ceefce5c25dd0c5a250f92f	1781939446	1781939446	kuqkz736@yeah.net	MargaratDavis	Moved http client to shared module
+38b5a9668e3453dbb68580455890298e92cebd67	1781617006	1781617006	kuqkz736@yeah.net	MargaratDavis	Add first Screen in shared and allow running from desktop
+779a311a96fda7d6b9905ea11750295c48dd612d	1781561166	1781561166	kuqkz736@yeah.net	MargaratDavis	Convert Client Screen to Compose
+1b7e5359791d880f2eb04fb428b32d1702a0ace6	1781006686	1781006686	kuqkz736@yeah.net	MargaratDavis	Single line Edit view
+5a59ce15c1898ba2e71ac612246644ecd85725b1	1780718246	1780718246	kuqkz736@yeah.net	MargaratDavis	Implement damaging combatant
+3ac39fe31c9df1ad157b5201f7c1123dc4ca54bf	1779920326	1779920326	kuqkz736@yeah.net	MargaratDavis	Upgrade versions
+2be84a54461a599abcb9a7afab43734e627c316d	1779461566	1779461566	kuqkz736@yeah.net	MargaratDavis	Fix VersionDTO
+18942d9f410cd073841fa84bcaa7582a66ce30a4	1779245846	1779245846	kuqkz736@yeah.net	MargaratDavis	Add display name and unique id to monster
+9f1819d4ddb9e621f1bdb857ef6df03a3debdade	1778925046	1778925046	kuqkz736@yeah.net	MargaratDavis	Move Bestiary to shared
+2793c3b4eb30fb0c8839a69429e7c49415fc70ff	1778418086	1778418086	kuqkz736@yeah.net	MargaratDavis	Active character highlight
+fba1b01f8ee9e2c878130f27fb4f2bca127b4903	1778053086	1778053086	kuqkz736@yeah.net	MargaratDavis	Active character highlight
+39dbffbdc1321a5d254a0dd6bca9f0b580add377	1777444926	1777444926	kuqkz736@yeah.net	MargaratDavis	Add start combat option
+3735bf37e9e58fb0b308d2eb81b2b25e1c03e804	1777289606	1777289606	kuqkz736@yeah.net	MargaratDavis	Update versions
+a9a22cc3a328e24bc5c30f71fab7e01145b016c8	1775999606	1775999606	kuqkz736@yeah.net	MargaratDavis	Converting Host Combat to compose
+963b8b25dd647e963c077b38d222182639066189	1775424286	1775424286	kuqkz736@yeah.net	MargaratDavis	Suppress unused multiplatform variables
+4c8b79eeca1054dce06bc48fe5fb7f6827fdb649	1774842446	1774842446	kuqkz736@yeah.net	MargaratDavis	Add plugin to detect updates
+8f6325d60c6b7b96f6cf905cf4f9abd2a8273249	1774510846	1774510846	kuqkz736@yeah.net	MargaratDavis	Bump androidx.lifecycle:lifecycle-runtime-compose
+9a918f31086c452734c73e38ccad23ddc70d970d	1773694286	1773694286	kuqkz736@yeah.net	MargaratDavis	Bump androidx.compose.ui:ui-tooling from 1.4.0-beta02 to 1.4.0-rc01
+3cf2d5c5725acdd5556510e929bc6f9edac72c01	1772775086	1772775086	kuqkz736@yeah.net	MargaratDavis	Bump androidx.compose.ui:ui-tooling-preview
+10ffca63c783b9a4f95274238d44ecd60e407e79	1771761726	1771761726	kuqkz736@yeah.net	MargaratDavis	Bump org.mockito:mockito-core from 4.11.0 to 5.2.0
+a25ac8481d7c964e9cc0cd4a0a5ee78cca4dec34	1770687046	1770687046	kuqkz736@yeah.net	MargaratDavis	Rename Constants to Version
+d1ffd9e5ab5061f07a0ec66749a2a91775ee4f9c	1769770326	1769770326	kuqkz736@yeah.net	MargaratDavis	Fix some warnings
+9c772a26287ebb62d36cee0613f03b4fb249570b	1768648526	1768648526	kuqkz736@yeah.net	MargaratDavis	Add multiplatform module
+cfa7bff48521b4cd56e0b9628d6cf674ac44c547	1768169326	1768169326	kuqkz736@yeah.net	MargaratDavis	Set some useful properties
+fc552aba085f499d6c768b26102d5b012e07d1d7	1766887886	1766887886	kuqkz736@yeah.net	MargaratDavis	Convert gradle files to Kotlin dsl
+04c29035634f2acc2fd0194388419a369e53509c	1766880765	1766880765	kuqkz736@yeah.net	MargaratDavis	Update Hilt version
+13e3aeb001deb7210ce47f0bb1bea5d669adaa03	1766072325	1766072325	kuqkz736@yeah.net	MargaratDavis	Use new version of preview works better.
+80e20793e8a487451d7f09d95a336f311dc8b6f0	1765755565	1765755565	kuqkz736@yeah.net	MargaratDavis	Fix character next id
+f6dee244b29fec886a75be989e0890b24822752a	1765690565	1765690565	kuqkz736@yeah.net	MargaratDavis	Bump kotlinxSerializationVersion from 1.4.1 to 1.5.0
+a1663ab38d37d4269de8d8afb2f5abc10d642c34	1764662405	1764662405	kuqkz736@yeah.net	MargaratDavis	Bump ktorVersion from 2.2.2 to 2.2.4
+f72b04bed34ebe8ed957afa4256e68760837735a	1764582765	1764582765	kuqkz736@yeah.net	MargaratDavis	Characters List and Edit implemented and tested
+32854498471dd9ba31f8b3f589916f5a8c8e4289	1764228645	1764228645	kuqkz736@yeah.net	MargaratDavis	Characters List and Edit implemented and tested
+4fb99ed6027cdad00e795aa214c7adb410d81ad7	1763577205	1763577205	kuqkz736@yeah.net	MargaratDavis	Hopefully implemented edit character screen. Not yet tested.
+b5b347ac38d95e664c61c03e5c59e789671ebc8d	1763460125	1763460125	kuqkz736@yeah.net	MargaratDavis	Working on character views
+7bfb2085b77d872d7ebbb007c9c781b7f56329e7	1763335245	1763335245	kuqkz736@yeah.net	MargaratDavis	Working on new Compose screen
+a579abb974f245d86a7afb2e8e11d80af5388d2e	1763321965	1763321965	kuqkz736@yeah.net	MargaratDavis	Upgrade Gradle
+5998edd339ed55ab829e2a62f1b767a242c019c6	1763281605	1763281605	kuqkz736@yeah.net	MargaratDavis	Bump kotlinVersion from 1.7.21 to 1.8.0
+1d5f0ed5a0a66e5c6e90fce4d677d7822b51faba	1762741165	1762741165	kuqkz736@yeah.net	MargaratDavis	Bump ktorVersion from 2.1.3 to 2.2.2
+b04bd9e667997563aa6bb85f61fd6794dcc6ae27	1762676045	1762676045	kuqkz736@yeah.net	MargaratDavis	Fix pipeline
+bc226ad116628a288f71aab90dff45c22a757b80	1762190165	1762190165	kuqkz736@yeah.net	MargaratDavis	Implement rejoining combat
+ba4091f365a35965510aae571ecdb4002bc08316	1761265325	1761265325	kuqkz736@yeah.net	MargaratDavis	Implement serverside of current commands
+524d46f75f1847f2c5dc824d6b7be7a86980eb63	1761193085	1761193085	kuqkz736@yeah.net	MargaratDavis	add missing Serializable
+8805d63295071af38a98ba8d522bbc16028b41c3	1759904245	1759904245	kuqkz736@yeah.net	MargaratDavis	Refactoring and implement rejoining session
+627042ee8372b1f86070437e1b5f9bdec891e910	1759500085	1759500085	kuqkz736@yeah.net	MargaratDavis	Add catches for websocket exceptions
+96e332b9afdf8850638aac15fd56b7427546ae5a	1759054325	1759054325	kuqkz736@yeah.net	MargaratDavis	Bump ktorVersion from 2.1.2 to 2.1.3
+78cf0f3ef4908d9358f03c8abe417d3f8903f28d	1758782205	1758782205	kuqkz736@yeah.net	MargaratDavis	Bump kotlinVersion from 1.7.20 to 1.7.21
+1bf008b57ce30368f7c2cb7f5411de4202f18a67	1757728605	1757728605	kuqkz736@yeah.net	MargaratDavis	Add Product flavors to differentiate local or not
+0f38b0cd42959a9d25c7980b3603dda4301cdf1e	1757361685	1757361685	kuqkz736@yeah.net	MargaratDavis	Fix github build
+4369122dfbd4891cb047471e4985db10e3ea4724	1757221165	1757221165	kuqkz736@yeah.net	MargaratDavis	Finally switched to encrypted forwarded url.
+e701476298add63f4ba37d45b799678f017ae0c1	1756952725	1756952725	kuqkz736@yeah.net	MargaratDavis	Add Client functionality
+34822109ff6fbc8c42f93e025e9850f65d2893dd	1755916805	1755916805	kuqkz736@yeah.net	MargaratDavis	Keep connection and send combat updates to server
+7c66dcf971b1e6a829b9538fe929de84df13bfde	1755038365	1755038365	kuqkz736@yeah.net	MargaratDavis	Update gitignore
+d6de410cac9643d2b2d725152fab67d93f51fc41	1754202125	1754202125	kuqkz736@yeah.net	MargaratDavis	Add more commands
+7a6849000a61b73ff19d860158818b17f02c5bd2	1752983245	1752983245	kuqkz736@yeah.net	MargaratDavis	First Websocket connection.
+8243ffcde12e010722df1393f4980e3b23dbba67	1752178565	1752178565	kuqkz736@yeah.net	MargaratDavis	Add common commands project
+89664907f6717d99eb432766f152db76a1a8449b	1750982165	1750982165	kuqkz736@yeah.net	MargaratDavis	Migrate to single gradle project
+0f85ca6b28f751b97dbb1ffbb1aff82d601dda02	1750349245	1750349245	kuqkz736@yeah.net	MargaratDavis	Add some intellij files to gitignore
+d4b6a7aab0c378a1fbac4c4c182e2a598a1bc071	1749257525	1749257525	kuqkz736@yeah.net	MargaratDavis	Bump navigation-safe-args-gradle-plugin from 2.5.2 to 2.5.3
+f64e65241243ee30d6f38709cdb7269bed3f0722	1748666925	1748666925	kuqkz736@yeah.net	MargaratDavis	Share combat
+d4836e4551376ed1c86e4055c6f95fcc13fd250d	1747980885	1747980885	kuqkz736@yeah.net	MargaratDavis	Update gitignore
+e891e99e78f7536f71d079428f1aa03ae2ac7f34	1747621405	1747621405	kuqkz736@yeah.net	MargaratDavis	Upgrade versions and add websocket
+859f203c9fc6a94b70abde3f5604c09d32661598	1746923165	1746923165	kuqkz736@yeah.net	MargaratDavis	Suppress Propertyname warning. Required when using gradle.properties
+e0389b899201f79cf1e9e653441f9e269a8e1f8c	1746557085	1746557085	kuqkz736@yeah.net	MargaratDavis	Add readme
+375f6d253c79ea2dca56679baf3291488c97defa	1745556165	1745556165	kuqkz736@yeah.net	MargaratDavis	Use variables for http request files
+1ea9f92b038e9e3a56882590d13e4851b0a9181d	1744987565	1744987565	kuqkz736@yeah.net	MargaratDavis	Implement swipe to delete
+f92eab286255eb50471a0cb6b8a377f6f005636a	1744368125	1744368125	kuqkz736@yeah.net	MargaratDavis	Bump kotlinxSerializationVersion from 1.4.0 to 1.4.1
+60c05587ba4436cb13a5463ef3771be00d549a5a	1743110325	1743110325	kuqkz736@yeah.net	MargaratDavis	Implement combat sharing
+311495af5e5d16837d18539876f00235733701cf	1742907685	1742907685	kuqkz736@yeah.net	MargaratDavis	Rename to CombatController
+3c525c6ab9954cde400d594e3fb5d0f724546b05	1741900325	1741900325	kuqkz736@yeah.net	MargaratDavis	Add request files
+7193f62d66e3c79c79184871a8a668468ca888ad	1741118285	1741118285	kuqkz736@yeah.net	MargaratDavis	Upgrade versions
+32cecc4fab0473bd82ff08feaf7cde2588698203	1740879445	1740879445	kuqkz736@yeah.net	MargaratDavis	Move Logic to separate controller as preparation
+fafa6716b8f7c9f8960259ba0bb6038b9d615f13	1740147125	1740147125	kuqkz736@yeah.net	MargaratDavis	App is deployed on google app engine.
+c716418942f993ec45c5c493309f4b3b7975806d	1739099405	1739099405	kuqkz736@yeah.net	MargaratDavis	Add Backend service that mirrors a session.
+a2574f8c178ee70aca1863b5f3d51349d87b63ba	1738422084	1738422084	kuqkz736@yeah.net	MargaratDavis	Ask user whether he wants to save pending changes when switching sele… (#30)
+77af8b6c64a40aa3c6ba4760db10e16859594488	1737260524	1737260524	kuqkz736@yeah.net	MargaratDavis	Update Versions (#29)
+c1b64142769dd1751820b1826d289bbd4f9680e1	1737196444	1737196444	kuqkz736@yeah.net	MargaratDavis	Bump org.jetbrains.kotlin.android from 1.7.10 to 1.7.20 (#25)
+7d4da9fc776934becd4ea731a65646097e57cc04	1736979284	1736979284	kuqkz736@yeah.net	MargaratDavis	Feature/autocomplete 5etools (#24)
+8554d582334356a1e22a86fcee2cc6cc0bd39578	1736797884	1736797884	kuqkz736@yeah.net	MargaratDavis	Load Bestiary from 5e.tools (#20)
+3f260030767d7dcd9b0e236dc1a99ad3e7eadb78	1736487204	1736487204	kuqkz736@yeah.net	MargaratDavis	Bump org.jetbrains.kotlin.android from 1.7.0 to 1.7.10 (#19)
+707e58f6a61066d93b0ec470f1b033a78fddde06	1736115844	1736115844	kuqkz736@yeah.net	MargaratDavis	Merge pull request #21 from findusl/feature/update-plugins
+11d344f478c361dc31272fdfeb467c47d35daa21	1734870644	1734870644	kuqkz736@yeah.net	MargaratDavis	Make binding private
+2c93e3ab40b4822b60f86ddac4b5402ce3fb68e4	1734589924	1734589924	kuqkz736@yeah.net	MargaratDavis	Upgrade plugins
+1ba6bfc12823ba0592e9df1f12699ba8327508b4	1733595324	1733595324	kuqkz736@yeah.net	MargaratDavis	Feature/auto complete (#18)
+a1c66197d92e2607185b1e1934fd08bf61a36b08	1732802404	1732802404	kuqkz736@yeah.net	MargaratDavis	Next turn using selector (#9)
+7f125a84a024665a42d03a3801c79493abcd9eae	1732453364	1732453364	kuqkz736@yeah.net	MargaratDavis	Merge pull request #17 from findusl/10-new-combatant-should-use-the-name-that-was-last-set-on-a-combatant
+3cbda2a149b11b3123a380221e45f56342ed5e1e	1731412604	1731412604	kuqkz736@yeah.net	MargaratDavis	Use the most recently set name as default for new combatants.
+2ef9e7c9f6d76903ab13fa99f67f4e1550f532f5	1730476244	1730476244	kuqkz736@yeah.net	MargaratDavis	Merge pull request #8 from findusl/initiative-tracker-7-close-virtual-keyboard
+c214c614f1df5d62ca3172cb5568a3f712925466	1729710364	1729710364	kuqkz736@yeah.net	MargaratDavis	initiative-tracker-7 Close Virtual Keyboard when leaving edit mode
+e2d754479965f107fb2ed02031aaa84a1336c72f	1728458124	1728458124	kuqkz736@yeah.net	MargaratDavis	use material card view for initiative items (#6)
+ba2be834538637134dba659e984f1e5446eef7c7	1728405044	1728405044	kuqkz736@yeah.net	MargaratDavis	Bump org.jetbrains.kotlin.android from 1.6.21 to 1.7.0 (#5)
+6a044eb0f01b6b22bfaaf48fafab5d18b0ca9d05	1727975684	1727975684	kuqkz736@yeah.net	MargaratDavis	Merge pull request #4 from findusl/feature/github_configuration
+ef9dbc632cec33818cd47a30b5b6c535c967d6da	1727681244	1727681244	kuqkz736@yeah.net	MargaratDavis	Add Dependabot and automatic builds
+a4c71f4ff1e48853f52eb91c10544affbed7058a	1726721564	1726721564	kuqkz736@yeah.net	MargaratDavis	Added selectAll when editing combatant name and initiative (#2)
+02432c47d363b8dc1c6c437e9b148da0d1c1ab5d	1726226284	1726226284	kuqkz736@yeah.net	MargaratDavis	Merge pull request #3 from findusl/feature/show_warnings_text_edit
+9ae88ea7ed5c014a6095913bef5bb84162e3c832	1724993524	1724993524	kuqkz736@yeah.net	MargaratDavis	Add error text for invalid Input
+0307112e0c16faf04216f3d93b2c9ad69e518e17	1724276044	1724276044	kuqkz736@yeah.net	MargaratDavis	Merge pull request #1 from findusl/bugfix/Check_empty_string
+99291d0becadb9109279f58a4f40ebc7167c2c5a	1723454044	1723454044	kuqkz736@yeah.net	MargaratDavis	fix parsing error for empty string
+4890dc99f3f241bcf54a29ab731d53fb26d45739	1722871524	1722871524	kuqkz736@yeah.net	MargaratDavis	Add controls row. Not yet functional
+c12afaeafa7ef2658f9f7e508bb423e6152837ef	1721952884	1721952884	kuqkz736@yeah.net	MargaratDavis	Apply item background color.
+2404eb522371c4c9705e20fd78068b3f0116a197	1720933124	1720933124	kuqkz736@yeah.net	MargaratDavis	Initial Commit

@@ -1,0 +1,35 @@
+# Address allow-list (capture date 2026-04-25). Used by tools/wallet_watcher.py.
+# Format: ADDRESS<TAB>SOURCE_REPO<TAB>IDENTIFICATION
+# Lines starting with # are ignored.
+
+# === ETHEREUM 0x addresses (luliguyu/dimatura, all upstream-original test fixtures) ===
+0x0db3981cb93db985e4e3a62ff695f7a1b242dd7c	luliguyu/dimatura	upstream test fixture (token)
+0x205046e6A6E159eD6ACedE46A36CAD6D449C80A1	luliguyu/dimatura	upstream test fixture (gas-fee tx recipient)
+0x20D20b8026B8F02540246f58120ddAAf35AECD9B	luliguyu/dimatura	upstream test fixture
+0x20EE9760786AD48aB90E326c5cd78c6269Ba10AB	luliguyu/dimatura	upstream test fixture
+0x20fB08fF1f1376A14C055E9F56df80563E16722b	luliguyu/dimatura	upstream test fixture
+0x28c4113a9d3a2e836f28c23ed8e3c1e7c243f566	luliguyu/dimatura	upstream test fixture
+0x5e4c1bd1e00d229fe4d72d64df0b2f20b7649a9e	luliguyu/dimatura	upstream test fixture
+0x6080604052348015600e575f5ffd5b5061012980	luliguyu/dimatura	EVM contract bytecode prefix (not an address)
+0x641dcb99dfcd2ad3c3e7c3d30090b274b788a0f2	luliguyu/dimatura	upstream test fixture
+0x669e3a48fa068514e89bc2be248be964d22672cc	luliguyu/dimatura	upstream test fixture (mnemonic-seed test)
+0x7819dc0205e6a5c286796886ce16e637b99e1838	luliguyu/dimatura	upstream test fixture
+0x978918b7b544ad491d0b294cc6ac4d7bb0ef7112	luliguyu/dimatura	upstream test fixture
+0xd6921377489c736691d06ad610f105a5207f3d47	luliguyu/dimatura	upstream test fixture (hex-seed listing)
+
+# === NEAR addresses (luliguyu/ssaavedrad, well-known mainnet token contracts) ===
+1f9840a85d5af5bf1d1762f925bdaddc4201f984.factory.bridge.near	luliguyu/ssaavedrad	UNI bridged
+2260fac5e5542a773aa44fbcfedf7c193bc2c599.factory.bridge.near	luliguyu/ssaavedrad	WBTC bridged
+514910771af9ca656af840dff83e8264ecf986ca.factory.bridge.near	luliguyu/ssaavedrad	LINK bridged
+6b175474e89094c44da98b954eedeac495271d0f.factory.bridge.near	luliguyu/ssaavedrad	DAI bridged
+a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.factory.bridge.near	luliguyu/ssaavedrad	USDC bridged
+dac17f958d2ee523a2206206994597c13d831ec7.factory.bridge.near	luliguyu/ssaavedrad	USDT bridged
+f5cfbc74057c610c8ef151a439252680ac68c6dc.factory.bridge.near	luliguyu/ssaavedrad	POND bridged
+berryclub.ek.near	luliguyu/ssaavedrad	Berry Club NEAR-native
+dbio.near	luliguyu/ssaavedrad	DBIO NEAR-native
+meta-pool.near	luliguyu/ssaavedrad	Meta Pool (liquid-staking)
+meta-token.near	luliguyu/ssaavedrad	META (Meta Pool governance)
+token.paras.near	luliguyu/ssaavedrad	Paras NFT marketplace
+token.v2.ref-finance.near	luliguyu/ssaavedrad	Ref Finance DEX token
+wrap.near	luliguyu/ssaavedrad	wNEAR (wrapped NEAR)
+xtoken.ref-finance.near	luliguyu/ssaavedrad	xREF (Ref Finance staking)

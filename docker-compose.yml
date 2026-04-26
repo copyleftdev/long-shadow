@@ -1,0 +1,53 @@
+# farmwatch — one-command deployment of the wallet/farm/star watchers
+#
+# Usage:
+#     # 1. Get a GitHub personal access token (no scopes needed for public repos)
+#     # 2. (Optional) Set up a Slack/Discord webhook for alerts
+#     # 3. Create .env in this directory with:
+#     #      GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#     #      WEBHOOK_URL=https://hooks.slack.com/services/XXX/YYY/ZZZ
+#     #      WEBHOOK_KIND=slack    # or discord, or generic (default)
+#     # 4. Run:
+#     #      docker compose up -d
+#     # 5. Tail logs:
+#     #      docker compose logs -f farmwatch
+
+services:
+  farmwatch:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: farmwatch:latest
+    container_name: farmwatch
+    restart: unless-stopped
+    environment:
+      # Required: GitHub token for the API (no scopes needed; PAT works)
+      GITHUB_TOKEN: ${GITHUB_TOKEN:?GITHUB_TOKEN must be set in .env or shell}
+      # Optional: webhook for alerts. Without it, alerts only print to logs.
+      WEBHOOK_URL: ${WEBHOOK_URL:-}
+      WEBHOOK_KIND: ${WEBHOOK_KIND:-generic}
+      # Tunables
+      TZ: UTC
+    volumes:
+      # State persistence — keep this volume across restarts so the watchers
+      # have a baseline to diff against. If you delete it, every initial run
+      # will silently re-baseline (no false positives, but you lose history).
+      - farmwatch-state:/state
+    # No exposed ports — purely an outbound monitor. Reads GitHub, writes webhook.
+    healthcheck:
+      # Healthcheck simply verifies the supercronic process is alive.
+      test: ["CMD-SHELL", "pgrep supercronic >/dev/null || exit 1"]
+      interval: 60s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    # Resource caps — the watchers are tiny but git clones can be hefty.
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: "1.0"
+
+volumes:
+  farmwatch-state:
+    driver: local

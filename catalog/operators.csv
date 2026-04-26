@@ -1,0 +1,21 @@
+cluster,account,account_type,created_at,public_repos,followers,profile_name,profile_location,profile_bio,profile_website,suspected_status,evidence_files
+A,kyasbalme,User,2025-10-25T04:24:18Z,6,0,,NYC & Tokyo,CS & Philosophy @ Columbia,http://blu3mo.com/,fresh-attacker-created,data/kraken/kyasbalme.json
+A,luliguyu,User,2025-10-21T10:44:48Z,10,1,,,,,fresh-attacker-created,data/kraken/luliguyu.json
+A,tusmart-grouptt,User,2022-03-18T04:31:53Z,14,1,Eric Pi,Pitcher Partners,,,likely-compromised-dormant-IF-account-holder-please-contact-us,data/enumeration/deep_dive.txt
+A,countneurooman,User,2022-04-18T13:54:58Z,10,0,countneuroman,Point,Happy and coding ;-),,likely-compromised-dormant-IF-account-holder-please-contact-us,data/enumeration/deep_dive.txt
+B,CaMaGuee,User,2021-08-23T08:39:38Z,11,0,,,,,compromised-dormant,data/enumeration/farm_b_c.txt
+B,esrfdev,User,2026-04-12T10:28:58Z,1,0,,,,,fresh-attacker-impersonates-ESRF,data/enumeration/farm_b_c.txt
+B,gdhughey,User,2025-11-28T07:24:41Z,5,0,,,,,fresh-attacker-created,data/enumeration/farm_b_c.txt
+B,jun564,User,2021-08-08T16:01:50Z,2,0,,,,,compromised-dormant,data/enumeration/farm_b_c.txt
+B,mctils12-arch,User,2026-04-03T02:14:42Z,1,0,,,,,fresh-attacker-created,data/enumeration/farm_b_c.txt
+B,mearley24,User,2023-02-07T12:06:05Z,11,1,,,,,possibly-compromised,data/enumeration/farm_b_c.txt
+B,rvadapally,User,2021-10-25T23:01:14Z,7,0,,,,,compromised-dormant,data/enumeration/farm_b_c.txt
+B,vpneoterra,User,2024-12-21T02:29:57Z,15,0,,,,,fake-fusion-startup-front,data/enumeration/deep_dive.txt
+C,DelbyIntelligence,Organization,2026-04-03T15:20:31Z,3112,0,,,,,brand-squat-of-delby.ai,data/enumeration/delby_full.jsonl
+C,delby-ai,User,2026-04-03T15:18:59Z,0,0,,,,,operator-account-92sec-before-org,data/enumeration/farm_b_c.txt
+D,RPaez09l,User,2021-11-12T10:51:46Z,28,1,Ianko Leite,,,,bot-star-aged-organic,data/enumeration/star_network.txt
+D,tASDFG12345m,User,2022-05-11T15:34:30Z,24,0,,,,,bot-star-aged-bot-handle,data/enumeration/star_network.txt
+D,7228735902,User,2022-06-20T07:15:05Z,18,0,Nadjmou BOINA,,Ethical Hacker | B.Tech Student | Web Developer,,bot-star-aged-organic-bio,data/enumeration/star_network.txt
+D,superdaysk3wom,User,2021-12-29T01:53:44Z,17,0,Ethan H,,I make stuff.,,bot-star-aged-organic,data/enumeration/star_network.txt
+D,liiiiiii1i1i1,User,2025-04-13T06:20:48Z,5,0,,,,,bot-star-fresh-bulk,data/enumeration/star_network.txt
+D,8888x82,User,2025-04-16T13:21:10Z,12,0,,,,,bot-star-fresh-bulk,data/enumeration/star_network.txt

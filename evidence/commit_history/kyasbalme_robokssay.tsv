@@ -1,0 +1,80 @@
+7d026b876fb8d2b8cab86520deeebd00efecf5d7	1762628695	1762628695	BensonJennifer6145@outlook.com	kyasbalme	fix markdown text layout
+86074a29ee30d288ae6ecf9e70874bca700912ef	1762232575	1762232575	BensonJennifer6145@outlook.com	kyasbalme	apply header consistency fix
+64c685649872b00c12243fd3d4453fb44e824ffd	1762017815	1762017815	BensonJennifer6145@outlook.com	kyasbalme	Fixed a wrong null check.
+2766cb4942cef803b50e42a094c1935143e839c5	1761220774	1761220774	BensonJennifer6145@outlook.com	kyasbalme	v1.31
+13b7e64052765a76ca5eca02e5d2d87b5aea710e	1760550814	1760550814	BensonJennifer6145@outlook.com	kyasbalme	Fixed memory access violation while terminating.
+16212cb4d205e7770495904e48f00e4a8013ddc9	1759305334	1759305334	BensonJennifer6145@outlook.com	kyasbalme	Fixed README.md to reflect the addition of a new feature.
+4d9fda6c9f156c89eabce9f0163cdf456e5d643a	1758063054	1758063054	BensonJennifer6145@outlook.com	kyasbalme	Added a fast check before looking for alias names.
+8e970daf55f3b6a5848924f4ae216af55bb8b00d	1757427534	1757427534	BensonJennifer6145@outlook.com	kyasbalme	Refactor templated operator() function.
+32ec07688ccb306cfca6d38184c7703efbe75165	1756786134	1756786134	BensonJennifer6145@outlook.com	kyasbalme	v1.30
+d298fb6f8989fe65acceb277f7f4b34eabd7c402	1755814654	1755814654	BensonJennifer6145@outlook.com	kyasbalme	Changed the storage of font names to have `@`-headed string.
+1a1b9c9e309b7bd9f5d1f9603f07c0a7dd67f7d7	1755101134	1755101134	BensonJennifer6145@outlook.com	kyasbalme	Shortened length limit by 1 character with respect to `@`-headed font names.
+7e863a8ef44fac287566f27ebb24fe5e5489c23a	1754982734	1754982734	BensonJennifer6145@outlook.com	kyasbalme	Added annotation about aliases with the name same as an existing font.
+9eeb1bbe8952d07d18d9dc5b5ea92c4704d90212	1754165654	1754165654	BensonJennifer6145@outlook.com	kyasbalme	Removed an unused overload.
+1f61b19724bf973d5f7e0c5fd64cb68eff42fec9	1754082574	1754082574	BensonJennifer6145@outlook.com	kyasbalme	Updated license to include year 2025.
+8586510ab5b78701e4894104924205a60b57b562	1753366054	1753366054	BensonJennifer6145@outlook.com	kyasbalme	Add Aliases.txt to example directory tree in README.md.
+369b148406aa13629c024b2f1884fa6c9ea122fe	1753197494	1753197494	BensonJennifer6145@outlook.com	kyasbalme	Added content to README.md about the alias feature.
+7d46b4ce6e43063b5d33026475cf07f0e853ea58	1753032894	1753032894	BensonJennifer6145@outlook.com	kyasbalme	Update copyright year in LICENSE file to 2024-2025.
+bb11f927b97c0c2e87cb8d3c303b1b53c2e958d6	1752586774	1752586774	BensonJennifer6145@outlook.com	kyasbalme	Updated an AviUtl alias file to enumerate fonts.
+f6e1b6bffb82b370a3d1a4b3dbc429829af921cb	1751511054	1751511054	BensonJennifer6145@outlook.com	kyasbalme	Added template/sample file to define aliases.
+cadeb39c571ea8149ee00a77c15297a2c99c2955	1750367454	1750367454	BensonJennifer6145@outlook.com	kyasbalme	Add font alias management and improve text file handling
+7e65560497674e0f418fa89b42b6af1a05377e7c	1749686334	1749686334	BensonJennifer6145@outlook.com	kyasbalme	Fixed sectioning in README.md.
+6e2eaaf9708db7d12125080d686f3561d5be3d86	1749397694	1749397694	BensonJennifer6145@outlook.com	kyasbalme	紹介動画へのリンク追加．
+257086103b98b089f426cb688d6c83f36661ba88	1749136614	1749136614	BensonJennifer6145@outlook.com	kyasbalme	v1.20
+98d026cc258aed980faa7e7f7c338e157d008d6f	1748911014	1748911014	BensonJennifer6145@outlook.com	kyasbalme	Use overload instead of template.
+9e0c1ef95a951ae023f8cdf18bdbc95bbf91f5d8	1747966934	1747966934	BensonJennifer6145@outlook.com	kyasbalme	Fixed off-by-one trimming length.
+d7652ddf29cf1f80b1563284a8768168f28f61b8	1746792734	1746792734	BensonJennifer6145@outlook.com	kyasbalme	Handlings in cases of failures in encode translations.
+0f60408f2110e8e8866148b18f3366d4bf094827	1746504294	1746504294	BensonJennifer6145@outlook.com	kyasbalme	Added a new way to embed the version number, expired the old one. + Slight updates to the `.exa` file that lists all installed fonts.
+ff434202fcf17d83f771fb6af332880fc865a298	1746483094	1746483094	BensonJennifer6145@outlook.com	kyasbalme	The font list file now requires to be encoded with UTF-8. + Refactored in results in a smaller binary file.
+b3a5e931b8ecc2def26d2c017d13a02e626c320b	1745969534	1745969534	BensonJennifer6145@outlook.com	kyasbalme	Refactored for preferred use of `std::wstring` and `::CharLowerW()` rather than `::wcscpy_s()` or hand-made `tolower()`.
+d4df33a5c9b7cdaa4e324cfd50d1e99f72032260	1744954174	1744954174	BensonJennifer6145@outlook.com	kyasbalme	Use `CP_ACP` to translate path to narrow string when loading a file.
+5260f05bbb0ccbe31eb0e505bcfa3b9c5bf2fbc8	1744621214	1744621214	BensonJennifer6145@outlook.com	kyasbalme	v1.14
+d67740831c00c8fed25fb8f18b013c5530f4d59e	1743815054	1743815054	BensonJennifer6145@outlook.com	kyasbalme	Update releaser.yml
+4edccfd0e3c703a471fb96d1da219c41732a0641	1742923614	1742923614	BensonJennifer6145@outlook.com	kyasbalme	v1.13
+a85ff40cb289c18c0025e232bd0f86173158c079	1742639414	1742639414	BensonJennifer6145@outlook.com	kyasbalme	v1.12
+fc00221d5892afbd87d8001f6d2719b641113706	1741506894	1741506894	BensonJennifer6145@outlook.com	kyasbalme	`::DisableThreadLibraryCalls()` 追加．
+06fd0fac346f0f99f160f7aee1e6b90cbc09099a	1740885934	1740885934	BensonJennifer6145@outlook.com	kyasbalme	README の誤字修正．
+de86310d99f1629eb0e95192651ce55ff5cd2509	1739691694	1739691694	BensonJennifer6145@outlook.com	kyasbalme	Update .gitattributes.
+c1950f3de9c61b7d5756f6b7cc54ded834b5e640	1738957013	1738957013	BensonJennifer6145@outlook.com	kyasbalme	v1.11
+dba78c373d97bcdb7275e02b4ebfeb79d8a0bd77	1737985213	1737985213	BensonJennifer6145@outlook.com	kyasbalme	ホワイトリストが空の場合のfallback.
+8ae2de27266004627e0f4fe16c2131823e7b3f89	1737429173	1737429173	BensonJennifer6145@outlook.com	kyasbalme	Indent.
+7d983fbda80b4c915d331f6c4a158bfbf30227bb	1736970293	1736970293	BensonJennifer6145@outlook.com	kyasbalme	README.md 追記．
+e4badcb80b6b09b0604a09bfcf464baca7f188d9	1736769813	1736769813	BensonJennifer6145@outlook.com	kyasbalme	全フォントリスト.exa を追加．
+fbb87a33e97e1bc57525512a94436344fb84577d	1736689093	1736689093	BensonJennifer6145@outlook.com	kyasbalme	v1.10
+79e3a791779f6b64683b81fb6fc130af7e3060d1	1736577853	1736577853	BensonJennifer6145@outlook.com	kyasbalme	ホワイトリストモードの追加． +文字列の取り回し微変更．
+0df9c2d125180bf195006f55c03daf234de56d42	1735771853	1735771853	BensonJennifer6145@outlook.com	kyasbalme	v1.06
+3dd4df651aee02d06930cebcfb09009d473f4c11	1734977213	1734977213	BensonJennifer6145@outlook.com	kyasbalme	なるべくAでなくWのほうのAPIを使うように．
+5e6dbf206751a3a3f1fb27818ac1adeabce8642a	1734186093	1734186093	BensonJennifer6145@outlook.com	kyasbalme	アルファベットの小文字化処理修正とコード整理．
+b790a32893c4acdfae40ce6208e2f6da8dad1de4	1733246013	1733246013	BensonJennifer6145@outlook.com	kyasbalme	READMEの更新と除外リストファイルのコメント追記．
+58d1a624d7b8d7a5fcaab7616e74e45e41cf9963	1732147893	1732147893	BensonJennifer6145@outlook.com	kyasbalme	v1.05
+36423d219f13f46fd9a12fb4cf23650e7ff7e939	1730841693	1730841693	BensonJennifer6145@outlook.com	kyasbalme	SJIS全角アルファベットの小文字化を修正．
+9f828efb4f889d08ca6b92083e7b64600d388713	1730216453	1730216453	BensonJennifer6145@outlook.com	kyasbalme	v1.04
+d5cfa2453aff7970ebf714b4d2a8caa304ff87f6	1728974893	1728974893	BensonJennifer6145@outlook.com	kyasbalme	detours.libの生成workflow追加．
+bb7a563540a25f00850d19d35d31547fb5625a3a	1728754213	1728754213	BensonJennifer6145@outlook.com	kyasbalme	README 手直し．
+1c1cace58e7461e89aaa85ef0d92a0f074ecc266	1728459293	1728459293	BensonJennifer6145@outlook.com	kyasbalme	std::string_view に普通に contains() 関数あったわ．
+397cd025308ecfb267c59786bb674372b9c4b923	1727410493	1727410493	BensonJennifer6145@outlook.com	kyasbalme	ちょっとデコってみた．
+cc33a5db489d43511c4863fed75879d8795ec5db	1726989773	1726989773	BensonJennifer6145@outlook.com	kyasbalme	説明文の誤字修正 + 追記．
+d1e9abc0af56fed9eb9449f05fc70aeb5ccd3e04	1726055733	1726055733	BensonJennifer6145@outlook.com	kyasbalme	ちょっと見やすいかも．
+aa0fac466edfd981a95eb528aeb766aaa1853729	1725714853	1725714853	BensonJennifer6145@outlook.com	kyasbalme	v1.03
+cc0cb2bd708d8658509560f2153bb90fd5f1f51b	1725488093	1725488093	BensonJennifer6145@outlook.com	kyasbalme	紆余曲折いろいろ修正．
+e736a296d3d9cd324a7d3af201c88dfd4b72cf56	1725274613	1725274613	BensonJennifer6145@outlook.com	kyasbalme	Update README.md
+fd2f18dc82c7649f65fdfe5dbc73f413f74a5f4f	1724617853	1724617853	BensonJennifer6145@outlook.com	kyasbalme	日付更新忘れてた．
+e3d62f75905da7f721d33f70eabafe1a6b8c53a6	1723989853	1723989853	BensonJennifer6145@outlook.com	kyasbalme	v1.02
+41c5f6648fb4baac65a7738ffd21a70d827261e4	1723611293	1723611293	BensonJennifer6145@outlook.com	kyasbalme	追加フォントの拡張子チェック． 除外フォント前後の全角空白も無視．
+539ff585e68ff6d890b915878a1f86f9040486a8	1722686693	1722686693	BensonJennifer6145@outlook.com	kyasbalme	やっぱり多分いらない．
+8019c66dd4e3786253e971c002d59bdc31ac3c13	1721926573	1721926573	BensonJennifer6145@outlook.com	kyasbalme	こっちのほうがいいかも．
+dd3ca378030ce5eff0e06d9e5a8af17984811519	1720840733	1720840733	BensonJennifer6145@outlook.com	kyasbalme	v1.01
+b66d6d992c594e9b0e876413e323bad5b4ee1287	1720148093	1720148093	BensonJennifer6145@outlook.com	kyasbalme	ビルドオプション修正．
+5acf5a95bf771629086817fad37743048e6a0c6a	1718890893	1718890893	BensonJennifer6145@outlook.com	kyasbalme	念のため．
+3a003ccb71afc2c06f82d64d38fbe739c6fae0fb	1717817413	1717817413	BensonJennifer6145@outlook.com	kyasbalme	Embed version number.
+1670e76d3de724800ccbdfb7f8c7d9f4a5c544eb	1717790813	1717790813	BensonJennifer6145@outlook.com	kyasbalme	Slight updates.
+1389575b0e578f1e065a585ddbce72ccea67ee35	1716636773	1716636773	BensonJennifer6145@outlook.com	kyasbalme	追加フォントが多いと起動しなかったのを修正．
+a635e7741c51275b3132c62cde1a9bbf2f63c997	1716254212	1716254212	BensonJennifer6145@outlook.com	kyasbalme	v1.00
+670e13be1a65a3e7dd1815007cc6c8ef119ca5e6	1715559052	1715559052	BensonJennifer6145@outlook.com	kyasbalme	Update README.md
+ee386d5a811438fa8905300d47d86b8f93213d75	1714921732	1714921732	BensonJennifer6145@outlook.com	kyasbalme	Update releaser.yml
+5d07e6d919dccd570be59020d59695ddf0b7df2d	1714880492	1714880492	BensonJennifer6145@outlook.com	kyasbalme	Update releaser.yml
+da7cdd21e0c696c66095b7da821edffe057039f5	1714638052	1714638052	BensonJennifer6145@outlook.com	kyasbalme	Update releaser.yml
+64e0f665cf2770976063b3a57ac1892be4a91796	1713994452	1713994452	BensonJennifer6145@outlook.com	kyasbalme	Update releaser.yml
+8e24c7cfd4782aff85012d43b90b39136a4f2962	1713595612	1713595612	BensonJennifer6145@outlook.com	kyasbalme	Update releaser.yml
+5482404ff0e14cb34ee47121f1cde6ce44d2ce8e	1712324292	1712324292	BensonJennifer6145@outlook.com	kyasbalme	Add README.md.
+6015206d36f41bea86ebe059d933c934fd359a74	1712144812	1712144812	BensonJennifer6145@outlook.com	kyasbalme	Add project files.

@@ -1,0 +1,19 @@
+# supercronic crontab — runs inside the farmwatch container.
+# Schedule rationale documented in tools/README.md.
+#
+# Each line invokes run-and-alert.sh, which executes the watcher and POSTs the
+# state JSON to $WEBHOOK_URL when the watcher exits 1 (= NEW findings).
+#
+# Times are UTC inside the container.
+
+# Wallet integrity — every 30 minutes (highest priority: operators control crypto wallet code)
+*/30 * * * *   /opt/farmwatch/run-and-alert.sh wallet  python3 /opt/farmwatch/tools/wallet_watcher.py --workdir /state/wallets
+
+# Operator-account changes — every 15 minutes (skip slow email-reach lookups on this run)
+*/15 * * * *   /opt/farmwatch/run-and-alert.sh farm    python3 /opt/farmwatch/tools/farm_watcher.py --workdir /state/farm --skip-email-reach
+
+# Bot-star activity + customer-star spikes — every 6 hours
+0 */6 * * *    /opt/farmwatch/run-and-alert.sh stars   python3 /opt/farmwatch/tools/star_watcher.py --workdir /state/stars
+
+# Full sock-puppet email reach — once daily at 04:15 UTC (slow: ~5 min due to commit-search rate limit)
+15 4 * * *     /opt/farmwatch/run-and-alert.sh email   python3 /opt/farmwatch/tools/farm_watcher.py --workdir /state/farm

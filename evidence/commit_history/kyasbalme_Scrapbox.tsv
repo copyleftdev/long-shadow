@@ -1,0 +1,625 @@
+ea78b4344cbed964a6ffbe04c1725d7bc911ad0a	2127428926	2127428926	BensonJennifer6145@outlook.com	kyasbalme	update auto markdown lines
+fd31fce56de20ec236df64f16aca39e4af0db771	2127276926	2127276926	BensonJennifer6145@outlook.com	kyasbalme	update repository info header
+e81bfc2423252ed700e493d939349898ea67618a	2127070166	2127070166	BensonJennifer6145@outlook.com	kyasbalme	update doc metadata lines
+916b7c1e6567a10583bbd67aa0c5c2564cb92d3a	2126191046	2126191046	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #159 from dousu/dousu-patch-1
+811f0925963a98d766aca85691c0babf1c157d80	2125969325	2125969325	BensonJennifer6145@outlook.com	kyasbalme	Create AGENTS.md with project guidelines and standards
+3586e0d043a6afc0f35f3ca5df161d7641994151	2125955325	2125955325	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #157 from dousu/dependabot/pip/update-2c2406366a
+d16b85a707aec4a2bf5a2b3430899a5cf92e4d79	2125643605	2125643605	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump the update group across 1 directory with 12 updates
+c424a64b4b9ffd700166da0a5d43b52f35240dcf	2125149525	2125149525	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #153 from dousu/dependabot/github_actions/update-6a14be197d
+fa7adfc5bd7bcfd11b2cc56e017939fb461d3a27	2124727685	2124727685	BensonJennifer6145@outlook.com	kyasbalme	build(deps): bump the update group across 1 directory with 2 updates
+51159128404b0b954a65e3c183e79787030d761a	2124403805	2124403805	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #156 from dousu/inference
+045112b26c15f928bc72cfe93433c288c1176120	2124267805	2124267805	BensonJennifer6145@outlook.com	kyasbalme	fix(evaluation): fix winrate logic
+9d3cebe789d0b5d3e86ee3f70cf4275b73cfb200	2123832885	2123832885	BensonJennifer6145@outlook.com	kyasbalme	fix(evaluation): fix winrate logic
+e3d5a5ad57d9c3218e22ce276a02e571653c59cd	2122580205	2122580205	BensonJennifer6145@outlook.com	kyasbalme	style(scripts): 便利スクリプトをscriptsに移動する
+5dba81e2d1962292a0c4730a12c008a3cf72e96a	2121824645	2121824645	BensonJennifer6145@outlook.com	kyasbalme	fix(loss-function): fix GCEwithNegativePenaltyLoss
+f3c407b28ebdb556c7b3043577bf5f2aa2fe9eea	2120731445	2120731445	BensonJennifer6145@outlook.com	kyasbalme	feat(loss-function): update policy loss function
+1376af729dcec4fda5552b8543fcb4dec8b1a28f	2120226605	2120226605	BensonJennifer6145@outlook.com	kyasbalme	fix(learn): policyの精度を計算するアルゴリズムの修正
+c21adb6f4d2c4efa22b87c3cdad77928b038ab35	2118991205	2118991205	BensonJennifer6145@outlook.com	kyasbalme	feat(preprocess): 集計時のchunk処理後の削除を無効化する
+b5618113a0f31908e00dfff6b2d47590fb3acd1b	2117913565	2117913565	BensonJennifer6145@outlook.com	kyasbalme	style(style): fix style
+e8d0d18e62acd7e33d3a3089311dafc260971e14	2116824325	2116824325	BensonJennifer6145@outlook.com	kyasbalme	refactor(pre-process): プログレスバーを単一化し視認性を向上
+37a3f247c5598a321ac5fc08b2864bb70177fdef	2115836365	2115836365	BensonJennifer6145@outlook.com	kyasbalme	feat(pre-process): GCS/S3への大規模データ保存とプログレスバー改善
+8be97a742f3450612a9152bf166b1e74792b50f2	2114650685	2114650685	BensonJennifer6145@outlook.com	kyasbalme	perf(pre-process): VACUUM最適化で集約処理を約10分高速化
+e6aa42cb0fd40273ca131478658491ce242d3c5b	2114453445	2114453445	BensonJennifer6145@outlook.com	kyasbalme	fix(pre-process): move_label_countのsparse圧縮でディスク使用量を140GB→30GBに削減
+dc72aecc42dece8e3b9f0d9d80588141f5ec8ee3	2113155365	2113155365	BensonJennifer6145@outlook.com	kyasbalme	feat(pre-process): チャンク集約時のプログレスバー追加
+c901ca7de6c88539ad701dd688369c1ec91edc14	2112569565	2112569565	BensonJennifer6145@outlook.com	kyasbalme	fix(pre-process): VACUUM実行条件のバグ修正でディスク使用量を160GB→100GBに削減
+e367a16d243d2b4d3c0c7dba75c1fa827766ed7f	2111898325	2111898325	BensonJennifer6145@outlook.com	kyasbalme	feat(pre-process): チャンク分割出力時の段階的削除でピークディスク使用量を50%削減
+f3ddad8eaccd287919db7a59641ecbfa1eb569b5	2111464765	2111464765	BensonJennifer6145@outlook.com	kyasbalme	test: テスト失敗の修正
+1091b1754ed94edc4444c442095da355396cd986	2110367725	2110367725	BensonJennifer6145@outlook.com	kyasbalme	feat(pre-process): 中間データベースと最終出力のビットパック圧縮を有効化
+a20490ab36fe99c5f806bcafb559ab90cfa4779c	2109084125	2109084125	BensonJennifer6145@outlook.com	kyasbalme	fix(infra): シングルプロセス時のキュータイムアウトを無効化
+9348276c55f8f16072192c2338ed32df0616f5de	2108616845	2108616845	BensonJennifer6145@outlook.com	kyasbalme	fix(pre-process): 並列処理のメモリ効率化（逐次サブミット方式）
+6deeed1913de005132bd108779b0604193d995d4	2107364525	2107364525	BensonJennifer6145@outlook.com	kyasbalme	feat: ユニーク局面数とメモリ使用量推定スクリプト追加
+e2a43c44330a657d3d79041282cfc52a076d976c	2106418485	2106418485	BensonJennifer6145@outlook.com	kyasbalme	docs: ディスクベース前処理とSQLite技術選定のADR追加
+f3c19ce6e869763db209122d6073a94de88b1651	2106301085	2106301085	BensonJennifer6145@outlook.com	kyasbalme	feat(pre-process): ディスクベース中間データストアによるメモリ効率化
+233b1f89e8e80045fcf400a5fbc421a21701bc4d	2105981445	2105981445	BensonJennifer6145@outlook.com	kyasbalme	perf(pre-process): メモリ効率化と実行時間短縮のための最適化
+890f2c8a21716f81e3d4c3eb97e3d8b2ed26b9d1	2105867365	2105867365	BensonJennifer6145@outlook.com	kyasbalme	perf(pre-process): 辞書ベース中間データ管理とユニーク盤面計算の最適化
+e3596b28b14efb5f322fb309b5353a47d5ad491a	2104985765	2104985765	BensonJennifer6145@outlook.com	kyasbalme	fix(test): スキーマ変更に伴うテスト修正とDeprecationWarning対応
+371b22365e090b502c4dab2bfcbc9dfc7874e3cd	2104089925	2104089925	BensonJennifer6145@outlook.com	kyasbalme	fix(test): スキーマ変更に伴うテスト修正とDeprecationWarning対応
+8a093069192cc07636f392261e5954beebdc242d	2103759965	2103759965	BensonJennifer6145@outlook.com	kyasbalme	refactor(tensorrt): comment
+e8f4fb6195229def264e762bc44e5321aacc6f85	2103363764	2103363764	BensonJennifer6145@outlook.com	kyasbalme	refactor(tensorrt): test
+ff701fcbdc5ccf38755b4f0f75b6e50fe87316d8	2102061884	2102061884	BensonJennifer6145@outlook.com	kyasbalme	fix(tensorrt): policyの出力がおかしかったので修正する
+351d85be1ee2d9e2912294ab0f0903a0bab0c241	2101117284	2101117284	BensonJennifer6145@outlook.com	kyasbalme	refactor(tensorrt): debug
+3db7c8691242fc1cb35f67c76a542a1abd15768f	2100601044	2100601044	BensonJennifer6145@outlook.com	kyasbalme	refactor(tensorrt): debug
+1340fd8a6d0f1bba0c5518977906ea24a7aa6d51	2099813484	2099813484	BensonJennifer6145@outlook.com	kyasbalme	fix(tensorrt): TensorRT Engineを毎回ONNXから生成するように変更
+16869ab399805fac5c3a846ba79fd0782da57140	2099545764	2099545764	BensonJennifer6145@outlook.com	kyasbalme	feat(evaluate): 0手読みコマンドの追加
+d55c6f86d2eba68c802686384ba73e9e2b7e35f9	2099200684	2099200684	BensonJennifer6145@outlook.com	kyasbalme	refactor(Loss-Function): MaskedGCEのペナルティのデフォルトが強すぎたので少し修正
+30feeff986f37f91a012c6e25231c22d146318d1	2098892004	2098892004	BensonJennifer6145@outlook.com	kyasbalme	fix(pre_process): ラベルからUSIへの変換処理を修正
+5acd758f97e5bec50ae7a2b8f4e8b2b5a4277ffc	2098697004	2098697004	BensonJennifer6145@outlook.com	kyasbalme	fix(python): use python3.12
+d508b395710c287fc8a90389ddf6783b35302552	2098147644	2098147644	BensonJennifer6145@outlook.com	kyasbalme	fix(save_model): upload to cloud storage
+8aac6f91af2e87adffcde47c24aaa61e1b10b123	2097616204	2097616204	BensonJennifer6145@outlook.com	kyasbalme	fix(save_model): コンパイル済みモデルのロード方法を修正
+f7ce7226313806c7018f3f737b65fc96d97fd2e5	2097217644	2097217644	BensonJennifer6145@outlook.com	kyasbalme	fix(Learning): fix typo
+e92836944d6b60471a466652117377ff5d943e24	2096793164	2096793164	BensonJennifer6145@outlook.com	kyasbalme	fix(save_model): save_modelの動かなかった部分の修正
+8829344c6dc72a0fef471b66964e58921f2cd09d	2095809844	2095809844	BensonJennifer6145@outlook.com	kyasbalme	fix(save_model): dummy_inputを転送していなくて落ちてしまうのを修正する
+5b9172bd5d736581aba04b59d375543d9bec9fab	2095413204	2095413204	BensonJennifer6145@outlook.com	kyasbalme	fix(tensorrt): cudaバージョンの指定が足りてなかったので追加する
+00d9f8fa909efc05f723ce5a73b363c9ee02b221	2094576404	2094576404	BensonJennifer6145@outlook.com	kyasbalme	feat(learn-model): ONNXとTensorRTでの実行できるような形でのモデルの保存を追加する
+84d2b13c5bf460c3dca3f157b70c8d6d6e777f27	2094532924	2094532924	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #152 from dousu/precommit-autoupdate-github-actions-20250901
+f5a1a9721a8f8edd5e128af03586a75cff80bc57	2093435604	2093435604	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+1c20563a80acf7a542b03dd92487f33c1ee91225	2093410724	2093410724	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #149 from dousu/usi-from-label
+3e69a335a69d068186a0fed7cf76042ae7c8dfc6	2092991004	2092991004	BensonJennifer6145@outlook.com	kyasbalme	fix(label): fix make_move_from_label
+30550cda2abf19b50a59a920da9d8d34e1ed18bc	2091981124	2091981124	BensonJennifer6145@outlook.com	kyasbalme	refactor(cshogi): cshogiをdomainにクラス作ってラップして入れ替えやすいようにしておく
+cd11d45b3c92730dab806e7c5d8019cae54d9e02	2091859724	2091859724	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #148 from dousu/usi-from-label
+42dafb372c1b175146e57b50ee3b9d771cce0d3a	2091319484	2091319484	BensonJennifer6145@outlook.com	kyasbalme	style(mypy): fix errors
+9f199921c8abbdf03434e73940da6aff9d52df50	2090884284	2090884284	BensonJennifer6145@outlook.com	kyasbalme	feat(label): add make_move_from_label inverse conversion function
+a6b7d3fe9e6c30f18ae2e467646b7b70e46af295	2090382604	2090382604	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #139 from dousu/update-learn
+685911288d4d7d7318515ea707407acd45d4f6d6	2089389084	2089389084	BensonJennifer6145@outlook.com	kyasbalme	fix(objectstorage): fix chunking logic in data source
+f69d67ad1841f5c78fc131eae1980bcc2470306f	2088374964	2088374964	BensonJennifer6145@outlook.com	kyasbalme	refactor(object-storage): use tqdm in DataSource
+10543bb3d694256f7f139864f3a4ce5347ada009	2087608484	2087608484	BensonJennifer6145@outlook.com	kyasbalme	fix(format): remove trailing whitespace
+3afb04516efd6026f38166acefd10bedd654c8af	2087589804	2087589804	BensonJennifer6145@outlook.com	kyasbalme	fix(resource-monitor): resolve type errors and format issues
+0838dc1104e7bcf509673118a372fc1fca9d673a	2087112684	2087112684	BensonJennifer6145@outlook.com	kyasbalme	feat(benchmark): add CPU/GPU resource monitoring to training benchmark
+0d935aa3ee64194e32dd008efa6b150e947c0f93	2086530524	2086530524	BensonJennifer6145@outlook.com	kyasbalme	fix(training-loop): AMP時のdevice typeがcuda固定だったので修正
+fb8e206209b2cbaa48013fc79cab551280ef8bdb	2085928604	2085928604	BensonJennifer6145@outlook.com	kyasbalme	refactor(training-model): add device info in log
+d0876dbd49dd035137f3cba46a9d402096814cdf	2085669884	2085669884	BensonJennifer6145@outlook.com	kyasbalme	refactor(training_loop): fix gpu transfer
+1a4f5faedc3980fb18c1b2432afaa8de0c477fdc	2084766804	2084766804	BensonJennifer6145@outlook.com	kyasbalme	refactor(learning): consolidate training setup and improve configuration
+4b67e8a245cf841018fbb0b89e8206a97dc8f85d	2084607404	2084607404	BensonJennifer6145@outlook.com	kyasbalme	fix(mypy): fix error
+393b4ff947810f35ca026d1c483694424816169a	2083683484	2083683484	BensonJennifer6145@outlook.com	kyasbalme	feat(benchmark-training): add model compilation
+da33c33504afc0f9c7991b07dc7a3906ed6f54a3	2082951323	2082951323	BensonJennifer6145@outlook.com	kyasbalme	refactor(training-loop): specify total in tqdm
+147b82d8e5805d157a9e60b3ccdeccb1c06d9f3d	2081890803	2081890803	BensonJennifer6145@outlook.com	kyasbalme	fix(utility-training-benchmark): fix an option
+fbacbb49facaeac9a7daacb9bd1b64f3d53d748b	2081783043	2081783043	BensonJennifer6145@outlook.com	kyasbalme	feat(data-io): add packed array loading and schema conversion functionality
+769c04050b96f4ccbcbe583ca606008538c10063	2081730923	2081730923	BensonJennifer6145@outlook.com	kyasbalme	perf(object-storage): update object storage parallel processing
+18feb8d068e9d6fc8d0c1961c1740caf81c95b41	2081589043	2081589043	BensonJennifer6145@outlook.com	kyasbalme	fix(docstrings): fix docstrings
+7b9ba588ef4e1c46278edc04e306e8b359c40c4c	2081151403	2081151403	BensonJennifer6145@outlook.com	kyasbalme	refactor(learning): cudaの初期化はメインプロセスで行うのでワーカープロセスでは初期化しない
+ff627886199763855c4efc793d355104d0b09a5f	2081109883	2081109883	BensonJennifer6145@outlook.com	kyasbalme	fix(training-benchmark): fix KeyError in TimingCallback
+3bb90b8054954005ca9a9670e27b7cdb6fc7557b	2080722643	2080722643	BensonJennifer6145@outlook.com	kyasbalme	fix(console-utility): fix utility
+88c57e4176dc9f864be9087888882f10f0fef601	2079958163	2079958163	BensonJennifer6145@outlook.com	kyasbalme	fix(object-storage-datasource): fix sample downloading
+7f015f9b84d28a9b40762825479fd1f3eaf7fc1f	2079405643	2079405643	BensonJennifer6145@outlook.com	kyasbalme	fix(console): fix learn-model and utility
+44967c7f97eca612114544166e1460ebdbcd5c15	2078348843	2078348843	BensonJennifer6145@outlook.com	kyasbalme	fix(object-storage-datasource): add existing files to file list
+a825e60a89dba07ae868e3607bc7be6156678e5c	2077758203	2077758203	BensonJennifer6145@outlook.com	kyasbalme	style(mypy): ignore type error
+8e2a593abf1372cc20aa3a6decebdab532a1d577	2076694883	2076694883	BensonJennifer6145@outlook.com	kyasbalme	fix(hcpe_converter): replace match statement with if-elif for Python 3.9 compatibility
+ae35913f2f8f6c16274d27be3a4249002f6a6b64	2075821043	2075821043	BensonJennifer6145@outlook.com	kyasbalme	refactor: code formatting and pre-commit config update
+7aa643ca39305e63538a3013dd7f40fde9dcd84b	2074979203	2074979203	BensonJennifer6145@outlook.com	kyasbalme	fix(pre-commit): fix alias
+3597b5e7732d36d37dc3a1ca9bfbf5ad2e7b5a49	2074458843	2074458843	BensonJennifer6145@outlook.com	kyasbalme	refactor(tqdm): update tqdm desc
+64b0155b493e754b2bbdb59cd59d705411a2e747	2073718243	2073718243	BensonJennifer6145@outlook.com	kyasbalme	refactor(preprocess): update transform logic
+f970523060caf4d36254899253aa7f74f314349b	2073121163	2073121163	BensonJennifer6145@outlook.com	kyasbalme	fix(pre-process-cli): fix typo
+eff11539d50b98b75e58a959ddbbbedb9e886857	2072816563	2072816563	BensonJennifer6145@outlook.com	kyasbalme	fix(ObjectStorageFeatureStore): fix bundling
+571c79045d34e2faf4b00c47abbcec0450c524d2	2071792083	2071792083	BensonJennifer6145@outlook.com	kyasbalme	refactor: standardize worker parameter usage in CLI commands
+6bd67b910a6da4cd526241ea9cf3d07814ca0400	2070644163	2070644163	BensonJennifer6145@outlook.com	kyasbalme	fix(poetry-lock): update poetry.lock
+7bea0152919af556d50dbaf3e579f7d2488ff80e	2069489323	2069489323	BensonJennifer6145@outlook.com	kyasbalme	Merge remote-tracking branch 'origin/main' into update-learn
+6aa529c70771f2b6417455f616c9a2ecef069407	2069111483	2069111483	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #147 from dousu/precommit-autoupdate-github-actions-20250801
+8a11f3098f46cd5e15caeb63d61228b5cef82e7b	2068103883	2068103883	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+6adbb8dda697f6762fd75e4d4e99378af3a87ddc	2067744443	2067744443	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #146 from dousu/dependabot/pip/update-eaeffcc0cf
+13e568a6bdeec8191d3f2d72da588a241019f451	2066679123	2066679123	BensonJennifer6145@outlook.com	kyasbalme	build(deps): bump the update group with 2 updates
+858d79f1cb94927c95316976d46f7582a75a055f	2065594523	2065594523	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #145 from dousu/precommit-autoupdate-github-actions-20250701
+5d5da2798ab36d1e99ff607121c9af665afdf456	2065508283	2065508283	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+cc4ceab97c62d97ff3ce6f9cf1444342812c9376	2064291643	2064291643	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #144 from dousu/dependabot/pip/update-c91ce9ebbb
+7d187ef1be4d42e3dac52e614d54c9a95f882ead	2064010563	2064010563	BensonJennifer6145@outlook.com	kyasbalme	build(deps): bump the update group across 1 directory with 4 updates
+5f30d6c3f37e99168885660eb7e259c4cb185125	2062826083	2062826083	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #141 from dousu/precommit-autoupdate-github-actions-20250601
+019b9fa9923d47daadd7859cf84ffc9c3769176b	2062752163	2062752163	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+f2c4ef323d4acc296a1cb468acbd5290b5180b0f	2062561483	2062561483	BensonJennifer6145@outlook.com	kyasbalme	refactor: major architecture cleanup and data schema refactoring
+cea7ecae48674cb67a4d0d96f80d8e77e3f22548	2062163283	2062163283	BensonJennifer6145@outlook.com	kyasbalme	fix(console): fix import ordering
+4aeeb10999084ea651b772bd5c3ba65458079222	2060853443	2060853443	BensonJennifer6145@outlook.com	kyasbalme	fix(console): apply linter fixes and cleanup
+1fea2217599af2c25ef7559925364d2a2009b149	2060349003	2060349003	BensonJennifer6145@outlook.com	kyasbalme	fix(console): add proper type annotations and __all__ export
+3b5f0d55c3bb3f13c4f7b380071ad8b83a5254ac	2060073082	2060073082	BensonJennifer6145@outlook.com	kyasbalme	fix(console): restore missing imports in common.py
+dffed98b5c60a9c470e19e86084e0ad8d3713e48	2059224522	2059224522	BensonJennifer6145@outlook.com	kyasbalme	refactor(console): split app.py into separate command files
+47d82b5c33993f20ecfd859bb7e90ad8f8663287	2058177522	2058177522	BensonJennifer6145@outlook.com	kyasbalme	fix(bundling): pass array_type to S3/GCS DataSource in benchmark_dataloader
+a646c9ff0750c3e9e7f93aa91586b9d7c5e00a83	2057082642	2057082642	BensonJennifer6145@outlook.com	kyasbalme	fix(bundling): add .bundle.raw detection for preprocessing array type
+11a55b16951c18d6a36d875db26001625552b5f2	2057051242	2057051242	BensonJennifer6145@outlook.com	kyasbalme	fix(bundling): use .bundle.raw extension for consistent tofile() format
+dbcdcd2478781a1e8d11ebb724c601b2fb6ac12d	2056022162	2056022162	BensonJennifer6145@outlook.com	kyasbalme	fix(bundling): correctly set cumulative start_idx for multiple bundles
+8e4ba8791e0148669dc2417b0a110f6876d9273a	2055286322	2055286322	BensonJennifer6145@outlook.com	kyasbalme	fix(bundling): add indices validation and filtering for bundled datasets
+d3823df2932a0e208ea7983c73ef62b39e857d4a	2054172522	2054172522	BensonJennifer6145@outlook.com	kyasbalme	fix(bundling): resolve index range error by moving bundling before train_test_split
+cf7a9bc2bdcaec0e42583369c4c1736a3f21d268	2053499042	2053499042	BensonJennifer6145@outlook.com	kyasbalme	feat(bundling): improve bundle I/O and add automatic file cleanup
+59331d4eb6a919b3ab3323ce9e380a9d48865d5b	2052873002	2052873002	BensonJennifer6145@outlook.com	kyasbalme	fix(architecture): move bundling service access to interface layer
+cc48a3e4c586735f9cd71e1e87a03e3f532e5160	2051807922	2051807922	BensonJennifer6145@outlook.com	kyasbalme	feat: implement bit-packing compression and fix cloud service integration tests
+1b34c93b5bad451ce6cfe242168e749df6c80578	2051115402	2051115402	BensonJennifer6145@outlook.com	kyasbalme	feat: implement bit-packing compression and fix cloud service integration tests
+f773a42e840a517f9969f825e2b45532b8fe4bf4	2050739922	2050739922	BensonJennifer6145@outlook.com	kyasbalme	fix(learning): improve checkpoint loading security and performance
+6765e293352c7a7b7d5b68d95b0a7e53540344a7	2050516282	2050516282	BensonJennifer6145@outlook.com	kyasbalme	docs(claude): reduce CLAUDE.md size from 1475 to 359 lines
+3d199ca0037e60ac6a4baa817c8dd7ca6a0b63a6	2049765882	2049765882	BensonJennifer6145@outlook.com	kyasbalme	fix(network): correct stride indices in ResNet layer construction
+132f593d5fc3528fca70289fcfbef1ebb1865d01	2049168162	2049168162	BensonJennifer6145@outlook.com	kyasbalme	fix: resolve complex numpy dtype access mypy issues
+68fdf6ac534bc6b1b0b3851d0a0eca91c5ce0814	2048529722	2048529722	BensonJennifer6145@outlook.com	kyasbalme	fix: resolve final mypy type ignore issue
+894efc5d4eebcaebabe0e3fdae9031ce8b40d7b9	2047521202	2047521202	BensonJennifer6145@outlook.com	kyasbalme	fix: resolve remaining mypy issues in test schema file
+65d589f4282c72fb3c40fd0e2e5bcf8a728fa835	2046420082	2046420082	BensonJennifer6145@outlook.com	kyasbalme	fix: resolve line length violation in test schema file
+f83d30fb7a8e55e9220e527936ed64164c54ae6c	2046159442	2046159442	BensonJennifer6145@outlook.com	kyasbalme	fix: resolve final pre-commit hook failures
+05fc83981cba0aaecade75228bb3c07d85f5943f	2045717042	2045717042	BensonJennifer6145@outlook.com	kyasbalme	fix: resolve remaining pre-commit hook failures
+733ffa3fce043af7be6da5c77b26a68539b9aba7	2045299682	2045299682	BensonJennifer6145@outlook.com	kyasbalme	fix: resolve pre-commit hook failures
+795b85eed9ac065819779e3788dce7d7ab09bcec	2044576202	2044576202	BensonJennifer6145@outlook.com	kyasbalme	feat(data-io): implement high-performance tofile()/fromfile() architecture
+11c47cb6a127070954f09112b02bf8f577fbd61c	2043508842	2043508842	BensonJennifer6145@outlook.com	kyasbalme	docs(claude): update CLAUDE.md with data I/O architecture improvements
+e7e7d7ac3e6f117fa8b2988e145415a60d620304	2043088482	2043088482	BensonJennifer6145@outlook.com	kyasbalme	feat(data): implement explicit array type specification system
+da622b94ece30642344c016fce756ebc83150df9	2042200122	2042200122	BensonJennifer6145@outlook.com	kyasbalme	feat(domain): implement centralized numpy dtype and I/O management
+306718aa2ab162453dc604f57e12183410006b66	2041237162	2041237162	BensonJennifer6145@outlook.com	kyasbalme	refactor(learning): eliminate duplicate training logic with callback system
+875ed0521e64f857b9ee1ffe22dd1550ef1187de	2040950522	2040950522	BensonJennifer6145@outlook.com	kyasbalme	perf(benchmark): limit DataLoader worker count to CPU cores
+1406e293c108c539b17905cb44a83dea99a7e78d	2040320842	2040320842	BensonJennifer6145@outlook.com	kyasbalme	fix(s3): resolve FileNotFoundError in S3 data source cleanup operations
+7f635c98a2e3c3ef510027bc495dd34e238eac89	2039281922	2039281922	BensonJennifer6145@outlook.com	kyasbalme	fix(console): resolve line length violation in benchmark training output
+5d479fe740f26872de4a192359737d46489a154e	2039191362	2039191362	BensonJennifer6145@outlook.com	kyasbalme	docs(claude): update CLAUDE.md with utility benchmarking and mixed precision features
+9f5f4f854e2d2947362901ed33c4118d9de23688	2038200562	2038200562	BensonJennifer6145@outlook.com	kyasbalme	refactor(benchmark_training): sample_ratioが設定されているときにestimationを表示されるように変更する
+627a01a8869e680ba84db7627eaf91bd8a1f67c1	2037145522	2037145522	BensonJennifer6145@outlook.com	kyasbalme	perf(label): optimize make_move_label function with lookup tables
+a41e9d982b47f261328687c1dd4cb7a366096d69	2036296882	2036296882	BensonJennifer6145@outlook.com	kyasbalme	refactor(learning): eliminate duplicate device setup in Learning class
+34fd89d8b0bdfbc86c8f156f9a96a868edd3886e	2035529522	2035529522	BensonJennifer6145@outlook.com	kyasbalme	feat(learning): add mixed precision training with torch.amp.autocast
+2237fbb15609615c6f8f526f3778518183a6527f	2034466362	2034466362	BensonJennifer6145@outlook.com	kyasbalme	fix(feature): fix numpy type
+645dd843dbd8c1812bb5e07f09461278b01f107c	2034252242	2034252242	BensonJennifer6145@outlook.com	kyasbalme	feat(dataset): convert uint8 tensors to float32 for ML processing
+e7b36fdec4850e54a65a2b7a5bcdcff0b5cfa050	2033596962	2033596962	BensonJennifer6145@outlook.com	kyasbalme	refactor(PrefetchDataset): remove PrefetchDataset
+2aa4ed49061601b6aa57dfec378634978070a271	2032668561	2032668561	BensonJennifer6145@outlook.com	kyasbalme	style(config): fix flake8 and ruff configuration conflicts
+466ba3734031f6ac0088db0d08c765c320599550	2031602801	2031602801	BensonJennifer6145@outlook.com	kyasbalme	style(tests): apply ruff-format fixes to test files
+65de0aa3f17a412461ca4de615c57491cd871bf8	2030601881	2030601881	BensonJennifer6145@outlook.com	kyasbalme	style(tests): fix remaining line length violations
+dcf25729e08c11dd908dc055719596e73f4f3d51	2029962841	2029962841	BensonJennifer6145@outlook.com	kyasbalme	style(tests): fix line length violations in test files
+2cdb591569394d2ed50c5a69e68e43e3b9dd68c9	2029478401	2029478401	BensonJennifer6145@outlook.com	kyasbalme	style(mypy): fix style
+6a3e9dfdf28e92f2bf66dca5e4513a91d7ef7ddc	2028863841	2028863841	BensonJennifer6145@outlook.com	kyasbalme	fix(quality): resolve VSCode diagnostic issues
+2ff6ba3e10fea20d3e060cc314bd4d9d897ffef6	2028076681	2028076681	BensonJennifer6145@outlook.com	kyasbalme	fix(utility): resolve line length and type check issues in training benchmark
+cde087030d8f479653379ea51d59c719aa6a7510	2027812641	2027812641	BensonJennifer6145@outlook.com	kyasbalme	fix(learning): add type ignore comments for dataset length access
+d33f1e617600b4708878eb923bd5ac2d81a798db	2027276641	2027276641	BensonJennifer6145@outlook.com	kyasbalme	feat(utility): add training benchmark subcommand for 1 epoch time estimation
+06308051232033af0a9cbcfcf6e9be6a498a0294	2026523361	2026523361	BensonJennifer6145@outlook.com	kyasbalme	feat(datasource): add sample_ratio parameter for efficient cloud data sampling
+a4fc14ee5abf8b5ac212fb9479c9db4fda9615cd	2025392361	2025392361	BensonJennifer6145@outlook.com	kyasbalme	style: fix formatting and line length issues from pre-commit hooks
+efc5f24104f8b6a86e2619258ac6e30705407230	2024972441	2024972441	BensonJennifer6145@outlook.com	kyasbalme	feat(utility): add DataLoader benchmark subcommand with prefetch-factor support
+fa51a41d20a08563f7bc11931227b9107bdbc307	2023688361	2023688361	BensonJennifer6145@outlook.com	kyasbalme	refactor(interface): add validation
+eadc45c2384f5b703ae628b3d526d587a08a35b1	2023364681	2023364681	BensonJennifer6145@outlook.com	kyasbalme	fix(dataloader): timeout
+b56fafab85a4fd878707d0a0ea82aab2e19961c1	2022357681	2022357681	BensonJennifer6145@outlook.com	kyasbalme	style(comment): fix comment
+2f59ed79f1ca558122fdf205ecd7f3a46a335bda	2021178921	2021178921	BensonJennifer6145@outlook.com	kyasbalme	fix(infra): cleanup cloud clients after data download
+41fcaaf78fa1afb5cc77bbdb6411e53cd8f05af5	2020943161	2020943161	BensonJennifer6145@outlook.com	kyasbalme	fix(infra): implement full lazy initialization for cloud data sources
+2131cbfe3f0a13dc04009e6fc200a0825f87d28f	2019741881	2019741881	BensonJennifer6145@outlook.com	kyasbalme	fix(infra): implement lazy initialization for cloud storage clients
+d66e11c15fcdca18f67ee51ac05d263814484dc1	2018700521	2018700521	BensonJennifer6145@outlook.com	kyasbalme	fix(learn): resolve CUDA multiprocessing initialization error
+976de5199324972895821838590c4b1afd9caccd	2018168561	2018168561	BensonJennifer6145@outlook.com	kyasbalme	feat(learn): implement DataLoader multiprocessing optimization with worker init functions
+7480d0afb26944ca3fb1d4255aa8acc004d1bb01	2017348001	2017348001	BensonJennifer6145@outlook.com	kyasbalme	perf(learn): optimize PrefetchDataset parameters to reduce overhead
+5d2c6061a23ac0dcce32b9998d1672424ea5fd9a	2016128001	2016128001	BensonJennifer6145@outlook.com	kyasbalme	fix(learn): resolve pin_memory conflict between Dataset and DataLoader
+a325ed0a86cd7700b862b103812bf354792b319f	2015110841	2015110841	BensonJennifer6145@outlook.com	kyasbalme	feat(learn): add PrefetchDataset for background data loading
+725b1bc07ad5d4a7d02075a1056851c87d9fe607	2014981681	2014981681	BensonJennifer6145@outlook.com	kyasbalme	perf(learn): optimize data loading with torch.from_numpy and pin_memory option
+9211cd8752f901fcab2c57d51697cf5e5778c05b	2014733121	2014733121	BensonJennifer6145@outlook.com	kyasbalme	fix(dataset): use torch.tensor() to avoid numpy read-only warning
+ee740658eea93e6b2edde7956bf304df85605c8d	2014593161	2014593161	BensonJennifer6145@outlook.com	kyasbalme	perf(datasource): eliminate numpy-to-dict conversion bottleneck
+9466a149556aef2483fc0557a0150294cddced0e	2013499241	2013499241	BensonJennifer6145@outlook.com	kyasbalme	fix(cloud): update download size estimation from 80KB to 1.5GB per file
+2271ce2702f99ac2ce1166520b3e1a378d6f1ffe	2012397281	2012397281	BensonJennifer6145@outlook.com	kyasbalme	fix(console): break long line in error message
+4c00a857b24928133ed20f33271f23f836d2e8fe	2011592401	2011592401	BensonJennifer6145@outlook.com	kyasbalme	fix(format): fix pre-commit hook formatting issues
+95e6e7b7763887b62d889f648044d9befb32b00b	2011488681	2011488681	BensonJennifer6145@outlook.com	kyasbalme	docs(gcs): update documentation with GCS support
+5bb45345809bed3212aa4d37f76f8cb43357677e	2010685881	2010685881	BensonJennifer6145@outlook.com	kyasbalme	feat(cli): add GCS support to all CLI commands
+2cd1ccfff2408546555051900161c42406c7ca98	2009449001	2009449001	BensonJennifer6145@outlook.com	kyasbalme	feat(gcs): add GCS feature store and data source implementations
+cacd5348440b128e0a2c981616c517b1c26f0ada	2009145961	2009145961	BensonJennifer6145@outlook.com	kyasbalme	refactor(learning): remove .checkpoint file saving functionality
+25b24d60b4e86e073b3a20cee4b992ed0a0dd1e9	2008114801	2008114801	BensonJennifer6145@outlook.com	kyasbalme	fix(learning): prevent division by zero in training batch logging
+e8485246aea52317b50a4db3a50123b4c38974bd	2007096001	2007096001	BensonJennifer6145@outlook.com	kyasbalme	fix(learning): correct channel mismatch between ResNet backbone and policy/value heads
+6d755bddf9d0530c377abd5de697552b13eae9bf	2006922041	2006922041	BensonJennifer6145@outlook.com	kyasbalme	feat(security): improve checkpoint security by saving only model parameters
+8416101c812a895e7487d3dd588c195514f09b93	2006271121	2006271121	BensonJennifer6145@outlook.com	kyasbalme	docs(architecture): add BottleneckBlock implementation documentation
+b2d4e8ae4b173d256c7e0bd85a6ed682489f50b0	2005036481	2005036481	BensonJennifer6145@outlook.com	kyasbalme	feat(learning): implement efficient BottleneckBlock architecture for Shogi AI
+bd0ca2b9bb9f641cb2227663618ee2cb9cb16e39	2004686801	2004686801	BensonJennifer6145@outlook.com	kyasbalme	perf(dir): ディレクトリ作成しなくていいように仕様を統一する
+c535d055bddb12ef888477ca2cfbee8a0299daac	2004384801	2004384801	BensonJennifer6145@outlook.com	kyasbalme	fix(s3): correct skip count calculation in sync logging
+06f412106564157a620c3a686184f3f98540d227	2003648641	2003648641	BensonJennifer6145@outlook.com	kyasbalme	docs(style): standardize Japanese punctuation across codebase
+9b352cfb5b48b8e5c4e50d219f32c9abe9924c8e	2002566120	2002566120	BensonJennifer6145@outlook.com	kyasbalme	fix(s3): resolve ServerSideEncryption parameter validation error and enforce encryption
+8a8b3bfa38d4f72eaa97cfeac7c160d5183b2542	2002247400	2002247400	BensonJennifer6145@outlook.com	kyasbalme	feat(parallel): implement CPU parallelization for hcpe-convert and pre-process commands
+21c41256898ff4f28792c3e705ac005f00aeb813	2001395720	2001395720	BensonJennifer6145@outlook.com	kyasbalme	perf(s3): optimize S3FeatureStore for 10x faster pre-processing performance
+fadab43a65088c6565b93cf9fd514dcaa331bcf1	2000607520	2000607520	BensonJennifer6145@outlook.com	kyasbalme	style(docs): standardize docstring formatting across codebase
+631f23d8d23f4353662a253e0c3f62970143c1d5	2000275160	2000275160	BensonJennifer6145@outlook.com	kyasbalme	docs(api): add comprehensive docstrings to public APIs
+e3cdb78bd55cf4a818ad3c44620e3107a8e9f2fe	1999980920	1999980920	BensonJennifer6145@outlook.com	kyasbalme	perf(s3): implement TransferManager for AWS CLI v2 equivalent download performance
+03b567bf7f2071df90f33d29ed32a933f4d837bc	1999597560	1999597560	BensonJennifer6145@outlook.com	kyasbalme	feat(docs): enhance CLAUDE.md with comprehensive development guidelines
+d3f183bac25ecc208151bfc1db89e581443eee12	1999443960	1999443960	BensonJennifer6145@outlook.com	kyasbalme	style(s3_data_source): fix style
+1d67a812e9cab4806369513d2273ff62cce834f0	1999374800	1999374800	BensonJennifer6145@outlook.com	kyasbalme	perf(s3): S3DataSourceに並列ダウンロード機能を追加
+f09d818d9216082ed75664225ba180054fce1707	1998898960	1998898960	BensonJennifer6145@outlook.com	kyasbalme	perf(s3_feature_store): s3 feature storeに並列アップロード機能を追加
+120e2ee3931c20ca4df387fd1459946e88cdd085	1997661160	1997661160	BensonJennifer6145@outlook.com	kyasbalme	refactor(s3): 時間のかかる処理にtqdmをいれておいた
+7c7aef56a48becb56552684dc59357636596ef1a	1996438280	1996438280	BensonJennifer6145@outlook.com	kyasbalme	style(workflows): fix end of files
+a441e5e2733c7099350fa87d25f9145b6477b454	1995258080	1995258080	BensonJennifer6145@outlook.com	kyasbalme	Merge remote-tracking branch 'origin/main' into update-learn
+4ff5543ab3cb2b02df35f31bd23fee1a06ae2994	1994814120	1994814120	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #142 from dousu/add-claude-github-actions-1748962548866
+f3778281025bc268bdf24e1cdd042371fe8d7151	1993813600	1993813600	BensonJennifer6145@outlook.com	kyasbalme	Add Claude PR Assistant workflow
+85e6f42f9df40d51223aec99029fca18deec6860	1993678640	1993678640	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #140 from dousu/dependabot/pip/update-b665e367d1
+67b58afdee3daf519f249a6f4eba1c7649cee69f	1992551320	1992551320	BensonJennifer6145@outlook.com	kyasbalme	build(deps): bump the update group across 1 directory with 4 updates
+4d23d838d199316299bdf4a9372e7bec8ca2666c	1991455040	1991455040	BensonJennifer6145@outlook.com	kyasbalme	feat(cli): add s3 options
+adfcfce7add90cc5e60cc4917fe294a6dc1b7372	1990206600	1990206600	BensonJennifer6145@outlook.com	kyasbalme	fix(poetry-lock): fix poetry lock
+b8bef8bc6c2fa12187281d5e307cedc169ef844b	1989615760	1989615760	BensonJennifer6145@outlook.com	kyasbalme	Merge remote-tracking branch 'origin/main' into update-learn
+9843231d693d78639f955074003a1307e2355e3e	1989007320	1989007320	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #134 from dousu/dependabot/pip/commitizen-4.6.0
+46aacc3df659642f387c1e950ec46ecc574ad652	1988907440	1988907440	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump commitizen from 4.1.1 to 4.6.0
+1adea2acbade8d1e1c556ec540e4416b3bcaaf99	1988628600	1988628600	BensonJennifer6145@outlook.com	kyasbalme	Merge remote-tracking branch 'origin/main' into update-learn
+56b664795ec33771e820857d8c0c6a3d800331df	1987373040	1987373040	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #137 from dousu/dousu-patch-1
+adfbc8a326bd5afc10671e770028c0d82b84f809	1986474680	1986474680	BensonJennifer6145@outlook.com	kyasbalme	Update dependabot.yml
+5c6d6f4acfc25983a67320db962ce1f03a21fbda	1985996240	1985996240	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #133 from dousu/dependabot/pip/pre-commit-4.2.0
+bf011739ee0848b93844744d77eb3c2fe6db3850	1985906880	1985906880	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump pre-commit from 4.1.0 to 4.2.0
+ab1f04e790d40856c91a63819730e047fa3c1a17	1984962200	1984962200	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #135 from dousu/dependabot/pip/ruff-0.11.7
+d88a790641344c1dfd2f266bc897249c04c1478f	1984123640	1984123640	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump ruff from 0.11.2 to 0.11.7
+5ead3469f8ae6bcec5a69715fe07b17b221460e3	1983942160	1983942160	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #136 from dousu/precommit-autoupdate-github-actions-20250501
+cfb65e3938f27bcafec5b31bf666db74ea2a9522	1983078920	1983078920	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+9524607ac5c7c85ee119517b89f4840d29239297	1982168640	1982168640	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #132 from dousu/precommit-autoupdate-github-actions-20250401
+5eb57483cc269ef12d253a2cedd4663d7f3dc0ae	1981688120	1981688120	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+882b697c5102200fff710524e46e0bf2f2cfd6ce	1981083040	1981083040	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #128 from dousu/dependabot/pip/flake8-7.2.0
+0d8b07d00c45e135f054095c4e693710133bb465	1980961880	1980961880	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump flake8 from 7.1.2 to 7.2.0
+7d805e5af783bafa314f24852a74aec79e07912c	1979725760	1979725760	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #129 from dousu/dependabot/pip/cshogi-0.8.9
+0ebeff5fbc2763d3afef2a77c8ce12cb7fc8d900	1979033640	1979033640	BensonJennifer6145@outlook.com	kyasbalme	build(deps): bump cshogi from 0.8.8 to 0.8.9
+d73fd36a263d0886c541e66a887e99d3495ae8b7	1978433520	1978433520	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #127 from dousu/dependabot/pip/yamllint-1.37.0
+1b4ebd15c956d636a8f60dd8469a9d34cb58cdd7	1977183440	1977183440	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump yamllint from 1.35.1 to 1.37.0
+e45b8aa4e1398d603420610b91428541df41a1e0	1976379079	1976379079	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #130 from dousu/dependabot/pip/pytest-8.3.5
+9149112230dcdb4af1189ab7636971961b2b62ee	1975891159	1975891159	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump pytest from 8.3.4 to 8.3.5
+c4e5770a78bb9b306e8e401c1862d7606a716140	1975060799	1975060799	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #131 from dousu/dependabot/pip/ruff-0.11.2
+25552babfcc1c3f7f47b9cb59b8c9dd0dc11205f	1974985199	1974985199	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump ruff from 0.9.9 to 0.11.2
+541b05380160a404248af80222340093d2eb297f	1974520559	1974520559	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #125 from dousu/dependabot/pip/black-25.1.0
+b6d803ac04d60014f7c51e7cef4fe674592cc5e0	1973466559	1973466559	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump black from 24.10.0 to 25.1.0
+14295d99a806d1dd9615f836a5a73e8ba2b86f99	1972721239	1972721239	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #121 from dousu/dependabot/pip/isort-6.0.1
+faea99fc21c34bcd47d62cf3b84e37b8a3c00ea3	1972659039	1972659039	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump isort from 6.0.0 to 6.0.1
+7ebecd49fc1cab7b8d9d58e858540a53607f55e5	1972141639	1972141639	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #122 from dousu/dependabot/pip/flake8-7.1.2
+284f6ffebc44c171374435894cb9f19c86594704	1970952639	1970952639	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump flake8 from 7.1.1 to 7.1.2
+aa510e0ed0b9997223ee87d027a819f826f32db7	1969719319	1969719319	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #124 from dousu/dependabot/pip/tensorboard-2.19.0
+36d5df55ecb80af73b812391630abadab93b3763	1968504439	1968504439	BensonJennifer6145@outlook.com	kyasbalme	build(deps): bump tensorboard from 2.18.0 to 2.19.0
+a407eeb41bf2c35324ce115bd4157ae5dd61e5b1	1968497199	1968497199	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #123 from dousu/dependabot/pip/ruff-0.9.9
+638848e73088f8fc8bc08f0bfce8358ec80528d5	1967500919	1967500919	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump ruff from 0.9.4 to 0.9.9
+7608d3fd0316717e0d6841a4c0ac0549be06e73c	1967038159	1967038159	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #126 from dousu/precommit-autoupdate-github-actions-20250301
+85ae1b8256fb0d4538110c37fe34c84c86fc7e1c	1966877839	1966877839	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+7a03b5d4ff49f00e499c62a59ffee1334023202f	1966143719	1966143719	BensonJennifer6145@outlook.com	kyasbalme	style(flake8): fix too long line
+37fd68c60f2bc956f042ecb25c8313a9a38f0cc1	1964973639	1964973639	BensonJennifer6145@outlook.com	kyasbalme	style(mypy): fix mypy errors
+0eb38585673a137435dbc64779d89d5e9093fc91	1963753439	1963753439	BensonJennifer6145@outlook.com	kyasbalme	style(flake8): fix too long line
+d95fbe2fe63799527d3649040b58bd3bc5c7b79d	1963533679	1963533679	BensonJennifer6145@outlook.com	kyasbalme	feat(infra): add S3
+90c8898e549d22cedb87792835554737a33c1578	1962337199	1962337199	BensonJennifer6145@outlook.com	kyasbalme	style(style): fix style
+1fb5fcce22c2c9f2b896cb6e0d4ca28632edc66a	1962044679	1962044679	BensonJennifer6145@outlook.com	kyasbalme	style(mypy): ignore numpy.unicode_
+3cc148e1f4750000841ed64af423cbd2551314ce	1961831559	1961831559	BensonJennifer6145@outlook.com	kyasbalme	style(style): fix style
+5ce90722e6c8049f9da3e3fa0b85a0796e1b14f0	1961037319	1961037319	BensonJennifer6145@outlook.com	kyasbalme	feat(bigquery): infraのbigqueryとのデータをnumpyで行うように変更する
+ad04b59d1b0f1adf1efcf8f4500adf38df997cb2	1960624359	1960624359	BensonJennifer6145@outlook.com	kyasbalme	refactor(converter-and-preprocess): pyarrowを使う必要がinfra側でなくなっているのでインターフェースを修正する
+e941bd11652bb15082436b5362cb23bef191f478	1959546239	1959546239	BensonJennifer6145@outlook.com	kyasbalme	fix(dev-initialization): poetry syncの際にcpuをつけておく
+128962428a179c969df24c20a3b0976c2fc4df53	1958306479	1958306479	BensonJennifer6145@outlook.com	kyasbalme	style(claude-code): format
+23ed1ada95b0c9b536840ff19937e6ab260dd8bc	1958042039	1958042039	BensonJennifer6145@outlook.com	kyasbalme	docs(claude-code): add CLAUDE.md
+41ea1c2af784e8df224353f3772d7d428a3a710a	1957272999	1957272999	BensonJennifer6145@outlook.com	kyasbalme	feat(infra): add s3
+3dfea2759d5c5d8dca9320337a5e9ad69950bfdf	1956816239	1956816239	BensonJennifer6145@outlook.com	kyasbalme	fix(pre-commit): fix pre-push stage
+f7d6c7d4e753420dfd5c3bfcbe3cd812669ab091	1956404919	1956404919	BensonJennifer6145@outlook.com	kyasbalme	fix(pre-commit): fix poetry lock
+fc72b6ea3b53a480fab32e25a8d68f5ee19f7cf2	1956329319	1956329319	BensonJennifer6145@outlook.com	kyasbalme	fix(torch): torchのバージョン上げ
+3a73517129132407b8c5c2157f27046b8503c3a2	1955329399	1955329399	BensonJennifer6145@outlook.com	kyasbalme	refactor(poetry-check): poetry checkでの指定項目の修正
+ea506455b51647781ada3d7634c18db907592fef	1954683319	1954683319	BensonJennifer6145@outlook.com	kyasbalme	feat(pyproject.toml): add extras
+bf62951b933155ffb6e67ce0d5767059ed5683d1	1953625759	1953625759	BensonJennifer6145@outlook.com	kyasbalme	docs(LLM): add memory bank document
+a22506b47b91100b569ef46c6f572663a0303507	1952670239	1952670239	BensonJennifer6145@outlook.com	kyasbalme	add directories
+315f4393ba8685d56fc8423650ce007d819d1dd8	1951446919	1951446919	BensonJennifer6145@outlook.com	kyasbalme	add Dockerfile
+89c75ee5956cbb6e15085bcdfae495a0811ea4d0	1951070559	1951070559	BensonJennifer6145@outlook.com	kyasbalme	style(mypy): fix style
+49cfe5ff047bbd3e88dbb93be699fdeb7f277285	1949812719	1949812719	BensonJennifer6145@outlook.com	kyasbalme	feat(bigquery-datasource): numpyで統一
+477325d26fc309dceaebf36971226211dc10d19c	1948593519	1948593519	BensonJennifer6145@outlook.com	kyasbalme	feat(dl.py): add torch.autograd.set_detect_anomaly
+b42855350f1e2e9cf2a516d00937e3de940701b6	1947945439	1947945439	BensonJennifer6145@outlook.com	kyasbalme	style(mypy): mypyがシグネチャを間違ってとらえているみたいなのでignoreする
+d674dfe2e7f8026c80e15b56179eec8e1b12e80d	1947148438	1947148438	BensonJennifer6145@outlook.com	kyasbalme	perf(bigquery-datasource): ローカルキャッシュ時の効率を改善する
+073a78e5a3c8c40ca5d64df1b6a765294d45a46b	1946004718	1946004718	BensonJennifer6145@outlook.com	kyasbalme	fix(learn-model): 勾配クリッピングの実施
+42690b0d2b8d0c7492e467cc52b0e6f644803fad	1944790078	1944790078	BensonJennifer6145@outlook.com	kyasbalme	fix(learn-model): 勾配爆発への対応
+ce024bf5b88087e6f9a9b20c22df0784fe7f2ef9	1944092878	1944092878	BensonJennifer6145@outlook.com	kyasbalme	style(ruff): fix style
+f8700fa01b46eab86bd681bb2ded12d4482ee6a2	1943136998	1943136998	BensonJennifer6145@outlook.com	kyasbalme	fix(tensorboard): parameterのヒストグラム記録方法を修正
+ba1271d549f66ada0a49aacea415b356b0b5d210	1942697358	1942697358	BensonJennifer6145@outlook.com	kyasbalme	style(ruff): fix style
+dae53c18ae8ead7be521b737ba1b7fa300989219	1942426838	1942426838	BensonJennifer6145@outlook.com	kyasbalme	feat(cli): BigQueryデータソースのローカルキャッシュに対応する
+d3d347f465b60b8e51605685ea836edcd3ba4f93	1941701878	1941701878	BensonJennifer6145@outlook.com	kyasbalme	fix(learning): fix epoch index
+f0ccf586f812b2a3bb68c1c9ac9fc90b3087b5e0	1941359918	1941359918	BensonJennifer6145@outlook.com	kyasbalme	feat(summarywriter): summarywriterのログをGCSに保存する
+1d52fd83597fd9abab6106a8f2d430f294ab18c1	1940740158	1940740158	BensonJennifer6145@outlook.com	kyasbalme	style(ruff): fix style
+61745b2792ed3347b848791ab348ad7ac2e4be0e	1940053638	1940053638	BensonJennifer6145@outlook.com	kyasbalme	style(ruff): fix style
+7d037de7e2908b3ed798452534bd2beaf8f00f95	1939676838	1939676838	BensonJennifer6145@outlook.com	kyasbalme	style(ruff): fix style
+501b3efa0afe106b30565715203396d48110d5dc	1939254998	1939254998	BensonJennifer6145@outlook.com	kyasbalme	feat(bigquery-datasource): add pre-load option
+acb19b6ceabbe501a1dd5f6ddfcee33f72fe063e	1938756998	1938756998	BensonJennifer6145@outlook.com	kyasbalme	feat(gcs): add method to upload a directory
+7ec61880b304c29960d0b91b5ab8c1ece96ee209	1937562838	1937562838	BensonJennifer6145@outlook.com	kyasbalme	refactor(tqdm): add progress bar
+95731c8c29a24922c28d2e75da7678ed6287b9ab	1936547478	1936547478	BensonJennifer6145@outlook.com	kyasbalme	feat(tensorboard): add histgram
+4dd17557257ae31df890db9d021702cc8017e4ff	1936169718	1936169718	BensonJennifer6145@outlook.com	kyasbalme	fix(log): fix summary writer
+cf455adfd569ef2fafbad6de606aa29550c6c76c	1935229958	1935229958	BensonJennifer6145@outlook.com	kyasbalme	feat(preprocess): preprocessでパーティションキーを指定できるようにする
+fc3cd2ca1b414d053931b3362549b1099f9ed881	1934246918	1934246918	BensonJennifer6145@outlook.com	kyasbalme	fix(feature-store): partition keyがリセットされない問題を修正
+e86596151792eebe34ea0950f62a9f3725659a5e	1933646878	1933646878	BensonJennifer6145@outlook.com	kyasbalme	refactor(logging): log message
+5278f75f74dcd2202f585b638a8ab31df8544a80	1932386398	1932386398	BensonJennifer6145@outlook.com	kyasbalme	refactor(logging): add a log message
+fcc8293ea345a07b47816bdf2885ef72eca1dee2	1931427478	1931427478	BensonJennifer6145@outlook.com	kyasbalme	style(flake8): fix style
+57a001c921f63b4747be9b3c74b0ca0920844885	1930775318	1930775318	BensonJennifer6145@outlook.com	kyasbalme	fix(feature-store): 大量データのときにpruningがうまくきかないのでmergeからdelete/insert方式に変更する
+c254163aeca64591b65b3762a98b96a7110749f9	1930117318	1930117318	BensonJennifer6145@outlook.com	kyasbalme	feat(feature-store): 特徴量保存用のBigQuery Tableをpartitioning requiredに変更
+03440c40f12a862d6ae9d6e11469456a428efe7d	1929460118	1929460118	BensonJennifer6145@outlook.com	kyasbalme	fix(variable-name): cacheのバイト数指定の命名を統一
+9606c28f9b3ff61aa43e738f92283066c06c53ff	1928571838	1928571838	BensonJennifer6145@outlook.com	kyasbalme	style(ruff): fix style
+7c6fee735a9079bf65f6bd3714636cb2c892c0ab	1928361838	1928361838	BensonJennifer6145@outlook.com	kyasbalme	style(style): f-stringがnestしているのを解消
+795097b42d8ee270303e91e453a4026c9cbe474a	1928288558	1928288558	BensonJennifer6145@outlook.com	kyasbalme	style(black): ruffと競合するのでblackを外す
+028327d8f5eef134a60f709ceabac87b23333d33	1927025638	1927025638	BensonJennifer6145@outlook.com	kyasbalme	feat(learning): employ masked GCE
+7d08bc543621610eb8abbf2f21d853de81142977	1926895278	1926895278	BensonJennifer6145@outlook.com	kyasbalme	fix(GCS): fix gcs path
+9b692f1eb2933c59ce4e8048338c530ecbd79934	1926751758	1926751758	BensonJennifer6145@outlook.com	kyasbalme	Merge remote-tracking branch 'origin/main' into update-learn
+98332851abda1eb98eec8139c33d615e5b5cf437	1925866758	1925866758	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #120 from dousu/precommit-autoupdate-github-actions-20250201
+68e98a456e1efb30fe6f2c60018e1a6665a67997	1924828998	1924828998	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+504b77c65b21340ab039ece44f495551952443a4	1923584518	1923584518	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #115 from dousu/dependabot/pip/ruff-0.9.4
+2a7947cec2983a6557afcf75da767f69ff1bde41	1923147318	1923147318	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump ruff from 0.8.4 to 0.9.4
+afa8ffdca96189c6587c52671f505fab15ce5b61	1922324918	1922324918	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #116 from dousu/dependabot/pip/pre-commit-4.1.0
+deec4ac034bfc6bea4f99f733a7ead7f50516091	1922190038	1922190038	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump pre-commit from 4.0.1 to 4.1.0
+0a147c24830f37b43bdad01e50b53863e2899ad8	1922177758	1922177758	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #118 from dousu/dependabot/pip/commitizen-4.1.1
+a3e171e183e5825a6ea21bec2ea47735d3c91951	1921237158	1921237158	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump commitizen from 4.1.0 to 4.1.1
+56f9b55e7c590907878e01e576eb132ccfa28c25	1920849038	1920849038	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #119 from dousu/dependabot/pip/scikit-learn-1.6.1
+9b2c3d00151898fa9aceb247f4b6db7f199a6673	1920703518	1920703518	BensonJennifer6145@outlook.com	kyasbalme	build(deps): bump scikit-learn from 1.6.0 to 1.6.1
+59943394621d13e5caf0a6f7bc8dce238536b257	1919940317	1919940317	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #117 from dousu/dependabot/pip/isort-6.0.0
+8f7f9a2711277b1b792f992e3ade1f0253d345f9	1919353477	1919353477	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump isort from 5.13.2 to 6.0.0
+e55b886312b6e473740ddcedae139e3279d70c79	1918825197	1918825197	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #114 from dousu/precommit-autoupdate-github-actions-20250101
+ae41c44d8cf32f596ea768aae81d335712cae6bb	1918125117	1918125117	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+4020ea99c48f9ce59f4cbd6ad2b2d1e0903e1ccc	1916912637	1916912637	BensonJennifer6145@outlook.com	kyasbalme	style(mypy): additional_dependencies
+7350ae28a3141dc710b19aacbe60d168350b8ac4	1916740517	1916740517	BensonJennifer6145@outlook.com	kyasbalme	style(mypy): fix mypy
+009d64b5a7215603ea8513d78af1735d66a3ebcb	1916388797	1916388797	BensonJennifer6145@outlook.com	kyasbalme	feat(preprocess): preprocessの入力をBigQueryに対応する
+43b35a01b80e25969824073c404ff6c5690df57c	1915960437	1915960437	BensonJennifer6145@outlook.com	kyasbalme	feat(bq-datasource): パーティションに対応する
+8d7b12bddce562fac8771c4a19016277df5f6f23	1915449157	1915449157	BensonJennifer6145@outlook.com	kyasbalme	perf(hcpe_converter): HCPE Converter employ partitioning table
+51c936dd20bb87a792453ffd97bd6ab3604b5579	1914494837	1914494837	BensonJennifer6145@outlook.com	kyasbalme	feat(hcpe_converter): add clustering key
+a778c0955c33d48a36eea8c37b05107ac23d8acd	1913412757	1913412757	BensonJennifer6145@outlook.com	kyasbalme	style(style): fix Generator
+765fd002b917cca8331cdadb32431ad8367b0d6c	1912648317	1912648317	BensonJennifer6145@outlook.com	kyasbalme	style(style): fix Generator
+3b075cb89918043241d908e117d2bfc172c05bbd	1911672917	1911672917	BensonJennifer6145@outlook.com	kyasbalme	fix(cli): fix help message
+512df5a0269f700124d8358b526d5e5b0cd6ce96	1910512317	1910512317	BensonJennifer6145@outlook.com	kyasbalme	fix(hcpe_converter): fix typo
+4f13ed87add9388745ee6b251e49af99901a61a7	1909710037	1909710037	BensonJennifer6145@outlook.com	kyasbalme	style(mypy): fix style
+b65f36c69dfa3b5012f36ddc871190a3a478491e	1908460757	1908460757	BensonJennifer6145@outlook.com	kyasbalme	style(formater): remove black
+2428fe1183ec17bcb0140b1e433cebf9ead41393	1907629077	1907629077	BensonJennifer6145@outlook.com	kyasbalme	feat(learn-model): BigQueryをデータソースとして選べるようにした
+96380727e3d7c2f0258f5fd4dfc76d660d1637ae	1906617277	1906617277	BensonJennifer6145@outlook.com	kyasbalme	refactor(bigquery-data-source): add tests
+14342af50c5e18ad2d05ec46963469b28c24a28a	1906024237	1906024237	BensonJennifer6145@outlook.com	kyasbalme	refactor(test_app_hcpe_converter.py): refactor
+a4bc78ba92bc55ff812ee5407a4a7f95eee2c520	1905478957	1905478957	BensonJennifer6145@outlook.com	kyasbalme	refactor(hcpe-converter): BigQueryを使ったテストを導入する
+0ab35e791394b50feb9f722103e306643d9043d6	1904601517	1904601517	BensonJennifer6145@outlook.com	kyasbalme	fix(bigquery): fix a comment
+1b6f1f22fca7c36927c27cc6ca36dbd73b552cc6	1904598637	1904598637	BensonJennifer6145@outlook.com	kyasbalme	style(flake8): fix style
+ad98c3018f0524fd6b8d44293d2528bbf61e783d	1904527837	1904527837	BensonJennifer6145@outlook.com	kyasbalme	refactor(bigquery-data-source): add tests
+13832a2e51982972fc74ba3f6218a35b071204f3	1903537197	1903537197	BensonJennifer6145@outlook.com	kyasbalme	fix(test): fix typo
+c13e94f81a4c2f6833f4edbb0f7a1a29993bbdb5	1903427837	1903427837	BensonJennifer6145@outlook.com	kyasbalme	fix(feature-store): デストラクタで実行される処理の中でloggerを実行するとcloseしたIOを参照してしまうバグの修正
+aace947f54886a13ad9a6a704d5113d2c2c01f9c	1902447637	1902447637	BensonJennifer6145@outlook.com	kyasbalme	feat(bigquery-data-source): add bigquery data source
+22ef3d48b362d59e210659ab44c7cb9e0aec8867	1902141917	1902141917	BensonJennifer6145@outlook.com	kyasbalme	perf(bigquery): ストレージ課金はPHYSICALに修正する
+e2e9585b6bf47621f1f09417be047a23bd8d87d2	1901380477	1901380477	BensonJennifer6145@outlook.com	kyasbalme	style(mypy): fix mypy
+4926205c77d5e94c846e3b77b05840801ab35444	1900784437	1900784437	BensonJennifer6145@outlook.com	kyasbalme	style(mypy): fix mypy
+7759a3f8122113793cb85fe7370ed4be7893c93d	1899962037	1899962037	BensonJennifer6145@outlook.com	kyasbalme	refactor(data-source): 構成変更の事前準備
+21a5658bd056c5c2d07029d91bb4b256292753f5	1898661877	1898661877	BensonJennifer6145@outlook.com	kyasbalme	fix(mypy): type annotation
+25ab9e74b4c5ba49ee3e531577cb79e0b1a47ef6	1898356597	1898356597	BensonJennifer6145@outlook.com	kyasbalme	fix(mypy): type annotation
+6d931c3cfd71e414199aa1056fe8864cc03f9152	1897773957	1897773957	BensonJennifer6145@outlook.com	kyasbalme	fix(tests): fix tests
+9e9999eef6492ba79552d9068597d69e23938888	1897158437	1897158437	BensonJennifer6145@outlook.com	kyasbalme	fix(test): fix tests
+cfa5f9332adf487956a2bb0769f89536ffa4cb6d	1896946597	1896946597	BensonJennifer6145@outlook.com	kyasbalme	temp
+044247b3e0db39ba95614fadfd411c9801686c2e	1896386717	1896386717	BensonJennifer6145@outlook.com	kyasbalme	fix(hcpe_converter): fix bigquery types
+729b364ed261102c776cf1b3c13f61163f688e32	1896352397	1896352397	BensonJennifer6145@outlook.com	kyasbalme	style(flake8): fix style
+344cab616fbb2ccbc8514b0b41026dd499ed376c	1895640957	1895640957	BensonJennifer6145@outlook.com	kyasbalme	style(poetry-lock): lock dependencies
+eac2fb2d17c0db71accd3b93791ed1c76f51579f	1894546597	1894546597	BensonJennifer6145@outlook.com	kyasbalme	style(mypy): fix type annotation
+264109098c67b2e2b1e34bc3c3b1e97e25ceb28b	1893274717	1893274717	BensonJennifer6145@outlook.com	kyasbalme	feat(GCP): GCSとBigQueryに保存できるようにした
+f9dcf436b7870f44784cb5723882c8adb80d2452	1893046877	1893046877	BensonJennifer6145@outlook.com	kyasbalme	feat(learn): pytorchのfloat32の精度がそこまで求められるものではないと思ったので少し下げておいた
+2ee3f4e808976a389c7d8c9fa3be75eb63021cab	1892593677	1892593677	BensonJennifer6145@outlook.com	kyasbalme	refactor(learn): batchの数をログに表示する
+e3707a73481c3e0a7990f9425eb20edc135e6cab	1892196436	1892196436	BensonJennifer6145@outlook.com	kyasbalme	fix(hcpe_converter): moveがないファイルに対応
+bb577ff316e29c73857cb95c8bddce1a5860389f	1891675516	1891675516	BensonJennifer6145@outlook.com	kyasbalme	refactor(debug): どうしてもわからないエラーがあるのでファイルを調べられるようにする
+d6170601d3445cf7ebe59b614afbbc7c4077cfd3	1891048716	1891048716	BensonJennifer6145@outlook.com	kyasbalme	refactor(hcpe_converter): これでも無駄なファイルできないことテストしていたので戻す
+72b57545cc7a4b8bc94b4080dec249801fcae233	1890324916	1890324916	BensonJennifer6145@outlook.com	kyasbalme	fix(hcpe_converter): 空のファイルを保存しないように修正
+ebdd222bade4bf04e9c48d49de61373a65db961e	1889383996	1889383996	BensonJennifer6145@outlook.com	kyasbalme	refactor(hcpe_converter): ログが出すぎなので調整
+39824b3b4a79a20bbdefa6e42adcff66ec74cde8	1888240676	1888240676	BensonJennifer6145@outlook.com	kyasbalme	fix(hcpe_converter): moveが0も以上であるので省くようにした
+529ab564a9dd2ba8d4bab1c6732ef6f93ed72166	1887376316	1887376316	BensonJennifer6145@outlook.com	kyasbalme	refactor(transform): ログメッセージの修正
+f5762531c8b5ea401ff1c78886023c2dbbdceba3	1887109396	1887109396	BensonJennifer6145@outlook.com	kyasbalme	refactor(transform): エラー時にその手を指したらcshogi上どうなるのか
+553275d765d9951babfbc9f21bd9abe81e0103a7	1886851196	1886851196	BensonJennifer6145@outlook.com	kyasbalme	style(learning): fix style
+3a9cc9a2ad111bd56dbcc11465fd3db49d5cd11b	1886594156	1886594156	BensonJennifer6145@outlook.com	kyasbalme	refactor(learning): ちょっとログを足してみた
+d81792fe90789a423b6e927461f86ee074377503	1886011236	1886011236	BensonJennifer6145@outlook.com	kyasbalme	refactor(transform): hcpesのshapeをログに出す
+6bd49642bb33e20eca48f8b321d0714e4fedb562	1885036436	1885036436	BensonJennifer6145@outlook.com	kyasbalme	perf(hcpe_converter): moveにおかしな値が入ってそうなのでもしあったら例外を投げる
+6324b1a1962bacef92dd3b3a463a90a26f25cb82	1884261116	1884261116	BensonJennifer6145@outlook.com	kyasbalme	Update hcpe_converter.py
+f78df1fa17f6b69b5f315a36a56c4954643e7905	1883911756	1883911756	BensonJennifer6145@outlook.com	kyasbalme	refactor(hcpe_converter): add a comment
+dccf28e994c94a475264817d56b2236f47a0f7fd	1882889276	1882889276	BensonJennifer6145@outlook.com	kyasbalme	style(flake8): fix style
+e9dcb1e291a134d8e0b832d24921b6e86a4bb57f	1881593556	1881593556	BensonJennifer6145@outlook.com	kyasbalme	feat(hcpe_converter): 特定のmoveのhcpesを除外するオプションを追加する
+5995d67971cfa9cb32c3a5c1d09a4ded3300b408	1880762316	1880762316	BensonJennifer6145@outlook.com	kyasbalme	fix(learning): pin_memoryはCPUとGPU間の転送で使うためいったんすべてのケースでfalseにする
+1ad7b68b1fa79d774e102c977bc0aa7a48d5035a	1879671676	1879671676	BensonJennifer6145@outlook.com	kyasbalme	fix(transform): tensorを作るときにdeviceの設定をつけるように変更する
+09a5b61ca59c28aa7b4b899dcf40f49f06a437c2	1878563996	1878563996	BensonJennifer6145@outlook.com	kyasbalme	docs(kifdataset): add a comment
+dc67cadada57ed38573b27e8c3315ab513e63104	1877743476	1877743476	BensonJennifer6145@outlook.com	kyasbalme	fix(kifdataset): 最初にtransformするとメモリ足りなくて落ちるので後からtransformに戻す
+4c83f0313655f24c452db688b99fbdd3279bdca9	1876842636	1876842636	BensonJennifer6145@outlook.com	kyasbalme	fix(kifdataset): なぜか途中でプログラムが終了するのでself.dataがかぶっている仮説で修正する
+12c2cd70ba4c90fe0913222d1ecc60c42bbb086f	1875682556	1875682556	BensonJennifer6145@outlook.com	kyasbalme	fix(kifdatase): 進捗率の表示を粗くするところの条件が抜けていたので修正
+82fb1ac649f585ed89c474a8e197fcd2148b6e94	1874583316	1874583316	BensonJennifer6145@outlook.com	kyasbalme	fix(kifdataset): 例外を創出しないポイントを間違えていたので修正する
+7d502b93043a1b0b1ef198aaf9ecccc9ea571944	1874140116	1874140116	BensonJennifer6145@outlook.com	kyasbalme	refactor(kifdataset): hcpeの変換進捗率をloggerにだす
+0bf1cca5de4fab39f047d798750434b82c3f4eb3	1873079676	1873079676	BensonJennifer6145@outlook.com	kyasbalme	fix(transform): move labelへの変換時にエラーが出たら無視する
+c1686a3b11de1f94b9f3ae4f00021b5bbbcb193b	1872375996	1872375996	BensonJennifer6145@outlook.com	kyasbalme	refactor(kifdataset): ちょっとだけ改良
+5efc615999198c60e04acddeda0320afc437d187	1872368996	1872368996	BensonJennifer6145@outlook.com	kyasbalme	refactor(kifdataset): initの時点でtransformを実行することでデバッグしやすくする
+ca543c6f40cd91a7a7f1ea4d1582a5949c9fcca0	1872184956	1872184956	BensonJennifer6145@outlook.com	kyasbalme	fix(hcpe_converter): 空のlistだった時に対応する
+f443fa50e52255303f4902b88e96a3f9fb068c87	1871717036	1871717036	BensonJennifer6145@outlook.com	kyasbalme	feat(hcpe_converter): オプション追加
+93748b01a5e0631b795736404a7d938c89d8e46c	1870773876	1870773876	BensonJennifer6145@outlook.com	kyasbalme	style(flake8): fix style
+4ec1e2c947efa6886d145c859a41b2107f1da25d	1869632556	1869632556	BensonJennifer6145@outlook.com	kyasbalme	refactor(logger): transformationの時のエラーメッセージを追加
+a9c880eae67fa9f18b030abb7d5eee561c165c35	1869591276	1869591276	BensonJennifer6145@outlook.com	kyasbalme	feat(hcpe_converter): HCPEコンバーターで進捗率をログに出す
+5b5970550ab87d431e9b39983115769e1bbf82e3	1868480916	1868480916	BensonJennifer6145@outlook.com	kyasbalme	style(mypy): fix style
+33dc31a27683559d5dc3b8dc36d48ea353c94d81	1867750316	1867750316	BensonJennifer6145@outlook.com	kyasbalme	feat(log): accuracy表示を追加
+a0087f6f829acc690b4bb4e5ab6e133b378a9b8d	1867548196	1867548196	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #113 from dousu/learning
+28becd1622870912dcbdf14af9cfa4dc655fe9b9	1866830756	1866830756	BensonJennifer6145@outlook.com	kyasbalme	style(flake8): fix style
+17a8f7499618fb4bb6dbe30b39aa5e6377a17cc3	1866453436	1866453436	BensonJennifer6145@outlook.com	kyasbalme	feat(learning): add new subcommand learn-model
+03e4c02ab6fc289c8474d0feb8aed8076a10633e	1865468036	1865468036	BensonJennifer6145@outlook.com	kyasbalme	fix(learning): 学習部分が回るように少し修正
+b205e0e0ae9508de96fed1046ad0a9d2ed3fc77b	1865037516	1865037516	BensonJennifer6145@outlook.com	kyasbalme	perf(feature): 正解ラベルから無駄なラベルを取り除いた
+b7165d0f0b5722a7234899dcfbf974169fda8037	1864626716	1864626716	BensonJennifer6145@outlook.com	kyasbalme	style(flake8,mypy): fix style
+a8cbc53d92415827e0aef4e3013cca587b8edb98	1863699716	1863699716	BensonJennifer6145@outlook.com	kyasbalme	feat(learning): 学習部分をひとまず追加
+d43eb6c01f2b6c93d43a83ebbf89d5d8f48b64db	1862619596	1862619596	BensonJennifer6145@outlook.com	kyasbalme	style(feature): fix style
+4bb4a5c10448ca2f54eab8b82dd92b7f86ab0c23	1862233956	1862233956	BensonJennifer6145@outlook.com	kyasbalme	feat(特徴量生成): 特徴量生成部分を追記する
+65cd32da0b64f22d679b02a078804eba5d753b68	1861987115	1861987115	BensonJennifer6145@outlook.com	kyasbalme	Merge remote-tracking branch 'origin/main' into learning
+a628b12d8236157cb6c5ab863dd7a1c5e0873430	1861866235	1861866235	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #112 from dousu/precommit-autoupdate-github-actions-20241201
+15480da0024fab3c0beb6a333b75500464dc2e71	1861133435	1861133435	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+dbe479f0e32f478d6fdeb159c38cfc68f70734f9	1860951435	1860951435	BensonJennifer6145@outlook.com	kyasbalme	build(poetry-lock): update poetry lock file
+a30d4feb3d911508484f63a6b765481623070056	1860828755	1860828755	BensonJennifer6145@outlook.com	kyasbalme	fix(test): pytestを実行したときのログをファイルに出すようにした
+8bfd9b250c4769aefeb04aed9909390c8e02b788	1860227195	1860227195	BensonJennifer6145@outlook.com	kyasbalme	docs(test_hcpe_converter): 不要なコメント削除
+ad305627b058ceeb9b0a7d14a30fd86f07f589b8	1859579955	1859579955	BensonJennifer6145@outlook.com	kyasbalme	build(poetry): update poetry lock
+5ccfb16bdb896f8379ebfb5e0dfca64362e87630	1858993035	1858993035	BensonJennifer6145@outlook.com	kyasbalme	Merge remote-tracking branch 'origin/main' into learning
+863aff7a98ff90f5b44935dc1b7917346301d24b	1858832715	1858832715	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #111 from dousu/dependabot/pip/commitizen-4.0.0
+b38deb59f8ffe080bf1ca49d3485f9271376f0b5	1858475555	1858475555	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump commitizen from 3.30.0 to 4.0.0
+a663f1bcbd7cd6f5cdf4e41aad746ac72e65d14f	1857433755	1857433755	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #110 from dousu/dependabot/pip/ruff-0.8.1
+6216894592018e27d00cf9b2b478fb7a42e38fb9	1857253595	1857253595	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump ruff from 0.7.2 to 0.8.1
+0cb76b39fdbe60520c24aee45d25045eed4ff986	1857226195	1857226195	BensonJennifer6145@outlook.com	kyasbalme	build(poetry): update poetry lock file
+6091699531e5ad0251651ac3ab975cbd241b20f7	1856000715	1856000715	BensonJennifer6145@outlook.com	kyasbalme	refactor(all): 学習部分作る前準備
+c6f620cb4a7947dbdf705b18f8f4005dcb933884	1855518515	1855518515	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #109 from dousu/refactor
+187f95ba1b2e9b14821dda86d108a20def09eb38	1855153715	1855153715	BensonJennifer6145@outlook.com	kyasbalme	ci(pre-commit): fix configuration
+ab06cda497cd64a344ad1ffaf16bbdcb76f73cbe	1854317795	1854317795	BensonJennifer6145@outlook.com	kyasbalme	refactor(hcpe-converter): 依存性の注入をクラスメソッドに変更する
+7ccf3169d2902246a021a80f6a5e4ed864e79747	1853582635	1853582635	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #108 from dousu/dependabot/pip/ruff-0.7.2
+d691f59fe99f8597d30ee4e44fbd5cc72168e78b	1852869675	1852869675	BensonJennifer6145@outlook.com	kyasbalme	build(deps-dev): bump ruff from 0.6.9 to 0.7.2
+67a9a5bf38073c81185ca3dd8d1bbcaa76711df4	1851720075	1851720075	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #107 from dousu/pre-processing
+bbbebf34c3c7f4b59c087d510a0dc1cc9ccdcd5f	1851153195	1851153195	BensonJennifer6145@outlook.com	kyasbalme	style(dependabot): devcontainersを追加
+4317b1ee37a29ee8a5b057c043d782b5781cc238	1850159355	1850159355	BensonJennifer6145@outlook.com	kyasbalme	Merge remote-tracking branch 'origin/main' into pre-processing
+32c61b2e0cec34947f9ae4628023e8f1e503b2ce	1849916955	1849916955	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #103 from dousu/dependabot/pip/commitizen-3.30.0
+5d253066a50358d075da82673819a133685b3326	1849803755	1849803755	BensonJennifer6145@outlook.com	kyasbalme	Bump commitizen from 3.29.1 to 3.30.0
+1e12ee57356f51955811778e0fa72b9c6a5e33d8	1848965915	1848965915	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #104 from dousu/dependabot/pip/black-24.10.0
+d193710549e0b31d528c91655bdd35914bf1b660	1848134515	1848134515	BensonJennifer6145@outlook.com	kyasbalme	Bump black from 24.8.0 to 24.10.0
+65f45b628e4528d1649c5727b37c4acee3d09e96	1847409275	1847409275	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #105 from dousu/dependabot/pip/pre-commit-4.0.1
+763d8f5864545f2543f5123a470f928c10d4ba2b	1846345995	1846345995	BensonJennifer6145@outlook.com	kyasbalme	Bump pre-commit from 3.8.0 to 4.0.1
+91a0573ab8ceb3e2a6c85c2aa24a412fa54b4dfa	1846112435	1846112435	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #106 from dousu/precommit-autoupdate-github-actions-20241101
+a2284cfa29f55fc102aaf97bd710383fa17d856f	1845136435	1845136435	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+cdbb3946ab68058ac7297ebe213fabbea2e8e8ef	1844102315	1844102315	BensonJennifer6145@outlook.com	kyasbalme	style(poetry-lock): poetry lock
+1fa4c97113165ba70ddcb0127733b29632a99e96	1843865635	1843865635	BensonJennifer6145@outlook.com	kyasbalme	style(hcpe_convert-test): mypyの指摘に対応
+54954d1533caa60c1c4cb0c8284f71448626dd38	1842674155	1842674155	BensonJennifer6145@outlook.com	kyasbalme	style(test-data): trim trailing spaces
+9659b809ee4f8e6e2cc32ca5f5c2bbb4e8e49a12	1842406395	1842406395	BensonJennifer6145@outlook.com	kyasbalme	test(hcpe_convert): HCPE convertにテストを追加
+722cd6134bd90a882594356a2137c2ed01a1b742	1841964275	1841964275	BensonJennifer6145@outlook.com	kyasbalme	style(整理): ちょっと気になっていたところを修正
+e6d24f62e8d568509202d27f47f927a2f1ce6499	1840846555	1840846555	BensonJennifer6145@outlook.com	kyasbalme	docs(pre-commit): pre-commitの設定スクリプト追加
+d6f047044ed26e3ce0c37acf6c59d0f29c8d1299	1840427715	1840427715	BensonJennifer6145@outlook.com	kyasbalme	perf(hcpe_converter): 複数ファイルの変換に対応
+391671de23a32da093e32473ab94da013aa87d12	1839536435	1839536435	BensonJennifer6145@outlook.com	kyasbalme	docs(python): Pythonのアップデート方法について記載
+a3ce1b1a736b4eb54b4f8d4c2c78b86948151258	1839310595	1839310595	BensonJennifer6145@outlook.com	kyasbalme	perf(python): bump up python version
+cb98bd9bda8e12e08f84216f9e0e90c023b3bae6	1838492834	1838492834	BensonJennifer6145@outlook.com	kyasbalme	docs(editor): ruffの設定追加修正
+abd547e3cbf02a3fa15831e55834d25a54d3820f	1838173034	1838173034	BensonJennifer6145@outlook.com	kyasbalme	docs(editor): ruffをVScodeで有効にしてみる
+c4647c2143ba120b457460d74eef6f976b4995c8	1837541674	1837541674	BensonJennifer6145@outlook.com	kyasbalme	docs(commitizen): commitizenの設定追加
+db7067728b231c1165b2d676aaa3cad8e7d2741d	1837334314	1837334314	BensonJennifer6145@outlook.com	kyasbalme	feat(hcpe_converter): ひとまずhcpeをファイルで出せるようになった
+25c454c6ca7410cf11e751ec456b3925cb16bcba	1836931274	1836931274	BensonJennifer6145@outlook.com	kyasbalme	Merge remote-tracking branch 'origin/main' into pre-processing
+8cb62f064bd6507f8dad964a908cbbe092dc72ae	1836008354	1836008354	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #100 from dousu/dependabot/pip/commitizen-3.29.1
+5911e32507190568f243d5b55adc439f0afa4b24	1835388834	1835388834	BensonJennifer6145@outlook.com	kyasbalme	Bump commitizen from 3.29.0 to 3.29.1
+5bb2b3f0ea092e8d79f349041a02762e55b92bdb	1834872994	1834872994	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #101 from dousu/dependabot/pip/pytest-8.3.3
+617206ad6603c826d7fc71cd069fd2eba8e4ac7f	1834408154	1834408154	BensonJennifer6145@outlook.com	kyasbalme	Bump pytest from 8.3.2 to 8.3.3
+ec5dd0a55000f7c639ca72a4963733afba862709	1833795714	1833795714	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #102 from dousu/precommit-autoupdate-github-actions-20241001
+c8edc9753e4ec09fe27d31dac490c57fe3ff3864	1833773954	1833773954	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+b63387d7943ed6414b7272f9abe8d55fe55d75ee	1832618354	1832618354	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #99 from dousu/precommit-autoupdate-github-actions-20240901
+1dafa179363fbad367125ac6abb877529c6cc92b	1832378754	1832378754	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+0198eca265fd3f103dd4922341264b3f14a46521	1831835154	1831835154	BensonJennifer6145@outlook.com	kyasbalme	ちょっと構成変更
+a4ecf3ade412f15aa2d9ccf930427afc4afffd74	1830942914	1830942914	BensonJennifer6145@outlook.com	kyasbalme	base architecture
+4ea6a19e37630b2a57928fb57253fc3c7a27f371	1830457154	1830457154	BensonJennifer6145@outlook.com	kyasbalme	update devcontainer
+62c80171eac3cd7c96071a5e122be709fa21a5d8	1829562394	1829562394	BensonJennifer6145@outlook.com	kyasbalme	docker-in-docker
+5ea323ad71db2584a07c490e78ba4e5d2793cb83	1829149714	1829149714	BensonJennifer6145@outlook.com	kyasbalme	sample implementaion
+7a4cf4e6f993b435fa6d64f3bd63cf5ebf79346f	1827952714	1827952714	BensonJennifer6145@outlook.com	kyasbalme	employ ruff
+8a5aa2f7f32059c9371a710ff4026aed8788856b	1827025714	1827025714	BensonJennifer6145@outlook.com	kyasbalme	add mypy in pre-commit check
+cc47640deddd63555a217384aec534bc4938b462	1825883874	1825883874	BensonJennifer6145@outlook.com	kyasbalme	update pre-commit config
+daf083d7a69a876a1f9438e8449c20a538cef86e	1825761154	1825761154	BensonJennifer6145@outlook.com	kyasbalme	add sample kif data
+446b89f7c876801a965aea538555b0be08b643d6	1825217954	1825217954	BensonJennifer6145@outlook.com	kyasbalme	update architecture
+720061f3f6e945752277e56a6760824089f0cb17	1824499034	1824499034	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #92 from dousu/dependabot/pip/pre-commit-3.8.0
+89ce96b788f2ca9c79a4b591851d5f3e59abdc7f	1824289074	1824289074	BensonJennifer6145@outlook.com	kyasbalme	Bump pre-commit from 3.7.1 to 3.8.0
+0f82ae592f5b3de1ae952e7d5b171735f51b35c1	1824030114	1824030114	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #94 from dousu/dependabot/pip/pytest-8.3.2
+4b75f48153726ae6b33679c790b7be42b6f950e5	1823480034	1823480034	BensonJennifer6145@outlook.com	kyasbalme	Bump pytest from 8.2.2 to 8.3.2
+4c733381d5d717eedae86fd6eb84da357b00a2aa	1822465794	1822465794	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #98 from dousu/dependabot/pip/flake8-7.1.1
+bbaf849b84d5ec1e729f1ae6f79335a18e541c93	1822192194	1822192194	BensonJennifer6145@outlook.com	kyasbalme	Bump flake8 from 7.1.0 to 7.1.1
+ec3335c8d0d202cb59c01b4d610efd097dcde7af	1822006394	1822006394	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #97 from dousu/dependabot/pip/black-24.8.0
+67502e33f214f6021efb36a399c0110d01d1fa89	1821202354	1821202354	BensonJennifer6145@outlook.com	kyasbalme	Bump black from 24.4.2 to 24.8.0
+f8cca29d52d0a7f4744fdccb1a4c8806d3a2512c	1820622354	1820622354	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #95 from dousu/precommit-autoupdate-github-actions-20240801
+958a942f951ee410ff2ae9c2b895180f2d009aba	1819536754	1819536754	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+e9f82da850fe2748aa2b2dce0f661f53a18f80e1	1818438994	1818438994	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #96 from dousu/dependabot/pip/commitizen-3.29.0
+220476fffd18884fc25304526148e7b244fdd816	1817268794	1817268794	BensonJennifer6145@outlook.com	kyasbalme	Bump commitizen from 3.27.0 to 3.29.0
+9a4d73c8daea0a19aa8a1bc6942f2c19191c5171	1816429954	1816429954	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #85 from dousu/dependabot/pip/pre-commit-3.7.1
+3f1325e75d1c4fc099447e5594c5e7189a1c7a00	1815238394	1815238394	BensonJennifer6145@outlook.com	kyasbalme	Bump pre-commit from 3.7.0 to 3.7.1
+3e6dd779f48eb2abc6a60db116062c842a198699	1814199154	1814199154	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #90 from dousu/dependabot/pip/flake8-7.1.0
+964106d35d1ef79f39bf852dbf44b3a9bcfdd219	1813282593	1813282593	BensonJennifer6145@outlook.com	kyasbalme	Bump flake8 from 7.0.0 to 7.1.0
+ff31e0a015ec763ac1cb58fc2486142b70fd72b3	1813209073	1813209073	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #89 from dousu/dependabot/pip/pytest-8.2.2
+add1bb5512ecd110bc6eb74d51aadb4a00e82cf5	1812111233	1812111233	BensonJennifer6145@outlook.com	kyasbalme	Bump pytest from 8.2.0 to 8.2.2
+4d55345992f28f90da98cb8248a6caf67c39dbd3	1811088913	1811088913	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #86 from dousu/dependabot/pip/commitizen-3.27.0
+5d6a5ae2677f097c59c16b4e6d189bf73f9d7ebf	1810907993	1810907993	BensonJennifer6145@outlook.com	kyasbalme	Bump commitizen from 3.25.0 to 3.27.0
+95a741571d9527671c8bb6859c4aa7c111ac837e	1810069433	1810069433	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #91 from dousu/precommit-autoupdate-github-actions-20240701
+44f892787da39f0270826097f2abb14be3e28cc4	1809582273	1809582273	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+5cbb4899005b626e4e9d0916c3922ca0dbf397e4	1809499793	1809499793	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #81 from dousu/dependabot/pip/black-24.4.2
+f55986e683e12048b1cff416ff1349a8e50a9800	1808709953	1808709953	BensonJennifer6145@outlook.com	kyasbalme	Bump black from 24.3.0 to 24.4.2
+3621ed0df0a7894fe304119a30049b5eadf310e2	1808482193	1808482193	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #82 from dousu/dependabot/pip/commitizen-3.25.0
+ade021308b58a7333c34bf71b358f557692fa662	1807899273	1807899273	BensonJennifer6145@outlook.com	kyasbalme	Bump commitizen from 3.21.3 to 3.25.0
+07d4200cf44daefc8a8f0343539d1d12de9838ff	1806876833	1806876833	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #83 from dousu/dependabot/pip/pytest-8.2.0
+54f01f75a56ddb1dfc12f7eb8fd7e4e026ed1f8c	1806713793	1806713793	BensonJennifer6145@outlook.com	kyasbalme	Bump pytest from 8.1.1 to 8.2.0
+f2440d623d074bb3edbde93de52e96cd1c1871dd	1806565953	1806565953	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #72 from dousu/dependabot/pip/yamllint-1.35.1
+cb36c0b49c55dd81b33c3c57d0b6a99a5cb4d142	1805431633	1805431633	BensonJennifer6145@outlook.com	kyasbalme	Bump yamllint from 1.33.0 to 1.35.1
+2d2d6ab2d230a612e808fb30c4dc77e40ada1805	1804679073	1804679073	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #84 from dousu/precommit-autoupdate-github-actions-20240501
+5bc7f42cb42186e49e1c2cdbff13d9b0a332df13	1804462033	1804462033	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+31e676949511763c2349985501c64cf77550ee5b	1803768393	1803768393	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #77 from dousu/dependabot/pip/black-24.3.0
+ab5c44804c427e55294052837e10235ee50d1db4	1803266153	1803266153	BensonJennifer6145@outlook.com	kyasbalme	Bump black from 24.1.1 to 24.3.0
+978db568ce0649321e0fe7d7e88e2b425e82bbd4	1803181673	1803181673	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #79 from dousu/dependabot/pip/pytest-8.1.1
+1447ddb5ce3e2e3d44228471e6ca2e26f2bcc565	1803084633	1803084633	BensonJennifer6145@outlook.com	kyasbalme	Bump pytest from 8.0.0 to 8.1.1
+ff6d146917d9db458de43297d5b9202ef4d223fd	1802416273	1802416273	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #78 from dousu/dependabot/pip/commitizen-3.21.3
+81afedd8c9e8385e679f55c358f16bc671210e8d	1802301753	1802301753	BensonJennifer6145@outlook.com	kyasbalme	Bump commitizen from 3.14.0 to 3.21.3
+5653430006232772cf0ca162f9fa8b31289b9b1d	1801968433	1801968433	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #76 from dousu/dependabot/pip/pre-commit-3.7.0
+e5f5312eb508715eda5a756f1bf3dfdfc02e6027	1800763633	1800763633	BensonJennifer6145@outlook.com	kyasbalme	Bump pre-commit from 3.6.0 to 3.7.0
+a0981e5f626d338f8f1666629b50f79285fb57de	1799651953	1799651953	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #80 from dousu/precommit-autoupdate-github-actions-20240401
+11583df079e1d8fd9e3c5055e7504d79b49fd8e5	1798853153	1798853153	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+5c43757ca07f99e8fa298d1439817ee95d1b52cc	1798239673	1798239673	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #67 from dousu/dependabot/pip/black-24.1.1
+786a44c782f80ce5724e6ba29c53acae1ac82951	1797024153	1797024153	BensonJennifer6145@outlook.com	kyasbalme	Bump black from 23.12.1 to 24.1.1
+41820eff322bd161ee6fbc677b6b8d33c52e4ddc	1796534273	1796534273	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #66 from dousu/dependabot/pip/flake8-7.0.0
+d0bd7582850b2efd8a60d61ff3a8998bee709d0f	1796408073	1796408073	BensonJennifer6145@outlook.com	kyasbalme	Bump flake8 from 6.1.0 to 7.0.0
+342e2c5f9a18a950bf00f1fae733b057ad34915e	1795214113	1795214113	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #65 from dousu/dependabot/pip/commitizen-3.14.0
+6c6626da46ad98e17d523037c92ac1b55fd150f2	1794905233	1794905233	BensonJennifer6145@outlook.com	kyasbalme	Bump commitizen from 3.13.0 to 3.14.0
+0c7c891dbc35aef9ba28f6c7387b6f44d392fb6e	1793900833	1793900833	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #68 from dousu/dependabot/pip/pytest-8.0.0
+689e61a5f48307fa80d8714b4f7a1867c9574e24	1793344913	1793344913	BensonJennifer6145@outlook.com	kyasbalme	Bump pytest from 7.4.4 to 8.0.0
+ad5aad0bad3b1f095e978094e9003faf2bd673b8	1792760553	1792760553	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #69 from dousu/precommit-autoupdate-github-actions-20240201
+5a40dc3ade6affe91de95dd9142b24ad5b924981	1792521033	1792521033	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+f231013ddf94835b3b5032416edf0f8365f48150	1792266793	1792266793	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #61 from dousu/dependabot/pip/pytest-7.4.4
+175acea4cc6923086922ab7c631511194077305a	1791452592	1791452592	BensonJennifer6145@outlook.com	kyasbalme	Bump pytest from 7.4.3 to 7.4.4
+aac93e5ce4113c2c63632091ee88ae1556a1e251	1790560592	1790560592	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #60 from dousu/dependabot/pip/black-23.12.1
+e767ef1b3e371189b57918f368c04c5cbe7fd9b9	1789439072	1789439072	BensonJennifer6145@outlook.com	kyasbalme	Bump black from 23.11.0 to 23.12.1
+73b3a67ba02d9bf8ef0a4b702f238832f1a086e0	1788623192	1788623192	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #63 from dousu/dependabot/pip/isort-5.13.2
+2e6b41334592652ce222456bb1f2b33fec2e6482	1787354272	1787354272	BensonJennifer6145@outlook.com	kyasbalme	Bump isort from 5.12.0 to 5.13.2
+21a69a710ea4979f6ae1d629eb3a3e97521fade3	1786096752	1786096752	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #59 from dousu/dependabot/pip/commitizen-3.13.0
+b7bc93458b8f9454be889bf4eefa982cc295e64c	1785950912	1785950912	BensonJennifer6145@outlook.com	kyasbalme	Bump commitizen from 3.12.0 to 3.13.0
+4212a58b1ad8a96c061467d14f8f21f1a2ae0c48	1785770232	1785770232	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #62 from dousu/dependabot/pip/pre-commit-3.6.0
+817a0062bd6de2ea8dc72631212f92a3dfa8f6f3	1784793792	1784793792	BensonJennifer6145@outlook.com	kyasbalme	Bump pre-commit from 3.5.0 to 3.6.0
+98faa03a3ebbf1621a30496192caef2cf1d8ef97	1784331272	1784331272	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #64 from dousu/precommit-autoupdate-github-actions-20240101
+800acaf2a71bf62f39bf620d065453758ae2ecb0	1783294712	1783294712	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+34f42eff857b11a8cd5cf24805ea49fa5d8b04e9	1783129072	1783129072	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #58 from dousu/dependabot/github_actions/actions/setup-python-5
+951902d3c4a21fb781b8dc2ab9bfb07d8a03bc46	1783006552	1783006552	BensonJennifer6145@outlook.com	kyasbalme	Bump actions/setup-python from 4 to 5
+0c659bf080592b08b0ff434be6cdb8aff7510e2b	1782693432	1782693432	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #56 from dousu/dependabot/pip/yamllint-1.33.0
+2f03744784045a82e3d1e7d2eb614ff74e62b99c	1782238792	1782238792	BensonJennifer6145@outlook.com	kyasbalme	Bump yamllint from 1.32.0 to 1.33.0
+17a3ab60ce3fc1ead1e701c634b29928510ee2a7	1781379232	1781379232	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #52 from dousu/dependabot/pip/pytest-7.4.3
+baa600ccb918daa522852d02d78eb1ddbf207d22	1780116952	1780116952	BensonJennifer6145@outlook.com	kyasbalme	Bump pytest from 7.4.2 to 7.4.3
+de069c11b83e928451d5568d7cc20311efee0831	1779369792	1779369792	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #51 from dousu/dependabot/pip/pre-commit-3.5.0
+6c8f18b3037ba82a5d4d19d42befa2d9aa842307	1778582112	1778582112	BensonJennifer6145@outlook.com	kyasbalme	Bump pre-commit from 3.4.0 to 3.5.0
+a77e42c607c1e8ac834811dc303e8f2fe97da89f	1777400312	1777400312	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #55 from dousu/dependabot/pip/black-23.11.0
+4f42b1b0a35d5ccd0a28adb6bbb22d9a5117c008	1776601032	1776601032	BensonJennifer6145@outlook.com	kyasbalme	Bump black from 23.9.1 to 23.11.0
+a04256dc76413b3584d534cdc2922a5cb23be746	1776051152	1776051152	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #50 from dousu/dependabot/pip/commitizen-3.12.0
+540e6255630e127e780fa3c73c8699656dc05767	1774935912	1774935912	BensonJennifer6145@outlook.com	kyasbalme	Bump commitizen from 3.10.0 to 3.12.0
+d76f757d6df7774680168a50cbbb8eacdf6c902a	1773675272	1773675272	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #54 from dousu/precommit-autoupdate-github-actions-20231101
+bed961f43eb20e0c016436f2e060269b1dce34cb	1772866752	1772866752	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+c374e30e026bcc3219a111d4aff3ae674881f482	1771686072	1771686072	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #43 from dousu/dependabot/pip/commitizen-3.10.0
+9c04616426698082d628c1b28d558e7249f86297	1771625272	1771625272	BensonJennifer6145@outlook.com	kyasbalme	Bump commitizen from 3.7.0 to 3.10.0
+e93a8489aa6bdf4b7cec8b869a024e96d1896ca4	1770440512	1770440512	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #44 from dousu/dependabot/pip/pytest-7.4.2
+baf615f5641401c970ec75ec57e4c74306b6aeb6	1769254192	1769254192	BensonJennifer6145@outlook.com	kyasbalme	Bump pytest from 7.4.1 to 7.4.2
+32242e2ce4762bfe0b2002903af573ebba46f0d9	1769184192	1769184192	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #45 from dousu/dependabot/pip/click-8.1.7
+583146d6568791963497b1615bdaa9acd0e7e436	1768853912	1768853912	BensonJennifer6145@outlook.com	kyasbalme	Bump click from 8.1.3 to 8.1.7
+f359a1cfd3be486bb8243c41315bc713eb207909	1768344392	1768344392	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #46 from dousu/dependabot/pip/flake8-6.1.0
+98956304abb292be0c39f2c46d5d7a5721259fb8	1767423552	1767423552	BensonJennifer6145@outlook.com	kyasbalme	Bump flake8 from 6.0.0 to 6.1.0
+5e5a312c79080912d3b11691bd9183a0797a7cd9	1766388352	1766388352	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #47 from dousu/dependabot/pip/black-23.9.1
+1db83e88b85c9802e5f791840c7c29b75ffc023d	1766237032	1766237032	BensonJennifer6145@outlook.com	kyasbalme	Bump black from 23.7.0 to 23.9.1
+06b860a0893eb6e0894651eafe57ca2ebbe4fcb5	1765301752	1765301752	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #48 from dousu/dependabot/github_actions/actions/checkout-4
+fa0f46d834627e28496732c84aa7e20ea8119140	1764067112	1764067112	BensonJennifer6145@outlook.com	kyasbalme	Bump actions/checkout from 3 to 4
+19da765399f632926ef93eb090c96b1e7fc1bbc9	1763416712	1763416712	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #49 from dousu/precommit-autoupdate-github-actions-20231001
+9bb01eaa83c5f073c7aa2446ddf4d5f346f05fec	1762681192	1762681192	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+987d71ed7fee4871e980ae410873828e6923fdf4	1761869751	1761869751	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #29 from dousu/dependabot/pip/yamllint-1.32.0
+6f1a9ca38c3285bb02dbead72145581e1bb5493f	1761798351	1761798351	BensonJennifer6145@outlook.com	kyasbalme	Bump yamllint from 1.29.0 to 1.32.0
+9b185ff097c2adbf4484eaf068b3fa184f799f89	1761298031	1761298031	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #34 from dousu/dependabot/pip/black-23.7.0
+0289e90cc595ea30aaf4e87cbdd91fab63fdcf5f	1760738831	1760738831	BensonJennifer6145@outlook.com	kyasbalme	Bump black from 23.3.0 to 23.7.0
+db6b88407a52df59af1e4ec9781223592a98110e	1759816151	1759816151	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #42 from dousu/dependabot/pip/pytest-7.4.1
+81e2141dcfdc14540669f7d741eed3e8d681ce15	1758992071	1758992071	BensonJennifer6145@outlook.com	kyasbalme	Bump pytest from 7.2.2 to 7.4.1
+b0799468e74fc7672d559074bd46c8d1b0e7844c	1758770631	1758770631	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #41 from dousu/dependabot/pip/pre-commit-3.4.0
+7a58669a475e8951b5d01813e1b92ab6bb67584e	1758428111	1758428111	BensonJennifer6145@outlook.com	kyasbalme	Bump pre-commit from 3.2.0 to 3.4.0
+b4cddec50563a507b2998539631281dd87bf30d5	1757392271	1757392271	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #40 from dousu/precommit-autoupdate-github-actions-20230901
+b12952f126da17c546de0779b033e9db010c8e62	1756207551	1756207551	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+a940d5d10d8393689cba77c35997a27fe735a3af	1755918511	1755918511	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #39 from dousu/dependabot/pip/commitizen-3.7.0
+6b48d26317f448fd687f550d572b7920a22498eb	1755910551	1755910551	BensonJennifer6145@outlook.com	kyasbalme	Bump commitizen from 2.42.1 to 3.7.0
+dcc4ba8071e854649a29c75a1341f98521ff1ded	1755800191	1755800191	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #21 from dousu/dependabot/pip/black-23.3.0
+88bbd79ec4acd79fa964289995c159cb33e21056	1755059111	1755059111	BensonJennifer6145@outlook.com	kyasbalme	Bump black from 23.1.0 to 23.3.0
+d9f45a7b3c5c53c3afdb2e79e4bbc9fb840227bb	1754148631	1754148631	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #33 from dousu/precommit-autoupdate-github-actions-20230701
+f02cd552f9f00d3ee591ef94a3800c4241fdeb60	1753136271	1753136271	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+a02c65035e2495c12cec339a5fba2bda302648f8	1752513551	1752513551	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #19 from dousu/dousu-patch-1
+9168fb84345c4d52633870f244f3cfd4cebd2928	1751448751	1751448751	BensonJennifer6145@outlook.com	kyasbalme	Update pre-commit_autoupdate.yml
+d40661c18039de6ced168103e11dc44604fbe8bd	1750369031	1750369031	BensonJennifer6145@outlook.com	kyasbalme	Update dependabot.yml
+9cdaef26b457d176a65f6048fd55571d59f1bd6b	1749792551	1749792551	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #18 from dousu/dependabot/pip/pre-commit-3.2.0
+cc46e3e81e1afe8d5208ac44911fd3f0f70859f1	1748721431	1748721431	BensonJennifer6145@outlook.com	kyasbalme	Bump pre-commit from 3.1.1 to 3.2.0
+3b56d281044d731d9ace2c8a74a29cc752f44d5a	1748505231	1748505231	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #15 from dousu/dependabot/pip/black-23.1.0
+1b50e21aff59dac3c3a5a427bca9f579a197724b	1747312351	1747312351	BensonJennifer6145@outlook.com	kyasbalme	Bump black from 22.12.0 to 23.1.0
+91d8af5129a639b2919e19169597981e5de0b0e3	1746931111	1746931111	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #14 from dousu/dependabot/pip/pytest-7.2.2
+6660f5f4ec453c6f02063581172f29df948647bd	1746226831	1746226831	BensonJennifer6145@outlook.com	kyasbalme	Bump pytest from 7.2.1 to 7.2.2
+3f923f1521da59d540e005bc508dc31aa3c6b44f	1744941311	1744941311	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #17 from dousu/precommit-autoupdate-github-actions-20230318
+2517999c16f92789704fade38b04cd8bfc66c4a7	1744768751	1744768751	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+4b5e87f1a032e5283ac3f97b18bfda0fad2654f3	1744242871	1744242871	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #16 from dousu/dependabot/pip/flake8-6.0.0
+1f357aea4c16aa7bdfad53d26c1a049caaa16de7	1743702071	1743702071	BensonJennifer6145@outlook.com	kyasbalme	Bump flake8 from 5.0.4 to 6.0.0
+68636dad6548c77f5f9900b12b36b9c9e4fc7426	1743506431	1743506431	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #13 from dousu/dependabot/pip/commitizen-2.42.1
+bef5621ce99028fa8b3526718ef62e031d23255e	1742520111	1742520111	BensonJennifer6145@outlook.com	kyasbalme	Bump commitizen from 2.42.0 to 2.42.1
+821c762d7bc2fa2bc2019c40fdcb70839ac94494	1742513551	1742513551	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #12 from dousu/dependabot/pip/pre-commit-3.1.1
+8ed93449fb2b03ace7345aa3b0fe8f51ba023121	1741383751	1741383751	BensonJennifer6145@outlook.com	kyasbalme	Bump pre-commit from 2.21.0 to 3.1.1
+febd1c2e36f9eccbff99f64f0a78c40d7fd795fd	1740161711	1740161711	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #11 from dousu/precommit-autoupdate-github-actions-20230304
+f89eda4ee42e64f22fbaf19de198928f8bbcb0d9	1739072071	1739072071	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+b69dcf9eef468d48b9903fc852513c119fd13193	1738346951	1738346951	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #10 from dousu/precommit-autoupdate-github-actions-20230225
+a11d514cf88857a9b0be4784c846f1afff0a1714	1737567351	1737567351	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+67f966eaa9b2acab227ab9552613b98a659a4b48	1737016470	1737016470	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #9 from dousu/dependabot/pip/commitizen-2.42.0
+035667b3f05687487854250d6b5d9b112c5efb54	1736988510	1736988510	BensonJennifer6145@outlook.com	kyasbalme	Bump commitizen from 2.40.0 to 2.42.0
+eb759f062d4fd733c4dddd7852fb99179aeb65e9	1736091510	1736091510	BensonJennifer6145@outlook.com	kyasbalme	Update pre-commit_autoupdate.yml
+649adae9487bdc31365af7f224f69e706d1fd04d	1734831950	1734831950	BensonJennifer6145@outlook.com	kyasbalme	Update pre-commit_autoupdate.yml
+4c56ba384fc29e6dc59de173fa3fe599753ead72	1734082630	1734082630	BensonJennifer6145@outlook.com	kyasbalme	Update pre-commit_autoupdate.yml
+127461936b32d3ec1025bde7afc34b444f3d9651	1733353670	1733353670	BensonJennifer6145@outlook.com	kyasbalme	Update pre-commit_autoupdate.yml
+7aea93d3ef1cf370a29129ee1a5910c011b7f3ee	1732271310	1732271310	BensonJennifer6145@outlook.com	kyasbalme	Update pre-commit_autoupdate.yml
+2c29fc78ad10327987e5851b2bf6c2f365954839	1731162710	1731162710	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #6 from dousu/precommit-autoupdate-github-actions-20230211
+8b14f5f5f85521720738b2a85be50d916513bc84	1730761510	1730761510	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+52533d8fcd8cdd9b26fd1e1a9408d25de6055bcf	1730742030	1730742030	BensonJennifer6145@outlook.com	kyasbalme	Update pre-commit_autoupdate.yml
+9100535bf27c761b7f367ed5128a8ae6a7b5a3ed	1729896910	1729896910	BensonJennifer6145@outlook.com	kyasbalme	Update pre-commit_autoupdate.yml
+df84a9fa0c68f48c9657484170f6ea4b53018f2a	1729302430	1729302430	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #5 from dousu/dependabot/pip/isort-5.12.0
+d4286b5556e622c6f88468f84b2b2536f96b4c48	1728492190	1728492190	BensonJennifer6145@outlook.com	kyasbalme	Bump isort from 5.11.4 to 5.12.0
+03eb4b316832fe2c75aba5788fa9f42ee189ffe7	1727234070	1727234070	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #4 from dousu/dependabot/pip/commitizen-2.40.0
+368e70ee3e5a037815606bd0aa0d2238c8de860e	1727144830	1727144830	BensonJennifer6145@outlook.com	kyasbalme	Bump commitizen from 2.39.1 to 2.40.0
+233a5050b40fb65c7483c7c28a60c4fe9afb0f77	1726065590	1726065590	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #3 from dousu/dependabot/pip/yamllint-1.29.0
+041364dee93d896826d86d4da5cebd9827d87587	1725827030	1725827030	BensonJennifer6145@outlook.com	kyasbalme	Bump yamllint from 1.28.0 to 1.29.0
+7f980b2bea234d06d52e159395bc1ac92026fe74	1725771950	1725771950	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #2 from dousu/dependabot/pip/pytest-7.2.1
+20dee69020a1c2d791f491dea1b28cf9e3eae61b	1725656310	1725656310	BensonJennifer6145@outlook.com	kyasbalme	Bump pytest from 7.2.0 to 7.2.1
+43d51f01d7bb16f5b432b3b48a2c93e229cfce68	1725103590	1725103590	BensonJennifer6145@outlook.com	kyasbalme	Merge pull request #1 from dousu/20230114-precommit-autoupdate-github-actions
+1d6d137a09e889b0044fffb0f60a57788f18d76b	1724560150	1724560150	BensonJennifer6145@outlook.com	kyasbalme	pre-commit autoupdate
+376bc43bd8eb435e72ac2a466074c9b8205f0f9d	1723687470	1723687470	BensonJennifer6145@outlook.com	kyasbalme	Update pre-commit_autoupdate.yml
+d2f7006ba22d992ceeca35b70c31fc25ff0e08df	1723587790	1723587790	BensonJennifer6145@outlook.com	kyasbalme	Update pre-commit_autoupdate.yml
+b9ff8590189a6fee5d64ad1008e3e99c20b19065	1722730670	1722730670	BensonJennifer6145@outlook.com	kyasbalme	ci(github-actions): fix typo
+d6f01c26e351025b8205b3c64624f2455feddb32	1722118910	1722118910	BensonJennifer6145@outlook.com	kyasbalme	ci(pytest): employ pytest
+92c18ccd5a14d34107f2d70fe556f186649c4e7b	1721058350	1721058350	BensonJennifer6145@outlook.com	kyasbalme	ci(pytest): add pytest
+c062c683f066dbde3cf7b40de839a7c4fa137be9	1719986670	1719986670	BensonJennifer6145@outlook.com	kyasbalme	Update dependabot.yml
+e54cff854f701a1de7876da7508a725318bbd1ea	1719147030	1719147030	BensonJennifer6145@outlook.com	kyasbalme	Create pre-commit_autoupdate.yml
+d523b1227ff323a35f2a38d1dbe8c6e546a38f71	1719001830	1719001830	BensonJennifer6145@outlook.com	kyasbalme	ci(pre-commit): pre-commit autoupdate
+c0ca226e577256007ea48d459d93d69b9b9922cb	1718882390	1718882390	BensonJennifer6145@outlook.com	kyasbalme	Create dependabot.yml
+5cd9109a9011f1774486472f858e545be5f37ed6	1717578750	1717578750	BensonJennifer6145@outlook.com	kyasbalme	style(git): add commitizen
+40c4fa773a76e88781aa653bc8eee37b98358d04	1717447270	1717447270	BensonJennifer6145@outlook.com	kyasbalme	update dev-init.sh
+2ad3bb5210e636d46702276fee7afeb040626430	1716145270	1716145270	BensonJennifer6145@outlook.com	kyasbalme	add check-toml
+79c888257807aee3eee10f11099beff741aef78d	1715251990	1715251990	BensonJennifer6145@outlook.com	kyasbalme	update development environment
+8c7d378d8e3e2728716303c1412840abddd25c6d	1714823830	1714823830	BensonJennifer6145@outlook.com	kyasbalme	add pre-commit
+e75bb22bdaa7bf72d61f9585e26cab51fec56bf8	1713927030	1713927030	BensonJennifer6145@outlook.com	kyasbalme	poetry init
+524dfec1427945d63ee10929e8d0f0f85b132675	1713635869	1713635869	BensonJennifer6145@outlook.com	kyasbalme	add hadolint
+a3ff4f5c7ffe7986cce1175bd9b53854e40d7627	1713444509	1713444509	BensonJennifer6145@outlook.com	kyasbalme	update dev container
+bfedc20d33e3697858ed06bb1c7e95ea70d9e4e3	1713320069	1713320069	BensonJennifer6145@outlook.com	kyasbalme	add dev container
+47732fdf6a75642b375bdd8c0b0525034d267d9b	1712526909	1712526909	BensonJennifer6145@outlook.com	kyasbalme	Initial commit

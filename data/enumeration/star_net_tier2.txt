@@ -1,0 +1,49 @@
+===== Repo MemMachine/MemMachine =====
+{"created_at":"2025-08-15T16:40:53Z","description":"Universal memory layer for AI Agents. It provides scalable, extensible, and inte","fork":false,"forks":170,"homepage":"https://memmachine.ai","parent":null,"pushed_at":"2026-04-25T00:08:13Z","source":null,"stars":3534}
+
+===== Repo 53AI/53AIHub =====
+{"created_at":"2025-04-24T11:24:11Z","description":"53AI Hub is an open-source AI portal, which enables you to quickly build a opera","fork":false,"forks":587,"homepage":"https://hub.53ai.com","parent":null,"pushed_at":"2026-03-04T01:02:02Z","source":null,"stars":5681}
+
+===== Repo iflytek/astron-agent =====
+{"created_at":"2025-09-19T08:46:01Z","description":"Enterprise-grade, commercial-friendly agentic workflow platform for building nex","fork":false,"forks":909,"homepage":"http://astron.ai/","parent":null,"pushed_at":"2026-04-24T09:34:27Z","source":null,"stars":8780}
+
+===== Repo aiflowy/aiflowy =====
+{"created_at":"2025-12-15T07:39:51Z","description":"AIFlowy is an enterprise-grade AI application development platform based on Java","fork":false,"forks":150,"homepage":"https://aiflowy.tech","parent":null,"pushed_at":"2026-04-10T10:03:41Z","source":null,"stars":1049}
+
+===== Repo EvoScientist/EvoScientist =====
+{"created_at":"2026-01-26T11:19:26Z","description":"🔬 Harness Vibe Research with Self-evolving AI Scientists","fork":false,"forks":167,"homepage":"https://EvoScientist.ai/","parent":null,"pushed_at":"2026-04-25T19:18:45Z","source":null,"stars":2590}
+
+===== Repo xup6jammy/AI-INVOICE-OCR-ENGINE =====
+{"created_at":"2025-11-27T03:46:16Z","description":null,"fork":false,"forks":3,"homepage":null,"parent":null,"pushed_at":"2025-11-27T04:53:57Z","source":null,"stars":163}
+
+===== Repo Karmacoke/chargen =====
+{"created_at":"2026-02-06T06:29:33Z","description":"AI-powered character generator built with React. Create detailed TRPG/Novel char","fork":false,"forks":6,"homepage":"https://karmacoke.github.io/chargen/","parent":null,"pushed_at":"2026-02-13T09:29:06Z","source":null,"stars":151}
+
+===== Repo Galaxy-Dawn/claude-scholar =====
+{"created_at":"2026-01-27T10:32:17Z","description":"Semi-automated research assistant for academic research and software development","fork":false,"forks":321,"homepage":null,"parent":null,"pushed_at":"2026-04-25T06:38:01Z","source":null,"stars":3446}
+
+===== Repo MarilynClarke/Hyperliquid-Copy-Trading-Bot =====
+{"created_at":"2022-06-03T06:33:30Z","description":"Hyperliquid || Hyperliquid Bot || Hyperliquid Copy Bot || Hyperliquid Copy Tradi","fork":false,"forks":294,"homepage":"","parent":null,"pushed_at":"2026-03-28T09:52:45Z","source":null,"stars":415}
+
+===== Repo PhyAgentOS/PhyAgentOS =====
+{"created_at":"2026-03-12T05:12:10Z","description":"PhyAgentOS is a self-evolving embodied AI operating system built on agentic work","fork":false,"forks":35,"homepage":"https://phy-agent-os.net/","parent":null,"pushed_at":"2026-04-26T02:03:51Z","source":null,"stars":211}
+
+===== Repo Soul-AILab/SoulX-LiveAct =====
+{"created_at":"2026-03-12T09:24:27Z","description":"Official inference code for SoulX-LiveAct: Towards Hour-Scale Real-Time Human An","fork":false,"forks":106,"homepage":"","parent":null,"pushed_at":"2026-04-15T05:45:17Z","source":null,"stars":1209}
+
+===== Repo DaRL-GenAI/instructional_agents =====
+{"created_at":"2025-10-06T18:34:18Z","description":"(EACL'26 Main) Instructional Agents: Reducing Teaching Faculty Workload through ","fork":true,"forks":147,"homepage":"","parent":"Hyan-Yao/instructional_agents","pushed_at":"2026-04-18T03:07:04Z","source":"Hyan-Yao/instructional_agents","stars":725}
+
+===== MemMachine stargazers (sample 50) =====
+["dxu104","Charlie-Yi-2002","CharlieYi2002","alan-ren-mv","vicaya","Zanetach","sheperdh","henryyuanheng-wang","EliasFilfile","siwei12101900","LucasR235","Brandon-c-tech","mricopeng","tianAndrew","TtVoid","kebe7jun","yankay","dora-zhang","karozi","Lovegoodstudy","alan8325","senegoid","honggyukim","Myoungseo-Matthew-Kim","wyy007","cxxz16","1saac-k","mrragava","git42","alxp12","chenming19850827","wujinkang","eric8810","hyzwz","devasheeshG","nvdpsingh","ozzyfromspace","MuddySheep","svetly-todorov","JinchengHeRyan","wangd","helloprototype","edwinyyyu","malatewang","Johnymachettes","szbr9486","scottly06","dvmazur","CcccYxx","mmkuznecov"]
+
+===== liiiiiii1i1i1 OWN repos =====
+[{"created_at":"2026-01-15T03:34:48Z","fork":true,"name":"HANA","stars":0},{"created_at":"2025-04-13T06:22:04Z","fork":false,"name":"shiny-succotash","stars":0},{"created_at":"2025-04-13T06:22:53Z","fork":false,"name":"ubiquitous-octo-guide","stars":0},{"created_at":"2026-03-18T06:55:29Z","fork":true,"name":"Wavelet","stars":0},{"created_at":"2025-08-21T06:28:16Z","fork":true,"name":"yomorun","stars":0}]
+
+===== 8888x82 OWN repos =====
+[{"created_at":"2025-10-10T04:28:34Z","fork":true,"name":"53AIHub","stars":0},{"created_at":"2025-04-16T13:22:26Z","fork":false,"name":"8888x82","stars":0},{"created_at":"2025-04-16T13:23:03Z","fork":false,"name":"bookish-fishstick","stars":0},{"created_at":"2026-02-25T04:35:04Z","fork":true,"name":"crewrktabletsn","stars":0},{"created_at":"2025-08-21T20:27:26Z","fork":true,"name":"csghub-server","stars":0},{"created_at":"2025-09-28T13:11:13Z","fork":true,"name":"evolving","stars":0},{"created_at":"2026-01-15T07:01:10Z","fork":true,"name":"immersive-web-sdk","stars":0},{"created_at":"2026-03-02T01:20:19Z","fork":true,"name":"iptuxq","stars":0},{"created_at":"2025-04-16T13:24:28Z","fork":false,"name":"legendary","stars":0},{"created_at":"2025-08-20T04:12:17Z","fork":true,"name":"RAKE","stars":0}]
+
+===== RPaez09l OWN repos =====
+[{"created_at":"2025-06-05T13:43:20Z","fork":true,"name":"AnOpc","stars":0},{"created_at":"2026-04-08T07:37:49Z","fork":true,"name":"ASWBXML","stars":0},{"created_at":"2025-05-17T22:26:19Z","fork":true,"name":"BabyOS","stars":0},{"created_at":"2025-07-22T06:30:28Z","fork":true,"name":"cailloum","stars":0},{"created_at":"2025-06-17T05:04:46Z","fork":true,"name":"Camera","stars":0},{"created_at":"2026-02-01T11:31:01Z","fork":true,"name":"dafthack","stars":0},{"created_at":"2021-11-12T10:54:17Z","fork":false,"name":"dannyvanlierop6","stars":0},{"created_at":"2021-11-12T10:53:28Z","fork":false,"name":"duanmingpym","stars":0},{"created_at":"2026-03-11T14:56:49Z","fork":true,"name":"ghaerrb","stars":0},{"created_at":"2021-11-12T10:54:56Z","fork":false,"name":"GITenbergp","stars":0},{"created_at":"2025-04-05T05:15:34Z","fork":true,"name":"github-slideshow","stars":0},{"created_at":"2025-03-08T22:03:56Z","fork":true,"name":"github7","stars":0},{"created_at":"2026-02-23T12:09:52Z","fork":true,"name":"Hamerslyl","stars":0},{"created_at":"2025-09-28T13:39:38Z","fork":true,"name":"HANA","stars":0},{"created_at":"2025-07-30T04:46:40Z","fork":true,"name":"Mauri","stars":0},{"created_at":"2023-05-24T07:46:23Z","fork":true,"name":"Min_Max_Similarity","stars":0},{"created_at":"2026-01-15T15:16:43Z","fork":true,"name":"NLuaf","stars":0},{"created_at":"2025-06-12T10:20:16Z","fork":true,"name":"OpenEmbodied","stars":0},{"created_at":"2025-09-24T12:32:47Z","fork":true,"name":"OpenEV","stars":0},{"created_at":"2025-06-12T07:29:37Z","fork":true,"name":"PandaWiki","stars":0}]
+
+===== DONE =====

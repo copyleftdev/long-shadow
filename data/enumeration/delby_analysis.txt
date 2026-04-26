@@ -1,0 +1,70 @@
+=== DelbyIntelligence creation timeline (per-day) ===
+2026-04-03	19
+2026-04-04	41
+2026-04-05	6
+2026-04-06	41
+2026-04-07	129
+2026-04-08	128
+2026-04-09	197
+2026-04-10	203
+2026-04-11	157
+2026-04-12	51
+2026-04-15	103
+2026-04-16	249
+2026-04-17	201
+2026-04-18	204
+2026-04-19	150
+2026-04-20	251
+2026-04-21	253
+2026-04-22	244
+2026-04-23	235
+2026-04-24	224
+2026-04-25	26
+
+=== All repos WITH descriptions (showcase set, 46 total) ===
+2026-04-25	product-choreograph-forge-multi-robot-coordinated-reaching	Delby AI Product: CHOREOGRAPH-FORGE: Multi-Robot Coordinated Reaching Planner wi
+2026-04-24	product-delby-voxscene-cortex-sparse-voxel-transformer-for	Delby AI Product: Delby VoxScene-Cortex: Sparse Voxel Transformer for Real-Time 
+2026-04-24	product-auto-annotation-transformer-self-supervised-labeli	Delby AI Product: Auto-Annotation Transformer: Self-Supervised Labeling for Mult
+2026-04-24	product-flex-forge-multi-material-deformable-object-manipu	Delby AI Product: FLEX-FORGE: Multi-Material Deformable Object Manipulation Suit
+2026-04-24	product-edgesync-autonomy-debugger-intelligent-field-incid	Delby AI Product: EdgeSync Autonomy Debugger - Intelligent Field Incident Replay
+2026-04-24	product-multi-sensor-sync-validator-interactive-3d-demo-fo	Delby AI Product: Multi-Sensor Sync Validator - Interactive 3D Demo for Innovati
+2026-04-24	product-active-learning-pipeline-for-perception-edge-case-	Delby AI Product: Active Learning Pipeline for Perception Edge Case Discovery
+2026-04-24	product-delby-drive-cortex-safety-certified-edge-inference	Delby AI Product: Delby DRIVE-Cortex: Safety-Certified Edge Inference Pipeline f
+2026-04-24	product-av-edge-case-semantic-search-demo-find-the-needle-	Delby AI Product: AV Edge Case Semantic Search Demo - "Find the Needle in the Pe
+2026-04-24	product-roboforensics-intelligent-fleet-incident-replay-se	Delby AI Product: RoboForensics - Intelligent Fleet Incident Replay & Semantic S
+2026-04-24	product-toss-forge-physics-informed-throwing-motion-synthe	Delby AI Product: TOSS-FORGE: Physics-Informed Throwing Motion Synthesis Engine 
+2026-04-24	product-delby-autocalib-studio-real-time-multi-sensor-cali	Delby AI Product: Delby AutoCalib-Studio: Real-Time Multi-Sensor Calibration Val
+2026-04-23	product-autoqa-studio-real-time-annotation-validation-plat	Delby AI Product: AutoQA Studio - Real-Time Annotation Validation Platform
+2026-04-23	product-tool-adapt-zero-shot-dexterous-tool-manipulation-s	Delby AI Product: TOOL-ADAPT: Zero-Shot Dexterous Tool Manipulation Studio for I
+2026-04-23	product-interactive-sensor-fusion-debugger-time-travel-thr	Delby AI Product: Interactive Sensor Fusion Debugger: Time-Travel Through AV Fai
+2026-04-23	product-interactive-edge-case-mining-dashboard-live-demo-f	Delby AI Product: Interactive Edge Case Mining Dashboard - Live Demo for Robotic
+2026-04-23	product-dexrep-studio-geometric-hand-object-representation	Delby AI Product: DEXREP-STUDIO: Geometric Hand-Object Representation Learning S
+2026-04-19	product-delby-nurec-studio-real-world-to-sim-pipeline-for-	Delby AI Product: Delby NuRec-Studio: Real-World to Sim Pipeline for AV Scenario
+2026-04-19	product-contact-forge-contact-guided-deep-rl-suite-for-mul	Delby AI Product: CONTACT-FORGE: Contact-Guided Deep RL Suite for Multi-Contact 
+2026-04-17	product-roborewind-intelligent-event-triggered-sensor-arch	Delby AI Product: RoboRewind: Intelligent Event-Triggered Sensor Archive with Fr
+2026-04-17	product-warehouse-pick-error-prediction-via-tactile-vision	Delby AI Product: Warehouse Pick-Error Prediction via Tactile-Vision Fusion Tran
+2026-04-17	product-multi-vendor-fleet-orchestration-demo-for-cardinal	Delby AI Product: Multi-Vendor Fleet Orchestration Demo for Cardinal Health
+2026-04-17	product-intrinsic-foundry-real-time-multi-part-assembly-se	Delby AI Product: INTRINSIC-FOUNDRY: Real-Time Multi-Part Assembly Sequencing & 
+2026-04-17	product-delby-microfusion-sub-10mw-gesture-recognition-for	Delby AI Product: Delby MicroFusion: Sub-10mW Gesture Recognition for Energy-Har
+2026-04-17	product-perception-model-ci-cd-validator-interactive-demo	Delby AI Product: Perception Model CI/CD Validator - Interactive Demo
+2026-04-17	product-legacy-av-data-unification-platform-multi-generati	Delby AI Product: Legacy AV Data Unification Platform - Multi-Generation Sensor 
+2026-04-16	product-federated-physical-ai-training-sandbox-live-demo-f	Delby AI Product: Federated Physical AI Training Sandbox - Live Demo for IIT Bom
+2026-04-16	product-aurora-sim2real-validation-suite-real-world-to-sim	Delby AI Product: Aurora Sim2Real Validation Suite - Real-World to Simulation Pa
+2026-04-16	product-active-learning-pipeline-auto-labeling-hard-negati	Delby AI Product: Active Learning Pipeline: Auto-Labeling Hard Negatives with Un
+2026-04-16	product-learned-compression-for-physical-ai-data-neural-co	Delby AI Product: Learned Compression for Physical AI Data: Neural Codec Researc
+2026-04-16	product-semantic-sensor-search-for-annotation-teams-intera	Delby AI Product: Semantic Sensor Search for Annotation Teams - Interactive Demo
+2026-04-15	product-tactile-transformer-pressure-motion-fusion-for-war	Delby AI Product: Tactile Transformer: Pressure-Motion Fusion for Warehouse Pick
+2026-04-15	product-delby-devloop-same-day-physical-ai-training-pipeli	Delby AI Product: Delby DevLoop: Same-Day Physical AI Training Pipeline
+2026-04-15	product-depth-anything-novus-metric-depth-forensic-search-	Delby AI Product: Depth-Anything-Novus: Metric Depth Forensic Search for AV Inci
+2026-04-15	product-fleet-perception-health-dashboard-real-time-sensor	Delby AI Product: Fleet Perception Health Dashboard - Real-time Sensor Degradati
+2026-04-15	product-real-time-skill-transfer-network-diffusion-model-f	Delby AI Product: Real-Time Skill Transfer Network: Diffusion Model for Expert M
+2026-04-09	product-teleglove-multi-vendor-sensor-fusion-platform-for-	Delby AI Product: TeleGlove: Multi-Vendor Sensor Fusion Platform for Distributed
+2026-04-09	product-physicalql-natural-language-query-engine-for-multi	Delby AI Product: PhysicalQL: Natural Language Query Engine for Multimodal Robot
+2026-04-09	product-delby-annotate-closed-loop-annotation-quality-syst	Delby AI Product: Delby Annotate: Closed-Loop Annotation Quality System with Pro
+2026-04-09	product-spatiotemporal-compression-transformer-for-sensor-	Delby AI Product: Spatiotemporal Compression Transformer for Sensor Data Storage
+2026-04-09	product-time-travel-debugger-for-autonomous-systems	Delby AI Product: Time-Travel Debugger for Autonomous Systems
+2026-04-09	product-nuplan-cortex-real-time-behavior-prediction-suite-	Delby AI Product: nuPlan Cortex: Real-Time Behavior Prediction Suite for Autonom
+2026-04-09	product-real-time-transformer-based-sensor-fusion-for-sub-	Delby AI Product: Real-Time Transformer-Based Sensor Fusion for Sub-50ms Control
+2026-04-09	product-active-learning-edge-case-miner-auto-discover-high	Delby AI Product: Active Learning Edge Case Miner: Auto-Discover High-Value Trai
+2026-04-09	product-semantic-sensor-search-demo-find-any-driving-scena	Delby AI Product: Semantic Sensor Search Demo: Find Any Driving Scenario in Peta
+2026-04-03	test-demo	Test demo repo
