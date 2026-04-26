@@ -39,7 +39,7 @@ long-shadow/
 ├── METHODOLOGY.md                       how the investigation actually unfolded
 ├── REPLAY.md                            every reproduction command, in execution order
 ├── HASHES.txt                           sha256sum of every artifact
-├── site/index.html                      single-file kinetic data-viz long-read
+├── docs/index.html                      single-file kinetic data-viz long-read
 ├── catalog/
 │   ├── CATALOG.md                       full evidentiary catalog
 │   ├── operators.csv                    every confirmed operator account, one per row
