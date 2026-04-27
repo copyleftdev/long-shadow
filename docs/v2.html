@@ -302,9 +302,45 @@ footer.colophon .sig { margin-top: var(--s-7); padding-top: var(--s-5); border-t
   .crow .meter-mini { display: none; }
   footer.colophon .col-wide { grid-template-columns: 1fr; }
 }
+
+/* ───────────────────  CHRONICLE NAV (v1 ↔ v2 ↔ v3)  */
+.chronicle-nav { background: var(--paper-2); border-bottom: 1px solid var(--rule); padding: 10px var(--gutter); font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; position: relative; z-index: 30; }
+.chronicle-inner { max-width: var(--col-bleed); margin: 0 auto; display: flex; align-items: center; gap: var(--s-3); flex-wrap: wrap; }
+.cn-item { display: inline-flex; align-items: baseline; gap: var(--s-2); color: var(--ink-2); text-decoration: none; padding: 4px 10px; border: 1px solid transparent; transition: background 200ms var(--ease-out-quart), color 200ms var(--ease-out-quart), border-color 200ms var(--ease-out-quart); }
+.cn-item:hover { background: var(--paper); color: var(--ink); border-color: var(--rule); }
+.cn-item .cn-num { font-weight: 700; color: var(--accent); font-size: 12px; }
+.cn-item .cn-tag { color: var(--muted); }
+.cn-item:hover .cn-tag { color: var(--ink-2); }
+.cn-item.current { color: var(--ink); pointer-events: none; background: var(--paper); border-color: var(--rule); }
+.cn-item.current .cn-num { color: var(--ink); }
+.cn-item.current .cn-tag { color: var(--accent); }
+.cn-arrow { color: var(--rule); font-family: var(--display); font-weight: 400; }
+.cn-spacer { flex: 1 1 auto; }
+.cn-meta { color: var(--muted); font-size: 10px; letter-spacing: 0.08em; }
+.cn-meta b { color: var(--ink-2); font-weight: 500; }
+@media (max-width: 720px) { .cn-item .cn-tag { display: none; } .cn-meta { display: none; } }
 </style>
 </head>
 <body>
+
+<nav class="chronicle-nav" aria-label="Operation Long Shadow chapters">
+  <div class="chronicle-inner">
+    <a class="cn-item" href="./index.html"><span class="cn-num">v1</span><span class="cn-tag">The original report</span></a>
+    <span class="cn-arrow">→</span>
+    <a class="cn-item current" aria-current="page" href="./v2.html"><span class="cn-num">v2</span><span class="cn-tag">The math, validated</span></a>
+    <span class="cn-arrow">→</span>
+    <a class="cn-item" href="./v3.html"><span class="cn-num">v3</span><span class="cn-tag">The market</span></a>
+    <span class="cn-spacer"></span>
+    <span class="cn-meta">Chronicle · <b>2026·04·25 → 04·26</b> · 1 workday</span>
+  </div>
+</nav>
+
+<a href="./v3.html" style="display:block; padding:10px var(--gutter); background:var(--accent-soft); border-bottom:1px solid var(--rule); font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink); text-decoration:none; transition:background 200ms var(--ease-out-quart);" onmouseover="this.style.background='oklch(90% 0.06 28)'" onmouseout="this.style.background='var(--accent-soft)'">
+  <div style="max-width:var(--col-bleed); margin:0 auto; display:flex; justify-content:space-between; align-items:baseline; gap:var(--s-5); flex-wrap:wrap;">
+    <span style="display:flex; align-items:baseline; gap:var(--s-3); flex-wrap:wrap"><span style="color:var(--accent); font-weight:700">UPDATE · 2026·04·26</span><span style="color:var(--ink-2)">v3 · The market · 12 operators · 2 real names · 1 cross-vertical malware kit · methodology generalized in 1 workday</span></span>
+    <span style="color:var(--accent)">read v3 →</span>
+  </div>
+</a>
 
 <div class="rail" aria-hidden="true"><div class="rail-fill" id="rail-fill"></div></div>
 <div class="chapter-marker" id="chapter-marker" aria-hidden="true">
@@ -691,6 +727,7 @@ footer.colophon .sig { margin-top: var(--s-7); padding-top: var(--s-5); border-t
         <li><span style="color:var(--muted)">·</span> <span class="mono">research/detector/scripts/</span> · <span class="mono">primitives/</span> · <span class="mono">harness/</span></li>
         <li><span style="color:var(--muted)">·</span> <span class="mono">research/detector/corpus/</span> — JSON + JSONL artifacts</li>
         <li><span style="color:var(--muted)">·</span> <a href="./index.html">v1 · the original investigation</a></li>
+        <li><span style="color:var(--muted)">·</span> <a href="./v3.html">v3 · the market — twelve operators, two real names, one workday</a></li>
       </ul>
       <h3 style="margin-top:var(--s-7)">References cited</h3>
       <ul>
