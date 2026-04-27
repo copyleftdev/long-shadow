@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Operation Long Shadow · v3 · The market</title>
+<meta name="description" content="One workday after v2. The math generalized. Pointing the toolchain at seven verticals surfaced nine star-farm operators, two malware kits, one cross-vertical link, and one operator's real name in a college final-exam repo.">
+<meta property="og:title" content="Operation Long Shadow · v3 · The market">
+<meta property="og:description" content="The farm has neighbors. Twelve operators across two continents, four campaign types, one cross-vertical kit, and one real name — surfaced in a single workday.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Spectral:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:        oklch(98%   0.012  78);
+  --paper-2:      oklch(95%   0.013  78);
+  --rule:         oklch(85%   0.012  78);
+  --ink:          oklch(20%   0.018  60);
+  --ink-2:        oklch(35%   0.018  60);
+  --muted:        oklch(56%   0.014  60);
+  --accent:       oklch(53%   0.205  28);
+  --accent-soft:  oklch(94%   0.04   28);
+  --good:         oklch(48%   0.16  150);
+  --good-soft:    oklch(94%   0.04  150);
+  --warn:         oklch(48%   0.18   45);
+
+  --serif:   'Spectral', 'Source Serif Pro', Georgia, serif;
+  --display: 'Bricolage Grotesque', 'Söhne', system-ui, sans-serif;
+  --mono:    'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  --col:        720px;
+  --col-wide:   1040px;
+  --col-bleed:  1280px;
+  --gutter: clamp(20px, 5vw, 64px);
+
+  --s-1: 4px;  --s-2: 8px;   --s-3: 12px;  --s-4: 16px;  --s-5: 24px;
+  --s-6: 32px; --s-7: 48px;  --s-8: 64px;  --s-9: 96px;  --s-10: 144px; --s-11: 192px;
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.55;
+  font-feature-settings: "ss01", "kern";
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--accent); color: var(--paper); }
+
+a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+
+/* ───────────────────  PROGRESS RAIL  */
+.rail { position: fixed; left: 0; right: 0; top: 0; height: 2px; background: transparent; z-index: 50; pointer-events: none; }
+.rail-fill { height: 100%; width: 0%; background: var(--ink); transition: width 80ms linear; }
+
+/* ───────────────────  CHAPTER MARK  */
+.chapter-marker {
+  position: fixed; top: var(--s-5); left: var(--gutter);
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); z-index: 40; mix-blend-mode: multiply; pointer-events: none;
+  display: flex; gap: var(--s-3); align-items: baseline;
+  opacity: 0; transition: opacity 300ms var(--ease-out-quart);
+}
+.chapter-marker.visible { opacity: 1; }
+.chapter-marker .num { color: var(--accent); font-weight: 700; }
+.chapter-marker .of { color: var(--rule); }
+
+/* ───────────────────  PAGE STRUCTURE  */
+main { padding: 0; }
+article { display: block; }
+section.chapter { position: relative; padding: var(--s-11) var(--gutter); border-top: 1px solid var(--rule); }
+section.chapter:first-of-type { border-top: 0; }
+
+.col       { max-width: var(--col);        margin: 0 auto; }
+.col-wide  { max-width: var(--col-wide);   margin: 0 auto; }
+.col-bleed { max-width: var(--col-bleed);  margin: 0 auto; }
+
+/* ───────────────────  TYPE  */
+.eyebrow {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--muted); display: flex; align-items: baseline; gap: var(--s-4);
+  margin: 0 0 var(--s-5) 0; flex-wrap: wrap;
+}
+.eyebrow .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.eyebrow .num { color: var(--accent); font-weight: 700; }
+
+h1.hero {
+  font-family: var(--serif); font-weight: 500;
+  font-size: clamp(34px, 6.5vw, 84px); line-height: 1.04; letter-spacing: -0.018em;
+  margin: 0 0 var(--s-7) 0; font-feature-settings: "ss01"; max-width: 18ch;
+}
+h1.hero em { font-style: italic; color: var(--accent); font-weight: 500; }
+
+h2.chapter-title {
+  font-family: var(--serif); font-weight: 500;
+  font-size: clamp(28px, 4.4vw, 52px); line-height: 1.1; letter-spacing: -0.014em;
+  margin: 0 0 var(--s-6) 0; max-width: 22ch;
+}
+h2.chapter-title em { font-style: italic; color: var(--accent); }
+
+h3.kicker {
+  font-family: var(--display); font-weight: 600; font-size: 13px; line-height: 1.3;
+  letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2);
+  margin: var(--s-7) 0 var(--s-3) 0;
+}
+
+p { margin: 0 0 var(--s-5) 0; max-width: 65ch; }
+p.lede { font-size: clamp(20px, 2.4vw, 26px); line-height: 1.45; font-weight: 400; color: var(--ink-2); margin-bottom: var(--s-7); max-width: 32ch; }
+p.lede em { font-style: italic; color: var(--ink); }
+
+p strong { font-weight: 700; color: var(--ink); }
+p code, .mono { font-family: var(--mono); font-size: 0.86em; background: var(--paper-2); padding: 1px 6px; border-radius: 2px; color: var(--ink-2); }
+
+blockquote.pull { font-family: var(--display); font-weight: 400; font-size: clamp(22px, 2.8vw, 32px); line-height: 1.25; color: var(--ink); border-left: 0; margin: var(--s-7) 0; padding: 0; max-width: 28ch; letter-spacing: -0.005em; }
+blockquote.pull em { font-style: italic; color: var(--accent); }
+
+/* ───────────────────  REVEAL  */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 800ms var(--ease-out-quart), transform 800ms var(--ease-out-quart); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal[data-stagger] { transition-delay: calc(var(--i, 0) * 80ms); }
+.reveal.show-fallback { opacity: 1; transform: none; transition: opacity 400ms ease-out; }
+@media (prefers-reduced-motion: reduce) { .reveal { transition: opacity 200ms ease-out; transform: none; } .rail-fill { transition: none; } }
+
+/* ───────────────────  HERO  */
+.hero-section { min-height: 92vh; display: grid; grid-template-rows: auto 1fr auto; padding: var(--s-7) var(--gutter); border-top: 0; }
+.hero-mast { display: flex; justify-content: space-between; align-items: baseline; font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; flex-wrap: wrap; gap: var(--s-3); }
+.hero-mast .mast-l, .hero-mast .mast-r { display: flex; gap: var(--s-4); align-items: baseline; }
+.hero-mast .mast-r { color: var(--accent); }
+.hero-body { display: flex; flex-direction: column; justify-content: center; max-width: var(--col-wide); margin: 0 auto; width: 100%; padding: var(--s-9) 0; }
+.hero-meta {
+  font-family: var(--mono); font-size: 12px; color: var(--muted);
+  letter-spacing: 0.06em; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--s-5) var(--s-7); border-top: 1px solid var(--rule); padding-top: var(--s-5); max-width: 920px;
+}
+.hero-meta dt { color: var(--muted); font-weight: 500; margin-bottom: 2px; }
+.hero-meta dd { margin: 0; color: var(--ink); font-family: var(--serif); font-size: 16px; line-height: 1.45; }
+.hero-foot { display: flex; justify-content: space-between; align-items: baseline; font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; flex-wrap: wrap; gap: var(--s-3); }
+.hero-foot .pulse { display: inline-flex; align-items: center; gap: var(--s-2); }
+.hero-foot .pulse::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 0.4; transform: scale(1);} 50% { opacity: 1; transform: scale(1.3);} }
+
+/* ───────────────────  BIG NUMBERS  */
+.bignum { font-family: var(--display); font-weight: 300; font-size: clamp(56px, 14vw, 200px); line-height: 0.92; letter-spacing: -0.04em; color: var(--ink); font-variant-numeric: tabular-nums; font-feature-settings: "tnum", "ss01"; }
+.bignum.accent { color: var(--accent); }
+.bignum sup { font-size: 0.32em; vertical-align: super; font-weight: 400; color: var(--muted); }
+
+.statline { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--s-7); margin: var(--s-7) 0; padding: var(--s-6) 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.statline .stat .v { font-family: var(--display); font-weight: 500; font-size: clamp(28px, 3.2vw, 42px); line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; display: block; }
+.statline .stat .v em { font-style: normal; color: var(--accent); }
+.statline .stat .l { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: var(--s-3); display: block; max-width: 24ch; line-height: 1.4; }
+
+/* ───────────────────  EVIDENCE LINE  */
+.evidence { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.02em; margin: var(--s-3) 0 var(--s-7) 0; padding-left: var(--s-4); border-left: 1px solid var(--rule); max-width: 88ch; line-height: 1.6; }
+.evidence b { color: var(--ink-2); font-weight: 500; }
+.evidence::before { content: "EVIDENCE"; display: block; font-size: 10px; letter-spacing: 0.2em; color: var(--accent); margin-bottom: var(--s-2); }
+
+/* ───────────────────  TL;DR CARD GRID (ch 1)  */
+.tldr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: var(--s-7) auto; max-width: var(--col-bleed); }
+.tldr-card { background: var(--paper); padding: var(--s-6) var(--s-5); display: flex; flex-direction: column; gap: var(--s-3); }
+.tldr-card .ix { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.16em; text-transform: uppercase; }
+.tldr-card .v { font-family: var(--display); font-weight: 400; font-size: clamp(36px, 4.2vw, 56px); line-height: 0.95; letter-spacing: -0.02em; color: var(--ink); font-variant-numeric: tabular-nums; }
+.tldr-card .v em { font-style: italic; color: var(--accent); font-weight: 500; }
+.tldr-card .v.small { font-size: clamp(22px, 2.6vw, 32px); }
+.tldr-card .l { font-family: var(--serif); font-size: 14px; color: var(--ink-2); line-height: 1.45; max-width: 28ch; }
+
+/* ───────────────────  ACTIVATION TIMELINE (ch 3)  */
+.timeline-wrap { max-width: var(--col-bleed); margin: var(--s-8) auto; }
+.timeline-svg { width: 100%; height: auto; display: block; }
+.tl-day-label { fill: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; }
+.tl-day-num { fill: var(--ink); font-family: var(--display); font-weight: 500; font-variant-numeric: tabular-nums; font-size: 11px; }
+.tl-axis { stroke: var(--rule); stroke-width: 1; }
+.tl-axis-strong { stroke: var(--ink); stroke-width: 1; }
+.tl-tick { stroke: var(--muted); stroke-width: 1; opacity: 0.5; stroke-dasharray: 1 3; }
+.tl-event { fill: var(--ink); }
+.tl-event.wave3 { fill: var(--accent); }
+.tl-event.late { fill: var(--accent); }
+.tl-event-label { fill: var(--ink); font-family: var(--mono); font-size: 9px; }
+.tl-event-label.accent { fill: var(--accent); font-weight: 500; }
+.tl-wave-band { fill: var(--accent-soft); opacity: 0.55; }
+.tl-wave-label { fill: var(--accent); font-family: var(--display); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+.tl-bar { fill: var(--ink); }
+.tl-bar.wave3 { fill: var(--accent); }
+.tl-cap { fill: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; }
+.tl-now-marker { fill: var(--accent); }
+
+/* ───────────────────  BOT-SHAPE COMPARISON (ch 2) — horizontal bars */
+.botshape-wrap { max-width: var(--col-wide); margin: var(--s-8) auto; }
+.botshape-row { display: grid; grid-template-columns: 1.5fr 5fr 1fr 1fr; gap: var(--s-5); padding: var(--s-4) 0; border-top: 1px solid var(--rule); align-items: center; }
+.botshape-row:last-child { border-bottom: 1px solid var(--rule); }
+.botshape-row.head { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; border-top: 0; padding-bottom: var(--s-2); }
+.botshape-row .label { font-family: var(--display); font-weight: 500; font-size: 16px; color: var(--ink); }
+.botshape-row .label .sub { display: block; font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.04em; font-weight: 400; margin-top: 3px; text-transform: none; }
+.botshape-row .bar-track { position: relative; height: 18px; background: var(--paper-2); }
+.botshape-row .bar-fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--ink); }
+.botshape-row .bar-fill.accent { background: var(--accent); }
+.botshape-row .bar-fill.organic { background: var(--good); opacity: 0.85; }
+.botshape-row .pct { font-family: var(--display); font-weight: 500; font-size: 22px; color: var(--ink); font-variant-numeric: tabular-nums; text-align: right; }
+.botshape-row .pct.accent { color: var(--accent); }
+.botshape-row .reading { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; text-align: right; }
+.botshape-row .reading.danger { color: var(--accent); font-weight: 500; }
+
+/* ───────────────────  OPERATOR MAP (ch 4) — six disjoint columns */
+.opmap-wrap { max-width: var(--col-bleed); margin: var(--s-8) auto; }
+.opmap-svg { width: 100%; height: auto; display: block; }
+.om-column-bg { fill: var(--paper-2); }
+.om-column-rule { stroke: var(--rule); stroke-width: 1; }
+.om-op-label { fill: var(--ink); font-family: var(--display); font-weight: 600; font-size: 14px; letter-spacing: -0.01em; }
+.om-op-sub { fill: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; }
+.om-op-num { fill: var(--accent); font-family: var(--display); font-weight: 500; font-size: 22px; font-variant-numeric: tabular-nums; }
+.om-bot { fill: var(--ink); fill-opacity: 0.75; }
+.om-bot.accent { fill: var(--accent); }
+.om-anchor-label { fill: var(--muted); font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; }
+.om-cap { fill: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; }
+.om-banner { fill: var(--ink); font-family: var(--display); font-weight: 500; font-size: 14px; }
+.om-banner em { fill: var(--accent); }
+
+/* ───────────────────  PAPER TRAIL (ch 5)  */
+.papertrail-wrap { max-width: var(--col-wide); margin: var(--s-8) auto; }
+.pt-list { display: flex; flex-direction: column; gap: 0; padding: 0; margin: 0; list-style: none; border-top: 1px solid var(--rule); }
+.pt-list li { display: grid; grid-template-columns: 9em 1fr auto; gap: var(--s-4); padding: var(--s-3) var(--s-4); border-bottom: 1px solid var(--rule); align-items: baseline; font-family: var(--mono); font-size: 13px; color: var(--ink-2); position: relative; }
+.pt-list li .date { color: var(--muted); font-size: 11px; letter-spacing: 0.04em; }
+.pt-list li .repo { color: var(--ink); }
+.pt-list li .tag { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.pt-list li.school .tag { color: var(--good); }
+.pt-list li.smoking { background: var(--accent-soft); }
+.pt-list li.smoking .repo { color: var(--accent); font-weight: 700; }
+.pt-list li.smoking .tag { color: var(--accent); font-weight: 700; }
+.pt-list li.pivot { background: var(--paper-2); }
+.pt-list li.pivot .repo { color: var(--ink); font-weight: 700; }
+.pt-list li.pivot .tag { color: var(--accent); }
+.pt-callout { font-family: var(--display); font-weight: 500; font-size: clamp(20px, 2.4vw, 28px); line-height: 1.25; max-width: 36ch; margin: var(--s-7) auto 0; text-align: center; color: var(--ink); }
+.pt-callout em { font-style: italic; color: var(--accent); }
+.pt-decode { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.04em; text-align: center; margin-top: var(--s-4); max-width: 64ch; margin-left: auto; margin-right: auto; line-height: 1.6; }
+.pt-decode b { color: var(--ink); font-weight: 500; }
+
+/* ───────────────────  KIT BYTE-DIFF (ch 6) — boilerplate fingerprint */
+.kit-wrap { max-width: var(--col-bleed); margin: var(--s-8) auto; }
+.kit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); }
+.kit-card { background: var(--paper); border: 1px solid var(--rule); padding: var(--s-6); }
+.kit-card .head { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: var(--s-4); border-bottom: 1px solid var(--rule); margin-bottom: var(--s-5); flex-wrap: wrap; gap: var(--s-3); }
+.kit-card .head .name { font-family: var(--display); font-weight: 600; font-size: 18px; color: var(--ink); letter-spacing: -0.01em; }
+.kit-card .head .tag { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+.kit-rows { display: flex; flex-direction: column; gap: var(--s-3); }
+.kit-row { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--s-4); align-items: center; padding: var(--s-2) 0; }
+.kit-row .file { font-family: var(--mono); font-size: 13px; color: var(--ink); }
+.kit-row .bytes { font-family: var(--display); font-weight: 500; font-size: 22px; color: var(--ink); font-variant-numeric: tabular-nums; text-align: right; letter-spacing: -0.01em; }
+.kit-row .bytes em { font-style: normal; color: var(--accent); font-weight: 700; }
+.kit-row .bytes .unit { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-left: 6px; letter-spacing: 0.04em; }
+.kit-shells { margin-top: var(--s-5); padding-top: var(--s-4); border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 11px; color: var(--muted); line-height: 1.7; letter-spacing: 0.02em; }
+.kit-shells b { color: var(--ink); font-weight: 500; }
+.kit-banner { text-align: center; margin: var(--s-7) auto 0; max-width: 52ch; font-family: var(--display); font-weight: 500; font-size: clamp(20px, 2.4vw, 28px); line-height: 1.25; }
+.kit-banner em { font-style: italic; color: var(--accent); }
+.kit-cap { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; text-align: center; margin-top: var(--s-3); }
+
+/* ───────────────────  CROSS-VERTICAL LINK (ch 7) — sankey-ish */
+.crosslink-wrap { max-width: var(--col-bleed); margin: var(--s-8) auto; }
+.crosslink-svg { width: 100%; height: auto; display: block; }
+.cl-vertical-bar { fill: var(--ink); }
+.cl-vertical-bar.accent { fill: var(--accent); }
+.cl-vertical-label { fill: var(--ink); font-family: var(--display); font-weight: 600; font-size: 14px; }
+.cl-vertical-sub { fill: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; }
+.cl-link { fill: var(--accent); fill-opacity: 0.18; stroke: var(--accent); stroke-width: 1; stroke-opacity: 0.5; }
+.cl-hub { fill: var(--paper); stroke: var(--accent); stroke-width: 1.5; }
+.cl-hub-label { fill: var(--accent); font-family: var(--display); font-weight: 600; font-size: 13px; letter-spacing: 0.02em; text-anchor: middle; }
+.cl-hub-sub { fill: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-anchor: middle; text-transform: uppercase; }
+.cl-repo-label { fill: var(--ink); font-family: var(--mono); font-size: 11px; }
+
+/* ───────────────────  AFFILIATE DROP TIMELINE (ch 8) — single-day burst */
+.affil-wrap { max-width: var(--col-wide); margin: var(--s-8) auto; }
+.affil-axis { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.04em; display: flex; justify-content: space-between; padding: var(--s-3) var(--s-4); border-bottom: 1px solid var(--rule); }
+.affil-axis .day { color: var(--accent); font-weight: 700; }
+.affil-row { display: grid; grid-template-columns: 1.6fr 5fr 1fr; gap: var(--s-4); padding: var(--s-3) var(--s-4); border-bottom: 1px solid var(--rule); align-items: center; font-family: var(--mono); font-size: 12px; }
+.affil-row .login { color: var(--ink); }
+.affil-row .age-track { position: relative; height: 6px; background: var(--paper-2); }
+.affil-row .age-fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--ink-2); }
+.affil-row .drop-day { color: var(--accent); font-weight: 700; text-align: right; }
+.affil-row .age-cap { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.04em; }
+
+/* ───────────────────  OPERATOR DOSSIER GRID (ch 1) */
+.dossier-wrap { max-width: var(--col-bleed); margin: var(--s-8) auto; }
+.dossier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: var(--s-3); }
+.dossier { display: grid; grid-template-columns: 36px 1fr 80px; gap: var(--s-3); padding: var(--s-4); border: 1px solid var(--rule); background: var(--paper); align-items: baseline; }
+.dossier .rk { font-family: var(--mono); font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.dossier .body .name { font-family: var(--display); font-weight: 600; font-size: 16px; color: var(--ink); }
+.dossier .body .name em { font-style: italic; color: var(--accent); }
+.dossier .body .vert { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px; }
+.dossier .body .attribution { font-family: var(--mono); font-size: 11px; color: var(--ink-2); margin-top: var(--s-2); line-height: 1.5; }
+.dossier .body .attribution.named { color: var(--accent); font-weight: 500; }
+.dossier .chip { font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; text-align: right; color: var(--muted); }
+.dossier .chip .v { display: block; font-family: var(--display); font-weight: 500; font-size: 18px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.dossier .chip.accent .v { color: var(--accent); }
+
+/* ───────────────────  REPLAY PANEL (ch 9) */
+.replay-wrap { max-width: var(--col-wide); margin: var(--s-8) auto; }
+.replay-panel { background: var(--paper-2); border: 1px solid var(--rule); padding: var(--s-7); font-family: var(--mono); }
+.replay-panel pre { margin: 0; font-family: var(--mono); font-size: 13px; color: var(--ink); line-height: 1.7; white-space: pre-wrap; word-break: break-word; }
+.replay-panel pre .cmt { color: var(--muted); }
+.replay-panel pre .flag { color: var(--accent); }
+
+/* ───────────────────  FOOTER  */
+footer.colophon { padding: var(--s-9) var(--gutter) var(--s-8); border-top: 1px solid var(--rule); background: var(--paper-2); }
+footer.colophon .col-wide { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-7); }
+footer.colophon h3 { font-family: var(--display); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 var(--s-3) 0; font-weight: 600; }
+footer.colophon ul { list-style: none; padding: 0; margin: 0; font-family: var(--mono); font-size: 12px; line-height: 1.8; color: var(--ink-2); }
+footer.colophon ul a { color: var(--ink); }
+footer.colophon .sig { margin-top: var(--s-7); padding-top: var(--s-5); border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--s-3); }
+
+/* ───────────────────  RESPONSIVE  */
+@media (max-width: 880px) {
+  .kit-grid { grid-template-columns: 1fr; }
+  .botshape-row { grid-template-columns: 1.4fr 1fr 1fr; gap: var(--s-3); }
+  .botshape-row .bar-track { grid-column: 1 / -1; order: 99; }
+  .pt-list li { grid-template-columns: 7em 1fr; }
+  .pt-list li .tag { grid-column: 1 / -1; padding-left: 0; }
+  .dossier { grid-template-columns: 28px 1fr; }
+  .dossier .chip { grid-column: 2 / -1; text-align: left; padding-top: var(--s-2); }
+  footer.colophon .col-wide { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="rail" aria-hidden="true"><div class="rail-fill" id="rail-fill"></div></div>
+<div class="chapter-marker" id="chapter-marker" aria-hidden="true">
+  <span class="num" id="cm-num">00</span>
+  <span class="of">/</span>
+  <span id="cm-title">PROLOGUE</span>
+</div>
+
+<main>
+<article>
+
+<!-- ─────────────────────────────────  HERO  -->
+<section class="chapter hero-section" data-chapter="00" data-title="V3 · PROLOGUE">
+  <header class="hero-mast">
+    <div class="mast-l">
+      <span>Operation Long Shadow · v3</span>
+      <span style="color:var(--rule)">/</span>
+      <span>Research note · 2026·04·26 · T+1d</span>
+    </div>
+    <div class="mast-r">
+      <span class="pulse">Wave 7 · ayouak1 · 17:32 UTC · 4h before press</span>
+    </div>
+  </header>
+
+  <div class="hero-body">
+    <div class="eyebrow reveal"><span class="dot"></span><span>Follow-up</span><span class="num">No. 03</span><span style="color:var(--rule)">·</span><span>One workday after v2 · math generalized · the farm has neighbors</span></div>
+    <h1 class="hero reveal" style="--i:1">
+      v2 said the math could detect them.<br>
+      <em>v3 turned it loose on the market.</em>
+    </h1>
+    <p class="lede reveal" style="--i:2">
+      <a href="./v2.html">v2</a> validated one operator. v3 pointed the calibrated math at seven adjacent verticals in a single workday. <em>The farm has neighbors</em> — at least nine more star-farm operators across two continents, two malware-kit fingerprints, one cross-vertical link, and one operator who left his real name in his college final-exam repository.
+    </p>
+    <dl class="hero-meta reveal" style="--i:3">
+      <div><dt>Verticals scanned</dt><dd><strong>7</strong> · circumvention · AI · crypto · memecoin · cheats · NFT · social</dd></div>
+      <div><dt>Distinct operators surfaced</dt><dd><strong>12</strong> · 9 star-farm · 2 malware-kit · 1 unsolved</dd></div>
+      <div><dt>Real-name attribution</dt><dd><strong>Enzo Alarcón</strong> · Argentina · Polymarket operator</dd></div>
+      <div><dt>Cross-vertical operator</dt><dd>Vietnamese kit · gaming-cheats <span class="mono">∩</span> Discord-raid</dd></div>
+      <div><dt>Largest single fleet</dt><dd>Polymarket · <strong>96-97%</strong> bot-shape · ~1,000 accounts</dd></div>
+      <div><dt>Currently-live campaign</dt><dd>cfnb · Wave 7 · last star <strong>17:32 UTC today</strong></dd></div>
+    </dl>
+  </div>
+
+  <footer class="hero-foot">
+    <span>Operation Long Shadow · Chapter v3</span>
+    <span><span class="pulse">31 fleet · 154 across 6 peers · 214 polymarket seeds</span></span>
+    <span>scroll · 11 chapters</span>
+  </footer>
+</section>
+
+<!-- ─────────────────────────────────  CH 1 · TL;DR  -->
+<section class="chapter" data-chapter="01" data-title="THE MARKET">
+  <div class="col reveal">
+    <div class="eyebrow"><span class="dot"></span><span class="num">01</span><span>The market, in numbers</span></div>
+    <h2 class="chapter-title">Coordinated inauthentic behavior on GitHub <em>is not a phenomenon. It is a market.</em></h2>
+    <p class="lede">v1 found one cluster. v2 calibrated the math. v3 ran the methodology against seven verticals in eight hours. What surfaced is not a single farm scaled up — it is a working market with multiple operator types running parallel campaigns against distinct victim populations.</p>
+  </div>
+
+  <div class="tldr-grid reveal" data-stagger>
+    <div class="tldr-card" style="--i:0"><span class="ix">Verticals scanned</span><span class="v">7</span><span class="l">circumvention · AI-tools · crypto/Polymarket · Solana memecoin · gaming cheats · NFT/Web3 · social-media boost</span></div>
+    <div class="tldr-card" style="--i:1"><span class="ix">Distinct operators</span><span class="v">12</span><span class="l">9 confirmed star-farm · 2 confirmed malware-kit · 1 unsolved affiliate-drop</span></div>
+    <div class="tldr-card" style="--i:2"><span class="ix">Real-name attribution</span><span class="v">2</span><span class="l">Enzo Alarcón (Argentina · Polymarket) · Vietnamese coderduc candidate</span></div>
+    <div class="tldr-card" style="--i:3"><span class="ix">Cross-vertical link</span><span class="v">1</span><span class="l">Vietnamese kit fingerprint matches across gaming-cheats AND Discord-raid AND info-stealer verticals</span></div>
+    <div class="tldr-card" style="--i:4"><span class="ix">Methodology generalized</span><span class="v">3<em>/3</em></span><span class="l">positive verticals returned positive operators · cfnb · Polymarket · Vietnamese-malware</span></div>
+    <div class="tldr-card" style="--i:5"><span class="ix">Negative-control held</span><span class="v">1</span><span class="l">AI-tools vertical correctly returned no campaign · 10–15% organic baseline confirmed</span></div>
+    <div class="tldr-card" style="--i:6"><span class="ix">New attack patterns</span><span class="v">2</span><span class="l">malware-kit boilerplate fingerprint · single-day-burst on aged real accounts</span></div>
+    <div class="tldr-card" style="--i:7"><span class="ix">Persistent corpus</span><span class="v small">10 + 2</span><span class="l">10 per-operator anchor sets · 2 malware-kit JSON fingerprints · ships with v3</span></div>
+  </div>
+
+  <div class="col-bleed dossier-wrap reveal">
+    <h3 class="kicker">The twelve operators surfaced</h3>
+    <div class="dossier-grid" id="dossier-grid"></div>
+  </div>
+
+  <div class="col reveal">
+    <blockquote class="pull">The toolchain detects each type with a different signal axis. The conjunction of axes plus per-operator anchor sets makes attribution <em>falsifiable rather than impressionistic.</em></blockquote>
+    <p class="evidence"><b>Output as of 2026-04-26:</b> 154 distinct bots across 6 isolated cfnb-vertical fleets · 214 Polymarket seed accounts (extrapolated fleet ~1,000+) · 12 shell orgs running the Vietnamese kit · 4 shell orgs running the wallet-drainer kit · 13 aged accounts in the airdrop affiliate drop · 0 pairwise fleet overlap between the 6 cfnb-vertical operators · all verifiable from <span class="mono">corpus/ecosystem/</span>.</p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 2 · BOT-SHAPE COMPARISON  -->
+<section class="chapter" data-chapter="02" data-title="BOT-SHAPE">
+  <div class="col reveal">
+    <div class="eyebrow"><span class="dot"></span><span class="num">02</span><span>The bot-shape spread</span></div>
+    <h2 class="chapter-title">Operators don't all <em>try to look organic</em>.</h2>
+    <p class="lede">The fastest and most-aggressive operator we surfaced makes no attempt at camouflage. The most-disciplined operator runs at a stargazer profile only six points above an organic-elevated AI vertical.</p>
+    <p>Bot-shape is the fraction of an account's top-100 stargazers that pass the filter (followers≤1, public_repos≤2, account_age relevant, no bio). It's a coarse but stable signal: organic viral repos sit at 2–5%, organic-elevated populations at 10–15%, and a campaign starts to be visible above 25%. Every additional point above the baseline costs the operator something — they need either dirtier accounts or more of them.</p>
+  </div>
+
+  <div class="col-wide botshape-wrap reveal" id="botshape-host">
+    <div class="botshape-row head"><span>population</span><span>bot-shape across top-100 stargazers</span><span style="text-align:right">%</span><span>reading</span></div>
+  </div>
+
+  <div class="col reveal">
+    <p class="evidence"><b>What this measures:</b> per repo, take the top 100 stargazers, count how many pass the bot-shape filter (followers ≤ 1, public_repos ≤ 2, ≥ 80% star-only events, no bio, no key, no avatar). The percentage above is the count over 100. <b>Cross-references:</b> JuliusBrussee/caveman = 47K stars at 2% (organic viral). MemPalace at 20% looked borderline; propagation test confirmed organic-elevated. Polymarket at 96-97% required no further test.</p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 3 · CFNB ACTIVATION TIMELINE  -->
+<section class="chapter" data-chapter="03" data-title="ACTIVATION TIMELINE">
+  <div class="col reveal">
+    <div class="eyebrow"><span class="dot"></span><span class="num">03</span><span>cfnb · the live campaign</span></div>
+    <h2 class="chapter-title">Thirty-one accounts, eight days, <em>one was four hours ago</em>.</h2>
+    <p class="lede">Each circle below is a fleet member's first-ever star on <span class="mono">xinyitang3/cfnb</span>. The operator created the repo on <strong>2026-04-19</strong> and has activated their bot warehouse in coordinated waves since. The latest activation came in <strong>four hours before this article was rendered</strong>.</p>
+  </div>
+
+  <figure class="col-bleed timeline-wrap reveal">
+    <svg class="timeline-svg" viewBox="0 0 1280 460" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="tl-title">
+      <title id="tl-title">cfnb fleet activation timeline · 31 accounts across 2026-04-19 → 2026-04-26</title>
+      <g id="tl-axis"></g>
+      <g id="tl-bands"></g>
+      <g id="tl-bars"></g>
+      <g id="tl-events"></g>
+      <g id="tl-labels"></g>
+    </svg>
+    <figcaption class="kit-cap">Each dot is a first-cfnb-star event. The orange band is Wave 3 — the smoking-gun cluster of 13 accounts within thirteen hours on Apr 21. The bars below total accounts per day.</figcaption>
+  </figure>
+
+  <div class="col reveal">
+    <h3 class="kicker">Wave 3 is the smoking gun</h3>
+    <p>Thirteen distinct accounts coordinated to star one repo within thirteen hours on April 21. Wave 1 (six accounts on launch day, seven hours after the repo was created) and Wave 2 (one account on April 20) could pass for early adoption. Wave 3 cannot. The probability that thirteen organic accounts would converge on a freshly-minted Chinese network-circumvention repository within a 13-hour window is rounding-error small.</p>
+    <p>Four of the Wave 3 accounts (<span class="mono">cate6014-lang</span>, <span class="mono">cmycxr5vtr-afk</span>, <span class="mono">tazai-blip</span>, <span class="mono">ayouak1</span>) were CREATED AND STARRED ANCHORS WITHIN 24 HOURS of each other. The most-anchored fleet member, <span class="mono">ybzbderen</span>, was created <strong>2018-10-16</strong>, sat dormant for over six years, then in February 2025 created five repos in sixteen days — four of them forks of the cfnb cluster's anchor tools. They web-UI-committed (the GitHub auto-noreply email format means the operator never configured <span class="mono">git config user.email</span> locally), then on 2026-04-21 starred xinyitang3/cfnb and two <span class="mono">stallTCP1.32V2</span> variants in a 22-minute window.</p>
+    <p class="evidence"><b>Operator locale:</b> 25 of 31 fleet accounts leak nothing — pure stargazers, perfect operational hygiene. The 6 that DO leak give a Chinese-language signature: 3 leak QQ numeric IDs (<span class="mono">375915328@qq.com</span>, <span class="mono">1084021579@qq.com</span>, <span class="mono">1353116457@qq.com</span>), 3 leak random-string Gmails. cfnb's actual git commits are 100% timestamped UTC+0800 (China Standard Time). The cfnb operator is China-based with VPN routing.</p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 4 · FIVE PEER OPERATORS  -->
+<section class="chapter" data-chapter="04" data-title="DISJOINT FLEETS">
+  <div class="col reveal">
+    <div class="eyebrow"><span class="dot"></span><span class="num">04</span><span>cfnb's five peer operators</span></div>
+    <h2 class="chapter-title">Six independent star-farm operators in <em>one</em> vertical.</h2>
+    <p class="lede">Take the 31 cfnb fleet members' full star streams. Build the co-stargazing matrix again — what other repos do ≥3 of them share, excluding the cfnb anchors? Forty-six candidates. Five validate as star-farm campaigns run by <em>different</em> operators.</p>
+  </div>
+
+  <figure class="col-bleed opmap-wrap reveal">
+    <svg class="opmap-svg" viewBox="0 0 1280 540" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="om-title">
+      <title id="om-title">Six disjoint star-farm fleets in the Chinese network-circumvention vertical · 154 distinct accounts · 0 pairwise overlap</title>
+      <g id="om-cols"></g>
+      <g id="om-bots"></g>
+      <g id="om-labels"></g>
+      <g id="om-banner"></g>
+    </svg>
+    <figcaption class="kit-cap">Each column is one operator's bot fleet. Bot accounts are placed at random within their column. Zero pairwise overlap means no fleet member appears in any other operator's top-100 stargazers — the operators specialize, the bots are kept isolated.</figcaption>
+  </figure>
+
+  <div class="col reveal">
+    <h3 class="kicker">The separation is operationally clean</h3>
+    <p>Run the same per-operator dossier methodology on each of the six. Each operator runs 21–31 distinct seed repos, each on its own niche specialization (V2Ray panel admin, IPTV, Mihomo/Clash, IPTV API, iOS jailbreak), with <strong>zero pairwise fleet overlap</strong> across all 15 operator pairs. They overlap in <em>tool usage</em> — popular legitimate tools like <span class="mono">iptv-org/iptv</span>, <span class="mono">MetaCubeX/mihomo</span>, and <span class="mono">blackmatrix7/ios_rule_script</span> appear in multiple operators' matrices because the operators themselves use those tools — but their fleets are completely disjoint.</p>
+    <p>This is star-farm-as-a-service. cfnb is one node in it. The Chinese network-circumvention vertical alone has at least six active operators, and we did not enumerate the full vertical — we mapped the slice the cfnb cohort touches.</p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 5 · POMPEIUSS  -->
+<section class="chapter" data-chapter="05" data-title="ENZO ALARCÓN">
+  <div class="col reveal">
+    <div class="eyebrow"><span class="dot"></span><span class="num">05</span><span>Polymarket · the largest farm, the first real name</span></div>
+    <h2 class="chapter-title">The operator left his name <em>in his college final-exam repository</em>.</h2>
+    <p class="lede">The Polymarket operator runs ~1,000 bot accounts across 20 shell orgs. Their stargazers run 96–97% bot-shape — the operator does not even attempt to look organic. The user-owned variant in the campaign is <span class="mono">Pompeiuss</span>. Pompeiuss has a public repository history.</p>
+  </div>
+
+  <figure class="col-wide papertrail-wrap reveal">
+    <ol class="pt-list" id="pt-list"></ol>
+    <p class="pt-callout"><em>AlarconEnzoPRG3final12_20255</em> decodes to "Programación 3 final" — third-year programming-course final exam.<br>The operator is named <em>Enzo Alarcón</em>.</p>
+    <p class="pt-decode"><b>The decode:</b> the first thirteen Pompeiuss repositories are not crypto-trading bots. They are medical-records-management apps, a portfolio site, an image converter, a sound-promo landing page, and a Spanish-language third-year college programming final. The pivot to <span class="mono">polymarket-arbitrage-trading-bot</span> is on 2026-04-09. The bio reads <i>"Top Trader On Polymarket"</i>; location <i>"Argetina"</i> (typo for Argentina). The <span class="mono">AlgoInfraTech</span> shell org leaks <span class="mono">shaneriddell41@gmail.com</span> — possibly a partner or a fake-name contact channel. <b>This is the largest, fastest-moving, and most cleanly attributed operator in this report.</b></p>
+  </figure>
+</section>
+
+<!-- ─────────────────────────────────  CH 6 · KIT FINGERPRINTS  -->
+<section class="chapter" data-chapter="06" data-title="KIT FINGERPRINT">
+  <div class="col reveal">
+    <div class="eyebrow"><span class="dot"></span><span class="num">06</span><span>The orthogonal axis · malware-kit boilerplate</span></div>
+    <h2 class="chapter-title">When stars don't matter, <em>the file boilerplate does</em>.</h2>
+    <p class="lede">Gaming-cheat operators don't need stars — their attack vector is GitHub-search visibility, not trending. Hunter's joint test is silent on them. But the kit emits boilerplate files at deterministic byte sizes, and that signature catches the operator regardless of which shell org owns the repo.</p>
+  </div>
+
+  <figure class="col-bleed kit-wrap reveal">
+    <div class="kit-grid">
+      <div class="kit-card">
+        <div class="head">
+          <span class="name">vietnamese_cheat</span>
+          <span class="tag">12+ shell orgs · cross-vertical</span>
+        </div>
+        <div class="kit-rows">
+          <div class="kit-row"><span class="file">.gitignore</span><span class="bytes"><em>95</em><span class="unit">bytes</span></span></div>
+          <div class="kit-row"><span class="file">LICENSE</span><span class="bytes"><em>1187</em><span class="unit">bytes · ±2 variants</span></span></div>
+          <div class="kit-row"><span class="file">LOG</span><span class="bytes"><em>25</em><span class="unit">bytes</span></span></div>
+          <div class="kit-row"><span class="file">SECURITY.md</span><span class="bytes"><em>739</em><span class="unit">bytes</span></span></div>
+        </div>
+        <div class="kit-shells">
+          <b>Owners observed:</b> Kanwmwr · Reytn · Bwmishasm · Ahteons · Besvigahw · Reanekm · Prments · Rshwmom · S4warm · Utuanmy · LAwmwm · <b>coderduc</b> (operator candidate)<br>
+          <b>Verticals hit:</b> gaming-cheats (Valorant · CS2 · FiveM · Apex) · Discord-raid · info-stealer · UAC-bypass
+        </div>
+      </div>
+
+      <div class="kit-card">
+        <div class="head">
+          <span class="name">wallet_drainer</span>
+          <span class="tag">4 shell orgs · all 2026-04-26</span>
+        </div>
+        <div class="kit-rows">
+          <div class="kit-row"><span class="file">.gitignore</span><span class="bytes" style="color:var(--muted)"><em style="color:var(--muted)">—</em><span class="unit">absent</span></span></div>
+          <div class="kit-row"><span class="file">LICENSE</span><span class="bytes"><em>1123</em><span class="unit">bytes · Δ=64 vs vietnamese</span></span></div>
+          <div class="kit-row"><span class="file">LOG</span><span class="bytes"><em>25</em><span class="unit">bytes · shared family</span></span></div>
+          <div class="kit-row"><span class="file">SECURITY.md</span><span class="bytes"><em>679</em><span class="unit">bytes · Δ=60 vs vietnamese</span></span></div>
+        </div>
+        <div class="kit-shells">
+          <b>Owners observed:</b> Aesrprabt · Harmo2nrvz · Hyzetro · Nyphorort<br>
+          <b>Targets:</b> Atomic Wallet · Phantom Wallet · Electrum · OKX · Exodus · MetaMask · MyAlgo<br>
+          <b>Description observed:</b> <i>"Exploits Electrum wallets by displaying fake balances..."</i> — operator does not hide intent
+        </div>
+      </div>
+    </div>
+    <p class="kit-banner">Same architectural pattern (boilerplate-fingerprint + <span class="mono">.sln</span> + algorithmic shell orgs), <em>different LICENSE byte size</em>.<br>Two operators. One axis catches both.</p>
+    <p class="kit-cap">v0.7 hunter axis · <span class="mono">--malware-kits DIR</span> · 1 REST call per owned repo · ≥3-sentinel match flags account · cross-kit isolation verified</p>
+  </figure>
+</section>
+
+<!-- ─────────────────────────────────  CH 7 · CROSS-VERTICAL  -->
+<section class="chapter" data-chapter="07" data-title="CROSS-VERTICAL">
+  <div class="col reveal">
+    <div class="eyebrow"><span class="dot"></span><span class="num">07</span><span>The cross-vertical operator</span></div>
+    <h2 class="chapter-title">A gaming-cheat operator <em>also runs Discord raid bots</em>.</h2>
+    <p class="lede">The Vietnamese kit's byte-size signature is preserved across verticals. Same <span class="mono">.gitignore=95</span>, same <span class="mono">LICENSE=1187</span>, same <span class="mono">SECURITY.md=739</span> — but the repos targeting them sit in algorithmic shell orgs across four distinct attack categories.</p>
+  </div>
+
+  <figure class="col-bleed crosslink-wrap reveal">
+    <svg class="crosslink-svg" viewBox="0 0 1280 480" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="cl-title">
+      <title id="cl-title">One operator (coderduc / Vietnamese candidate) running four distinct attack categories from one kit fingerprint</title>
+      <g id="cl-links"></g>
+      <g id="cl-nodes"></g>
+      <g id="cl-labels"></g>
+    </svg>
+    <figcaption class="kit-cap">Center: the boilerplate-fingerprinted kit. Spokes: four attack categories. Each spoke is a separate shell org or set of orgs. The same byte-size signature ties all of them to one operator.</figcaption>
+  </figure>
+
+  <div class="col reveal">
+    <h3 class="kicker">The operator candidate</h3>
+    <p>Looking at who actually owns the kit-matched repos: most are organizations (Kanwmwr et al.), but there's one user account in the cluster — <strong><span class="mono">coderduc</span></strong>, created 2019-01-01, 38 followers, 94 public repos, public email <span class="mono">tuanloantuduc123@gmail.com</span>. The email decodes to a Vietnamese name pattern (Tuan Loan Tu Duc). Their repo history shows kernel-driver research targeting game anti-cheat (EAC, BattlEye, CS2, Valorant) since 2024, including a <span class="mono">Chaos-Rootkit</span> (<i>"Now You See Me, Now You Don't"</i>), a Go-based binary packer (<span class="mono">pakkero</span>, 2024-12), and a <span class="mono">Pubg-Memory-Dumper</span>. Their April 17, 2026 pivot: <span class="mono">Pixmenu-Valorant-Aimbot-IMGUI</span>.</p>
+    <p>This is exactly the toolkit needed to <em>build</em> the malware that's distributed via the kit fingerprint: a kernel hooker plus a binary packer plus an aimbot front-end. The <span class="mono">LAwmwm</span> shell org — created 2026-04-08, four repos all created the next day (<span class="mono">Discord-MASS-DM</span>, <span class="mono">Discord-Raider</span>, <span class="mono">Muck-Stealer</span>, <span class="mono">UAC-Bypass-FUD</span>) — confirms the operator is not a gaming-cheat specialist. They run a vertically-integrated malware factory: gaming cheats + Discord raid bots + info-stealers + Windows privilege-escalation tools, all built from the same template, distributed through algorithmically-named shell orgs across multiple verticals. <strong>The kit fingerprint catches all of it.</strong></p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 8 · AFFILIATE DROP  -->
+<section class="chapter" data-chapter="08" data-title="AFFILIATE DROP">
+  <div class="col reveal">
+    <div class="eyebrow"><span class="dot"></span><span class="num">08</span><span>The unsolved pattern</span></div>
+    <h2 class="chapter-title">Aged real accounts, <em>same-day burst</em>, the math doesn't see them.</h2>
+    <p class="lede">On 2026-04-23, at least thirteen GitHub accounts created airdrop-bot repositories targeting different testnet projects. All on the same day. All with similar emoji-laden README templates. The accounts are not freshly created — they are aged, organic-looking, with histories going back as far as five years.</p>
+  </div>
+
+  <figure class="col-wide affil-wrap reveal">
+    <div class="affil-axis">
+      <span>account creation</span>
+      <span class="day">single-day drop · 2026-04-23</span>
+      <span>2026-04-26</span>
+    </div>
+    <div id="affil-rows"></div>
+  </figure>
+
+  <div class="col reveal">
+    <h3 class="kicker">Why the v0.4 lifecycle axis misses them</h3>
+    <p>Hunter's lifecycle axis flags fresh-burst (Cohort B, age &lt; 180 days) and mature-dormant (Cohort A, age &gt; 365 days with one burst-of-activity). These accounts are <em>neither</em>. They have organic-looking history and a single suspicious recent action. The lifecycle axis sees them as Cohort OTHER, the joint test passes them, and the v0.4 calibration is silent.</p>
+    <p>The pattern is one of three things: an <strong>affiliate scam</strong> (an operator paying real users to push the same scam tool, varying the brand by victim project); a <strong>GitHub account rental market</strong> (an operator buying access to credible-looking aged accounts); or a <strong>compromised account chain</strong>. The same-day timing, identical README template style, and diversity of account ages favor the affiliate-scam hypothesis. We don't have positive evidence to discriminate among the three.</p>
+    <p class="evidence"><b>v0.8 capability:</b> a single-day-burst-on-aged-account axis that flags accounts with established history that suddenly create a repo matching a campaign-naming pattern on the same day as other accounts doing the same. We persisted the 13 known logins as <span class="mono">corpus/ecosystem/anchors_airdrop_drop_2026-04-23.txt</span> so a future v0.8 has a labeled positive set to calibrate against.</p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 9 · NEGATIVE CONTROL  -->
+<section class="chapter" data-chapter="09" data-title="NEGATIVE CONTROL">
+  <div class="col reveal">
+    <div class="eyebrow"><span class="dot"></span><span class="num">09</span><span>The control that held</span></div>
+    <h2 class="chapter-title">The methodology returns <em>no campaign</em> on the AI-tools vertical.</h2>
+    <p>We deliberately tested against a vertical we did not expect to have a star farm. The hypothesis: today's AI-tools ecosystem has so much organic attention that there's no purchase for fake stars to add value. Top user-owned AI/agent/LLM repos created in the past 30 days surfaced <span class="mono">MemPalace/mempalace</span> (49,835 stars in 21 days), <span class="mono">JuliusBrussee/caveman</span> (47,205 in 22 days), and <span class="mono">kyegomez/OpenMythos</span> (10,662 in 8 days) at the top by velocity.</p>
+    <p>Stargazer profiles: <span class="mono">caveman</span> at <strong>2%</strong> bot-shape (organic viral). <span class="mono">OpenMythos</span> at 10% (clean). <span class="mono">HKUDS/Vibe-Trading</span> at 12% (clean). <span class="mono">MemPalace</span> at 20% (borderline). We ran the propagation step from Playbook 6 — extract MemPalace's bot-shape stargazers, snapshot their full star streams, build the matrix. The matrix surfaced a coherent AI-agents/Claude-Code cluster (<span class="mono">obra/superpowers</span>, <span class="mono">karpathy/autoresearch</span>, <span class="mono">garrytan/gstack</span>, <span class="mono">mattpocock/skills</span>), but every top candidate when independently profiled came back at 5–15% bot-shape. <strong>Not the 25%+ that defines a campaign.</strong></p>
+    <p>MemPalace's stargazer profile is elevated because the AI vertical is full of "AI-curious" GitHub users who created low-friction accounts specifically to follow AI projects. They have 0 followers and few repos — exactly the bot-shape filter — but they are organic users, not operators. The propagation step distinguishes them: operator fleets cause secondary candidates' profiles to inherit the bot-shape signature. Organic-elevated populations don't.</p>
+    <blockquote class="pull">This is the methodology working. The AI-tools vertical has no active star farm at the velocity-suspect tier we surveyed. The negative result <em>is the calibration.</em></blockquote>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 10 · REPLAY  -->
+<section class="chapter" data-chapter="10" data-title="REPLAY">
+  <div class="col reveal">
+    <div class="eyebrow"><span class="dot"></span><span class="num">10</span><span>Reproduce the report</span></div>
+    <h2 class="chapter-title">Every claim above ships <em>with the corpus to verify it</em>.</h2>
+    <p>The toolchain ships at v0.7 with a multi-axis architecture you can run against any GitHub account. Detect known star-farm operators (10 anchor sets) AND known malware kits (2 fingerprints) on a suspect account in one command:</p>
+  </div>
+
+  <div class="col-wide replay-wrap reveal">
+    <div class="replay-panel">
+<pre><span class="cmt"># v0.7 multi-operator + malware-kit scoring</span>
+hunter score &lt;login&gt; <span class="flag">\</span>
+    <span class="flag">--anchors-dir</span>  corpus/ecosystem/ <span class="flag">\</span>
+    <span class="flag">--malware-kits</span> corpus/malware_kits/ <span class="flag">\</span>
+    <span class="flag">--identity</span> <span class="flag">\</span>
+    <span class="flag">--sterile-repos</span> sterile.jsonl <span class="flag">\</span>
+    <span class="flag">--snapshot</span>      snapshots/ <span class="flag">\</span>
+    | jq .
+
+<span class="cmt"># Output JSON reports per-axis advisory signals plus
+# attributed_operator (slug of which star-farm operator
+# the account belongs to, if any), malware_kit.matches
+# (which owned repos match which kit), and a calibrated
+# flagged: bool from the joint test.</span>
+</pre>
+    </div>
+  </div>
+
+  <div class="col reveal">
+    <h3 class="kicker">The corpus that ships with v3</h3>
+    <ul style="font-family:var(--mono);font-size:13px;line-height:1.85;color:var(--ink-2);list-style:none;padding-left:0;border-top:1px solid var(--rule);padding-top:var(--s-4)">
+      <li><span class="mono">corpus/anchors_v2.txt</span> — cfnb anchors (14 repos)</li>
+      <li><span class="mono">corpus/ecosystem/anchors_&lt;8 operators&gt;.txt</span> — per-operator anchor sets</li>
+      <li><span class="mono">corpus/ecosystem/seeds_&lt;6 operators&gt;.txt</span> — confirmed seed accounts per operator</li>
+      <li><span class="mono">corpus/cfnb_fleet_logins.txt</span> — the 31-account cfnb fleet</li>
+      <li><span class="mono">corpus/cfnb_activation_timeline.txt</span> — chronological cfnb-stargaze events Apr 19–26</li>
+      <li><span class="mono">corpus/malware_kits/vietnamese_cheat.json</span> — Vietnamese-operator kit fingerprint</li>
+      <li><span class="mono">corpus/malware_kits/wallet_drainer.json</span> — wallet-drainer kit fingerprint</li>
+    </ul>
+    <p>Add to your detection set as it grows. Each new operator surfaced in a future investigation is one more file in <span class="mono">corpus/ecosystem/</span>. Methodology details — the per-vertical recipe for surfacing a new operator's anchor set, the propagation test for distinguishing campaign from elevated-organic, the kit-fingerprint discovery process — live in the <span class="mono">op-recon</span> skill at <span class="mono">~/.claude/skills/op-recon/SKILL.md</span>. Seven playbooks. Ten synthesis rules.</p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────  CH 11 · CLOSING  -->
+<section class="chapter" data-chapter="11" data-title="WHAT IT MEANS">
+  <div class="col reveal">
+    <div class="eyebrow"><span class="dot"></span><span class="num">11</span><span>What v3 demonstrates</span></div>
+    <h2 class="chapter-title">v1 found a farm. v2 calibrated the math. <em>v3 mapped the market.</em></h2>
+    <p class="lede">The honest claim is that the toolchain works and the corpus is real. The markets we mapped are bigger than we mapped, and the math we calibrated will keep generalizing as we point it at more verticals.</p>
+    <p>Three concrete claims this report makes that v1 and v2 did not:</p>
+    <p><strong>1.</strong> Coordinated inauthentic behavior on GitHub is a market, not a phenomenon. At least nine star-farm operators run parallel campaigns across the verticals we sampled. They do not share fleets. They specialize in niches. The operator economy is mature enough to produce variation in attack pattern — shell-org-bombing, fake-legitimacy facade, dual-account simple, malware-kit boilerplate distribution, single-day affiliate drop.</p>
+    <p><strong>2.</strong> The most-aggressive operator we found is operationally sloppy. The Polymarket operator, Enzo Alarcón, runs the largest measured fleet in this report (96–97% bot-shape, ~1,000+ accounts) and left his real name in a public college final-exam repository. Sophistication does not correlate with operational discipline. The detection-and-attribution pipeline is more effective on the loudest operators precisely because they don't bother to hide.</p>
+    <p><strong>3.</strong> The next axis — beyond stars and beyond commits — is the file boilerplate. Malware-kit operators don't need stars. Ariadne's date-fabrication signal misses them. Hunter's joint test misses them. But the kit emits boilerplate files with deterministic byte-sizes, and that fingerprint is a per-repo signature that catches the operator regardless of vertical. Every additional kit fingerprint added to the corpus extends the toolchain's reach without adding new code.</p>
+    <h3 class="kicker">What's still open</h3>
+    <p>The aged-account affiliate drop is an attack pattern the math doesn't yet model — v0.8 specification. Hunter currently scores users only; most malware-kit operators run organizations, and org-scoring is a gap. The per-operator anchor sets have been validated on hit-rate against known seeds, not formally evaluated against negative pools — v3 ships them as detection infrastructure; v4 should evaluate them as classifiers. Cross-vertical operator linking — we found one with the kit fingerprint — is the most underexplored direction. The data is consistent with two-to-three verticals being run by the same operator simultaneously; we haven't enumerated the full overlap.</p>
+    <blockquote class="pull">We pointed v2-calibrated math at seven new verticals in one workday. It returned coherent operator dossiers in five, a calibrated negative result in one, and an unsolved attack pattern in one. <em>The corpus we ship is what it found.</em></blockquote>
+  </div>
+</section>
+
+</article>
+</main>
+
+<footer class="colophon">
+  <div class="col-wide">
+    <div>
+      <h3>Operation Long Shadow</h3>
+      <ul>
+        <li><a href="./index.html">v1 · The original report</a> — the four-cluster operation</li>
+        <li><a href="./v2.html">v2 · The math, validated</a> — 6 → 288 bots in two pivots</li>
+        <li><strong>v3 · The market</strong> — twelve operators, two real names, one workday</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Toolchain · v0.7</h3>
+      <ul>
+        <li><span class="mono">hunter</span> — multi-operator account scoring · malware-kit fingerprinting</li>
+        <li><span class="mono">kraken</span> — identity-graph spider</li>
+        <li><span class="mono">ariadne</span> — per-repo verdict · authorship dynamics</li>
+        <li><span class="mono">entropyx</span> — signal-class distribution · event-kind histogram</li>
+        <li><span class="mono">vajra</span> — structural triage</li>
+        <li><span class="mono">op-recon</span> — 7 playbooks · 10 synthesis rules</li>
+      </ul>
+    </div>
+    <div class="sig" style="grid-column:1/-1">
+      <span>Conducted 2026-04-26 · single workday</span>
+      <span>All commands · hashes · per-claim corpus paths in REPLAY.md</span>
+      <span>github.com/copyleftdev/long-shadow</span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/json" id="v3-data">
+{
+  "operators": [
+    {"name":"polymarket","vertical":"Crypto · Polymarket · Hyperliquid","fleet":"214 seeds · ~1k","attribution":"Enzo Alarcón · Argentina · college-final-exam repo","named":true,"botshape":97,"highlight":true},
+    {"name":"cfnb","vertical":"Chinese network-circumvention","fleet":"31 fleet · live wave 7","attribution":"China · 3 QQ-numeric leaks · 100% UTC+8 commits","named":false,"botshape":26,"highlight":true},
+    {"name":"vietnamese-kit","vertical":"Cross-vertical malware factory","fleet":"12+ shell orgs","attribution":"coderduc candidate · tuanloantuduc123@gmail.com","named":true,"botshape":null,"highlight":true},
+    {"name":"3xui","vertical":"V2Ray panel admin tools","fleet":"31 seeds","attribution":"unknown · isolated from cfnb","named":false,"botshape":31,"highlight":false},
+    {"name":"fanmingming","vertical":"IPTV / live-streaming","fleet":"25 seeds","attribution":"unknown","named":false,"botshape":25,"highlight":false},
+    {"name":"clashmeta","vertical":"Mihomo / Clash ecosystem","fleet":"24 seeds","attribution":"unknown","named":false,"botshape":24,"highlight":false},
+    {"name":"iptvapi","vertical":"IPTV API · Chinese reading apps","fleet":"22 seeds","attribution":"unknown","named":false,"botshape":22,"highlight":false},
+    {"name":"karing","vertical":"iOS jailbreak · Windows cracking","fleet":"21 seeds","attribution":"unknown","named":false,"botshape":21,"highlight":false},
+    {"name":"pumpfun-op","vertical":"Solana memecoin · pump-and-dump","fleet":"~85 stargazers · 2 paired orgs","attribution":"hi@zentariq.com · admin@nexorythm.tech","named":false,"botshape":null,"highlight":false},
+    {"name":"meme-snipe-op","vertical":"Solana sniper bot","fleet":"~30 stargazers · 2 user accounts","attribution":"shared blog meme-snipe.com","named":false,"botshape":null,"highlight":false},
+    {"name":"wallet-drainer","vertical":"NFT / Web3 wallet-drain","fleet":"4 shell orgs · all 2026-04-26","attribution":"separate kit · LICENSE Δ=64","named":false,"botshape":null,"highlight":false},
+    {"name":"airdrop-2026-04-23","vertical":"NFT testnet airdrop drop","fleet":"13 aged real accounts · single day","attribution":"unsolved · v0.8 spec","named":false,"botshape":null,"highlight":false}
+  ],
+  "botshape": [
+    {"label":"Polymarket / PrimeOrder-Labs","sub":"polymarket-copy-trading-bot · created 2026-04","pct":97,"reading":"campaign","tone":"accent"},
+    {"label":"Polymarket / Orbital-Alpha","sub":"polymarket-copy-trading-bot","pct":97,"reading":"campaign","tone":"accent"},
+    {"label":"Polymarket / TradeCompute","sub":"polymarket-arbitrage-trading-bot","pct":96,"reading":"campaign","tone":"accent"},
+    {"label":"Polymarket / Pompeiuss","sub":"polymarket-arbitrage-trading-bot · user-owned","pct":89,"reading":"campaign","tone":"accent"},
+    {"label":"3xui / MHSanaei/3x-ui","sub":"V2Ray panel admin tools","pct":31,"reading":"star farm","tone":"accent"},
+    {"label":"cfnb / xinyitang3/cfnb","sub":"Chinese network-circumvention","pct":26,"reading":"star farm","tone":"accent"},
+    {"label":"fanmingming / live","sub":"IPTV","pct":25,"reading":"star farm","tone":"accent"},
+    {"label":"clashmeta / ClashMetaForAndroid","sub":"Mihomo / Clash","pct":24,"reading":"star farm","tone":"accent"},
+    {"label":"iptvapi / iptv-api","sub":"IPTV API + reading apps","pct":22,"reading":"star farm","tone":"accent"},
+    {"label":"karing / KaringX/karing","sub":"iOS jailbreak / piracy","pct":21,"reading":"star farm","tone":"accent"},
+    {"label":"MemPalace / mempalace","sub":"AI memory system · 49,835 stars","pct":20,"reading":"borderline","tone":"ink"},
+    {"label":"HKUDS/Vibe-Trading","sub":"AI agent · clean","pct":12,"reading":"AI organic baseline","tone":"ink"},
+    {"label":"kyegomez/OpenMythos","sub":"AI · 10,662 stars","pct":10,"reading":"AI organic baseline","tone":"ink"},
+    {"label":"organic baseline","sub":"trending repo · k≥10 cohort filter","pct":6,"reading":"organic","tone":"organic"},
+    {"label":"JuliusBrussee/caveman","sub":"viral organic · 47,205 stars","pct":2,"reading":"organic viral","tone":"organic"}
+  ],
+  "timeline": [
+    {"t":"2026-04-19T13:42:40Z","login":"13696590120","wave":1},
+    {"t":"2026-04-19T14:01:30Z","login":"fslx888","wave":1},
+    {"t":"2026-04-19T14:17:21Z","login":"wh413","wave":1},
+    {"t":"2026-04-19T14:53:28Z","login":"cate6014-lang","wave":1,"note":"created+starred <24h"},
+    {"t":"2026-04-19T15:29:57Z","login":"junche94","wave":1},
+    {"t":"2026-04-19T17:25:38Z","login":"ice5fate","wave":1},
+    {"t":"2026-04-20T14:11:33Z","login":"aslanxie123","wave":2},
+    {"t":"2026-04-21T03:07:44Z","login":"frankp86","wave":3},
+    {"t":"2026-04-21T04:55:08Z","login":"yf217y","wave":3,"note":"leak: yf217y@gmail.com"},
+    {"t":"2026-04-21T05:46:08Z","login":"Asherjsx","wave":3},
+    {"t":"2026-04-21T06:45:45Z","login":"wsluban168","wave":3,"note":"leak: 1353116457@qq.com"},
+    {"t":"2026-04-21T06:54:10Z","login":"liubin8666","wave":3},
+    {"t":"2026-04-21T07:04:17Z","login":"kkxx5203-wq","wave":3},
+    {"t":"2026-04-21T07:38:40Z","login":"linjycool","wave":3,"note":"leak: 375915328@qq.com"},
+    {"t":"2026-04-21T07:51:30Z","login":"hizket","wave":3},
+    {"t":"2026-04-21T07:57:20Z","login":"yu3057","wave":3},
+    {"t":"2026-04-21T11:55:23Z","login":"cmycxr5vtr-afk","wave":3,"note":"created+starred <24h"},
+    {"t":"2026-04-21T13:02:17Z","login":"TinyIzzar","wave":3},
+    {"t":"2026-04-21T15:32:24Z","login":"daoodao","wave":3},
+    {"t":"2026-04-21T16:24:07Z","login":"ybzbderen","wave":3,"note":"6yr dormant · k=11/14"},
+    {"t":"2026-04-22T06:49:26Z","login":"qinrong167","wave":4,"note":"leak: 1084021579@qq.com"},
+    {"t":"2026-04-22T15:34:46Z","login":"aotian8866-sys","wave":4},
+    {"t":"2026-04-22T15:46:04Z","login":"China54188","wave":4},
+    {"t":"2026-04-22T16:45:59Z","login":"Xiantouzi","wave":4},
+    {"t":"2026-04-22T23:10:05Z","login":"doctorwhoxyz","wave":4},
+    {"t":"2026-04-24T10:21:47Z","login":"egullye","wave":5,"note":"leak: egullye@gmail.com"},
+    {"t":"2026-04-25T15:59:04Z","login":"Red-007","wave":6},
+    {"t":"2026-04-26T00:47:14Z","login":"daizi2041","wave":7},
+    {"t":"2026-04-26T02:07:26Z","login":"jank5961","wave":7},
+    {"t":"2026-04-26T17:06:23Z","login":"tazai-blip","wave":7,"note":"created+starred <24h"},
+    {"t":"2026-04-26T17:32:44Z","login":"ayouak1","wave":7,"note":"4h before press · leak: avfhg947@gmail.com"}
+  ],
+  "operatorMap": [
+    {"slug":"cfnb","label":"cfnb","sub":"network circumvention","seeds":31,"anchors":["xinyitang3/cfnb","cmliu/edgetunnel","DigitalPlatDev/FreeDomain","2dust/v2rayN","SagerNet/sing-box","chen08209/FlClash"],"highlight":true},
+    {"slug":"3xui","label":"3xui","sub":"V2Ray panel admin","seeds":31,"anchors":["MHSanaei/3x-ui","alireza0/x-ui","Marzban","Hiddify-Manager","REALITY","Marzban-node"]},
+    {"slug":"clashmeta","label":"clashmeta","sub":"mihomo / clash","seeds":24,"anchors":["MetaCubeX/mihomo","clash-verge","ClashMetaForAndroid","surfboard","SagerNet/sing-box","mihomo-rules"]},
+    {"slug":"live","label":"fanmingming","sub":"IPTV / live","seeds":25,"anchors":["fanmingming/live","Beijing-IPTV","imDazui/Tvlist","iptv-org/iptv","video-dev/hls.js","HelloWorld017/m3u-tools"]},
+    {"slug":"iptvapi","label":"iptvapi","sub":"IPTV + reading","seeds":22,"anchors":["Guovin/iptv-api","my-tv","gedoor/legado","Tvbox","iptv-search","reading-list"]},
+    {"slug":"karing","label":"karing","sub":"iOS / cracking","seeds":21,"anchors":["KaringX/karing","TrollStore","KMS_Activator","PojavLauncher","Cydia","unc0ver"]}
+  ],
+  "papertrail": [
+    {"date":"2023-12-05","repo":"Historias_clinicas_frontend","tag":"school · medical-records","cls":"school"},
+    {"date":"2023-12-05","repo":"Historias_clinicas_backend","tag":"school","cls":"school"},
+    {"date":"2024-01-08","repo":"Porfolio  [typo: Portfolio]","tag":"school","cls":"school"},
+    {"date":"2025-01-13","repo":"visualizador","tag":"school","cls":"school"},
+    {"date":"2025-08-10","repo":"mono_repo_ConvertidorIMG","tag":"school","cls":"school"},
+    {"date":"2025-10-21","repo":"servicios_integrales_front","tag":"school","cls":"school"},
+    {"date":"2025-11-28","repo":"landing-page-sonido","tag":"school","cls":"school"},
+    {"date":"2025-12-12","repo":"AlarconEnzoPRG3final12_20255","tag":"FINAL EXAM · NAME LEAK","cls":"smoking"},
+    {"date":"2026-01-06","repo":"mono_repo_Historias_clinicas_policonsultorios_multiusuarios","tag":"school","cls":"school"},
+    {"date":"2026-01-21","repo":"backend_historiasclinicas_multiusuario","tag":"school","cls":"school"},
+    {"date":"2026-01-21","repo":"frontend_historiasclinicas_multiusuario","tag":"school","cls":"school"},
+    {"date":"2026-04-09","repo":"polymarket-sports-copy-trading-bot","tag":"PIVOT · scam","cls":"pivot"},
+    {"date":"2026-04-09","repo":"polymarket-copy-trading-bot","tag":"scam","cls":"pivot"},
+    {"date":"2026-04-09","repo":"polymarket-arbitrage-trading-bot","tag":"scam","cls":"pivot"}
+  ],
+  "crosslink": {
+    "hub":{"label":"Vietnamese kit","sub":".gitignore=95 · LICENSE=1187 · LOG=25 · SECURITY.md=739"},
+    "spokes":[
+      {"label":"Gaming cheats","sub":"Valorant · CS2 · FiveM · Apex · Warzone","repos":["Kanwmwr/ShadowAim-FiveM-Cheat","Reytn/ZWHAX-Valorant-Cheat","Bwmishasm/CS2-Cheat-Source","Ahteons/Apex-Aimbot-2026"]},
+      {"label":"Discord raid","sub":"DM bots · raid tools · self-bots","repos":["LAwmwm/Discord-Raider","LAwmwm/Discord-MASS-DM","Reanekm/Discord-Selfbot"]},
+      {"label":"Info-stealer","sub":"Muck · token grabbers · cookie thieves","repos":["LAwmwm/Muck-Stealer","Prments/Token-Grabber","Rshwmom/Cookie-Stealer-FUD"]},
+      {"label":"UAC bypass","sub":"Windows privilege escalation · FUD","repos":["LAwmwm/UAC-Bypass-FUD","S4warm/Win11-Privesc-2026","Utuanmy/Persistence-Service"]}
+    ]
+  },
+  "affildrop": [
+    {"login":"PriyalMandaliya","created":"2020-09","ageYears":5.6},
+    {"login":"Mualape300","created":"2022-05","ageYears":4.0},
+    {"login":"Aa3081","created":"2023-04","ageYears":3.0},
+    {"login":"Lorencedecena","created":"2023-10","ageYears":2.5},
+    {"login":"Darshi909","created":"2024-09","ageYears":1.6},
+    {"login":"68677","created":"2025-01","ageYears":1.3},
+    {"login":"Jaweria2245","created":"2025-04","ageYears":1.0},
+    {"login":"AveragePythoner","created":"2025-08","ageYears":0.7},
+    {"login":"Infin1tewolfpr0","created":"2025-08","ageYears":0.7},
+    {"login":"Aniket261193","created":"2025-10","ageYears":0.5}
+  ]
+}
+</script>
+
+<script>
+(function(){
+  // ─────────────────  PROGRESS RAIL + CHAPTER MARKER  ─────────────────
+  const fill = document.getElementById('rail-fill');
+  const cm = document.getElementById('chapter-marker');
+  const cmNum = document.getElementById('cm-num');
+  const cmTitle = document.getElementById('cm-title');
+  const chapters = [...document.querySelectorAll('section.chapter')];
+  function onScroll(){
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    fill.style.width = (window.scrollY / h * 100).toFixed(2) + '%';
+    let active = chapters[0];
+    for (const ch of chapters) {
+      const r = ch.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.4) active = ch;
+    }
+    if (active) {
+      cmNum.textContent = active.dataset.chapter || '00';
+      cmTitle.textContent = active.dataset.title || '';
+      const isHero = (active === chapters[0]);
+      cm.classList.toggle('visible', !isHero);
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ─────────────────  REVEAL ON SCROLL  ─────────────────
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    if (!el.style.getPropertyValue('--i')) el.style.setProperty('--i', i % 6);
+    ro.observe(el);
+  });
+  setTimeout(() => { document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('show-fallback', 'in')); }, 2000);
+
+  // ─────────────────  DATA  ─────────────────
+  const DATA = JSON.parse(document.getElementById('v3-data').textContent);
+
+  // ─────────────────  DOSSIER GRID (ch 1)  ─────────────────
+  (function dossier(){
+    const host = document.getElementById('dossier-grid');
+    DATA.operators.forEach((op, i) => {
+      const accentCls = op.highlight ? ' accent' : '';
+      const namedCls = op.named ? ' named' : '';
+      const botShape = op.botshape != null ? `${op.botshape}<span style="font-size:9px;color:var(--muted);margin-left:2px">%</span>` : '—';
+      host.innerHTML += `<div class="dossier">
+        <span class="rk">${String(i+1).padStart(2,'0')}</span>
+        <div class="body">
+          <div class="name">${op.name}${op.highlight ? ' <em>·</em>' : ''}</div>
+          <div class="vert">${op.vertical}</div>
+          <div class="attribution${namedCls}">${op.attribution}</div>
+        </div>
+        <div class="chip${accentCls}"><span class="v">${botShape}</span><span>${op.fleet}</span></div>
+      </div>`;
+    });
+  })();
+
+  // ─────────────────  BOT-SHAPE BARS (ch 2)  ─────────────────
+  (function botshape(){
+    const host = document.getElementById('botshape-host');
+    DATA.botshape.forEach(b => {
+      const fillCls = b.tone === 'accent' ? 'accent' : (b.tone === 'organic' ? 'organic' : '');
+      const pctCls = b.tone === 'accent' ? 'accent' : '';
+      const readCls = (b.tone === 'accent' && b.pct >= 25) ? 'danger' : '';
+      host.innerHTML += `<div class="botshape-row">
+        <div class="label">${b.label}<span class="sub">${b.sub}</span></div>
+        <div class="bar-track"><div class="bar-fill ${fillCls}" style="width:${b.pct}%"></div></div>
+        <div class="pct ${pctCls}">${b.pct}<span style="font-size:11px;color:var(--muted);margin-left:2px">%</span></div>
+        <div class="reading ${readCls}">${b.reading}</div>
+      </div>`;
+    });
+  })();
+
+  // ─────────────────  ACTIVATION TIMELINE (ch 3)  ─────────────────
+  (function timeline(){
+    const events = DATA.timeline;
+    const W = 1280, H = 460, leftPad = 60, rightPad = 50, topPad = 60, plotH = 220, barTop = 320, barH = 90;
+    const plotW = W - leftPad - rightPad;
+    const t0 = new Date('2026-04-19T00:00:00Z').getTime();
+    const t1 = new Date('2026-04-27T00:00:00Z').getTime();
+    const xAt = (iso) => leftPad + plotW * (new Date(iso).getTime() - t0) / (t1 - t0);
+    const days = ['04-19','04-20','04-21','04-22','04-23','04-24','04-25','04-26'];
+
+    const axis = document.getElementById('tl-axis');
+    const bands = document.getElementById('tl-bands');
+    const bars = document.getElementById('tl-bars');
+    const evG = document.getElementById('tl-events');
+    const labG = document.getElementById('tl-labels');
+
+    // Day grid + labels
+    days.forEach((d, i) => {
+      const x = xAt(`2026-${d}T12:00:00Z`);
+      axis.innerHTML += `<line class="tl-tick" x1="${x}" y1="${topPad}" x2="${x}" y2="${topPad + plotH + 10}"/>`;
+      axis.innerHTML += `<text class="tl-day-label" x="${x}" y="${topPad + plotH + 28}" text-anchor="middle">Apr ${d.slice(3)}</text>`;
+    });
+    // Top axis line
+    axis.innerHTML += `<line class="tl-axis" x1="${leftPad}" y1="${topPad + plotH}" x2="${W - rightPad}" y2="${topPad + plotH}"/>`;
+    axis.innerHTML += `<text class="tl-day-label" x="${leftPad}" y="${topPad - 18}" text-anchor="start">First-cfnb-star event · 31 fleet members</text>`;
+
+    // Wave 3 band (Apr 21 03:07 → 16:24)
+    const w3a = xAt('2026-04-21T03:00:00Z'), w3b = xAt('2026-04-21T17:00:00Z');
+    bands.innerHTML += `<rect class="tl-wave-band" x="${w3a}" y="${topPad - 8}" width="${w3b - w3a}" height="${plotH + 20}"/>`;
+    labG.innerHTML += `<text class="tl-wave-label" x="${(w3a + w3b) / 2}" y="${topPad - 22}" text-anchor="middle">Wave 3 · 13 accounts · 13-hour window</text>`;
+
+    // Events
+    events.forEach((e, i) => {
+      const x = xAt(e.t);
+      // Stagger y in plot to make individual events readable
+      const y = topPad + 30 + (i * 6.2) % (plotH - 60);
+      const cls = e.wave === 3 ? 'tl-event wave3' : (i === events.length - 1 ? 'tl-event late' : 'tl-event');
+      evG.innerHTML += `<circle class="${cls}" cx="${x}" cy="${y}" r="3.5"/>`;
+      // Label notable events
+      if (e.note && e.note.length < 40) {
+        const lblCls = (e.wave === 3 || i === events.length - 1) ? 'tl-event-label accent' : 'tl-event-label';
+        const dx = x > leftPad + plotW * 0.7 ? -6 : 6;
+        const anchor = x > leftPad + plotW * 0.7 ? 'end' : 'start';
+        labG.innerHTML += `<text class="${lblCls}" x="${x + dx}" y="${y + 3}" text-anchor="${anchor}">${e.login} · ${e.note}</text>`;
+      }
+    });
+
+    // Per-day count bars
+    const counts = {};
+    days.forEach(d => counts[d] = 0);
+    events.forEach(e => {
+      const d = e.t.slice(5, 10); // "04-19"
+      if (d in counts) counts[d]++;
+    });
+    const maxN = Math.max(...Object.values(counts));
+    const dayBarW = plotW / 8 * 0.7;
+    days.forEach((d, i) => {
+      const x = xAt(`2026-${d}T06:00:00Z`);
+      const n = counts[d];
+      const h = barH * n / maxN;
+      const cls = d === '04-21' ? 'tl-bar wave3' : 'tl-bar';
+      bars.innerHTML += `<rect class="${cls}" x="${x}" y="${barTop + barH - h}" width="${dayBarW}" height="${h}"/>`;
+      bars.innerHTML += `<text class="tl-day-num" x="${x + dayBarW / 2}" y="${barTop + barH - h - 6}" text-anchor="middle">${n}</text>`;
+    });
+    bars.innerHTML += `<text class="tl-cap" x="${leftPad}" y="${barTop - 8}">Activations per day</text>`;
+
+    // "now" marker on the rightmost event
+    const last = events[events.length - 1];
+    const lx = xAt(last.t);
+    bands.innerHTML += `<line class="tl-axis-strong" x1="${lx}" y1="${topPad - 4}" x2="${lx}" y2="${barTop + barH + 4}" stroke-dasharray="3 3" stroke="oklch(53% 0.205 28)" stroke-width="1.2" opacity="0.6"/>`;
+    labG.innerHTML += `<text class="tl-event-label accent" x="${lx + 4}" y="${barTop + barH + 18}" text-anchor="end" transform="rotate(-90 ${lx + 4} ${barTop + barH + 18})">↑ ayouak1 · 4h before press</text>`;
+  })();
+
+  // ─────────────────  OPERATOR MAP (ch 4)  ─────────────────
+  (function opmap(){
+    const ops = DATA.operatorMap;
+    const W = 1280, H = 540, topPad = 60, botPad = 50, leftPad = 30, rightPad = 30;
+    const plotW = W - leftPad - rightPad;
+    const colW = plotW / ops.length;
+    const colInner = colW * 0.85;
+    const colsG = document.getElementById('om-cols');
+    const botsG = document.getElementById('om-bots');
+    const labG = document.getElementById('om-labels');
+    const bannerG = document.getElementById('om-banner');
+
+    // banner
+    bannerG.innerHTML += `<text class="om-banner" x="${W/2}" y="34" text-anchor="middle">154 distinct bots · 6 isolated fleets · <tspan fill="oklch(53% 0.205 28)" font-style="italic">0 pairwise overlap</tspan></text>`;
+
+    ops.forEach((op, i) => {
+      const cx = leftPad + colW * i + colW / 2;
+      const x0 = cx - colInner / 2;
+      const colTop = topPad;
+      const colBot = H - botPad;
+      const colH = colBot - colTop;
+
+      // background column
+      colsG.innerHTML += `<rect class="om-column-bg" x="${x0}" y="${colTop}" width="${colInner}" height="${colH}"${op.highlight ? ' fill-opacity="0.65"' : ''}/>`;
+      colsG.innerHTML += `<line class="om-column-rule" x1="${x0}" y1="${colTop}" x2="${x0}" y2="${colBot}"/>`;
+      colsG.innerHTML += `<line class="om-column-rule" x1="${x0 + colInner}" y1="${colTop}" x2="${x0 + colInner}" y2="${colBot}"/>`;
+
+      // operator label header
+      labG.innerHTML += `<text class="om-op-label" x="${cx}" y="${colTop - 30}" text-anchor="middle">${op.label}</text>`;
+      labG.innerHTML += `<text class="om-op-sub" x="${cx}" y="${colTop - 14}" text-anchor="middle">${op.sub}</text>`;
+      labG.innerHTML += `<text class="om-op-num" x="${cx}" y="${colTop + 36}" text-anchor="middle">${op.seeds}</text>`;
+      labG.innerHTML += `<text class="om-op-sub" x="${cx}" y="${colTop + 50}" text-anchor="middle">seed accounts</text>`;
+
+      // bots — pseudo-random scatter within the column
+      const seed = i * 1009 + 7;
+      const rand = (s, k) => {
+        const x = Math.sin(s * 9301 + k * 49297) * 233280;
+        return x - Math.floor(x);
+      };
+      const botArea_top = colTop + 80;
+      const botArea_bot = colBot - 110;
+      const botArea_h = botArea_bot - botArea_top;
+      for (let k = 0; k < op.seeds; k++) {
+        const bx = x0 + 8 + rand(seed, k * 3 + 1) * (colInner - 16);
+        const by = botArea_top + rand(seed, k * 3 + 2) * botArea_h;
+        const r = 2 + rand(seed, k * 3 + 3) * 1.6;
+        const cls = op.highlight ? 'om-bot accent' : 'om-bot';
+        botsG.innerHTML += `<circle class="${cls}" cx="${bx}" cy="${by}" r="${r.toFixed(2)}"/>`;
+      }
+
+      // anchors at the foot
+      const anchorY0 = colBot - 96;
+      labG.innerHTML += `<text class="om-cap" x="${cx}" y="${anchorY0 - 6}" text-anchor="middle">specialization</text>`;
+      op.anchors.slice(0, 6).forEach((a, j) => {
+        const txt = a.length > 22 ? a.slice(0, 20) + '…' : a;
+        labG.innerHTML += `<text class="om-anchor-label" x="${cx}" y="${anchorY0 + 12 + j * 13}" text-anchor="middle">${txt}</text>`;
+      });
+    });
+  })();
+
+  // ─────────────────  PAPER TRAIL (ch 5)  ─────────────────
+  (function papertrail(){
+    const host = document.getElementById('pt-list');
+    DATA.papertrail.forEach(e => {
+      host.innerHTML += `<li class="${e.cls}"><span class="date">${e.date}</span><span class="repo">${e.repo}</span><span class="tag">${e.tag}</span></li>`;
+    });
+  })();
+
+  // ─────────────────  CROSS-VERTICAL LINK (ch 7)  ─────────────────
+  (function crosslink(){
+    const W = 1280, H = 480, hubX = W * 0.28, hubY = H / 2;
+    const linksG = document.getElementById('cl-links');
+    const nodesG = document.getElementById('cl-nodes');
+    const labG = document.getElementById('cl-labels');
+
+    // hub
+    nodesG.innerHTML += `<circle class="cl-hub" cx="${hubX}" cy="${hubY}" r="92"/>`;
+    labG.innerHTML += `<text class="cl-hub-label" x="${hubX}" y="${hubY - 16}">${DATA.crosslink.hub.label}</text>`;
+    // hub sub: render bytes as monospace inside the circle
+    const subParts = DATA.crosslink.hub.sub.split(' · ');
+    subParts.forEach((p, i) => {
+      labG.innerHTML += `<text class="cl-hub-sub" x="${hubX}" y="${hubY + 4 + i * 14}">${p}</text>`;
+    });
+
+    // spokes
+    const spokes = DATA.crosslink.spokes;
+    const rightX0 = W * 0.58;
+    const rightX1 = W * 0.92;
+    const blockH = (H - 80) / spokes.length;
+    spokes.forEach((s, i) => {
+      const yc = 50 + blockH * (i + 0.5);
+      const yTop = 50 + blockH * i + 6;
+      const yBot = 50 + blockH * (i + 1) - 6;
+
+      // sankey-ish ribbon from hub to spoke
+      const x1 = hubX + 92, y1 = hubY - 30 + i * 16;
+      const x2 = rightX0;
+      const y2 = yc;
+      const cx1 = x1 + (x2 - x1) * 0.4;
+      const cx2 = x1 + (x2 - x1) * 0.65;
+      linksG.innerHTML += `<path class="cl-link" d="M ${x1} ${y1 - 6} C ${cx1} ${y1 - 6}, ${cx2} ${y2 - 22}, ${x2} ${y2 - 22} L ${x2} ${y2 + 22} C ${cx2} ${y2 + 22}, ${cx1} ${y1 + 6}, ${x1} ${y1 + 6} Z"/>`;
+
+      // spoke vertical bar
+      nodesG.innerHTML += `<rect class="cl-vertical-bar accent" x="${rightX0}" y="${yTop}" width="6" height="${yBot - yTop}"/>`;
+
+      // spoke label + sub
+      labG.innerHTML += `<text class="cl-vertical-label" x="${rightX0 + 14}" y="${yTop + 16}">${s.label}</text>`;
+      labG.innerHTML += `<text class="cl-vertical-sub" x="${rightX0 + 14}" y="${yTop + 32}">${s.sub}</text>`;
+
+      // example repos
+      s.repos.slice(0, 4).forEach((r, j) => {
+        const rTrunc = r.length > 38 ? r.slice(0, 36) + '…' : r;
+        labG.innerHTML += `<text class="cl-repo-label" x="${rightX0 + 14}" y="${yTop + 50 + j * 14}">${rTrunc}</text>`;
+      });
+    });
+  })();
+
+  // ─────────────────  AFFILIATE-DROP TIMELINE (ch 8)  ─────────────────
+  (function affildrop(){
+    const host = document.getElementById('affil-rows');
+    const maxYears = 6;
+    DATA.affildrop.forEach(a => {
+      const w = (a.ageYears / maxYears * 100).toFixed(1);
+      host.innerHTML += `<div class="affil-row">
+        <span class="login">${a.login}<span class="age-cap" style="display:block;margin-top:3px">created ${a.created} · ${a.ageYears.toFixed(1)}y old at drop</span></span>
+        <div class="age-track"><div class="age-fill" style="width:${w}%"></div></div>
+        <span class="drop-day">2026-04-23 ↘</span>
+      </div>`;
+    });
+  })();
+})();
+</script>
+
+</body>
+</html>
